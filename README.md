@@ -1,1 +1,1 @@
-This repository serves as a way to store and share the CAT+ ontology.
+    This repoisotry aims to store the CAT+ ontology. The CAT+ ontology provides concepts (classes and properties) to model human and machine readable automated catalysis discovery experiment metadata. It is the result of re-using external pre-existing vocabularies such as Allotrope, schema.org and qudt, together with custom imaging specific objects and properties.
