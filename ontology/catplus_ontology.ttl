@@ -65,7 +65,6 @@ cat: a owl:Ontology ;
 
 <http://purl.allotrope.org/ontologies/property#AFX_0000622> a rdf:Property ;
     skos:prefLabel "event start time" ;
-    skos:altLabel "analysis time" ;
     skos:definition "Point in time when an event starts." ;
     .
 
@@ -95,9 +94,9 @@ cat: a owl:Ontology ;
     skos:prefLabel "vial location identifier" ;
     skos:definition "A vial location identifier is a local identifier that identifies the location of a vial in the vial plate in the scope of the vial plate. [Allotrope]" ;
     .
-<http://purl.obolibrary.org/obo/PATO_0000128> a rdf:Property ;
-    skos:prefLabel "weight" ;
-    skos:definition "A physical quality inhering in a bearer that has mass near a gravitational body." ;
+<http://qudt.org/vocab/quantity#MolecularMass> a rdf:Property ;
+    skos:prefLabel "molecularWeight" ;
+    skos:definition "The molecular mass, or molecular weight of a chemical compound is the mass of one molecule of that compound, relative to the unified atomic mass unit, u. Molecular mass should not be confused with molar mass, which is the mass of one mole of a substance." ;
     .
 <http://purl.obolibrary.org/obo/PATO_0000033> a rdf:Property ;
     skos:prefLabel "concentration" ;
@@ -117,13 +116,13 @@ qudt:quantity a rdf:Property ;
 cat:predictedQuantity a rdf:Property ;
     rdfs:subPropertyOf qudt:quantity ;
     skos:prefLabel "predicted quantity" ;
-    skos:definition "" ; #todo
+    skos:definition "a property to estimate an observable thing with a quantity (qudt:Quantity)";
     .
 
 cat:realQuantity a rdf:Property ;
     rdfs:subPropertyOf qudt:quantity ;
     skos:prefLabel "real quantity" ;
-    skos:definition "" ; #todo
+    skos:definition "a property to mesure an observable thing with a quantity (qudt:Quantity)";
     .
 
 <http://purl.allotrope.org/ontologies/result#AFR_0001120> a rdf:Property ;
@@ -133,7 +132,7 @@ cat:realQuantity a rdf:Property ;
 
 cat:actionName a rdf:Property ;
     skos:prefLabel "action name" ;
-    skos:definition "An action name is a name that identifies an action." ; #todo
+    skos:definition "An action name is a name that identifies an action.";
     .
 
 cat:vialType a rdf:Property ;
@@ -143,7 +142,7 @@ cat:vialType a rdf:Property ;
 
 cat:Role a rdf:Property ;
     skos:prefLabel "role" ;
-    skos:definition "A role is a function or position in a system." ;
+    skos:definition "A role is a function or position in a system. In our system, a role is the defined function for the sample or chemical within the context of the reaction." ;
     .
 
 cat:containerID a rdf:Property ;
@@ -160,7 +159,7 @@ cat:containerBarcode a rdf:Property ;
 
 cat:dispenseType a rdf:Property ;
     skos:prefLabel "dispense type" ;
-    skos:definition "A dispense type is a type of dispense." ; #todo
+    skos:definition "A dispense type is a type of dispense. It can be either liquid or solid." ;
     .
 
 cat:internalBarCode a rdf:Property ;
@@ -172,7 +171,7 @@ cat:internalBarCode a rdf:Property ;
 
 cat:vacuum a rdf:Property ;
     skos:prefLabel "vacuum" ;
-    skos:definition "" ; #todo" ;
+    skos:definition "The pressure of the vacuum ??" ; #todo to be defined with the chemist
     .
 
 cat:temperature a rdf:Property ;
@@ -211,7 +210,7 @@ cat:ContainersPositionsAndQuantities a rdfs:Class, sh:NodeShape ;
     rdfs:comment    """A class that represents the containers, positions and quantities of a sample. 
                     It must have a value for the well location identifier property, and a property called 'quantity' that has 3 representations of the same quantity with different units and values. 
                     The units are Mol, MilliL and MilliGM.""" ;
-    skos:definition "" ; #TODO
+    skos:definition "The containers positions and quantities for a sample. It is used in the context of adding quantities to one or multiple samples." ;
     sh:property [
         sh:path <http://purl.allotrope.org/ontologies/result#AFR_0002240> ; 
         sh:datatype xsd:string
@@ -278,7 +277,7 @@ cat:AddAction a rdfs:Class, sh:NodeShape ;
 
 cat:Action a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Action" ;
-    skos:definition "" ; #TODO
+    skos:definition "An action is a unit element in a procedure and is a concretization of an action specification." ; 
     sh:property [sh:path <http://purl.allotrope.org/ontologies/result#AFR_0001723> ; sh:datatype xsd:string ] ;#Equipment name , 
     sh:property [sh:path <https://schema.org/name> ; sh:datatype xsd:string ] ; #name
     sh:property [sh:path <http://purl.allotrope.org/ontologies/property#AFX_0000622> ; sh:datatype xsd:dateTime ] ;#startTime ,
