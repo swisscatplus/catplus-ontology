@@ -90,6 +90,11 @@ cat: a owl:Ontology ;
     skos:definition "A end time is a time that denotes the end of some process. [Allotrope]" ;
     .
 
+##<http://purl.allotrope.org/ontologies/property#AFX_0000026> a rdf:Property ;
+##    skos:prefLabel "wavelength" ;
+##    skos:definition "Distance in the direction of propagation of a periodic wave between two successive points where at a given time the phase is the same. [IUPAC Gold Book]" ;
+##    .
+
 <http://purl.allotrope.org/ontologies/result#AFR_0002464> a rdf:Property ;
     skos:prefLabel "vial location identifier" ;
     skos:definition "A vial location identifier is a local identifier that identifies the location of a vial in the vial plate in the scope of the vial plate. [Allotrope]" ;
@@ -182,6 +187,11 @@ cat:temperatureShaker a rdf:Property ;
     rdfs:subPropertyOf cat:temperature ;
     skos:prefLabel "temperature shaker" ;
     skos:definition "The temperature of the shaker." ;
+    .
+
+cat:wavelength a rdf:Property ;
+    skos:prefLabel "wavelength irradiation" ;
+    skos:definition "Distance in the direction of propagation of a periodic wave between two successive points where at a given time the phase is the same. [IUPAC Gold Book]. The wavelength to irradiate a sample. One possible unit is the nm." ;
     .
 
 cat:temperatureTumbleStirrer a rdf:Property ;
@@ -335,6 +345,11 @@ cat:temperatureTumbleStirrerShape a sh:PropertyShape ;
 
 cat:temperatureShakerShape a sh:PropertyShape ;
     sh:path cat:temperatureShaker ;
+    sh:node cat:Observation ; 
+    .
+
+cat:wavelengthShape a sh:PropertyShape ;
+    sh:path cat:wavelength ;
     sh:node cat:Observation ; 
     .
 
