@@ -47,10 +47,10 @@ cat: a owl:Ontology ;
     skos:definition "An action is a unit element in a procedure and is a concretization of an action specification." ;
     .
 
-<http://purl.allotrope.org/ontologies/property#AFX_0000211> a rdf:Property ;
-    skos:prefLabel "rotational speed" ;
+<https://qudt.org/vocab/quantitykind/AngularVelocity> a rdf:Property ;
+    skos:prefLabel "angular velocity" ;
     skos:altLabel "speed of revolution", "speed", "speed of rotation" ;
-    skos:definition "Rotational speed (or speed of revolution) of an object rotating around an axis is the number of turns of the object divided by time, specified as revolutions per minute (rpm), revolutions per second (rev/s), or radians per second (rad/s). Rotational speed is equal to the angular velocity ? (or O) divided by 2p. [Wikipedia]" ;
+    skos:definition "Angular Velocity refers to how fast an object rotates or revolves relative to another point.[QUDT]" ;
     .
 
 <http://purl.allotrope.org/ontologies/result#AFR_0001918>  a rdf:Property ;
@@ -75,7 +75,7 @@ cat: a owl:Ontology ;
 
 <http://purl.allotrope.org/ontologies/quality#AFQ_0000111> a rdf:Property ;
     skos:prefLabel "state of matter" ;
-    skos:altLabel "material state" ;
+    skos:altLabel "material state" , "dispense state" ;
     skos:definition "A state of matter is a quality of material that is one of the distinct forms in which matter can exist. Four states of matter are observable in everyday life: solid, liquid, gas, and plasma. Many other states are known to exist only in extreme situations, such as Bose-Einstein condensates, neutron-degenerate matter, and quark-gluon plasma, which only occur in situations of extreme cold, extreme density, and extremely high-energy color-charged matter respectively. [Wikipedia]" ;
     . 
 
@@ -113,6 +113,16 @@ cat: a owl:Ontology ;
     skos:definition"Purity is a composition quality inhering in an bearer by virtue of the bearer lacking undesired components. [Allotrope]" ;
     .
 
+schema:name a rdf:Property ;
+    skos:prefLabel "name" ;
+    skos:definition "A name is a word or set of words by which a person, animal, place, or thing is known, addressed, or referred to." ;
+    .
+
+schema:description a rdf:Property ;
+    skos:prefLabel "description" ;
+    skos:definition "A description is a spoken or written representation or account of a person, object, or event." ;
+    .
+
 qudt:quantity a rdf:Property ;
     skos:prefLabel "quantity" ;
     skos:definition "a property to relate an observable thing with a quantity (qudt:Quantity)" ;
@@ -133,11 +143,6 @@ cat:realQuantity a rdf:Property ;
 <http://purl.allotrope.org/ontologies/result#AFR_0001120> a rdf:Property ;
     skos:prefLabel "batch identifier" ;
     skos:definition "The batch identifier is measurement metadata that identifies the batch where a sample is taken from for being measured. [Allotrope]" ;
-    .
-
-cat:actionName a rdf:Property ;
-    skos:prefLabel "action name" ;
-    skos:definition "An action name is a name that identifies an action.";
     .
 
 cat:vialType a rdf:Property ;
@@ -282,7 +287,12 @@ cat:QuantityShape a sh:NodeShape ;
 
 cat:AddAction a rdfs:Class, sh:NodeShape ;
    rdfs:subClassOf cat:Action ;
-   sh:property [sh:path cat:dispenseType ; sh:datatype xsd:string]
+   sh:property [sh:path cat:dispenseType ; sh:datatype xsd:string] ;
+   sh:property [sh:path cat:hasSample ; sh:class cat:Sample] ;
+   sh:property [sh:path cat:hasPositionContainerAndQuantity ; sh:class cat:ContainersPositionsAndQuantities] ;
+   sh:property [sh:path <http://purl.allotrope.org/ontologies/quality#AFQ_0000111> ; sh:xone ( "Solid" "Liquid") ; ] ; #is this correct?
+   sh:property [sh:path cat:temperatureShaker ; sh:node cat:temperatureShakerShape] ;
+   sh:property [sh:path cat:temperatureTumbleStirrer ; sh:node cat:temperatureTumbleStirrerShape] ;
     .
 
 cat:Action a rdfs:Class, sh:NodeShape ;
@@ -293,6 +303,7 @@ cat:Action a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path <http://purl.allotrope.org/ontologies/property#AFX_0000622> ; sh:datatype xsd:dateTime ] ;#startTime ,
     sh:property [sh:path <http://purl.allotrope.org/ontologies/result#AFR_0002423> ; sh:datatype xsd:dateTime ] ;#endTime , 
     sh:property [sh:path <http://purl.allotrope.org/ontologies/result#AFR_0001606> ; sh:datatype xsd:string ] ;#methodName
+    sh:property [sh:path "LOCAL EQUIPMENT NAME"]
 .
 
 
@@ -315,7 +326,7 @@ cat:Sample a rdfs:Class, sh:Nodeshape ;
     sh:property [sh:path purl:identifier ; sh:datatype xsd:string] ;
     sh:property [sh:path cat:predictedQuantity ] ;
     sh:property [sh:path cat:realQuantity ] ;
-    sh:property [sh:path <http://purl.allotrope.org/ontologies/quality#AFQ_0000111> ; sh:xone ( "Solid" "Liquid" "Gas" "Plasma") ; ] ; 
+    sh:property [sh:path <http://purl.allotrope.org/ontologies/quality#AFQ_0000111> ; sh:xone ( "Solid" "Liquid") ; ] ; 
     sh:property [sh:path cat:internalBarCode ; sh:datatype xsd:string] ;
     sh:property [sh:path cat:containerBarcode ; sh:datatype xsd:string] ;
     sh:property [sh:path cat:concentration ;
@@ -326,17 +337,55 @@ cat:Sample a rdfs:Class, sh:Nodeshape ;
                     sh:node cat:Observation ; 
                     sh:node [sh:property    [sh:path qudt:unit ; 
                                             sh:hasValue unit:PERCENT] ]];
+    sh:property [sh:path cat:hasSample ; sh:class cat:Sample] ; 
     .
 
 <http://purl.obolibrary.org/obo/CHEBI_25367> a rdfs:Class, sh:NodeShape ;
     rdfs:subClassOf <https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI_36357> ;
     sh:property [sh:path purl:CHEBIidentifier ; sh:datatype xsd:string] ;
-    sh:property [sh:path purl:identifier ; sh:datatype xsd:string] ;
+    sh:property [sh:path purl:identifier ; sh:datatype xsd:string] ; #make mincount1
     sh:property [sh:path cat:casNumber; sh:datatype xsd:string] ;
     sh:property [sh:path <http://purl.allotrope.org/ontologies/result#AFR_0002295> ; sh:datatype xsd:string] ;
+    sh:property [sh:path cat:swissCatNumber; sh:datatype xsd:string] ;
+    sh:property [sh:path schema:keywords; sh:datatype xsd:string] ;
+    sh:property [sh:path molecularFormula ; sh:datatype xsd:string] ;
+    sh:property [sh:path cat:inchi ; sh:datatype xsd:string] ; #todo regex for this?
+    sh:property [sh:path density ; sh:datatype xsd:string] ;
+    sh:property [sh:path cat:theoreticalRole ; sh:datatype xsd:decimal] ;
     skos:prefLabel "molecule" ;
     skos:definition "Any polyatomic entity that is an electrically neutral entity consisting of more than one atom." ;
     .
+
+cat:swissCatNumber a rdf:Property ;
+    skos:prefLabel "SwissCAT number" ;
+    skos:definition "A SwissCAT number is a unique identifier assigned by the SwissCAT to every chemical substance described in the open scientific literature." ;
+    .#todo
+
+schema:keywords a rdf:Property ;
+    skos:prefLabel "keywords" ;
+    skos:definition "Keywords or tags used to describe some item. Multiple textual entries in a keywords list are typically delimited by commas, or by repeating the property.[Schema.org]" ;
+    .
+
+molecularFormula a rdf:Property ;
+    skos:prefLabel "molecular formula" ;
+    skos:definition "A molecular formula is a representation of a molecule that uses chemical symbols to indicate the types of atoms followed by subscripts to show the number of atoms of each type in the molecule." ;
+    .#tochceck
+
+cat:inchi a rdf:Property ;
+    skos:prefLabel "InChI" ;
+    skos:definition "The IUPAC International Chemical Identifier (InChI) is a textual identifier for chemical substances, designed to provide a standard way to encode molecular information and to facilitate the search for such information in databases and on the web." ;
+    . #tocheck
+
+density a rdf:Property ;
+    skos:prefLabel "density" ;
+    skos:definition "Density is a physical quality that quantifies the mass of a substance per unit volume. [PATO]" ; #tocheck
+    .
+
+cat:theoreticalRole a rdf:Property ;
+    skos:prefLabel "theoretical role" ;
+    skos:definition "The theoretical role is the role of the molecule in the context of the reaction." ;#todo
+    .
+
 
 cat:temperatureTumbleStirrerShape a sh:PropertyShape ;
     sh:path cat:temperatureTumbleStirrer ;
@@ -361,8 +410,9 @@ cat:actionShape a sh:PropertyShape ;
 cat:speedInRPM a sh:PropertyShape ;
     sh:path <http://purl.allotrope.org/ontologies/property#AFX_0000211> ;
     sh:node cat:Observation ;
-    sh:property [sh:path qudt:unit ; sh:hasValue unit:REV-PER-MIN] ;
-    .
+    sh:property [sh:path qudt:unit ;
+                sh:shouldBeAQuantityKind unit:AngularVelocity] ;
+    .#todo fix - this should be nodeshape maybe?
 
 cat:temperatureInDegC a sh:PropertyShape ;
     sh:path <http://purl.allotrope.org/ontologies/property#AFX_0000060> ;

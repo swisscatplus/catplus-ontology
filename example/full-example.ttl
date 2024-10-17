@@ -1,0 +1,93 @@
+@prefix cat: <http://example.org/cat#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix purl: <http://purl.allotrope.org/ontologies/> .
+@prefix ex: <http://example.org/> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix unit: <https://qudt.org/vocab/unit/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix schema: <https://schema.org/> .
+
+# Instance data for a specific sample
+ex:Sample1 a cat:Sample ;
+    cat:containerID "Container123" ;
+    cat:hasChemical ex:Molecule1 ;
+    <http://purl.allotrope.org/ontologies/result#AFR_0002464> "Location456" ;
+    cat:vialType "storage vial" ;
+    cat:role ex:RoleType ;
+    <http://purl.org/dc/terms/identifier> "Sample123" ;
+    cat:predictedQuantity [
+        qudt:value 2.5 ;
+        qudt:unit unit:MOL
+    ] ;
+    cat:realQuantity [
+        qudt:value 2.0 ;
+        qudt:unit unit:MOL
+    ] ;
+    <http://purl.allotrope.org/ontologies/quality#AFQ_0000111> "Liquid" ;
+    cat:internalBarCode "ABC123XYZ" ;
+    cat:containerBarcode "XYZ987ABC" ;
+    cat:concentration [
+        qudt:value 0.5 ;
+        qudt:unit unit:MOL-PER-L
+    ] ;
+    <http://purl.allotrope.org/ontologies/quality#AFQ_0000209> [
+        qudt:value 99.5 ;
+        qudt:unit unit:PERCENT
+    ] .
+
+# Instance data for an Action
+ex:AddAction1 a cat:AddAction ;
+    cat:dispenseType "liquid" ;
+    cat:hasSample ex:Sample1 ;
+    cat:temperatureShaker ex:ShakerObservation ;
+    cat:temperatureTumbleStirrer ex:TumbleStirrerObservation ;
+    cat:hasPositionContainerAndQuantity [
+        <http://purl.allotrope.org/ontologies/result#AFR_0002240> "Well-01" ;
+        cat:quantity [
+            qudt:value 1.0 ;
+            qudt:unit unit:MOL
+        ] ;
+        cat:quantity [
+            qudt:value 100.0 ;
+            qudt:unit unit:MilliL
+        ] ;
+        cat:quantity [
+            qudt:value 80.0 ;
+            qudt:unit unit:MilliGM
+        ]
+    ] ;
+    <http://purl.allotrope.org/ontologies/result#AFR_0001723> "Shaker Model A" ;
+    <https://schema.org/name> "Mixing Step" ;
+    <http://purl.allotrope.org/ontologies/property#AFX_0000622> "2024-04-01T10:00:00"^^xsd:dateTime ;
+    <http://purl.allotrope.org/ontologies/result#AFR_0002423> "2024-04-01T10:05:00"^^xsd:dateTime ;
+    <http://purl.allotrope.org/ontologies/result#AFR_0001606> "Mixing Method" .
+
+# Instance data for a Chemical Molecule
+ex:Molecule1 a <http://purl.obolibrary.org/obo/CHEBI_25367> ;
+    purl:CHEBIidentifier "CHEBI_25367" ;
+    purl:identifier "Mol001" ;
+    cat:casNumber "50-00-0" ;
+    <http://purl.allotrope.org/ontologies/result#AFR_0002295> "C1=CC=CC=C1" .
+
+# Additional Property shapes
+ex:TumbleStirrerObservation a cat:Observation ;
+    cat:temperatureTumbleStirrer [
+        qudt:unit unit:DEG_C ;
+        qudt:value 30.0
+    ] .
+
+ex:ShakerObservation a cat:Observation ;
+    cat:temperatureShaker [
+        qudt:unit unit:DEG_C ;
+        qudt:value 20.0
+    ] .
+
+
+#Check whether this is correct and makes sense with ontology. Yes - but we need properties to link molecule to samples
+#turn this into JSON_LD
+#send
+
