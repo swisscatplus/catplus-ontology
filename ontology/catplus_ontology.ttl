@@ -303,7 +303,7 @@ cat:Action a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path <http://purl.allotrope.org/ontologies/property#AFX_0000622> ; sh:datatype xsd:dateTime ] ;#startTime ,
     sh:property [sh:path <http://purl.allotrope.org/ontologies/result#AFR_0002423> ; sh:datatype xsd:dateTime ] ;#endTime , 
     sh:property [sh:path <http://purl.allotrope.org/ontologies/result#AFR_0001606> ; sh:datatype xsd:string ] ;#methodName
-    sh:property [sh:path "LOCAL EQUIPMENT NAME"]
+    sh:property [sh:path cat:localEquipmentName ; sh:datatype xsd:string ] ;#localEquipmentName
 .
 
 
@@ -348,12 +348,31 @@ cat:Sample a rdfs:Class, sh:Nodeshape ;
     sh:property [sh:path <http://purl.allotrope.org/ontologies/result#AFR_0002295> ; sh:datatype xsd:string] ;
     sh:property [sh:path cat:swissCatNumber; sh:datatype xsd:string] ;
     sh:property [sh:path schema:keywords; sh:datatype xsd:string] ;
-    sh:property [sh:path molecularFormula ; sh:datatype xsd:string] ;
+    sh:property [sh:path <http://purl.allotrope.org/ontologies/result#AFR_0001952> ; sh:datatype xsd:string] ;
     sh:property [sh:path cat:inchi ; sh:datatype xsd:string] ; #todo regex for this?
     sh:property [sh:path density ; sh:datatype xsd:string] ;
     sh:property [sh:path cat:theoreticalRole ; sh:datatype xsd:decimal] ;
     skos:prefLabel "molecule" ;
     skos:definition "Any polyatomic entity that is an electrically neutral entity consisting of more than one atom." ;
+    .
+
+cat:Objective a rdfS:Class , sh:NodeShape ;
+    skos:prefLabel "Objective" ;
+    skos:definition "An objective is a goal or target to be achieved by the experiment." ;
+    sh:property [sh:path schema:name ; sh:datatype xsd:string] ;
+    sh:property [sh:path schema:description ; sh:datatype xsd:string] ;
+    sh:property [sh:path criteria ; sh:datatype xsd:string] ;
+    sh:property [sh:path <http://purl.allotrope.org/ontologies/common#AFC_0000090> ; sh:datatype xsd:string] ;
+    .
+
+<http://purl.allotrope.org/ontologies/common#AFC_0000090> a rdf:Property ;
+    skos:prefLabel "condition" ;
+    skos:definition "A condition is an information content entity that is about the portion of reality under which something occurs or is valid. The condition is limited by its scope and may have preconditions. It restricts the possible realizations. [Allotrope]" ; #todo check
+    .
+
+cat:criteria a rdf:Property ;
+    skos:prefLabel "criteria" ;
+    skos:definition "A criteria is a standard or rule by which the success of the experiment is judged." ; #todo check
     .
 
 cat:swissCatNumber a rdf:Property ;
@@ -366,10 +385,9 @@ schema:keywords a rdf:Property ;
     skos:definition "Keywords or tags used to describe some item. Multiple textual entries in a keywords list are typically delimited by commas, or by repeating the property.[Schema.org]" ;
     .
 
-molecularFormula a rdf:Property ;
+<http://purl.allotrope.org/ontologies/result#AFR_0001952> a rdf:Property ;
     skos:prefLabel "molecular formula" ;
-    skos:definition "A molecular formula is a representation of a molecule that uses chemical symbols to indicate the types of atoms followed by subscripts to show the number of atoms of each type in the molecule." ;
-    .#tochceck
+    skos:definition "A molecular formula is a molecular entity facet which identifies each constituent element by its chemical symbol and indicates the number of atoms of each element found in each discrete molecular entity of that compound. [CHEMINF]" ;    .#tochceck
 
 cat:inchi a rdf:Property ;
     skos:prefLabel "InChI" ;
@@ -378,7 +396,7 @@ cat:inchi a rdf:Property ;
 
 density a rdf:Property ;
     skos:prefLabel "density" ;
-    skos:definition "Density is a physical quality that quantifies the mass of a substance per unit volume. [PATO]" ; #tocheck
+    skos:definition "Density is a physical quality that quantifies the mass of a substance per unit volume. [PATO]" ; #todo check
     .
 
 cat:theoreticalRole a rdf:Property ;
