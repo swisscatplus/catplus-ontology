@@ -53,9 +53,9 @@ cat: a owl:Ontology ;
     skos:definition "Angular Velocity refers to how fast an object rotates or revolves relative to another point.[QUDT]" ;
     .
 
-<http://purl.allotrope.org/ontologies/result#AFR_0001918>  a rdf:Property ;
-    skos:prefLabel "pressure" ;
-    skos:definition "Pressure is a quality quantification facet that quantifies the mount of force exerted per unit area. [PATO]" ;
+<http://purl.allotrope.org/ontologies/process#AFP_0002677>  a rdf:Property ;
+    skos:prefLabel "pressure measurement" ;
+    skos:definition "A measurement that targets the pressure of some material entity. [Allotrope]" ;
     .
     
 <http://purl.org/dc/terms/identifier> a rdf:Property ;
@@ -99,11 +99,11 @@ cat: a owl:Ontology ;
     skos:prefLabel "vial location identifier" ;
     skos:definition "A vial location identifier is a local identifier that identifies the location of a vial in the vial plate in the scope of the vial plate. [Allotrope]" ;
     .
-<http://qudt.org/vocab/quantity#MolecularMass> a rdf:Property ;
-    skos:prefLabel "molecularWeight" ;
-    skos:definition "The molecular mass, or molecular weight of a chemical compound is the mass of one molecule of that compound, relative to the unified atomic mass unit, u. Molecular mass should not be confused with molar mass, which is the mass of one mole of a substance." ;
+<http://purl.allotrope.org/ontologies/result#AFR_0002294> a rdf:Property ;
+    skos:prefLabel "molecular mass" ;
+    skos:definition "A molecular mass is a quality quantification facet that quantifies the mass of a molecule. [Allotrope]" ;
     .
-<http://purl.obolibrary.org/obo/PATO_0000033> a rdf:Property ;
+<http://purl.allotrope.org/ontologies/result#AFR_0002036> a rdf:Property ;
     skos:prefLabel "concentration" ;
     skos:definition "Concentration is a molecular quality inhering in a substance by virtue of the amount of the bearer's there is mixed with another substance. [PATO]" ;
     .
@@ -128,16 +128,16 @@ qudt:quantity a rdf:Property ;
     skos:definition "a property to relate an observable thing with a quantity (qudt:Quantity)" ;
     .
 
-cat:predictedQuantity a rdf:Property ;
+<http://purl.allotrope.org/ontologies/role#AFRL_0000474> a rdf:Property ;
     rdfs:subPropertyOf qudt:quantity ;
-    skos:prefLabel "predicted quantity" ;
-    skos:definition "a property to estimate an observable thing with a quantity (qudt:Quantity)";
+    skos:prefLabel "expected datum" ;
+    skos:definition "An expected datum is a descriptive datum that describes a information that was predicted or assumed to be the outcome of some process . [Allotrope]";
     .
 
-cat:realQuantity a rdf:Property ;
+cat:measuredQuantity a rdf:Property ;
     rdfs:subPropertyOf qudt:quantity ;
-    skos:prefLabel "real quantity" ;
-    skos:definition "a property to mesure an observable thing with a quantity (qudt:Quantity)";
+    skos:prefLabel "measured quantity" ;
+    skos:definition "Actual measured value of a physical property, such as mass, volume, or concentration, as opposed to a theoretical or ideal value.";
     .
 
 <http://purl.allotrope.org/ontologies/result#AFR_0001120> a rdf:Property ;
@@ -147,7 +147,7 @@ cat:realQuantity a rdf:Property ;
 
 cat:vialType a rdf:Property ;
     skos:prefLabel "vial type" ;
-    skos:definition "A vial type is a type of vial." ;
+    skos:definition "classification and design of a vial used for particular purposes in laboratory settings, such as storage, preparation, sampling, or analysis." ;
     .
 
 cat:Role a rdf:Property ;
@@ -157,7 +157,7 @@ cat:Role a rdf:Property ;
 
 cat:containerID a rdf:Property ;
     skos:prefLabel "container identifier" ;
-    skos:definition "A container identifier is a unique identifier that identifies a container." ;
+    skos:definition "The identifier or number for the individual container storing each specific media type. " ;
     .
 
 
@@ -169,7 +169,7 @@ cat:containerBarcode a rdf:Property ;
 
 cat:dispenseType a rdf:Property ;
     skos:prefLabel "dispense type" ;
-    skos:definition "A dispense type is a type of dispense. It can be either liquid or solid." ;
+    skos:definition "The method or mechanism used to deliver or dispense liquids or powders from one container to another, refered to mass or liquid" ;
     .
 
 cat:internalBarCode a rdf:Property ;
@@ -191,7 +191,7 @@ cat:temperature a rdf:Property ;
 cat:temperatureShaker a rdf:Property ;
     rdfs:subPropertyOf cat:temperature ;
     skos:prefLabel "temperature shaker" ;
-    skos:definition "The temperature of the shaker." ;
+    skos:definition "the temperature maintained by a device that combines mechanical agitation with precise temperature control, allowing samples to be mixed or incubated under specific thermal conditions." ;
     .
 
 cat:wavelength a rdf:Property ;
@@ -202,7 +202,7 @@ cat:wavelength a rdf:Property ;
 cat:temperatureTumbleStirrer a rdf:Property ;
     rdfs:subPropertyOf cat:temperature ;
     skos:prefLabel "temperature tumble stirrer" ;
-    skos:definition "The temperature of the tumble stirrer." ;
+    skos:definition "the specific temperature maintained by a device designed for mixing or agitating liquids, typically by using a rotating motion to create a tumbling effect." ;
     .
 
 cat:casNumber a rdf:Property ;
@@ -225,7 +225,7 @@ cat:ContainersPositionsAndQuantities a rdfs:Class, sh:NodeShape ;
     rdfs:comment    """A class that represents the containers, positions and quantities of a sample. 
                     It must have a value for the well location identifier property, and a property called 'quantity' that has 3 representations of the same quantity with different units and values. 
                     The units are Mol, MilliL and MilliGM.""" ;
-    skos:definition "The containers positions and quantities for a sample. It is used in the context of adding quantities to one or multiple samples." ;
+    skos:definition "Refers to specific aspects related to the handling and organization of samples or materials" ;
     sh:property [
         sh:path <http://purl.allotrope.org/ontologies/result#AFR_0002240> ; 
         sh:datatype xsd:string
@@ -286,7 +286,7 @@ cat:QuantityShape a sh:NodeShape ;
     ] .
 
 cat:AddAction a rdfs:Class, sh:NodeShape ;
-   rdfs:subClassOf cat:Action ;
+   rdfs:subClassOf <http://purl.allotrope.org/ontologies/realizable#AFRE_0000001> ;
    sh:property [sh:path cat:dispenseType ; sh:datatype xsd:string] ;
    sh:property [sh:path cat:hasSample ; sh:class cat:Sample] ;
    sh:property [sh:path cat:hasPositionContainerAndQuantity ; sh:class cat:ContainersPositionsAndQuantities] ;
@@ -295,7 +295,7 @@ cat:AddAction a rdfs:Class, sh:NodeShape ;
    sh:property [sh:path cat:temperatureTumbleStirrer ; sh:node cat:temperatureTumbleStirrerShape] ;
     .
 
-cat:Action a rdfs:Class, sh:NodeShape ;
+<http://purl.allotrope.org/ontologies/realizable#AFRE_0000001> a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Action" ;
     skos:definition "An action is a unit element in a procedure and is a concretization of an action specification." ; 
     sh:property [sh:path <http://purl.allotrope.org/ontologies/result#AFR_0001723> ; sh:datatype xsd:string ] ;#Equipment name , 
@@ -324,12 +324,12 @@ cat:Sample a rdfs:Class, sh:Nodeshape ;
     sh:property [sh:path cat:vialType ; sh:datatype xsd:string ; sh:xone ( "storage vial" "synthesis vial" "reaction vial" "sample vial" "other") ; ] ;
     sh:property [sh:path cat:role ; sh:class <http://purl.allotrope.org/ontologies/role#AFRL_0000344> ] ;   
     sh:property [sh:path purl:identifier ; sh:datatype xsd:string] ;
-    sh:property [sh:path cat:predictedQuantity ] ;
-    sh:property [sh:path cat:realQuantity ] ;
+    sh:property [sh:path <http://purl.allotrope.org/ontologies/role#AFRL_0000474> ] ;
+    sh:property [sh:path cat:measuredQuantity ] ;
     sh:property [sh:path <http://purl.allotrope.org/ontologies/quality#AFQ_0000111> ; sh:xone ( "Solid" "Liquid") ; ] ; 
     sh:property [sh:path cat:internalBarCode ; sh:datatype xsd:string] ;
     sh:property [sh:path cat:containerBarcode ; sh:datatype xsd:string] ;
-    sh:property [sh:path cat:concentration ;
+    sh:property [sh:path <http://purl.allotrope.org/ontologies/result#AFR_0002036> ;
                     sh:node cat:Observation ; 
                     sh:node [sh:property    [sh:path qudt:unit ; 
                                             sh:hasValue unit:MOL-PER-L] ]];
@@ -349,14 +349,14 @@ cat:Sample a rdfs:Class, sh:Nodeshape ;
     sh:property [sh:path cat:swissCatNumber; sh:datatype xsd:string] ;
     sh:property [sh:path schema:keywords; sh:datatype xsd:string] ;
     sh:property [sh:path <http://purl.allotrope.org/ontologies/result#AFR_0001952> ; sh:datatype xsd:string] ;
-    sh:property [sh:path cat:inchi ; sh:datatype xsd:string] ; #todo regex for this?
-    sh:property [sh:path density ; sh:datatype xsd:string] ;
+    sh:property [sh:path <http://purl.allotrope.org/ontologies/result#AFR_0002296> ; sh:datatype xsd:string] ; #todo regex for this?
+    sh:property [sh:path <http://purl.obolibrary.org/obo/PATO_0001019> ; sh:datatype xsd:string] ;
     sh:property [sh:path cat:theoreticalRole ; sh:datatype xsd:decimal] ;
     skos:prefLabel "molecule" ;
     skos:definition "Any polyatomic entity that is an electrically neutral entity consisting of more than one atom." ;
     .
 
-cat:Objective a rdfS:Class , sh:NodeShape ;
+<http://purl.obolibrary.org/obo/IAO_0000005> a rdfS:Class , sh:NodeShape ;
     skos:prefLabel "Objective" ;
     skos:definition "An objective is a goal or target to be achieved by the experiment." ;
     sh:property [sh:path schema:name ; sh:datatype xsd:string] ;
@@ -389,14 +389,14 @@ schema:keywords a rdf:Property ;
     skos:prefLabel "molecular formula" ;
     skos:definition "A molecular formula is a molecular entity facet which identifies each constituent element by its chemical symbol and indicates the number of atoms of each element found in each discrete molecular entity of that compound. [CHEMINF]" ;    .#tochceck
 
-cat:inchi a rdf:Property ;
+<http://purl.allotrope.org/ontologies/result#AFR_0002296> a rdf:Property ;
     skos:prefLabel "InChI" ;
-    skos:definition "The IUPAC International Chemical Identifier (InChI) is a textual identifier for chemical substances, designed to provide a standard way to encode molecular information and to facilitate the search for such information in databases and on the web." ;
+    skos:definition "An InChI molecular structure is a molecular structure specified in IUPAC International Chemical Identifier (InChI) line notation. [edamontology.org]" ;
     . #tocheck
 
-density a rdf:Property ;
+<http://purl.obolibrary.org/obo/PATO_0001019> a rdf:Property ;
     skos:prefLabel "density" ;
-    skos:definition "Density is a physical quality that quantifies the mass of a substance per unit volume. [PATO]" ; #todo check
+    skos:definition "A physical quality which inheres in a bearer by virtue of some influence is exerted by the bearer's mass per unit size." ; #todo check
     .
 
 cat:theoreticalRole a rdf:Property ;
@@ -418,11 +418,6 @@ cat:temperatureShakerShape a sh:PropertyShape ;
 cat:wavelengthShape a sh:PropertyShape ;
     sh:path cat:wavelength ;
     sh:node cat:Observation ; 
-    .
-
-cat:actionShape a sh:PropertyShape ;
-    sh:path <http://purl.allotrope.org/ontologies/realizable#AFRE_0000001> ;
-    sh:class cat:Action ;
     .
 
 cat:speedInRPM a sh:PropertyShape ;
