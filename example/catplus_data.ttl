@@ -1,15 +1,17 @@
-prefix ex: <http://example.org/> 
-prefix cat: <http://example.org/cat#> 
-prefix qudt: <https://qudt.org/vocab/unit/> 
-prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
-prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
-prefix xsd: <http://www.w3.org/2001/XMLSchema#> 
-prefix skos: <http://www.w3.org/2004/02/skos/core#> 
-prefix allotrope: <http://purl.allotrope.org/ontologies/> 
+prefix cat: <http://example.org/cat#>
+prefix skos: <http://www.w3.org/2004/02/skos/core#>
+prefix sh: <http://www.w3.org/ns/shacl#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+prefix ex: <http://example.org/>
+prefix purl: <http://purl.allotrope.org/ontologies/>
+prefix schema: <https://schema.org/>
+prefix qudt: <http://qudt.org/schema/qudt/>
+prefix unit: <https://qudt.org/vocab/unit/>
 prefix owl: <http://www.w3.org/2002/07/owl#> 
 prefix dct: <http://purl.org/dc/terms/>
 prefix vann: <http://purl.org/vocab/vann/>
-
 
 # Instance of a Quantity with three Observations
 ex:SampleQuantity a cat:ContainersPositionsAndQuantities ;
@@ -57,3 +59,24 @@ ex:Observation4 a cat:Observation ;
 
 ex:quantityTest a cat:Quantity ;
     cat:realQuantity "five" .
+
+
+:batch1 a cat:Batch ;
+    :chemicalList :chemical1, :chemical2 ;
+    .
+
+:chemical1 a cat:Chemical ;
+    :chemicalName "Chemical 1" ;
+    :chemicalFormula "C6H12O6" ;
+    :chemicalMolarMass "1980.16" ;
+    :chemicalCAS "50-99-7" ;
+    .
+
+:chemical2 a cat:Chemical ;
+    :chemicalName "Chemical 2" ;
+    :chemicalFormula "C6H12O6" ;
+    :chemicalMolarMass "180.16" ;
+    :chemicalCAS "50-99-7" ;
+    .
+
+

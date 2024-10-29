@@ -23,7 +23,7 @@ ex:Sample1 a cat:Sample ;
         qudt:value 2.5 ;
         qudt:unit unit:MOL
     ] ;
-    cat:realQuantity [
+    <http://example.org/cat#realQuantity> [
         qudt:value 2.0 ;
         qudt:unit unit:MOL
     ] ;

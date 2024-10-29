@@ -1,0 +1,197 @@
+@prefix allo-prop: <http://purl.allotrope.org/ontologies/property#> .
+@prefix allo-qual: <http://purl.allotrope.org/ontologies/quality#> .
+@prefix allo-real: <http://purl.allotrope.org/ontologies/realizable#> .
+@prefix allo-res:  <http://purl.allotrope.org/ontologies/result#> .
+@prefix cat:       <http://example.org/cat#> .
+@prefix dash:      <http://datashapes.org/dash#> .
+@prefix dct:       <http://purl.org/dc/terms/> .
+@prefix ex:        <http://example.org/> .
+@prefix graphql:   <http://datashapes.org/graphql#> .
+@prefix obo:       <http://purl.obolibrary.org/obo/> .
+@prefix owl:       <http://www.w3.org/2002/07/owl#> .
+@prefix purl:      <http://purl.allotrope.org/ontologies/> .
+@prefix qudt:      <http://qudt.org/schema/qudt/> .
+@prefix rdf:       <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:      <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema:    <https://schema.org/> .
+@prefix sh:        <http://www.w3.org/ns/shacl#> .
+@prefix skos:      <http://www.w3.org/2004/02/skos/core#> .
+@prefix swa:       <http://topbraid.org/swa#> .
+@prefix tosh:      <http://topbraid.org/tosh#> .
+@prefix unit:      <https://qudt.org/vocab/unit/> .
+@prefix vann:      <http://purl.org/vocab/vann/> .
+@prefix xsd:       <http://www.w3.org/2001/XMLSchema#> .
+
+
+# Instance data for an AddAction, inheriting from Action
+cat:myAddAction a cat:AddAction ;
+    schema:name "Add Sample Action" ;
+    allo-res:AFR_0001723 "Dispensing Equipment 01" ;
+    allo-prop:AFX_0000622 "2024-10-25T10:30:00"^^xsd:dateTime ;
+    allo-res:AFR_0002423 "2024-10-25T10:35:00"^^xsd:dateTime ;
+    allo-res:AFR_0001606 "Automated Dispense Method" ;
+    cat:localEquipmentName "Dispense Unit 01" ;
+    cat:containerBarcode "CBAR456" ;
+    cat:containerID "CONTAINER789" ;
+    allo-qual:AFQ_0000111 "Liquid" ;
+    cat:dispenseType "Liquid" ;
+    cat:hasSample cat:sample1 ;
+    cat:hasPositionContainerAndQuantity cat:containerPosQuant1 ;
+    cat:speedInRPM [
+        qudt:value 1500 ;
+        qudt:unit unit:REV-PER-MIN
+    ] ;
+    cat:temperatureShakerShape [
+        qudt:unit unit:DEG_C ;
+        qudt:value 25
+    ] ;
+    cat:temperatureTumbleStirrerShape [
+        qudt:unit unit:DEG_C ;
+        qudt:value 30
+    ] .
+
+# Instance for ContainersPositionsAndQuantities
+cat:containerPosQuant1 a cat:ContainersPositionsAndQuantities ;
+    allo-res:AFR_0002240 "A1" ;
+    qudt:quantity [
+        qudt:value 1.5 ;
+        qudt:unit unit:MilliL
+    ] .
+
+
+# Instance of SetTemperatureAction
+cat:mySetTemperatureAction a cat:setTemperatureAction ;
+    cat:speedInRPM [
+        qudt:value 1200 ;
+        qudt:unit unit:REV-PER-MIN
+    ] ;
+    cat:temperatureShakerShape [
+        qudt:unit unit:DEG_C ;
+        qudt:value 20
+    ] ;
+    cat:temperatureTumbleStirrerShape [
+        qudt:unit unit:DEG_C ;
+        qudt:value 22
+    ] .
+
+
+
+# Sample instance data for Sample
+cat:sample1 a cat:Sample ;
+    cat:containerID "C12345" ;
+    allo-res:AFR_0002464 "Vial-A1" ;
+    cat:vialType "storage vial" ;
+    allo-qual:AFQ_0000111 "Solid" ;
+    cat:role <http://purl.allotrope.org/ontologies/role#AFRL_0000344> ;
+    purl:identifier "SAMPLE001" ;
+    cat:hasSample cat:sample2 ;
+    <http://purl.allotrope.org/ontologies/role#AFRL_0000474> [
+        qudt:unit unit:MilliGM;
+        qudt:value 0.55
+    ] ;
+    cat:measuredQuantity [
+        qudt:unit unit:MilliGM;
+        qudt:value 0.62
+    ] ;
+    cat:internalBarCode "BARCODE123" ;
+    cat:containerBarcode "CBAR123" ;
+    allo-res:AFR_0002036 [
+        qudt:unit unit:MOL-PER-L ;
+        qudt:value 0.35
+    ] ;
+    allo-qual:AFQ_0000209 [
+        qudt:unit unit:PERCENT ;
+        qudt:value 90.5
+    ] ;
+    cat:vacuum [
+        qudt:unit unit:bar ;
+        qudt:value 3.0
+    ] ;
+    allo-prop:AFX_0000060 [
+        qudt:unit unit:DEG_C ;
+        qudt:value 25
+    ] ;
+    cat:temperatureShaker [
+        qudt:unit unit:DEG_C ;
+        qudt:value 22
+    ] ;
+    cat:temperatureTumbleStirrer [
+        qudt:unit unit:DEG_C ;
+        qudt:value 12
+    ] ;
+    cat:hasChemical cat:myChemical123 .
+
+    # Molecule instance based on CHEBI_25367
+cat:myChemical123 a obo:CHEBI_25367 ;
+    purl:CHEBIidentifier "CHEBI:25367" ;
+    purl:identifier "MOL001" ;
+    cat:casNumber "50-00-0" ;
+    cat:chemicalName "Formaldehyde" ;
+    allo-res:AFR_0002295 "C=O" ;
+    allo-res:AFR_0002294 "30.03" ;
+    cat:swissCatNumber "SWISS001" ;
+    schema:keywords "organic", "aldehyde" ;
+    allo-res:AFR_0001952 "CH2O" ;
+    allo-res:AFR_0002296 "WSFSSNUMVPVAAY" ;
+    obo:PATO_0001019 "1.09" ;
+    cat:theoreticalRole 1.0 .
+
+cat:sample2 a cat:Sample ;
+    cat:containerID "C12346" ;
+    allo-res:AFR_0002464 "Vial-A2" ;
+    cat:vialType "storage vial" ;
+    cat:role <http://purl.allotrope.org/ontologies/role#AFRL_0000344> ;
+    purl:identifier "SAMPLE002" ;
+    <http://purl.allotrope.org/ontologies/role#AFRL_0000474> [
+        qudt:unit unit:MilliGM ;
+        qudt:value 0.52
+    ] ;
+    allo-qual:AFQ_0000111 "Liquid" ;
+    cat:measuredQuantity [
+        qudt:unit unit:MilliL ;
+        qudt:value 0.63
+    ] ;
+    cat:internalBarCode "BARCODE124" ;
+    cat:containerBarcode "CBAR124" ;
+    allo-res:AFR_0002036 [
+        qudt:unit unit:MOL-PER-L ;
+        qudt:value 0.054
+    ] ;
+    allo-qual:AFQ_0000209 [
+        qudt:unit unit:PERCENT ;
+        qudt:value 92
+    ] ;
+    cat:vacuum [
+        qudt:unit unit:bar ;
+        qudt:value 2.0
+    ] ;
+    allo-prop:AFX_0000060 [
+        qudt:unit unit:DEG_C ;
+        qudt:value 222.5
+    ] ;
+    cat:temperatureShaker [
+        qudt:unit unit:DEG_C ;
+        qudt:value 35
+    ] ;
+    cat:temperatureTumbleStirrer [
+        qudt:unit unit:DEG_C ;
+        qudt:value 34
+    ] ;
+    cat:hasChemical cat:myChemical456 .
+
+# Instance data for Chemical
+cat:myChemical456 a obo:CHEBI_25367 ;
+    cat:chemicalName "Acetone" ;
+    cat:chemicalFormula "C3H6O" ;
+    cat:chemicalMolarMass "58.08" ;
+    cat:chemicalCAS "67-64-1" ;
+    cat:theoreticalRole 2.0 ;
+    cat:swissCatNumber "SWISS002" ;
+    cat:casNumber "67-64-1" ;
+    allo-res:AFR_0002295 "CC(=O)C" ;
+    allo-res:AFR_0002294 "58.08" ;
+    allo-res:AFR_0001952 "C3H6O" ;
+    allo-res:AFR_0002296 "WSFSSNUMVPVAAY" ;
+    schema:keywords "organic", "ketone" ;
+    obo:PATO_0001019 "0.79" .
+

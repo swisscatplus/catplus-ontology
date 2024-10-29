@@ -12,8 +12,14 @@ prefix unit: <https://qudt.org/vocab/unit/>
 prefix owl: <http://www.w3.org/2002/07/owl#> 
 prefix dct: <http://purl.org/dc/terms/>
 prefix vann: <http://purl.org/vocab/vann/>
+prefix obo: <http://purl.obolibrary.org/obo/>
+prefix allo-res: <http://purl.allotrope.org/ontologies/result#> 
+prefix allo-prop: <http://purl.allotrope.org/ontologies/property#>
+prefix allo-real: <http://purl.allotrope.org/ontologies/realizable#>
+prefix allo-qual: <http://purl.allotrope.org/ontologies/quality#> 
+prefix obo: <http://purl.obolibrary.org/obo/>
 
-
+#ontology for catalysis, chemistry
 #ontology for catalysis, chemistry
 cat: a owl:Ontology ;
     dct:abstract "The CAT+ ontology provides concepts (classes and properties) to model human and machine readable automated catalysis discovery experiment metadata. It is the result of re-using external pre-existing vocabularies such as Allotrope, schema.org and qudt, together with custom imaging specific objects and properties." ;
@@ -25,17 +31,17 @@ cat: a owl:Ontology ;
     dct:title "CAT+ Ontology" ;
     vann:preferredNamespacePrefix "cat" ;
     vann:preferredNamespaceUri "http://example.org/cat#"^^xsd:string ;
-    owl:versionInfo "0.1.0"^^xsd:string ;
+    owl:versionInfo "0.2.0"^^xsd:string ;
     sh:entailment <http://www.w3.org/ns/entailment/RDFS>
     .
 
-<http://purl.allotrope.org/ontologies/result#AFR_0001723> a rdfs:Property ;
+allo-res:AFR_0001723 a rdfs:Property ;
     skos:prefLabel "equipment name" ;
     skos:definition "An equipment name is a written name refering to a device." ;
     skos:altLabel "device name" ;
     .
 
-<http://purl.allotrope.org/ontologies/result#AFR_0002240> a rdf:Property ;
+allo-res:AFR_0002240 a rdf:Property ;
     skos:prefLabel "well location identifier" ;
     skos:definition "A well location identifier is a local identifier that identifies the location of a well on the container submitted to the experiment in the scope of the container." ;
     .
@@ -63,52 +69,52 @@ cat: a owl:Ontology ;
     skos:definition "An unambiguous reference to the resource within a given context." ;
     .
 
-<http://purl.allotrope.org/ontologies/property#AFX_0000622> a rdf:Property ;
+allo-prop:AFX_0000622 a rdf:Property ;
     skos:prefLabel "event start time" ;
     skos:definition "Point in time when an event starts." ;
     .
 
-<http://purl.allotrope.org/ontologies/property#AFX_0000687> a rdf:Property ;
+allo-prop:AFX_0000687 a rdf:Property ;
     skos:prefLabel "barcode" ;
     skos:definition "A barcode is an optical machine-readable representation of data relating to the object to which it is attached. [Wikipedia]" ;
     .
 
-<http://purl.allotrope.org/ontologies/quality#AFQ_0000111> a rdf:Property ;
+allo-qual:AFQ_0000111 a rdf:Property ;
     skos:prefLabel "state of matter" ;
     skos:altLabel "material state" , "dispense state" ;
     skos:definition "A state of matter is a quality of material that is one of the distinct forms in which matter can exist. Four states of matter are observable in everyday life: solid, liquid, gas, and plasma. Many other states are known to exist only in extreme situations, such as Bose-Einstein condensates, neutron-degenerate matter, and quark-gluon plasma, which only occur in situations of extreme cold, extreme density, and extremely high-energy color-charged matter respectively. [Wikipedia]" ;
     . 
 
 
-<http://purl.allotrope.org/ontologies/result#AFR_0002295> a rdf:Property ;
+allo-res:AFR_0002295 a rdf:Property ;
     skos:prefLabel "SMILES molecular structure" ;
     skos:definition "A SMILES molecular structure is a molecular structure specified in Simplified Molecular Input Line Entry System (SMILES) line notation. [edamontology.org]" ;
     .
 
-<http://purl.allotrope.org/ontologies/result#AFR_0002423> a rdf:Property ;
+allo-res:AFR_0002423 a rdf:Property ;
     skos:prefLabel "end time" ;
     skos:definition "A end time is a time that denotes the end of some process. [Allotrope]" ;
     .
 
-##<http://purl.allotrope.org/ontologies/property#AFX_0000026> a rdf:Property ;
+##allo-prop:AFX_0000026> a rdf:Property ;
 ##    skos:prefLabel "wavelength" ;
 ##    skos:definition "Distance in the direction of propagation of a periodic wave between two successive points where at a given time the phase is the same. [IUPAC Gold Book]" ;
 ##    .
 
-<http://purl.allotrope.org/ontologies/result#AFR_0002464> a rdf:Property ;
+allo-res:AFR_0002464 a rdf:Property ;
     skos:prefLabel "vial location identifier" ;
     skos:definition "A vial location identifier is a local identifier that identifies the location of a vial in the vial plate in the scope of the vial plate. [Allotrope]" ;
     .
-<http://purl.allotrope.org/ontologies/result#AFR_0002294> a rdf:Property ;
+allo-res:AFR_0002294 a rdf:Property ;
     skos:prefLabel "molecular mass" ;
     skos:definition "A molecular mass is a quality quantification facet that quantifies the mass of a molecule. [Allotrope]" ;
     .
-<http://purl.allotrope.org/ontologies/result#AFR_0002036> a rdf:Property ;
+allo-res:AFR_0002036 a rdf:Property ;
     skos:prefLabel "concentration" ;
     skos:definition "Concentration is a molecular quality inhering in a substance by virtue of the amount of the bearer's there is mixed with another substance. [PATO]" ;
     .
 
-<http://purl.allotrope.org/ontologies/quality#AFQ_0000209> a rdf:Property ;
+allo-qual:AFQ_0000209 a rdf:Property ;
     skos:prefLabel "purity" ;
     skos:definition"Purity is a composition quality inhering in an bearer by virtue of the bearer lacking undesired components. [Allotrope]" ;
     .
@@ -140,7 +146,7 @@ cat:measuredQuantity a rdf:Property ;
     skos:definition "Actual measured value of a physical property, such as mass, volume, or concentration, as opposed to a theoretical or ideal value.";
     .
 
-<http://purl.allotrope.org/ontologies/result#AFR_0001120> a rdf:Property ;
+allo-res:AFR_0001120 a rdf:Property ;
     skos:prefLabel "batch identifier" ;
     skos:definition "The batch identifier is measurement metadata that identifies the batch where a sample is taken from for being measured. [Allotrope]" ;
     .
@@ -162,7 +168,7 @@ cat:containerID a rdf:Property ;
 
 
 cat:containerBarcode a rdf:Property ;
-    rdfs:subPropertyOf <http://purl.allotrope.org/ontologies/property#AFX_0000687> ;
+    rdfs:subPropertyOf allo-prop:AFX_0000687 ;
     skos:prefLabel "container barcode" ;
     skos:definition "A container barcode is a unique identifier that identifies a container within a sample" ;
     .
@@ -173,23 +179,29 @@ cat:dispenseType a rdf:Property ;
     .
 
 cat:internalBarCode a rdf:Property ;
-    rdfs:subPropertyOf <http://purl.allotrope.org/ontologies/property#AFX_0000687> ;
+    rdfs:subPropertyOf allo-prop:AFX_0000687 ;
     skos:prefLabel "internal barcode" ;
     skos:definition "An internal barcode is a unique identifier that identifies a sample" ;
     skos:example "EPFL barcode", "inhouse-created barcode" ;
     .
 
-cat:vacuum a rdf:Property ;
-    skos:prefLabel "vacuum" ;
-    skos:definition "The pressure of the vacuum ??" ; #todo to be defined with the chemist
+cat:position a rdf:Property ;
+    skos:prefLabel "position" ;
+    skos:definition "The position of the container in the container plate" ;
     .
 
-cat:temperature a rdf:Property ;
+cat:vacuum a rdf:Property ;
+    skos:prefLabel "vacuum" ;
+    skos:definition "the state of a gas at which its pressure in a vessel and therefore its particle density is lower than that of the ambient surrounding atmosphere or in which the pressure of the gas is lower than 300 mbar, i. e. lower than the pressure of the atmosphere on the Earth's surface." ; #todo to be defined with the chemist
+    .
+
+allo-prop:AFX_0000060 a rdf:Property ;
     skos:prefLabel "temperature" ;
-    skos:definition "A physical quality of the thermal energy of a system. [PATO]" .
+    skos:definition "A temperature is a comparative objective measure of hot and cold. It is measured, typically by a thermometer, through the bulk behavior of a thermometric material, detection of heat radiation, or by particle velocity or kinetic energy. It may be calibrated in any of various temperature scales, Celsius, Fahrenheit, Kelvin, etc. [Wikipedia]" ;
+    .
 
 cat:temperatureShaker a rdf:Property ;
-    rdfs:subPropertyOf cat:temperature ;
+    rdfs:subPropertyOf allo-prop:AFX_0000060 ;
     skos:prefLabel "temperature shaker" ;
     skos:definition "the temperature maintained by a device that combines mechanical agitation with precise temperature control, allowing samples to be mixed or incubated under specific thermal conditions." ;
     .
@@ -200,7 +212,7 @@ cat:wavelength a rdf:Property ;
     .
 
 cat:temperatureTumbleStirrer a rdf:Property ;
-    rdfs:subPropertyOf cat:temperature ;
+    rdfs:subPropertyOf allo-prop:AFX_0000060 ;
     skos:prefLabel "temperature tumble stirrer" ;
     skos:definition "the specific temperature maintained by a device designed for mixing or agitating liquids, typically by using a rotating motion to create a tumbling effect." ;
     .
@@ -216,9 +228,47 @@ cat:chemicalName a rdf:Property ;
     skos:example "ethanol", "2-propanol", "sodium chloride" ;
     .
 
+cat:hasChemical a rdf:Property ;
+    skos:prefLabel "has chemical" ;
+    skos:definition "The chemical that is part of the sample" ;
+    .
+
 
 ###################################################################################################
 # Shapes
+
+cat:AddAction a rdfs:Class, sh:NodeShape ;
+   rdfs:subClassOf <http://purl.allotrope.org/ontologies/realizable#AFRE_0000001> ;
+   sh:property [sh:path cat:dispenseType ; sh:datatype xsd:string] ;
+   sh:property [sh:path cat:hasSample ; sh:class cat:Sample] ;
+   sh:property [sh:path cat:hasPositionContainerAndQuantity ; sh:class cat:ContainersPositionsAndQuantities] ;
+   sh:property [sh:path allo-qual:AFQ_0000111 ; 
+                sh:xone ([ sh:hasValue "Solid"] 
+                        [sh:hasValue "Liquid"]) ; ] ; #state of matter / dispense state
+   sh:property cat:speedInRPM ;
+   sh:property cat:temperatureShakerShape ;
+   sh:property cat:temperatureTumbleStirrerShape ;
+    .
+
+cat:setTemperatureAction a rdfs:Class, sh:NodeShape ;
+    rdfs:subClassOf <http://purl.allotrope.org/ontologies/realizable#AFRE_0000001> ;
+    sh:property cat:speedInRPM ;
+    sh:property cat:temperatureShakerShape ;
+    sh:property cat:temperatureTumbleStirrerShape ;
+    .
+
+<http://purl.allotrope.org/ontologies/realizable#AFRE_0000001> a rdfs:Class, sh:NodeShape ;
+    skos:prefLabel "Action" ;
+    skos:definition "An action is a unit element in a procedure and is a concretization of an action specification." ; 
+    sh:property [sh:path allo-res:AFR_0001723 ; sh:datatype xsd:string ] ;#Equipment name , 
+    sh:property [sh:path <https://schema.org/name> ; sh:datatype xsd:string ] ; #name
+    sh:property [sh:path allo-prop:AFX_0000622 ; sh:datatype xsd:dateTime ] ;#startTime ,
+    sh:property [sh:path allo-res:AFR_0002423 ; sh:datatype xsd:dateTime ] ;#endTime , 
+    sh:property [sh:path allo-res:AFR_0001606 ; sh:datatype xsd:string ] ;#methodName
+    sh:property [sh:path cat:localEquipmentName ; sh:datatype xsd:string ] ;#localEquipmentName
+    sh:property [sh:path cat:containerBarcode ; sh:datatype xsd:string ] ;#containerBarcode
+    sh:property [sh:path cat:containerID ; sh:datatype xsd:string ] ;#containerID
+.
 
 cat:ContainersPositionsAndQuantities a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Containers, Positions and Quantities" ;
@@ -227,85 +277,25 @@ cat:ContainersPositionsAndQuantities a rdfs:Class, sh:NodeShape ;
                     The units are Mol, MilliL and MilliGM.""" ;
     skos:definition "Refers to specific aspects related to the handling and organization of samples or materials" ;
     sh:property [
-        sh:path <http://purl.allotrope.org/ontologies/result#AFR_0002240> ; 
+        sh:path allo-res:AFR_0002240 ; 
         sh:datatype xsd:string
-    ] ;
-    sh:property [
-        sh:path cat:quantity ;
-        sh:qualifiedValueShape [
-            sh:node [
-                sh:property [
-                    sh:path qudt:unit ;
-                    sh:hasValue unit:MOL ;
-                ] ;
-            ]
-        ] ;
-        sh:qualifiedMinCount 1 ;
-        sh:qualifiedMaxCount 1 ;
-    ] ;
-    sh:property [
-        sh:path cat:quantity ;
-        sh:qualifiedValueShape [
-            sh:node [
-                sh:property [
-                    sh:path qudt:unit ;
-                    sh:hasValue unit:MilliL ;
-                ] ;
-            ]
-        ] ;
-        sh:qualifiedMinCount 1 ;
-        sh:qualifiedMaxCount 1 ;
-    ] ;
-    sh:property [
-        sh:path cat:quantity ;
-        sh:qualifiedValueShape [
-            sh:node [
-                sh:property [
-                    sh:path qudt:unit ;
-                    sh:hasValue unit:MilliGM ;
-                ] ;
-            ]
-        ] ;
-        sh:qualifiedMinCount 1 ;
-        sh:qualifiedMaxCount 1 ;
-    ] .
+    ] ; #Well location identifier, also known as "position"
+    .
 
 cat:QuantityShape a sh:NodeShape ;
-    sh:targetObjectsOf cat:quantity ;
+    sh:targetObjectsOf qudt:quantity ;
     sh:property [
         sh:path qudt:value ;
         sh:datatype xsd:decimal ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
     ] ;
-    sh:property [
-        sh:path qudt:unit ;
-        sh:in (unit:MOL unit:MilliL unit:MilliGM) ;
-        sh:minCount 1 ;
+    sh:property [sh:path qudt:unit ; 
+        sh:minCount 1 ; 
         sh:maxCount 1 ;
-    ] .
-
-cat:AddAction a rdfs:Class, sh:NodeShape ;
-   rdfs:subClassOf <http://purl.allotrope.org/ontologies/realizable#AFRE_0000001> ;
-   sh:property [sh:path cat:dispenseType ; sh:datatype xsd:string] ;
-   sh:property [sh:path cat:hasSample ; sh:class cat:Sample] ;
-   sh:property [sh:path cat:hasPositionContainerAndQuantity ; sh:class cat:ContainersPositionsAndQuantities] ;
-   sh:property [sh:path <http://purl.allotrope.org/ontologies/quality#AFQ_0000111> ; sh:xone ( "Solid" "Liquid") ; ] ; #is this correct?
-   sh:property [sh:path cat:temperatureShaker ; sh:node cat:temperatureShakerShape] ;
-   sh:property [sh:path cat:temperatureTumbleStirrer ; sh:node cat:temperatureTumbleStirrerShape] ;
-    .
-
-<http://purl.allotrope.org/ontologies/realizable#AFRE_0000001> a rdfs:Class, sh:NodeShape ;
-    skos:prefLabel "Action" ;
-    skos:definition "An action is a unit element in a procedure and is a concretization of an action specification." ; 
-    sh:property [sh:path <http://purl.allotrope.org/ontologies/result#AFR_0001723> ; sh:datatype xsd:string ] ;#Equipment name , 
-    sh:property [sh:path <https://schema.org/name> ; sh:datatype xsd:string ] ; #name
-    sh:property [sh:path <http://purl.allotrope.org/ontologies/property#AFX_0000622> ; sh:datatype xsd:dateTime ] ;#startTime ,
-    sh:property [sh:path <http://purl.allotrope.org/ontologies/result#AFR_0002423> ; sh:datatype xsd:dateTime ] ;#endTime , 
-    sh:property [sh:path <http://purl.allotrope.org/ontologies/result#AFR_0001606> ; sh:datatype xsd:string ] ;#methodName
-    sh:property [sh:path cat:localEquipmentName ; sh:datatype xsd:string ] ;#localEquipmentName
-.
-
+        sh:xone ([ sh:hasValue unit:MillGM ] 
+                [sh:hasValue unit:MilliL ] )]
+ .
 
 cat:Observation a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Observation" ;
@@ -314,30 +304,39 @@ cat:Observation a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path qudt:value ; sh:minCount 1 ; sh:maxCount 1] ;
     .
 
-cat:Sample a rdfs:Class, sh:Nodeshape ;
+cat:Sample a rdfs:Class, sh:NodeShape ;
     skos:related <http://purl.allotrope.org/ontologies/material#AFM_0001099> ;
     skos:prefLabel "Sample" ;
     skos:altLabel  "chemical mixture" ;
     skos:definition "A portion of chemical mixture is a chemical substance that is composed of chemical substances. [Allotrope]" ;
     sh:property [sh:path cat:containerID ; sh:datatype xsd:string] ;
-    sh:property [sh:path <http://purl.allotrope.org/ontologies/result#AFR_0002464> ; sh:datatype xsd:string] ;
-    sh:property [sh:path cat:vialType ; sh:datatype xsd:string ; sh:xone ( "storage vial" "synthesis vial" "reaction vial" "sample vial" "other") ; ] ;
-    sh:property [sh:path cat:role ; sh:class <http://purl.allotrope.org/ontologies/role#AFRL_0000344> ] ;   
-    sh:property [sh:path purl:identifier ; sh:datatype xsd:string] ;
-    sh:property [sh:path <http://purl.allotrope.org/ontologies/role#AFRL_0000474> ] ;
-    sh:property [sh:path cat:measuredQuantity ] ;
-    sh:property [sh:path <http://purl.allotrope.org/ontologies/quality#AFQ_0000111> ; sh:xone ( "Solid" "Liquid") ; ] ; 
-    sh:property [sh:path cat:internalBarCode ; sh:datatype xsd:string] ;
-    sh:property [sh:path cat:containerBarcode ; sh:datatype xsd:string] ;
-    sh:property [sh:path <http://purl.allotrope.org/ontologies/result#AFR_0002036> ;
+    sh:property [sh:path allo-res:AFR_0002464 ; sh:datatype xsd:string] ; #Vial location identifier
+    sh:property cat:vialShape ; #vial type
+    sh:property [sh:path cat:role ] ;   #role
+    sh:property [sh:path purl:identifier ; sh:datatype xsd:string] ; #identifier
+    sh:property [sh:path <http://purl.allotrope.org/ontologies/role#AFRL_0000474> ; sh:node cat:Observation] ; #expectedDatum/quantity
+    sh:property [sh:path cat:measuredQuantity ; sh:node cat:Observation] ; #measuredQuantity
+    sh:property [sh:path allo-qual:AFQ_0000111 ; 
+                sh:xone ([ sh:hasValue "Solid"] 
+                        [sh:hasValue "Liquid"]) ; ] ;  #state of matter / dispense state
+    sh:property [sh:path cat:internalBarCode ; sh:datatype xsd:string] ; #internal barcode
+    sh:property [sh:path cat:containerBarcode ; sh:datatype xsd:string] ; #container barcode
+    sh:property [sh:path allo-res:AFR_0002036 ; #concentration
                     sh:node cat:Observation ; 
                     sh:node [sh:property    [sh:path qudt:unit ; 
                                             sh:hasValue unit:MOL-PER-L] ]];
-    sh:property [sh:path <http://purl.allotrope.org/ontologies/quality#AFQ_0000209> ;
+    sh:property [sh:path allo-qual:AFQ_0000209 ; #purity
                     sh:node cat:Observation ; 
                     sh:node [sh:property    [sh:path qudt:unit ; 
                                             sh:hasValue unit:PERCENT] ]];
-    sh:property [sh:path cat:hasSample ; sh:class cat:Sample] ; 
+    sh:property [sh:path cat:hasSample ; sh:class cat:Sample] ; #hasSample
+    sh:property [sh:path cat:vacuum ; sh:node cat:Observation ; #vacuum
+                    sh:node [sh:property    [sh:path qudt:unit ; 
+                                            sh:hasValue unit:bar] ]];
+    sh:property [sh:path allo-prop:AFX_0000060 ] ; #temperature
+    sh:property [sh:path cat:temperatureShaker ] ; #temperatureShaker
+    sh:property [sh:path cat:temperatureTumbleStirrer ] ; #temperatureTumbleStirrer
+    sh:property [sh:path cat:hasChemical ; sh:class <http://purl.obolibrary.org/obo/CHEBI_25367> ] ; #hasChemical
     .
 
 <http://purl.obolibrary.org/obo/CHEBI_25367> a rdfs:Class, sh:NodeShape ;
@@ -345,25 +344,35 @@ cat:Sample a rdfs:Class, sh:Nodeshape ;
     sh:property [sh:path purl:CHEBIidentifier ; sh:datatype xsd:string] ;
     sh:property [sh:path purl:identifier ; sh:datatype xsd:string] ; #make mincount1
     sh:property [sh:path cat:casNumber; sh:datatype xsd:string] ;
-    sh:property [sh:path <http://purl.allotrope.org/ontologies/result#AFR_0002295> ; sh:datatype xsd:string] ;
+    sh:property [sh:path cat:chemicalName; sh:datatype xsd:string] ;
+    sh:property [sh:path allo-res:AFR_0002295 ; sh:datatype xsd:string] ; #smiles
+    sh:property [sh:path allo-res:AFR_0002294 ; sh:datatype xsd:string] ; #molecularMass
     sh:property [sh:path cat:swissCatNumber; sh:datatype xsd:string] ;
     sh:property [sh:path schema:keywords; sh:datatype xsd:string] ;
-    sh:property [sh:path <http://purl.allotrope.org/ontologies/result#AFR_0001952> ; sh:datatype xsd:string] ;
-    sh:property [sh:path <http://purl.allotrope.org/ontologies/result#AFR_0002296> ; sh:datatype xsd:string] ; #todo regex for this?
-    sh:property [sh:path <http://purl.obolibrary.org/obo/PATO_0001019> ; sh:datatype xsd:string] ;
+    sh:property [sh:path allo-res:AFR_0001952 ; sh:datatype xsd:string] ; #molecular formula
+    sh:property [sh:path allo-res:AFR_0002296 ; sh:datatype xsd:string] ; #inchi key
+    sh:property [sh:path <http://purl.obolibrary.org/obo/PATO_0001019> ; sh:datatype xsd:string] ; #mass densitity
     sh:property [sh:path cat:theoreticalRole ; sh:datatype xsd:decimal] ;
     skos:prefLabel "molecule" ;
     skos:definition "Any polyatomic entity that is an electrically neutral entity consisting of more than one atom." ;
     .
 
-<http://purl.obolibrary.org/obo/IAO_0000005> a rdfS:Class , sh:NodeShape ;
+<http://purl.obolibrary.org/obo/IAO_0000005> a rdfs:Class , sh:NodeShape ;
     skos:prefLabel "Objective" ;
     skos:definition "An objective is a goal or target to be achieved by the experiment." ;
     sh:property [sh:path schema:name ; sh:datatype xsd:string] ;
     sh:property [sh:path schema:description ; sh:datatype xsd:string] ;
-    sh:property [sh:path criteria ; sh:datatype xsd:string] ;
+    sh:property [sh:path cat:criteria ; sh:datatype xsd:string] ;
     sh:property [sh:path <http://purl.allotrope.org/ontologies/common#AFC_0000090> ; sh:datatype xsd:string] ;
     .
+
+cat:Campaign a rdfs:Class, sh:NodeShape ;
+    skos:prefLabel "Campaign" ;
+    skos:definition "A campaign is a series of experiments that are conducted to achieve a specific objective." ;
+    sh:property [sh:path schema:name ; sh:datatype xsd:string] ;
+    sh:property [sh:path schema:description ; sh:datatype xsd:string] ;
+    sh:property [sh:path cat:genericObjective ; sh:datatype xsd:string] ;
+.
 
 <http://purl.allotrope.org/ontologies/common#AFC_0000090> a rdf:Property ;
     skos:prefLabel "condition" ;
@@ -384,12 +393,16 @@ schema:keywords a rdf:Property ;
     skos:prefLabel "keywords" ;
     skos:definition "Keywords or tags used to describe some item. Multiple textual entries in a keywords list are typically delimited by commas, or by repeating the property.[Schema.org]" ;
     .
-
-<http://purl.allotrope.org/ontologies/result#AFR_0001952> a rdf:Property ;
+cat:genericObjective a rdf:Property ;
+    skos:prefLabel "generic objective" ;
+    skos:definition "A generic objective is a high-level goal or target to be achieved by the campaign." ;
+    .
+    
+allo-res:AFR_0001952 a rdf:Property ;
     skos:prefLabel "molecular formula" ;
     skos:definition "A molecular formula is a molecular entity facet which identifies each constituent element by its chemical symbol and indicates the number of atoms of each element found in each discrete molecular entity of that compound. [CHEMINF]" ;    .#tochceck
 
-<http://purl.allotrope.org/ontologies/result#AFR_0002296> a rdf:Property ;
+allo-res:AFR_0002296 a rdf:Property ;
     skos:prefLabel "InChI" ;
     skos:definition "An InChI molecular structure is a molecular structure specified in IUPAC International Chemical Identifier (InChI) line notation. [edamontology.org]" ;
     . #tocheck
@@ -405,14 +418,17 @@ cat:theoreticalRole a rdf:Property ;
     .
 
 
+
 cat:temperatureTumbleStirrerShape a sh:PropertyShape ;
     sh:path cat:temperatureTumbleStirrer ;
-    sh:node cat:Observation ; 
+    sh:node cat:Observation ;
+    sh:property [sh:path qudt:unit ; sh:hasValue unit:DEG_C]
     .
 
 cat:temperatureShakerShape a sh:PropertyShape ;
     sh:path cat:temperatureShaker ;
-    sh:node cat:Observation ; 
+    sh:node cat:Observation ;
+    sh:property [sh:path qudt:unit ; sh:hasValue unit:DEG_C]
     .
 
 cat:wavelengthShape a sh:PropertyShape ;
@@ -421,14 +437,24 @@ cat:wavelengthShape a sh:PropertyShape ;
     .
 
 cat:speedInRPM a sh:PropertyShape ;
-    sh:path <http://purl.allotrope.org/ontologies/property#AFX_0000211> ;
+    sh:path allo-prop:AFX_0000211 ;
     sh:node cat:Observation ;
-    sh:property [sh:path qudt:unit ;
-                sh:shouldBeAQuantityKind unit:AngularVelocity] ;
-    .#todo fix - this should be nodeshape maybe?
+    sh:node [sh:property [sh:path qudt:unit ;
+                sh:hasValue unit:REV-PER-MIN] ;]
+    .
 
 cat:temperatureInDegC a sh:PropertyShape ;
-    sh:path <http://purl.allotrope.org/ontologies/property#AFX_0000060> ;
+    sh:path allo-prop:AFX_0000060 ;
     sh:node cat:Observation ;
     sh:property [sh:path qudt:unit ; sh:hasValue unit:DEG_C] ;
     .
+
+cat:vialShape a sh:PropertyShape ;
+    sh:path cat:vialType ;
+    sh:xone (
+        [ sh:hasValue "synthesis vial" ]
+        [ sh:hasValue "storage vial" ]
+        [ sh:hasValue "reaction vial" ]
+        [ sh:hasValue "sample vial" ]
+        [ sh:hasValue "other" ]
+    ) .
