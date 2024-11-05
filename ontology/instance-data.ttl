@@ -51,7 +51,7 @@ cat:myAddAction a cat:AddAction ;
     ] .
 
 # Instance for ContainersPositionsAndQuantities
-cat:containerPosQuant1 a cat:ContainersPositionsAndQuantities ;
+cat:containerPosQuant1 a cat:ContainerPositionAndQuantity ;
     allo-res:AFR_0002240 "A1" ;
     qudt:quantity [
         qudt:value 1.5 ;
