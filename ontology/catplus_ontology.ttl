@@ -241,7 +241,7 @@ cat:AddAction a rdfs:Class, sh:NodeShape ;
    rdfs:subClassOf <http://purl.allotrope.org/ontologies/realizable#AFRE_0000001> ;
    sh:property [sh:path cat:dispenseType ; sh:datatype xsd:string] ;
    sh:property [sh:path cat:hasSample ; sh:class cat:Sample] ;
-   sh:property [sh:path cat:hasPositionContainerAndQuantity ; sh:class cat:ContainerPositionAndQuantity] ;
+   sh:property [sh:path cat:hasContainerPositionAndQuantity ; sh:class cat:ContainerPositionAndQuantity] ;
    sh:property [sh:path allo-qual:AFQ_0000111 ; 
                 sh:xone ([ sh:hasValue "Solid"] 
                         [sh:hasValue "Liquid"]) ; ] ; #state of matter / dispense state
