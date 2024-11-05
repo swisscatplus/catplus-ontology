@@ -233,6 +233,10 @@ cat:hasChemical a rdf:Property ;
     skos:definition "The chemical that is part of the sample" ;
     .
 
+cat:hasContainerPositionAndQuantity a rdf:Property ;
+skos:prefLabel "has Container Position and Quantity" ;
+skos:definition "indicates the relationship between a action and it's description of the container posititions and quantities" ;
+.
 
 ###################################################################################################
 # Shapes
