@@ -36,7 +36,7 @@ cat:myAddAction a cat:AddAction ;
     allo-qual:AFQ_0000111 "Liquid" ;
     cat:dispenseType "Liquid" ;
     cat:hasSample cat:sample1 ;
-    cat:hasPositionContainerAndQuantity cat:containerPosQuant1 ;
+    cat:hasContainerPositionAndQuantityAndQuantity cat:containerPosQuant1 ;
     cat:hasBatch cat:batch123 ;
     cat:speedInRPM [
         qudt:value 1500 ;
