@@ -272,6 +272,7 @@ cat:setTemperatureAction a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path cat:localEquipmentName ; sh:datatype xsd:string ] ;#localEquipmentName
     sh:property [sh:path cat:containerBarcode ; sh:datatype xsd:string ] ;#containerBarcode
     sh:property [sh:path cat:containerID ; sh:datatype xsd:string ] ;#containerID
+    sh:property [sh:path cat:hasBatch ; sh:class cat:Batch] ; #hasBatch
 .
 
 cat:ContainerPositionAndQuantity a rdfs:Class, sh:NodeShape ;
@@ -440,7 +441,7 @@ cat:hasCampaign a rdf:Property ;
 
 cat:hasBatch a rdf:Property ;
     skos:prefLabel "has batch" ;
-    skos:definition "The batch that is part of the campaign" ;
+    skos:definition "refers to a specific batch instance" ;
     .
 
 allo-res:AFR_0002764 a rdf:Property ;
