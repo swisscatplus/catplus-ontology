@@ -2,7 +2,7 @@
   "batchID": "23",
   "action": [
     {
-        "action_name": "set_temperature",
+        "action_name": "setTemperatureAction",
         "speed":{
           "value": 152,
           "unit": "rpm"
@@ -24,7 +24,7 @@
         "containerBarcode": "1"
     },
     {
-        "action_name": "add",
+        "action_name": "AddAction",
         "speed":{
           "value": 152,
           "unit": "rpm"
@@ -88,7 +88,7 @@
         }
     },
     {
-        "action_name": "add",
+        "action_name": "AddAction",
         "speed":{
           "value": 152,
           "unit": "rpm"
@@ -156,7 +156,7 @@
         }
     },
     {
-        "action_name": "add",
+        "action_name": "AddAction",
         "speed":{
           "value": 152,
           "unit": "rpm"
@@ -224,7 +224,7 @@
         }
     },
     {
-        "action_name": "add",
+        "action_name": "AddAction",
         "speed":{
           "value": 152,
           "unit": "rpm"
@@ -313,7 +313,7 @@
         "containerBarcode": "1"
     },
     {
-        "action_name": "set_temperature",
+        "action_name": "setTemperatureAction",
         "speed":{
           "value": "",
           "unit": "rpm"
@@ -363,7 +363,7 @@
         "containerBarcode": "1"
     },
     {
-        "action_name": "set_temperature",
+        "action_name": "setTemperatureAction",
         "speed":{
           "value": "",
           "unit": "rpm"
