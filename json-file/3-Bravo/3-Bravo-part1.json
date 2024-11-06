@@ -1,0 +1,69 @@
+{
+    "actions": [
+        {
+            "action_name": "evaporation",
+            "startTime": "2024-07-25_12:03:31", 
+            "endingtime": "2024-07-25_12:15:20",
+            "temperature":{
+                "value": 156,
+                "unit": "°C"
+            },
+            "order": "1"
+        },
+        {
+            "action_name":"dilution", 
+            "solvent":{
+                "chemical": {
+                    "ID": "",
+                    "name": "Water",
+                    "CASNumber": "",
+                    "molecularMass": "",
+                    "smiles": "H2O"
+                    },
+                "volume":{
+                    "value": 1,
+                    "unit": "mL"
+                }
+            },
+            "order": "2"
+        },
+        {
+            "action_name":"magneticStirrer",
+            "startTime": "2024-07-25_12:03:31",
+            "endingtime": "2024-07-25_12:15:20",
+            "speed":{
+                "value": 152,
+                "unit": "rpm"
+            },
+            "order": "3"
+        },
+        {
+            "action_name":"solventChange",
+            "SPEprocess": true,
+            "solvent":{
+                "chemical": {
+                    "ID": "",
+                    "name": "Acetonitrile",
+                    "CASNumber": "",
+                    "molecularMass": "",
+                    "smiles": ""
+                    },
+                "volume":{
+                    "value": 50,
+                    "unit": "uL"
+                },
+            },
+            "order": "4"
+        },
+        {
+            "action_name":"magneticStirrer",
+            "startTime": "2024-07-25_12:03:31",
+            "endingtime": "2024-07-25_12:15:20",
+            "speed":{
+                "value": 152,
+                "unit": "rpm"
+            },
+            "order": "5"
+        }
+    ]
+}

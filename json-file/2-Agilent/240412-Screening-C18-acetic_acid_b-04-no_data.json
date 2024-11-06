@@ -1,0 +1,605 @@
+{
+    "liquid chromatography aggregate document": {
+        "liquid chromatography document": [
+            {
+                "analyst": "Swisscat (swisscat)",
+                "measurement aggregate document": {
+                    "measurement document": [
+                        {
+                            "measurement identifier": "DAD1A",
+                            "chromatography column document": {},
+                            "device control aggregate document": {
+                                "device control document": [
+                                    {
+                                        "device identifier": "",
+                                        "device type": "Diode array uv detector",
+                                        "product manufacturer": "Agilent",
+                                        "equipment serial number": "DEAC617961",
+                                        "model number": "G7115A",
+                                        "firmware version": "D.07.38 [0001]",
+                                        "detection type": "single channel"
+                                    }
+                                ]
+                            },
+                            "sample document": {
+                                "sample identifier": "0659d110-49d0-4e98-8f3a-1aaf9c4ec0d9",
+                                "written name": "1-4 PYRIDYL PIPERAZINE-2024-04-12 10-23-04+02-00-20.dx"
+                            },
+                            "injection document": {
+                                "autosampler injection volume setting (chromatography)": {
+                                    "value": 5,
+                                    "unit": "mm^3"
+                                },
+                                "injection identifier": "2024-04-12 10-23-04+02-00-20.dx",
+                                "injection time": "2024-04-12T08:23:47.113+00:00"
+                            },
+                            "detection type": "single channel",
+                            "chromatogram data cube": {
+                                "label": "DAD1A,Sig=215,4  Ref=off",
+                                "cube-structure": {
+                                    "dimensions": [
+                                        {
+                                            "@componentDatatype": "double",
+                                            "concept": "retention time",
+                                            "unit": "s"
+                                        }
+                                    ],
+                                    "measures": [
+                                        {
+                                            "@componentDatatype": "double",
+                                            "concept": "absorbance",
+                                            "unit": "mAU"
+                                        }
+                                    ]
+                                },
+                                "data": {
+                                    "measures": [
+                                        [
+                                            
+                                            -0.870228
+                                        ]
+                                    ],
+                                    "dimensions": [
+                                        [
+                                            0.2
+                                           
+                                        ]
+                                    ]
+                                },
+                                "identifier": "DAD1A"
+                            },
+                            "processed data document": {
+                                "peak list": {
+                                    "peak": [
+                                        {
+                                            "@index": 1,
+                                            "peak area": {
+                                                "value": 34034.5,
+                                                "unit": "mAU.s"
+                                            },
+                                            "retention time": {
+                                                "value": 1.19008,
+                                                "unit": "min"
+                                            },
+                                            "peakIdentifier": "f81b4bcb-4d4a-41c7-8b34-5610e940d3ca",
+                                            "peak end": {
+                                                "value": 1.68996,
+                                                "unit": "min"
+                                            },
+                                            "relative peak height": {
+                                                "value": 100,
+                                                "unit": "%"
+                                            },
+                                            "peak height": {
+                                                "value": 3058.31,
+                                                "unit": "mAU"
+                                            },
+                                            "peak start": {
+                                                "value": 0.984987,
+                                                "unit": "min"
+                                            },
+                                            "relative peak area": {
+                                                "value": 100,
+                                                "unit": "%"
+                                            },
+                                            "peak value at start": {
+                                                "value": -169.679,
+                                                "unit": "mAU"
+                                            },
+                                            "peak value at end": {
+                                                "value": -183.143,
+                                                "unit": "mAU"
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "measurement identifier": "DAD1B",
+                            "chromatography column document": {},
+                            "device control aggregate document": {
+                                "device control document": [
+                                    {
+                                        "device identifier": "",
+                                        "device type": "Diode array uv detector",
+                                        "product manufacturer": "Agilent",
+                                        "equipment serial number": "DEAC617961",
+                                        "model number": "G7115A",
+                                        "firmware version": "D.07.38 [0001]",
+                                        "detection type": "single channel"
+                                    }
+                                ]
+                            },
+                            "sample document": {
+                                "sample identifier": "0659d110-49d0-4e98-8f3a-1aaf9c4ec0d9",
+                                "written name": "1-4 PYRIDYL PIPERAZINE-2024-04-12 10-23-04+02-00-20.dx"
+                            },
+                            "injection document": {
+                                "autosampler injection volume setting (chromatography)": {
+                                    "value": 5,
+                                    "unit": "mm^3"
+                                },
+                                "injection identifier": "2024-04-12 10-23-04+02-00-20.dx",
+                                "injection time": "2024-04-12T08:23:47.113+00:00"
+                            },
+                            "detection type": "single channel",
+                            "chromatogram data cube": {
+                                "label": "DAD1B,Sig=254,4  Ref=off",
+                                "cube-structure": {
+                                    "dimensions": [
+                                        {
+                                            "@componentDatatype": "double",
+                                            "concept": "retention time",
+                                            "unit": "s"
+                                        }
+                                    ],
+                                    "measures": [
+                                        {
+                                            "@componentDatatype": "double",
+                                            "concept": "absorbance",
+                                            "unit": "mAU"
+                                        }
+                                    ]
+                                },
+                                "data": {
+                                    "measures": [
+                                        [
+                                            0.130653
+                                            
+                                        ]
+                                    ],
+                                    "dimensions": [
+                                        [
+                                            0.2
+                                            
+                                        ]
+                                    ]
+                                },
+                                "identifier": "DAD1B"
+                            },
+                            "processed data document": {
+                                "peak list": {
+                                    "peak": []
+                                }
+                            }
+                        },
+                        {
+                            "measurement identifier": "MS1 +TIC SCAN ESI Frag=110V Gain=3.0",
+                            "chromatography column document": {},
+                            "device control aggregate document": {
+                                "device control document": [
+                                    {
+                                        "device identifier": "",
+                                        "device type": "Diode array uv detector",
+                                        "product manufacturer": "Agilent",
+                                        "equipment serial number": "DEAC617961",
+                                        "model number": "G7115A",
+                                        "firmware version": "D.07.38 [0001]",
+                                        "detection type": "single channel"
+                                    }
+                                ]
+                            },
+                            "sample document": {
+                                "sample identifier": "0659d110-49d0-4e98-8f3a-1aaf9c4ec0d9",
+                                "written name": "1-4 PYRIDYL PIPERAZINE-2024-04-12 10-23-04+02-00-20.dx"
+                            },
+                            "injection document": {
+                                "autosampler injection volume setting (chromatography)": {
+                                    "value": 5,
+                                    "unit": "mm^3"
+                                },
+                                "injection identifier": "2024-04-12 10-23-04+02-00-20.dx",
+                                "injection time": "2024-04-12T08:23:47.113+00:00"
+                            },
+                            "detection type": "single channel",
+                            "chromatogram data cube": {
+                                "label": "+TIC SCAN ESI Frag=110V Gain=3.0",
+                                "cube-structure": {
+                                    "dimensions": [
+                                        {
+                                            "@componentDatatype": "double",
+                                            "concept": "retention time",
+                                            "unit": "s"
+                                        }
+                                    ],
+                                    "measures": [
+                                        {
+                                            "@componentDatatype": "double",
+                                            "concept": "count",
+                                            "unit": "(unitless)"
+                                        }
+                                    ]
+                                },
+                                "data": {
+                                    "measures": [
+                                        [
+                                            25767.6
+                                           
+                                        ]
+                                    ],
+                                    "dimensions": [
+                                        [
+                                            0.541
+                                           
+                                        ]
+                                    ]
+                                },
+                                "identifier": "MS1 +TIC SCAN ESI Frag=110V Gain=3.0"
+                            },
+                            "processed data document": {
+                                "peak list": {
+                                    "peak": [
+                                        {
+                                            "@index": 1,
+                                            "peak area": {
+                                                "value": 1278380000,
+                                                "unit": "Counts.s"
+                                            },
+                                            "retention time": {
+                                                "value": 1.29756,
+                                                "unit": "min"
+                                            },
+                                            "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809",
+                                            "peak end": {
+                                                "value": 2.15236,
+                                                "unit": "min"
+                                            },
+                                            "relative peak height": {
+                                                "value": 100,
+                                                "unit": "%"
+                                            },
+                                            "peak height": {
+                                                "value": 94721500,
+                                                "unit": "(unitless)"
+                                            },
+                                            "peak start": {
+                                                "value": 1.06079,
+                                                "unit": "min"
+                                            },
+                                            "relative peak area": {
+                                                "value": 100,
+                                                "unit": "%"
+                                            },
+                                            "peak value at start": {
+                                                "value": 31854200,
+                                                "unit": "(unitless)"
+                                            },
+                                            "peak value at end": {
+                                                "value": 26108000,
+                                                "unit": "(unitless)"
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "measurement identifier": "MS1 -TIC SCAN ESI Frag=110V Gain=3.0",
+                            "chromatography column document": {},
+                            "device control aggregate document": {
+                                "device control document": [
+                                    {
+                                        "device identifier": "",
+                                        "device type": "Diode array uv detector",
+                                        "product manufacturer": "Agilent",
+                                        "equipment serial number": "DEAC617961",
+                                        "model number": "G7115A",
+                                        "firmware version": "D.07.38 [0001]",
+                                        "detection type": "single channel"
+                                    }
+                                ]
+                            },
+                            "sample document": {
+                                "sample identifier": "0659d110-49d0-4e98-8f3a-1aaf9c4ec0d9",
+                                "written name": "1-4 PYRIDYL PIPERAZINE-2024-04-12 10-23-04+02-00-20.dx"
+                            },
+                            "injection document": {
+                                "autosampler injection volume setting (chromatography)": {
+                                    "value": 5,
+                                    "unit": "mm^3"
+                                },
+                                "injection identifier": "2024-04-12 10-23-04+02-00-20.dx",
+                                "injection time": "2024-04-12T08:23:47.113+00:00"
+                            },
+                            "detection type": "single channel",
+                            "chromatogram data cube": {
+                                "label": "-TIC SCAN ESI Frag=110V Gain=3.0",
+                                "cube-structure": {
+                                    "dimensions": [
+                                        {
+                                            "@componentDatatype": "double",
+                                            "concept": "retention time",
+                                            "unit": "s"
+                                        }
+                                    ],
+                                    "measures": [
+                                        {
+                                            "@componentDatatype": "double",
+                                            "concept": "count",
+                                            "unit": "(unitless)"
+                                        }
+                                    ]
+                                },
+                                "data": {
+                                    "measures": [
+                                        [
+                                            25808.3
+                                           
+                                        ]
+                                    ],
+                                    "dimensions": [
+                                        [
+                                            1.074,
+                                            2.134
+                                           
+                                        ]
+                                    ]
+                                },
+                                "identifier": "MS1 -TIC SCAN ESI Frag=110V Gain=3.0"
+                            },
+                            "processed data document": {
+                                "peak list": {
+                                    "peak": []
+                                }
+                            }
+                        },
+                        {
+                            "measurement identifier": "DAD1I",
+                            "chromatography column document": {},
+                            "device control aggregate document": {
+                                "device control document": [
+                                    {
+                                        "device identifier": "",
+                                        "device type": "Diode array uv detector",
+                                        "product manufacturer": "Agilent",
+                                        "equipment serial number": "DEAC617961",
+                                        "model number": "G7115A",
+                                        "firmware version": "D.07.38 [0001]",
+                                        "detection type": "single channel"
+                                    }
+                                ]
+                            },
+                            "sample document": {
+                                "sample identifier": "0659d110-49d0-4e98-8f3a-1aaf9c4ec0d9",
+                                "written name": "1-4 PYRIDYL PIPERAZINE-2024-04-12 10-23-04+02-00-20.dx"
+                            },
+                            "injection document": {
+                                "autosampler injection volume setting (chromatography)": {
+                                    "value": 5,
+                                    "unit": "mm^3"
+                                },
+                                "injection identifier": "2024-04-12 10-23-04+02-00-20.dx",
+                                "injection time": "2024-04-12T08:23:47.113+00:00"
+                            },
+                            "detection type": "single channel",
+                            "chromatogram data cube": {
+                                "cube-structure": {
+                                    "dimensions": [],
+                                    "measures": []
+                                },
+                                "data": {
+                                    "measures": "",
+                                    "dimensions": ""
+                                }
+                            },
+                            "three-dimensional ultraviolet spectrum data cube": {
+                                "label": "DAD1I,DAD: Spectrum",
+                                "cube-structure": {
+                                    "dimensions": [
+                                        {
+                                            "@componentDatatype": "double",
+                                            "concept": "retention time",
+                                            "unit": "s"
+                                        },
+                                        {
+                                            "@componentDatatype": "double",
+                                            "concept": "wavelength",
+                                            "unit": "nM"
+                                        }
+                                    ],
+                                    "measures": [
+                                        {
+                                            "@componentDatatype": "double",
+                                            "concept": "absorbance",
+                                            "unit": "mAU"
+                                        }
+                                    ]
+                                },
+                                "data": {
+                                    "measures": [
+                                        [
+                                            [
+                                               
+                                            ]
+                                        ]
+                                    ],
+                                    "dimensions": [
+                                        [
+                                            
+                                        ]
+                                    ]
+                                },
+                                "identifier": "DAD1I"
+                            }
+                        },
+                        {
+                            "measurement identifier": "SQ1A 2024-04-12 10-23-04+02-00-20",
+                            "chromatography column document": {},
+                            "device control aggregate document": {
+                                "device control document": [
+                                    {
+                                        "device identifier": "",
+                                        "device type": "Diode array uv detector",
+                                        "product manufacturer": "Agilent",
+                                        "equipment serial number": "DEAC617961",
+                                        "model number": "G7115A",
+                                        "firmware version": "D.07.38 [0001]",
+                                        "detection type": "single channel"
+                                    }
+                                ]
+                            },
+                            "sample document": {
+                                "sample identifier": "0659d110-49d0-4e98-8f3a-1aaf9c4ec0d9",
+                                "written name": "1-4 PYRIDYL PIPERAZINE-2024-04-12 10-23-04+02-00-20.dx"
+                            },
+                            "injection document": {
+                                "autosampler injection volume setting (chromatography)": {
+                                    "value": 5,
+                                    "unit": "mm^3"
+                                },
+                                "injection identifier": "2024-04-12 10-23-04+02-00-20.dx",
+                                "injection time": "2024-04-12T08:23:47.113+00:00"
+                            },
+                            "detection type": "single channel",
+                            "chromatogram data cube": {
+                                "cube-structure": {
+                                    "dimensions": [],
+                                    "measures": []
+                                },
+                                "data": {
+                                    "measures": "",
+                                    "dimensions": ""
+                                }
+                            },
+                            "three-dimensional mass spectrum data cube": {
+                                "label": "SQ1A +/-ESI  Scan Frag=110.0V ",
+                                "cube-structure": {
+                                    "dimensions": [
+                                        {
+                                            "@componentDatatype": "double",
+                                            "concept": "retention time",
+                                            "unit": "s"
+                                        },
+                                        {
+                                            "@componentDatatype": "double",
+                                            "concept": "mass to charge ratio",
+                                            "unit": "(unitless)"
+                                        }
+                                    ],
+                                    "measures": [
+                                        {
+                                            "@componentDatatype": "double",
+                                            "concept": "temp_abundance",
+                                            "unit": "(unitless)"
+                                        }
+                                    ]
+                                },
+                                "data": [
+                                    {
+                                        "time": 0.5410000000000001,
+                                        "measures": [
+                                            [
+                                                
+                                            ]
+                                        ]
+                                    }
+                                ],
+                                "identifier": "SQ1A 2024-04-12 10-23-04+02-00-20"
+                            }
+                        }
+                    ]
+                },
+                "@index": 4
+            }
+        ],
+        "device system document": {
+            "asset management identifier": "a7155146-e1d0-41be-99bf-eb2e55f9766e",
+            "device document": [
+                {
+                    "device identifier": "LC Pump",
+                    "device type": "Pump",
+                    "model number": "G7104C",
+                    "product manufacturer": "Agilent",
+                    "equipment serial number": "DEAGZ02881",
+                    "firmware version": "B.07.38 [0003]",
+                    "@index": 1
+                },
+                {
+                    "device identifier": "Sampler",
+                    "device type": "Autosampler",
+                    "model number": "G7167A",
+                    "product manufacturer": "Agilent",
+                    "equipment serial number": "DEAGW00219",
+                    "firmware version": "D.07.38 [0003]",
+                    "@index": 2
+                },
+                {
+                    "device identifier": "MCT",
+                    "device type": "Oven",
+                    "model number": "G7116A",
+                    "product manufacturer": "Agilent",
+                    "equipment serial number": "DEAEM10233",
+                    "firmware version": "D.07.38 [0001]",
+                    "@index": 3
+                },
+                {
+                    "device identifier": "Flow Modulator",
+                    "device type": "Flow Splitter",
+                    "model number": "G7170B",
+                    "product manufacturer": "Agilent",
+                    "equipment serial number": "DEAG300596",
+                    "firmware version": "D.07.38 [0001]",
+                    "@index": 4
+                },
+                {
+                    "device identifier": "Collector",
+                    "device type": "Fraction Collector",
+                    "model number": "G1364F",
+                    "product manufacturer": "Agilent",
+                    "equipment serial number": "DEAGS01651",
+                    "firmware version": "D.07.38 [0001]",
+                    "@index": 5
+                },
+                {
+                    "device identifier": "DAD",
+                    "device type": "Diode array uv detector",
+                    "model number": "G7115A",
+                    "product manufacturer": "Agilent",
+                    "equipment serial number": "DEAC617961",
+                    "firmware version": "D.07.38 [0001]",
+                    "@index": 6
+                },
+                {
+                    "device identifier": "MS Pump",
+                    "device type": "Pump",
+                    "model number": "G7111A",
+                    "product manufacturer": "Agilent",
+                    "equipment serial number": "DEAEX00810",
+                    "firmware version": "D.07.38 [0001]",
+                    "@index": 7
+                },
+                {
+                    "device identifier": "SQ",
+                    "device type": "MS-SingleQuadrupole detector",
+                    "model number": "LC/MSD iQ",
+                    "product manufacturer": "Agilent",
+                    "equipment serial number": "SG2301R004",
+                    "firmware version": "6.74.3",
+                    "@index": 8
+                }
+            ]
+        }
+    },
+    "$asm.manifest": "http://purl.allotrope.org/manifests/liquid-chromatography/REC/2023/03/liquid-chromatography.manifest"
+}
