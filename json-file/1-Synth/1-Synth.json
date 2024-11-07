@@ -292,7 +292,7 @@
         }
     },
     {
-        "action_name": "shake",
+        "action_name": "shakeAction",
         "RotationTumbleStirrer":{
           "value": 600,
           "unit": "rpm"
@@ -335,7 +335,7 @@
         "containerBarcode": "1"
     },
     {
-        "action_name": "set_vacuum",
+        "action_name": "setVacuumAction",
         "vacuum":{
           "value": "",
           "unit": "bar"
@@ -349,7 +349,7 @@
         "containerBarcode": "1"
     },
     {
-        "action_name": "set_pressure",
+        "action_name": "setPressureAction",
         "pressureMeasurement":{
           "value": "",
           "unit": "bar"
@@ -385,7 +385,7 @@
         "containerBarcode": "1"
     },
     {
-      "action_name": "filtrate",
+      "action_name": "filtrateAction",
       "startTime": "2024-07-25_12:15:23",
       "method_name": "filtrate",
       "equipment_name": "Chemspeed SWING XL",

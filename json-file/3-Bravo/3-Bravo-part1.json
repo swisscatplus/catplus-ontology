@@ -8,62 +8,57 @@
                 "value": 156,
                 "unit": "°C"
             },
+            "sampleID": 26,
+            "containerID": 157,
+            "containerBarcode": "1234858858754848",
+            "position":"A1",
             "order": "1"
         },
         {
-            "action_name":"dilution", 
-            "solvent":{
-                "chemical": {
-                    "ID": "",
-                    "name": "Water",
-                    "CASNumber": "",
-                    "molecularMass": "",
-                    "smiles": "H2O"
+            "action_name":"dilution",
+            "hasSolvent":{
+                "hasChemical": {
+                    "chemicalID": "",
+                    "chemicalName": "Water",
+                    "CASNumber": "7732-18-5",
+                    "molecularMass": "18.015",
+                    "smiles": "O"
                     },
                 "volume":{
-                    "value": 1,
+                    "value": 0.5,
                     "unit": "mL"
                 }
             },
+            "sampleID": 26,
+            "containerID": 157,
+            "containerBarcode": "1234858858754848",
+            "position":"A1",
             "order": "2"
-        },
-        {
-            "action_name":"magneticStirrer",
-            "startTime": "2024-07-25_12:03:31",
-            "endingtime": "2024-07-25_12:15:20",
-            "speed":{
-                "value": 152,
-                "unit": "rpm"
-            },
-            "order": "3"
         },
         {
             "action_name":"solventChange",
             "SPEprocess": true,
-            "solvent":{
-                "chemical": {
-                    "ID": "",
-                    "name": "Acetonitrile",
-                    "CASNumber": "",
-                    "molecularMass": "",
-                    "smiles": ""
+            "hasSolvent":{
+                "hasChemical": {
+                    "chemicalID": "",
+                    "chemicalName": "Acetonitrile",
+                    "CASNumber": "75-05-8",
+                    "molecularMass": "41.05",
+                    "smiles": "CC#N"
                     },
                 "volume":{
                     "value": 50,
                     "unit": "uL"
-                },
+                }
             },
-            "order": "4"
-        },
-        {
-            "action_name":"magneticStirrer",
-            "startTime": "2024-07-25_12:03:31",
-            "endingtime": "2024-07-25_12:15:20",
-            "speed":{
-                "value": 152,
-                "unit": "rpm"
+            "hasCartridge":{
+
             },
-            "order": "5"
+            "sampleID": 26,
+            "containerID": 157,
+            "containerBarcode": "1234858858754848",
+            "position":"A1",
+            "order": "3"
         }
     ]
 }

@@ -1,0 +1,216 @@
+{
+    "actions": [
+        {
+            "action_name": "evaporation_75%",
+            "startTime": "2024-07-25_12:03:31", 
+            "endingtime": "2024-07-25_12:15:20",
+            "temperature":{
+                "value": 156,
+                "unit": "°C"
+            },
+            "sampleFraction": [
+                {
+                    "sampleID": 25,
+                    "containerID": 157,
+                    "containerBarcode": "1234858858754848",
+                    "position":"A1",
+                    "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809"
+                },
+                {
+                    "sampleID": 26,
+                    "containerID": 157,
+                    "containerBarcode": "1234858858754848",
+                    "position":"A2",
+                    "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809"
+                },
+                {
+                    "sampleID": 27,
+                    "containerID": 157,
+                    "containerBarcode": "1234858858754848",
+                    "position":"A3",
+                    "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809"
+                }
+            ],
+            "order": "1"
+        },
+        {
+            "action_name": "combination_one_well",
+            "startTime": "2024-07-25_12:03:31", 
+            "endingtime": "2024-07-25_12:15:20",
+            "temperature":{
+                "value": 156,
+                "unit": "°C"
+            },
+            "sampleID": 28,
+            "containerID": 158,
+            "containerBarcode": "1234858858754849",
+            "position":"A1",
+            "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809",
+            "order": "2"
+        },
+        {
+            "action_name": "evaporation_100%",
+            "startTime": "2024-07-25_12:03:31", 
+            "endingtime": "2024-07-25_12:15:20",
+            "temperature":{
+                "value": 156,
+                "unit": "°C"
+            },
+            "sampleID": 28,
+            "containerID": 158,
+            "containerBarcode": "1234858858754849",
+            "position":"A1",
+            "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809",
+            "order": "3"
+        },
+        {   "action_name":"dissolution",
+            "sampleID": 28,
+            "containerID": 158,
+            "containerBarcode": "1234858858754849",
+            "position":"A1",
+            "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809",
+            "hasSolvent":{
+                "hasChemical": {
+                    "chemicalID": "",
+                    "chemicalName": "Chloroform",
+                    "CASNumber": "67-66-3",
+                    "molecularMass": "119.37",
+                    "smiles": "C1CCOC1"
+                    },
+                "volume":{
+                    "value": 0.15,
+                    "unit": "mL"
+                    }
+                },
+            "order":"4"
+        },
+        {
+            "action_name":"magneticStirrer",
+            "startTime": "2024-07-25_12:03:31",
+            "endingtime": "2024-07-25_12:15:20",
+            "speed":{
+                "value": 152,
+                "unit": "rpm"
+            },
+            "sampleID": 28,
+            "containerID": 158,
+            "containerBarcode": "1234858858754849",
+            "position":"A1",
+            "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809",
+            "order": "5"
+        },
+        {
+            "action_name": "separation_3wells",
+            "startTime": "2024-07-25_12:03:31", 
+            "endingtime": "2024-07-25_12:15:20",
+            "sampleFraction": [
+                {
+                    "sampleID": 29,
+                    "containerID": 159,
+                    "containerBarcode": "1234858858754847",
+                    "position":"A1",
+                    "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809",
+                    "quantity":{
+                        "value": 0.125,
+                        "unit": "mL"
+                    }
+                },
+                {
+                    "sampleID": 30,
+                    "containerID": 159,
+                    "containerBarcode": "1234858858754847",
+                    "position":"A2",
+                    "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809",
+                    "quantity":{
+                        "value": 0.025,
+                        "unit": "mL"
+                    }
+                },
+                {
+                    "sampleID": 31,
+                    "containerID": 159,
+                    "containerBarcode": "1234858858754847",
+                    "position":"A3",
+                    "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809",
+                    "quantity":{
+                        "value": 0.025,
+                        "unit": "mL"
+                    }
+                }
+            ],
+            "order": "6"
+        },
+        {   "action_name":"dilution_in_series",
+            "sampleID": 30,
+            "containerID": 159,
+            "containerBarcode": "1234858858754847",
+            "position":"A2",
+            "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809",
+            "hasSolvent":{
+                "hasChemical": {
+                    "chemicalID": "",
+                    "chemicalName": "Chloroform",
+                    "CASNumber": "67-66-3",
+                    "molecularMass": "119.37",
+                    "smiles": "C1CCOC1"
+                    },
+                "volume":{
+                    "value": 0.075,
+                    "unit": "mL"
+                    }
+                },
+            "order":"7"
+        },
+        {
+            "action_name": "evaporation_100%",
+            "startTime": "2024-07-25_12:03:31", 
+            "endingtime": "2024-07-25_12:15:20",
+            "temperature":{
+                "value": 156,
+                "unit": "°C"
+            },
+            "sampleID": 31,
+            "containerID": 159,
+            "containerBarcode": "1234858858754847",
+            "position":"A2",
+            "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809",
+            "order": "8"
+        },
+        {   "action_name":"dissolution",
+            "sampleID": 31,
+            "containerID": 159,
+            "containerBarcode": "1234858858754847",
+            "position":"A2",
+            "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809",
+            "hasSolvent":{
+                "hasChemical": {
+                    "chemicalID": "",
+                    "chemicalName": "Chloroform-deuterated",
+                    "CASNumber": "865-49-6",
+                    "molecularMass": "120.38",
+                    "smiles": "[2H]C(Cl)(Cl)Cl"
+                    },
+                "volume":{
+                    "value": 0.1,
+                    "unit": "mL"
+                    }
+                },
+            "order":"9"
+        },
+        {
+            "action_name":"magneticStirrer",
+            "startTime": "2024-07-25_12:03:31",
+            "endingtime": "2024-07-25_12:15:20",
+            "speed":{
+                "value": 152,
+                "unit": "rpm"
+            },
+            "sampleID": 31,
+            "containerID": 159,
+            "containerBarcode": "1234858858754847",
+            "position":"A2",
+            "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809",
+            "order": "10"
+        }
+    ] 
+}
