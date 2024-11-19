@@ -35,10 +35,15 @@ cat: a owl:Ontology ;
     sh:entailment <http://www.w3.org/ns/entailment/RDFS>
     .
 
-allo-res:AFR_0001723 a rdfs:Property ;
+allo-res:AFR_0001723 a rdf:Property ;
     skos:prefLabel "equipment name" ;
     skos:definition "An equipment name is a written name refering to a device." ;
     skos:altLabel "device name" ;
+    .
+
+cat:subEquipmentName a rdf:Property ;
+    skos:prefLabel "sub equipment name" ;
+    skos:definition "A sub equipment name is a written name refering to a sub category of equipment." ;
     .
 
 allo-res:AFR_0002240 a rdf:Property ;
@@ -134,6 +139,11 @@ qudt:quantity a rdf:Property ;
     skos:definition "a property to relate an observable thing with a quantity (qudt:Quantity)" ;
     .
 
+qudt:unit a rdf:Property ;
+    skos:prefLabel "unit" ;
+    skos:definition "A reference to the unit of measure of a quantity (variable or constant) of interest." ;
+    .
+
 <http://purl.allotrope.org/ontologies/role#AFRL_0000474> a rdf:Property ;
     rdfs:subPropertyOf qudt:quantity ;
     skos:prefLabel "expected datum" ;
@@ -156,7 +166,7 @@ cat:vialType a rdf:Property ;
     skos:definition "classification and design of a vial used for particular purposes in laboratory settings, such as storage, preparation, sampling, or analysis." ;
     .
 
-cat:Role a rdf:Property ;
+cat:role a rdf:Property ;
     skos:prefLabel "role" ;
     skos:definition "A role is a function or position in a system. In our system, a role is the defined function for the sample or chemical within the context of the reaction." ;
     .
@@ -183,11 +193,6 @@ cat:internalBarCode a rdf:Property ;
     skos:prefLabel "internal barcode" ;
     skos:definition "An internal barcode is a unique identifier that identifies a sample" ;
     skos:example "EPFL barcode", "inhouse-created barcode" ;
-    .
-
-cat:position a rdf:Property ;
-    skos:prefLabel "position" ;
-    skos:definition "The position of the container in the container plate" ;
     .
 
 cat:vacuum a rdf:Property ;
@@ -222,10 +227,14 @@ cat:casNumber a rdf:Property ;
     skos:definition "A CAS number is a unique numerical identifier assigned by the Chemical Abstracts Service (CAS) to every chemical substance described in the open scientific literature." ;
     .
 
-cat:chemicalName a rdf:Property ;
+allo-res:AFR_0002292 a rdf:Property ;
     skos:prefLabel "chemical name" ;
-    skos:definition "A chemical name is a name that identifies a chemical substance." ;
+    skos:definition "A chemical name is the written name of a chemical substance that shows the names of each of its elements or subcompounds. [Allotrope]" ;
     skos:example "ethanol", "2-propanol", "sodium chloride" ;
+    .
+allo-res:AFR_0002464 a rdf:Property ;
+    skos:prefLabel "vial location identifier" ;
+    skos:definition "A vial location identifier is a local identifier that identifies the location of a vial in the vial plate in the scope of the vial plate. [Allotrope]" ;
     .
 
 cat:hasChemical a rdf:Property ;
@@ -234,9 +243,14 @@ cat:hasChemical a rdf:Property ;
     .
 
 cat:hasContainerPositionAndQuantity a rdf:Property ;
-skos:prefLabel "has Container Position and Quantity" ;
-skos:definition "indicates the relationship between a action and it's description of the container posititions and quantities" ;
-.
+    skos:prefLabel "has Container Position and Quantity" ;
+    skos:definition "indicates the relationship between a action and it's description of the container posititions and quantities" ;
+    .
+
+<http://purl.allotrope.org/ontologies/process#AFP_0002677> a rdf:Property ;
+    skos:prefLabel "pressure measurement" ;
+    skos:definition "A measurement that targets the pressure of some material entity. [Allotrope]" ;
+    .
 
 ###################################################################################################
 # Shapes
@@ -261,10 +275,27 @@ cat:setTemperatureAction a rdfs:Class, sh:NodeShape ;
     sh:property cat:temperatureTumbleStirrerShape ;
     .
 
+cat:setPressureAction a rdfs:Class, sh:NodeShape ;
+    rdfs:subClassOf <http://purl.allotrope.org/ontologies/realizable#AFRE_0000001> ;
+    sh:property [sh:path <http://purl.allotrope.org/ontologies/process#AFP_0002677> ;
+                 sh:node cat:Observation ; 
+                 sh:node [sh:property    [sh:path qudt:unit ; 
+                                         sh:hasValue unit:Bar] ]];
+    .
+
+cat:setVacuumAction a rdfs:Class, sh:NodeShape ;
+    rdfs:subClassOf <http://purl.allotrope.org/ontologies/realizable#AFRE_0000001> ;
+    sh:property [sh:path cat:vacuum ; #vacuum
+                 sh:node cat:Observation ; 
+                 sh:node [sh:property    [sh:path qudt:unit ; 
+                                            sh:hasValue unit:bar] ]];
+    .
+
 <http://purl.allotrope.org/ontologies/realizable#AFRE_0000001> a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Action" ;
     skos:definition "An action is a unit element in a procedure and is a concretization of an action specification." ; 
     sh:property [sh:path allo-res:AFR_0001723 ; sh:datatype xsd:string ] ;#Equipment name , 
+    sh:property [sh:path cat:subEquipmentName ; sh:datatype xsd:string ] ;#subEquipmentName
     sh:property [sh:path <https://schema.org/name> ; sh:datatype xsd:string ] ; #name
     sh:property [sh:path allo-prop:AFX_0000622 ; sh:datatype xsd:dateTime ] ;#startTime ,
     sh:property [sh:path allo-res:AFR_0002423 ; sh:datatype xsd:dateTime ] ;#endTime , 
@@ -282,9 +313,11 @@ cat:ContainerPositionAndQuantity a rdfs:Class, sh:NodeShape ;
                     The units are MilliL and MilliGM.""" ;
     skos:definition "Refers to specific aspects related to the handling and organization of samples or materials" ;
     sh:property [
-        sh:path allo-res:AFR_0002240 ; 
+        sh:path allo-res:AFR_0002240 ;                 #Well location identifier, also known as "position"
         sh:datatype xsd:string
-    ] ; #Well location identifier, also known as "position"
+    ] ;
+    sh:property [sh:path qudt:quantity ;
+                sh:node cat:Observation ]
     .
 
 cat:QuantityShape a sh:NodeShape ;
@@ -315,15 +348,15 @@ cat:Sample a rdfs:Class, sh:NodeShape ;
     skos:altLabel  "chemical mixture" ;
     skos:definition "A portion of chemical mixture is a chemical substance that is composed of chemical substances. [Allotrope]" ;
     sh:property [sh:path cat:containerID ; sh:datatype xsd:string] ;
-    sh:property [sh:path allo-res:AFR_0002464 ; sh:datatype xsd:string] ; #Vial location identifier
+    sh:property [sh:path allo-res:AFR_0002464 ; sh:datatype xsd:string] ; #VialID
     sh:property cat:vialShape ; #vial type
     sh:property [sh:path cat:role ] ;   #role
-    sh:property [sh:path purl:identifier ; sh:datatype xsd:string] ; #identifier
+    sh:property [sh:path purl:identifier ; sh:datatype xsd:string] ; #identifier/sampleID
     sh:property [sh:path <http://purl.allotrope.org/ontologies/role#AFRL_0000474> ; sh:node cat:Observation] ; #expectedDatum/quantity
     sh:property [sh:path cat:measuredQuantity ; sh:node cat:Observation] ; #measuredQuantity
     sh:property [sh:path allo-qual:AFQ_0000111 ; 
                 sh:xone ([ sh:hasValue "Solid"] 
-                        [sh:hasValue "Liquid"]) ; ] ;  #state of matter / dispense state
+                        [sh:hasValue "Liquid"]) ; ] ;  #dispense state
     sh:property [sh:path cat:internalBarCode ; sh:datatype xsd:string] ; #internal barcode
     sh:property [sh:path cat:containerBarcode ; sh:datatype xsd:string] ; #container barcode
     sh:property [sh:path allo-res:AFR_0002036 ; #concentration
@@ -335,12 +368,6 @@ cat:Sample a rdfs:Class, sh:NodeShape ;
                     sh:node [sh:property    [sh:path qudt:unit ; 
                                             sh:hasValue unit:PERCENT] ]];
     sh:property [sh:path cat:hasSample ; sh:class cat:Sample] ; #hasSample
-    sh:property [sh:path cat:vacuum ; sh:node cat:Observation ; #vacuum
-                    sh:node [sh:property    [sh:path qudt:unit ; 
-                                            sh:hasValue unit:bar] ]];
-    sh:property [sh:path allo-prop:AFX_0000060 ] ; #temperature
-    sh:property [sh:path cat:temperatureShaker ] ; #temperatureShaker
-    sh:property [sh:path cat:temperatureTumbleStirrer ] ; #temperatureTumbleStirrer
     sh:property [sh:path cat:hasChemical ; sh:class <http://purl.obolibrary.org/obo/CHEBI_25367> ] ; #hasChemical
     .
 
@@ -348,12 +375,12 @@ cat:Sample a rdfs:Class, sh:NodeShape ;
     rdfs:subClassOf <https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI_36357> ;
     sh:property [sh:path purl:CHEBIidentifier ; sh:datatype xsd:string] ;
     sh:property [sh:path purl:identifier ; sh:datatype xsd:string] ; #make mincount1
-    sh:property [sh:path cat:casNumber; sh:datatype xsd:string] ;
-    sh:property [sh:path cat:chemicalName; sh:datatype xsd:string] ;
+    sh:property [sh:path cat:casNumber; sh:datatype xsd:string] ; #CAS Number
+    sh:property [sh:path allo-res:AFR_0002292 ; sh:datatype xsd:string] ; #chemical name
     sh:property [sh:path allo-res:AFR_0002295 ; sh:datatype xsd:string] ; #smiles
     sh:property [sh:path allo-res:AFR_0002294 ; sh:datatype xsd:string] ; #molecularMass
-    sh:property [sh:path cat:swissCatNumber; sh:datatype xsd:string] ;
-    sh:property [sh:path schema:keywords; sh:datatype xsd:string] ;
+    sh:property [sh:path cat:swissCatNumber; sh:datatype xsd:string] ; #Swisscat number
+    sh:property [sh:path schema:keywords ; sh:datatype xsd:string] ; #keywords
     sh:property [sh:path allo-res:AFR_0001952 ; sh:datatype xsd:string] ; #molecular formula
     sh:property [sh:path allo-res:AFR_0002296 ; sh:datatype xsd:string] ; #inchi key
     sh:property [sh:path <http://purl.obolibrary.org/obo/PATO_0001019> ; sh:datatype xsd:string ;
@@ -491,6 +518,13 @@ allo-res:AFR_0002296 a rdf:Property ;
     skos:prefLabel "InChI" ;
     skos:definition "An InChI molecular structure is a molecular structure specified in IUPAC International Chemical Identifier (InChI) line notation. [edamontology.org]" ;
     . #tocheck
+    
+allo-prop:AFX_0000211 a rdf:Property ;
+    skos:prefLabel "speed" ;
+    skos:definition "Speed in revolutions per minute (RPM) is a measure of the frequency of rotation, specifically the number of full rotations completed in one minute around a fixed axis." ;
+    .
+
+
 
 <http://purl.obolibrary.org/obo/PATO_0001019> a rdf:Property ;
     skos:prefLabel "density" ;
