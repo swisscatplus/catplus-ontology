@@ -41,7 +41,7 @@
         },
         {
             "action_name": "combination",
-            "numberWell": "1",
+            "number_of_well": "1",
             "startTime": "2024-07-25_12:03:31",
             "endingtime": "2024-07-25_12:15:20",
             "hasSample": {
@@ -111,7 +111,10 @@
                     "chemicalID": "",
                     "chemicalName": "Chloroform",
                     "CASNumber": "67-66-3",
-                    "molecularMass": "119.37",
+                    "molecularMass": {
+                        "value": 119.37,
+                        "unit": "g/mol"
+                    },
                     "smiles": "C1CCOC1"
                 },
                 "volume": {
@@ -138,7 +141,7 @@
         },
         {
             "action_name": "separation",
-            "numberWell": "3",
+            "number_of_well": "3",
             "startTime": "2024-07-25_12:03:31",
             "endingtime": "2024-07-25_12:15:20",
             "hasSample": {
@@ -201,7 +204,10 @@
                     "chemicalID": "",
                     "chemicalName": "Chloroform",
                     "CASNumber": "67-66-3",
-                    "molecularMass": "119.37",
+                    "molecularMass": {
+                        "value": 119.37,
+                        "unit": "g/mol"
+                    },
                     "smiles": "C1CCOC1"
                 },
                 "volume": {
@@ -242,7 +248,10 @@
                     "chemicalID": "",
                     "chemicalName": "Chloroform-deuterated",
                     "CASNumber": "865-49-6",
-                    "molecularMass": "120.38",
+                    "molecularMass": {
+                        "value": 120.38,
+                        "unit": "g/mol"
+                    },
                     "smiles": "[2H]C(Cl)(Cl)Cl"
                 },
                 "volume": {

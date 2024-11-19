@@ -47,7 +47,10 @@
                             "chemicalID": "",
                             "chemicalName": "Tetrahydrofuran",
                             "CASNumber": "109-99-9",
-                            "molecularMass": "72.11",
+                            "molecularMass": {
+                                "value": 72.11,
+                                "unit": "g/mol"
+                            },
                             "smiles": "C(Cl)(Cl)Cl"
                         },
                         "volume": {
@@ -67,7 +70,10 @@
                             "chemicalID": "",
                             "chemicalName": "Chloroform",
                             "CASNumber": "67-66-3",
-                            "molecularMass": "119.37",
+                            "molecularMass": {
+                                "value": 119.37,
+                                "unit": "g/mol"
+                            },
                             "smiles": "C1CCOC1"
                         },
                         "volume": {
@@ -87,7 +93,10 @@
                             "chemicalID": "",
                             "chemicalName": "Chloroform-deuterated",
                             "CASNumber": "865-49-6",
-                            "molecularMass": "120.38",
+                            "molecularMass": {
+                                "value": 120.38,
+                                "unit": "g/mol"
+                            },
                             "smiles": "[2H]C(Cl)(Cl)Cl"
                         },
                         "volume": {

@@ -25,7 +25,10 @@
                     "chemicalID": "",
                     "chemicalName": "Water",
                     "CASNumber": "7732-18-5",
-                    "molecularMass": "18.015",
+                    "molecularMass": {
+                        "value": 18.015,
+                        "unit": "g/mol"
+                    },
                     "smiles": "O"
                 },
                 "volume": {
@@ -41,7 +44,7 @@
         },
         {
             "action_name": "solventChange",
-            "SPEprocess": true,
+            "SPMEprocess": true,
             "hasSubaction": [
                 {
                     "subaction_name": "separation-cartridge-part-1",
@@ -79,7 +82,10 @@
                     "chemicalID": "",
                     "chemicalName": "Acetonitrile",
                     "CASNumber": "75-05-8",
-                    "molecularMass": "41.05",
+                    "molecularMass": {
+                        "value": 41.05,
+                        "unit": "g/mol"
+                    },
                     "smiles": "CC#N"
                 },
                 "volume": {
