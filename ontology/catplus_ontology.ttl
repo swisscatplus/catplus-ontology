@@ -19,7 +19,7 @@ prefix allo-real: <http://purl.allotrope.org/ontologies/realizable#>
 prefix allo-qual: <http://purl.allotrope.org/ontologies/quality#> 
 prefix obo: <http://purl.obolibrary.org/obo/>
 
-#ontology for catalysis, chemistry
+
 #ontology for catalysis, chemistry
 cat: a owl:Ontology ;
     dct:abstract "The CAT+ ontology provides concepts (classes and properties) to model human and machine readable automated catalysis discovery experiment metadata. It is the result of re-using external pre-existing vocabularies such as Allotrope, schema.org and qudt, together with custom imaging specific objects and properties." ;
@@ -100,11 +100,6 @@ allo-res:AFR_0002423 a rdf:Property ;
     skos:prefLabel "end time" ;
     skos:definition "A end time is a time that denotes the end of some process. [Allotrope]" ;
     .
-
-##allo-prop:AFX_0000026> a rdf:Property ;
-##    skos:prefLabel "wavelength" ;
-##    skos:definition "Distance in the direction of propagation of a periodic wave between two successive points where at a given time the phase is the same. [IUPAC Gold Book]" ;
-##    .
 
 allo-res:AFR_0002464 a rdf:Property ;
     skos:prefLabel "vial location identifier" ;
@@ -268,14 +263,14 @@ cat:AddAction a rdfs:Class, sh:NodeShape ;
    sh:property cat:temperatureTumbleStirrerShape ;
     .
 
-cat:setTemperatureAction a rdfs:Class, sh:NodeShape ;
+cat:SetTemperatureAction a rdfs:Class, sh:NodeShape ;
     rdfs:subClassOf <http://purl.allotrope.org/ontologies/realizable#AFRE_0000001> ;
     sh:property cat:speedInRPM ;
     sh:property cat:temperatureShakerShape ;
     sh:property cat:temperatureTumbleStirrerShape ;
     .
 
-cat:setPressureAction a rdfs:Class, sh:NodeShape ;
+cat:SetPressureAction a rdfs:Class, sh:NodeShape ;
     rdfs:subClassOf <http://purl.allotrope.org/ontologies/realizable#AFRE_0000001> ;
     sh:property [sh:path <http://purl.allotrope.org/ontologies/process#AFP_0002677> ;
                  sh:node cat:Observation ; 
@@ -283,7 +278,7 @@ cat:setPressureAction a rdfs:Class, sh:NodeShape ;
                                          sh:hasValue unit:Bar] ]];
     .
 
-cat:setVacuumAction a rdfs:Class, sh:NodeShape ;
+cat:SetVacuumAction a rdfs:Class, sh:NodeShape ;
     rdfs:subClassOf <http://purl.allotrope.org/ontologies/realizable#AFRE_0000001> ;
     sh:property [sh:path cat:vacuum ; #vacuum
                  sh:node cat:Observation ; 
