@@ -218,6 +218,7 @@ cat:temperatureTumbleStirrer a rdf:Property ;
     .
 
 cat:casNumber a rdf:Property ;
+    skos:related <https://www.cas.org/> ;
     skos:prefLabel "CAS number" ;
     skos:definition "A CAS number is a unique numerical identifier assigned by the Chemical Abstracts Service (CAS) to every chemical substance described in the open scientific literature." ;
     .
@@ -518,8 +519,6 @@ allo-prop:AFX_0000211 a rdf:Property ;
     skos:prefLabel "speed" ;
     skos:definition "Speed in revolutions per minute (RPM) is a measure of the frequency of rotation, specifically the number of full rotations completed in one minute around a fixed axis." ;
     .
-
-
 
 <http://purl.obolibrary.org/obo/PATO_0001019> a rdf:Property ;
     skos:prefLabel "density" ;
