@@ -49,6 +49,7 @@
             ],
             "startTime": "2024-07-25_12:00:13",
             "endingTime": "2024-07-25_12:00:17",
+            "methodName": "addition",
             "dispenseState": "liquid",
             "dispenseType": "volume",
             "hasSample": {
@@ -116,6 +117,7 @@
             ],
             "startTime": "2024-07-25_12:01:29",
             "endingTime": "2024-07-25_12:01:35",
+            "methodName": "addition",
             "dispenseState": "liquid",
             "dispenseType": "volume",
             "hasSample": {
@@ -125,7 +127,7 @@
                 },
                 "containerID": "18",
                 "containerBarcode": "18",
-                "vialId": "17",
+                "vialID": "17",
                 "vialType": "storage vial",
                 "role": "reagent",
                 "hasSample": [
@@ -187,6 +189,7 @@
             ],
             "startTime": "2024-07-25_12:02:01",
             "endingTime": "2024-07-25_12:02:03",
+            "methodName": "addition",
             "dispenseState": "solid",
             "dispenseType": "mass",
             "hasSample": {
@@ -258,6 +261,7 @@
             ],
             "startTime": "2024-07-25_12:02:39",
             "endingTime": "2024-07-25_12:02:41",
+            "methodName": "addition",
             "dispenseState": "liquid",
             "dispenseType": "volume",
             "hasSample": {
@@ -311,6 +315,7 @@
             },
             "startTime": "2024-07-25_12:03:31",
             "endingtime": "2024-07-25_12:15:20",
+            "methodName": "shake",
             "temperatureTumbleStirrer": {
                 "value": 25,
                 "unit": "°C"
