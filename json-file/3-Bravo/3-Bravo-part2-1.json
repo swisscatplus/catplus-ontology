@@ -1,9 +1,9 @@
 {
-    "actions": [
+    "Actions": [
         {
-            "action_name": "evaporation",
+            "actionName": "evaporation",
             "startTime": "2024-07-25_12:03:31",
-            "endingtime": "2024-07-25_12:15:20",
+            "endingTime": "2024-07-25_12:15:20",
             "temperature": {
                 "value": 156,
                 "unit": "°C"
@@ -34,7 +34,7 @@
             "order": "1"
         },
         {
-            "action_name": "dissolution",
+            "actionName": "dissolution",
             "sampleFraction": [
                 {
                     "sampleID": 25,
@@ -109,9 +109,9 @@
             "order": "2"
         },
         {
-            "action_name": "magneticStirrer",
+            "actionName": "magneticStirrer",
             "startTime": "2024-07-25_12:03:31",
-            "endingtime": "2024-07-25_12:15:20",
+            "endingTime": "2024-07-25_12:15:20",
             "speed": {
                 "value": 152,
                 "unit": "rpm"

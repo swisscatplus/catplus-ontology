@@ -1,6 +1,6 @@
 {
     "batchID": "23",
-    "Action": [
+    "Actions": [
         {
             "actionName": "setTemperatureAction",
             "speedShaker": {
@@ -309,7 +309,7 @@
         },
         {
             "actionName": "shakeAction",
-            "speedTumbleStirrer": {
+            "speedStirrer": {
                 "value": 600,
                 "unit": "rpm"
             },
