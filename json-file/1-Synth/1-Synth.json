@@ -1,6 +1,6 @@
 {
     "batchID": "23",
-    "Action": [
+    "Actions": [
         {
             "actionName": "setTemperatureAction",
             "speedShaker": {
