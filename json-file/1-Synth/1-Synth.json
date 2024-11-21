@@ -309,7 +309,7 @@
         },
         {
             "actionName": "shakeAction",
-            "speedStirrer": {
+            "speedTumbleStirrer": {
                 "value": 600,
                 "unit": "rpm"
             },
