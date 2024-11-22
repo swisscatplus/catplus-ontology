@@ -404,6 +404,7 @@
         {
             "actionName": "filtrateAction",
             "startTime": "2024-07-25_12:15:23",
+            "endingTime":"2024-07-25_12:16:50",
             "methodName": "filtrate",
             "equipmentName": "Chemspeed SWING XL",
             "subEquipmentName": "Filtration station",
