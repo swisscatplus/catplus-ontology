@@ -233,6 +233,11 @@ cat:hasChemical a rdf:Property ;
     skos:definition "The chemical that is part of the sample" ;
     .
 
+cat:subEquipmentName a rdf:Property ;
+    skos:prefLabel "sub equipment name" ;
+    skos:definition "The name of the sub equipment used in the experiment" ;
+    .
+
 cat:hasContainerPositionAndQuantity a rdf:Property ;
 skos:prefLabel "has Container Position and Quantity" ;
 skos:definition "indicates the relationship between a action and it's description of the container posititions and quantities" ;
@@ -249,7 +254,7 @@ cat:AddAction a rdfs:Class, sh:NodeShape ;
    sh:property [sh:path allo-qual:AFQ_0000111 ; 
                 sh:xone ([ sh:hasValue "Solid"] 
                         [sh:hasValue "Liquid"]) ; ] ; #state of matter / dispense state
-   sh:property cat:speedInRPM ;
+   sh:property cat:speedShaker ;
    sh:property cat:temperatureShakerShape ;
    sh:property cat:temperatureTumbleStirrerShape ;
     .
@@ -269,7 +274,7 @@ cat:setTemperatureAction a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path allo-prop:AFX_0000622 ; sh:datatype xsd:dateTime ] ;#startTime ,
     sh:property [sh:path allo-res:AFR_0002423 ; sh:datatype xsd:dateTime ] ;#endTime , 
     sh:property [sh:path allo-res:AFR_0001606 ; sh:datatype xsd:string ] ;#methodName
-    sh:property [sh:path cat:localEquipmentName ; sh:datatype xsd:string ] ;#localEquipmentName
+    sh:property [sh:path cat:subEquipmentName ; sh:datatype xsd:string ] ;#subEquipmentName
     sh:property [sh:path cat:containerBarcode ; sh:datatype xsd:string ] ;#containerBarcode
     sh:property [sh:path cat:containerID ; sh:datatype xsd:string ] ;#containerID
     sh:property [sh:path cat:hasBatch ; sh:class cat:Batch] ; #hasBatch
@@ -514,11 +519,6 @@ cat:temperatureShakerShape a sh:PropertyShape ;
     sh:path cat:temperatureShaker ;
     sh:node cat:Observation ;
     sh:property [sh:path qudt:unit ; sh:hasValue unit:DEG_C]
-    .
-
-cat:wavelengthShape a sh:PropertyShape ;
-    sh:path cat:wavelength ;
-    sh:node cat:Observation ; 
     .
 
 cat:speedInRPM a sh:PropertyShape ;
