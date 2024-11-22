@@ -266,7 +266,7 @@ cat:AddAction a rdfs:Class, sh:NodeShape ;
 
 cat:SetTemperatureAction a rdfs:Class, sh:NodeShape ;
     rdfs:subClassOf <http://purl.allotrope.org/ontologies/realizable#AFRE_0000001> ;
-    sh:property cat:speedInRPM ;
+    sh:property cat:speedShakerShape ;
     sh:property cat:temperatureShakerShape ;
     sh:property cat:temperatureTumbleStirrerShape ;
     .
@@ -285,6 +285,17 @@ cat:SetVacuumAction a rdfs:Class, sh:NodeShape ;
                  sh:node cat:Observation ; 
                  sh:node [sh:property    [sh:path qudt:unit ; 
                                             sh:hasValue unit:bar] ]];
+    .
+
+cat:ShakeAction a rdfs:Class, sh:NodeShape ;
+    rdfs:subClassOf <http://purl.allotrope.org/ontologies/realizable#AFRE_0000001> ;
+    sh:property cat:speedTumbleStirrerShape ;
+    sh:property cat:temperatureShakerShape ;
+    sh:property cat:temperatureTumbleStirrerShape ;
+    .
+
+cat:FiltrateAction a rdfs:Class, sh:NodeShape ;
+    rdfs:subClassOf <http://purl.allotrope.org/ontologies/realizable#AFRE_0000001> ;
     .
 
 <http://purl.allotrope.org/ontologies/realizable#AFRE_0000001> a rdfs:Class, sh:NodeShape ;
@@ -432,7 +443,7 @@ cat:Product a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path <http://purl.allotrope.org/ontologies/result#AFR_0000951> ; sh:datatype xsd:string] ;
     .
 
-<http://purl.allotrope.org/ontologies/result#AFR_0000951> a rdf:Property ;
+allo-res:AFR_0000951 a rdf:Property ;
     skos:prefLabel "duration" ;
     skos:definition "A measure of the magnitude of the time region in which the process occurs. [Allotrope]" ;
     .
@@ -489,13 +500,13 @@ cat:researchClassificaiton a rdf:Property ;
 
 cat:criteria a rdf:Property ;
     skos:prefLabel "criteria" ;
-    skos:definition "A criteria is a standard or rule by which the success of the experiment is judged." ; #todo check
+    skos:definition "A criteria is a standard or rule by which the success of the experiment is judged." ;
     .
 
 cat:swissCatNumber a rdf:Property ;
     skos:prefLabel "SwissCAT number" ;
     skos:definition "A SwissCAT number is a unique identifier assigned by the SwissCAT to every chemical substance described in the open scientific literature." ;
-    .#todo
+    .
 
 schema:keywords a rdf:Property ;
     skos:prefLabel "keywords" ;
@@ -513,7 +524,7 @@ allo-res:AFR_0001952 a rdf:Property ;
 allo-res:AFR_0002296 a rdf:Property ;
     skos:prefLabel "InChI" ;
     skos:definition "An InChI molecular structure is a molecular structure specified in IUPAC International Chemical Identifier (InChI) line notation. [edamontology.org]" ;
-    . #tocheck
+    . 
     
 allo-prop:AFX_0000211 a rdf:Property ;
     skos:prefLabel "speed" ;
@@ -522,12 +533,12 @@ allo-prop:AFX_0000211 a rdf:Property ;
 
 <http://purl.obolibrary.org/obo/PATO_0001019> a rdf:Property ;
     skos:prefLabel "density" ;
-    skos:definition "A physical quality which inheres in a bearer by virtue of some influence is exerted by the bearer's mass per unit size." ; #todo check
+    skos:definition "A physical quality which inheres in a bearer by virtue of some influence is exerted by the bearer's mass per unit size." ; 
     .
 
 cat:theoreticalRole a rdf:Property ;
     skos:prefLabel "theoretical role" ;
-    skos:definition "The theoretical role is the role of the molecule in the context of the reaction." ;#todo
+    skos:definition "The theoretical role is the role of the molecule in the context of the reaction." ;
     .
 
 
@@ -550,6 +561,20 @@ cat:wavelengthShape a sh:PropertyShape ;
     .
 
 cat:speedInRPM a sh:PropertyShape ;
+    sh:path allo-prop:AFX_0000211 ;
+    sh:node cat:Observation ;
+    sh:node [sh:property [sh:path qudt:unit ;
+                sh:hasValue unit:REV-PER-MIN] ;]
+    .
+
+cat:speedTumbleStirrerShape a sh:PropertyShape ;
+    sh:path allo-prop:AFX_0000211 ;
+    sh:node cat:Observation ;
+    sh:node [sh:property [sh:path qudt:unit ;
+                sh:hasValue unit:REV-PER-MIN] ;]
+    .
+
+cat:speedShakerShape a sh:PropertyShape ;
     sh:path allo-prop:AFX_0000211 ;
     sh:node cat:Observation ;
     sh:node [sh:property [sh:path qudt:unit ;
