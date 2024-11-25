@@ -15,8 +15,8 @@
                 "value": 25,
                 "unit": "°C"
             },
-            "startTime": "2024-07-25_12:00:00",
-            "endingTime": "2024-07-25_12:00:02",
+            "startTime": "2024-07-25T12:00:00",
+            "endingTime": "2024-07-25T12:00:02",
             "methodName": "set_temperature",
             "equipmentName": "Chemspeed SWING XL",
             "subEquipmentName": "heater",
@@ -47,10 +47,10 @@
                     }
                 }
             ],
-            "startTime": "2024-07-25_12:00:13",
-            "endingTime": "2024-07-25_12:00:17",
+            "startTime": "2024-07-25T12:00:13",
+            "endingTime": "2024-07-25T12:00:17",
             "methodName": "addition",
-            "dispenseState": "liquid",
+            "dispenseState": "Liquid",
             "dispenseType": "volume",
             "hasSample": {
                 "expectedDatum": {
@@ -71,7 +71,7 @@
                             "value": "",
                             "unit": "mg"
                         },
-                        "physicalState": "liquid",
+                        "physicalState": "Liquid",
                         "concentration": {
                             "value": "",
                             "unit": "mol/L"
@@ -115,10 +115,10 @@
                     }
                 }
             ],
-            "startTime": "2024-07-25_12:01:29",
-            "endingTime": "2024-07-25_12:01:35",
+            "startTime": "2024-07-25T12:01:29",
+            "endingTime": "2024-07-25T12:01:35",
             "methodName": "addition",
-            "dispenseState": "liquid",
+            "dispenseState": "Liquid",
             "dispenseType": "volume",
             "hasSample": {
                 "expectedDatum": {
@@ -143,7 +143,7 @@
                             "value": "",
                             "unit": "mg"
                         },
-                        "physicalState": "liquid",
+                        "physicalState": "Liquid",
                         "concentration": {
                             "value": "",
                             "unit": "mol/L"
@@ -187,10 +187,10 @@
                     }
                 }
             ],
-            "startTime": "2024-07-25_12:02:01",
-            "endingTime": "2024-07-25_12:02:03",
+            "startTime": "2024-07-25T12:02:01",
+            "endingTime": "2024-07-25T12:02:03",
             "methodName": "addition",
-            "dispenseState": "solid",
+            "dispenseState": "Solid",
             "dispenseType": "mass",
             "hasSample": {
                 "expectedDatum": {
@@ -215,7 +215,7 @@
                             "value": "",
                             "unit": "mg"
                         },
-                        "physicalState": "liquid",
+                        "physicalState": "Liquid",
                         "concentration": {
                             "value": "",
                             "unit": "mol/L"
@@ -259,10 +259,10 @@
                     }
                 }
             ],
-            "startTime": "2024-07-25_12:02:39",
-            "endingTime": "2024-07-25_12:02:41",
+            "startTime": "2024-07-25T12:02:39",
+            "endingTime": "2024-07-25T12:02:41",
             "methodName": "addition",
-            "dispenseState": "liquid",
+            "dispenseState": "Liquid",
             "dispenseType": "volume",
             "hasSample": {
                 "expectedDatum": {
@@ -287,7 +287,7 @@
                             "value": "",
                             "unit": "mg"
                         },
-                        "physicalState": "liquid",
+                        "physicalState": "Liquid",
                         "concentration": {
                             "value": "",
                             "unit": "mol/L"
@@ -313,8 +313,8 @@
                 "value": 600,
                 "unit": "rpm"
             },
-            "startTime": "2024-07-25_12:03:31",
-            "endingtime": "2024-07-25_12:15:20",
+            "startTime": "2024-07-25T12:03:31",
+            "endingTime": "2024-07-25T12:15:20",
             "methodName": "shake",
             "temperatureTumbleStirrer": {
                 "value": 25,
@@ -343,8 +343,8 @@
                 "value": 25,
                 "unit": "°C"
             },
-            "startTime": "2024-07-25_12:03:31",
-            "endingTime": "2024-07-25_12:03:41",
+            "startTime": "2024-07-25T12:03:31",
+            "endingTime": "2024-07-25T12:03:41",
             "methodName": "set_temperature",
             "equipmentName": "Chemspeed SWING XL",
             "subEquipmentName": "heater",
@@ -357,8 +357,8 @@
                 "value": 20,
                 "unit": "bar"
             },
-            "startTime": "2024-07-25_12:03:41",
-            "endingTime": "2024-07-25_12:03:50",
+            "startTime": "2024-07-25T12:03:41",
+            "endingTime": "2024-07-25T12:03:50",
             "methodName": "set_vacuum",
             "equipmentName": "Chemspeed SWING XL",
             "subEquipmentName": "vacuum",
@@ -371,8 +371,8 @@
                 "value": 5,
                 "unit": "bar"
             },
-            "startTime": "2024-07-25_12:03:50",
-            "endingTime": "2024-07-25_12:04:057",
+            "startTime": "2024-07-25T12:03:50",
+            "endingTime": "2024-07-25T12:04:057",
             "methodName": "set_pressure",
             "equipmentName": "Chemspeed SWING XL",
             "subEquipmentName": "MTP_Pressure",
@@ -393,8 +393,8 @@
                 "value": 25,
                 "unit": "°C"
             },
-            "startTime": "2024-07-25_12:04:57",
-            "endingTime": "2024-07-25_12:05:20",
+            "startTime": "2024-07-25T12:04:57",
+            "endingTime": "2024-07-25T12:05:20",
             "methodName": "set_temperature",
             "equipmentName": "Chemspeed SWING XL",
             "subEquipmentName": "heater",
@@ -403,8 +403,8 @@
         },
         {
             "actionName": "filtrateAction",
-            "startTime": "2024-07-25_12:15:23",
-            "endingTime":"2024-07-25_12:16:50",
+            "startTime": "2024-07-25T12:15:23",
+            "endingTime":"2024-07-25T12:16:50",
             "methodName": "filtrate",
             "equipmentName": "Chemspeed SWING XL",
             "subEquipmentName": "Filtration station",
