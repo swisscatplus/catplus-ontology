@@ -1,13 +1,13 @@
 {
-    "actions": [
+    "Actions": [
         {
-            "action_name": "evaporation",
-            "volume_evaporation_final": {
+            "actionName": "evaporation",
+            "volumeEvaporationFinal": {
                 "value": "100",
                 "unit": "%"
             },
             "startTime": "2024-07-25_12:03:31",
-            "endingtime": "2024-07-25_12:15:20",
+            "endingTime": "2024-07-25_12:15:20",
             "temperature": {
                 "value": 156,
                 "unit": "°C"
@@ -19,13 +19,16 @@
             "order": "1"
         },
         {
-            "action_name": "dilution",
+            "actionName": "dilution",
             "hasSolvent": {
                 "hasChemical": {
                     "chemicalID": "",
                     "chemicalName": "Water",
                     "CASNumber": "7732-18-5",
-                    "molecularMass": "18.015",
+                    "molecularMass": {
+                        "value": 18.015,
+                        "unit": "g/mol"
+                    },
                     "smiles": "O"
                 },
                 "volume": {
@@ -40,35 +43,35 @@
             "order": "2"
         },
         {
-            "action_name": "solventChange",
-            "SPEprocess": true,
-            "hasSubaction": [
+            "actionName": "solventChange",
+            "SPMEprocess": true,
+            "hasSubAction": [
                 {
-                    "subaction_name": "separation-cartridge-part-1",
+                    "subActionName": "separation-cartridge-part-1",
                     "hasCartridge": {
                         "cartridgeName": "unknown-cartridge",
                         "cartridgeComposition": "unknown-material"
                     },
-                    "starttime": {
+                    "startTime": {
                         "value": 0,
                         "unit": "min"
                     },
-                    "endingtime": {
+                    "endingTime": {
                         "value": 1,
                         "unit": "min"
                     }
                 },
                 {
-                    "subaction_name": "separation-cartridge-part2",
+                    "subActionName": "separation-cartridge-part2",
                     "hasCartridge": {
                         "cartridgeName": "C18Cartridge",
                         "cartridgeComposition": "C18"
                     },
-                    "starttime": {
+                    "startTime": {
                         "value": 1,
                         "unit": "min"
                     },
-                    "endingtime": {
+                    "endingTime": {
                         "value": 7,
                         "unit": "min"
                     }
@@ -79,7 +82,10 @@
                     "chemicalID": "",
                     "chemicalName": "Acetonitrile",
                     "CASNumber": "75-05-8",
-                    "molecularMass": "41.05",
+                    "molecularMass": {
+                        "value": 41.05,
+                        "unit": "g/mol"
+                    },
                     "smiles": "CC#N"
                 },
                 "volume": {

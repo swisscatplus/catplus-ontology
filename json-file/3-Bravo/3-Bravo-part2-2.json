@@ -1,8 +1,8 @@
 {
-    "actions": [
+    "Actions": [
         {
-            "action_name": "evaporation",
-            "volume_evaporation_final": {
+            "actionName": "evaporation",
+            "volumeEvaporationFinal": {
                 "value": "75",
                 "unit": "%"
             },
@@ -40,10 +40,10 @@
             "order": "1"
         },
         {
-            "action_name": "combination",
-            "numberWell": "1",
+            "actionName": "combination",
+            "numberOfWell": "1",
             "startTime": "2024-07-25_12:03:31",
-            "endingtime": "2024-07-25_12:15:20",
+            "endingTime": "2024-07-25_12:15:20",
             "hasSample": {
                 "sampleFraction": [
                     {
@@ -81,13 +81,13 @@
             }
         },
         {
-            "action_name": "evaporation",
-            "volume_evaporation_final": {
+            "actionName": "evaporation",
+            "volumeEvaporationFinal": {
                 "value": "100",
                 "unit": "%"
             },
             "startTime": "2024-07-25_12:03:31",
-            "endingtime": "2024-07-25_12:15:20",
+            "endingTime": "2024-07-25_12:15:20",
             "temperature": {
                 "value": 156,
                 "unit": "°C"
@@ -100,7 +100,7 @@
             "order": "3"
         },
         {
-            "action_name": "dissolution",
+            "actionName": "dissolution",
             "sampleID": 28,
             "containerID": 158,
             "containerBarcode": "1234858858754849",
@@ -111,7 +111,10 @@
                     "chemicalID": "",
                     "chemicalName": "Chloroform",
                     "CASNumber": "67-66-3",
-                    "molecularMass": "119.37",
+                    "molecularMass": {
+                        "value": 119.37,
+                        "unit": "g/mol"
+                    },
                     "smiles": "C1CCOC1"
                 },
                 "volume": {
@@ -122,9 +125,9 @@
             "order": "4"
         },
         {
-            "action_name": "magneticStirrer",
+            "actionName": "magneticStirrer",
             "startTime": "2024-07-25_12:03:31",
-            "endingtime": "2024-07-25_12:15:20",
+            "endingTime": "2024-07-25_12:15:20",
             "speed": {
                 "value": 152,
                 "unit": "rpm"
@@ -137,10 +140,10 @@
             "order": "5"
         },
         {
-            "action_name": "separation",
-            "numberWell": "3",
+            "actionName": "separation",
+            "numberOfWell": "3",
             "startTime": "2024-07-25_12:03:31",
-            "endingtime": "2024-07-25_12:15:20",
+            "endingTime": "2024-07-25_12:15:20",
             "hasSample": {
                 "sampleID": 28,
                 "containerID": 158,
@@ -190,7 +193,7 @@
             "order": "6"
         },
         {
-            "action_name": "dilution",
+            "actionName": "dilution",
             "sampleID": 30,
             "containerID": 159,
             "containerBarcode": "1234858858754847",
@@ -201,7 +204,10 @@
                     "chemicalID": "",
                     "chemicalName": "Chloroform",
                     "CASNumber": "67-66-3",
-                    "molecularMass": "119.37",
+                    "molecularMass": {
+                        "value": 119.37,
+                        "unit": "g/mol"
+                    },
                     "smiles": "C1CCOC1"
                 },
                 "volume": {
@@ -212,13 +218,13 @@
             "order": "7"
         },
         {
-            "action_name": "evaporation",
-            "volume_evaporation_final": {
+            "actionName": "evaporation",
+            "volumeEvaporationFinal": {
                 "value": "100",
                 "unit": "%"
             },
             "startTime": "2024-07-25_12:03:31",
-            "endingtime": "2024-07-25_12:15:20",
+            "endingTime": "2024-07-25_12:15:20",
             "temperature": {
                 "value": 156,
                 "unit": "°C"
@@ -231,7 +237,7 @@
             "order": "8"
         },
         {
-            "action_name": "dissolution",
+            "actionName": "dissolution",
             "sampleID": 31,
             "containerID": 160,
             "containerBarcode": "1234858858754846",
@@ -242,7 +248,10 @@
                     "chemicalID": "",
                     "chemicalName": "Chloroform-deuterated",
                     "CASNumber": "865-49-6",
-                    "molecularMass": "120.38",
+                    "molecularMass": {
+                        "value": 120.38,
+                        "unit": "g/mol"
+                    },
                     "smiles": "[2H]C(Cl)(Cl)Cl"
                 },
                 "volume": {
@@ -253,9 +262,9 @@
             "order": "9"
         },
         {
-            "action_name": "magneticStirrer",
+            "actionName": "magneticStirrer",
             "startTime": "2024-07-25_12:03:31",
-            "endingtime": "2024-07-25_12:15:20",
+            "endingTime": "2024-07-25_12:15:20",
             "speed": {
                 "value": 152,
                 "unit": "rpm"
