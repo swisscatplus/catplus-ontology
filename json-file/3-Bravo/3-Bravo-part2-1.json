@@ -2,116 +2,123 @@
     "Actions": [
         {
             "actionName": "evaporation",
+            "equipmentName": "Evaporator",
+            "subEquipmentName": "item-1",
             "startTime": "2024-07-25_12:03:31",
             "endingTime": "2024-07-25_12:15:20",
+            "containerID": 157,
+            "containerBarcode": "1234858858754848",
+            "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809",
             "temperature": {
                 "value": 156,
                 "unit": "°C"
             },
-            "sampleFraction": [
+            "sampleList": [
                 {
                     "sampleID": 25,
-                    "containerID": 157,
-                    "containerBarcode": "1234858858754848",
-                    "position": "A1",
-                    "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809"
+                    "position": "A1"
                 },
                 {
                     "sampleID": 26,
-                    "containerID": 157,
-                    "containerBarcode": "1234858858754848",
-                    "position": "A2",
-                    "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809"
+                    "position": "A2"
                 },
                 {
                     "sampleID": 27,
-                    "containerID": 157,
-                    "containerBarcode": "1234858858754848",
-                    "position": "A3",
-                    "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809"
+                    "position": "A3"
                 }
             ],
             "order": "1"
         },
         {
             "actionName": "dissolution",
-            "sampleFraction": [
-                {
-                    "sampleID": 25,
-                    "containerID": 157,
-                    "containerBarcode": "1234858858754848",
-                    "position": "A1",
-                    "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809",
-                    "hasSolvent": {
-                        "hasChemical": {
-                            "chemicalID": "",
-                            "chemicalName": "Tetrahydrofuran",
-                            "CASNumber": "109-99-9",
-                            "molecularMass": {
-                                "value": 72.11,
-                                "unit": "g/mol"
-                            },
-                            "smiles": "C(Cl)(Cl)Cl"
-                        },
-                        "volume": {
-                            "value": 0.1,
-                            "unit": "mL"
-                        }
-                    }
+            "equipmentName": "solvent addition",
+            "subEquipmentName": "micropipette",
+            "sampleID": 25,
+            "containerID": 157,
+            "containerBarcode": "1234858858754848",
+            "position": "A1",
+            "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809",
+            "hasSolvent": {
+                "hasChemical": {
+                    "chemicalID": "",
+                    "chemicalName": "Tetrahydrofuran",
+                    "CASNumber": "109-99-9",
+                    "molecularMass": {
+                        "value": 72.11,
+                        "unit": "g/mol"
+                    },
+                    "smiles": "C(Cl)(Cl)Cl"
                 },
-                {
-                    "sampleID": 26,
-                    "containerID": 157,
-                    "containerBarcode": "1234858858754848",
-                    "position": "A2",
-                    "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809",
-                    "hasSolvent": {
-                        "hasChemical": {
-                            "chemicalID": "",
-                            "chemicalName": "Chloroform",
-                            "CASNumber": "67-66-3",
-                            "molecularMass": {
-                                "value": 119.37,
-                                "unit": "g/mol"
-                            },
-                            "smiles": "C1CCOC1"
-                        },
-                        "volume": {
-                            "value": 0.1,
-                            "unit": "mL"
-                        }
-                    }
-                },
-                {
-                    "sampleID": 27,
-                    "containerID": 157,
-                    "containerBarcode": "1234858858754848",
-                    "position": "A3",
-                    "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809",
-                    "hasSolvent": {
-                        "hasChemical": {
-                            "chemicalID": "",
-                            "chemicalName": "Chloroform-deuterated",
-                            "CASNumber": "865-49-6",
-                            "molecularMass": {
-                                "value": 120.38,
-                                "unit": "g/mol"
-                            },
-                            "smiles": "[2H]C(Cl)(Cl)Cl"
-                        },
-                        "volume": {
-                            "value": 0.1,
-                            "unit": "mL"
-                        }
-                    }
+                "volume": {
+                    "value": 0.1,
+                    "unit": "mL"
                 }
-            ],
+            },
             "order": "2"
         },
         {
+            "actionName": "dissolution",
+            "equipmentName": "solvent addition",
+            "subEquipmentName": "micropipette",
+            "sampleID": 26,
+            "containerID": 157,
+            "containerBarcode": "1234858858754848",
+            "position": "A2",
+            "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809",
+            "hasSolvent": {
+                "hasChemical": {
+                    "chemicalID": "",
+                    "chemicalName": "Chloroform",
+                    "CASNumber": "67-66-3",
+                    "molecularMass": {
+                        "value": 119.37,
+                        "unit": "g/mol"
+                    },
+                    "smiles": "C1CCOC1"
+                },
+                "volume": {
+                    "value": 0.1,
+                    "unit": "mL"
+                }
+            },
+            "order": "3"
+        },
+        {
+            "actionName": "dissolution",
+            "equipmentName": "solvent addition",
+            "subEquipmentName": "micropipette",
+            "sampleID": 27,
+            "containerID": 157,
+            "containerBarcode": "1234858858754848",
+            "position": "A3",
+            "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809",
+            "hasSolvent": {
+                "hasChemical": {
+                    "chemicalID": "",
+                    "chemicalName": "Chloroform-deuterated",
+                    "CASNumber": "865-49-6",
+                    "molecularMass": {
+                        "value": 120.38,
+                        "unit": "g/mol"
+                    },
+                    "smiles": "[2H]C(Cl)(Cl)Cl"
+                },
+                "volume": {
+                    "value": 0.1,
+                    "unit": "mL"
+                }
+            },
+            "order": "4"
+        },
+        {
             "actionName": "magneticStirrer",
+            "equipmentName": "agitation",
+            "subEquipmentName": "item-1",
             "startTime": "2024-07-25_12:03:31",
             "endingTime": "2024-07-25_12:15:20",
+            "containerID": 157,
+            "containerBarcode": "1234858858754848",
+            "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809",
             "speed": {
                 "value": 152,
                 "unit": "rpm"
@@ -119,27 +126,18 @@
             "sampleFraction": [
                 {
                     "sampleID": 25,
-                    "containerID": 157,
-                    "containerBarcode": "1234858858754848",
-                    "position": "A1",
-                    "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809"
+                    "position": "A1"
                 },
                 {
                     "sampleID": 26,
-                    "containerID": 157,
-                    "containerBarcode": "1234858858754848",
-                    "position": "A2",
-                    "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809"
+                    "position": "A2"
                 },
                 {
                     "sampleID": 27,
-                    "containerID": 157,
-                    "containerBarcode": "1234858858754848",
-                    "position": "A3",
-                    "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809"
+                    "position": "A3"
                 }
             ],
-            "order": "3"
+            "order": "5"
         }
     ]
 }

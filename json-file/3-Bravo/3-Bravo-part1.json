@@ -16,6 +16,8 @@
             "containerID": 157,
             "containerBarcode": "1234858858754848",
             "position": "A1",
+            "equipmentName": "Evaporator",
+            "subEquipmentName": "item-1",
             "order": "1"
         },
         {
@@ -40,6 +42,8 @@
             "containerID": 157,
             "containerBarcode": "1234858858754848",
             "position": "A1",
+            "equipmentName": "solvent adddition",
+            "subEquipmentName": "micropipette",
             "order": "2"
         },
         {
@@ -97,6 +101,8 @@
             "containerID": 157,
             "containerBarcode": "1234858858754848",
             "position": "A1",
+            "equipmentName": "SPE",
+            "subEquipmentName": "cartridge exchange",
             "order": "3"
         }
     ]

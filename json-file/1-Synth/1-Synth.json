@@ -33,14 +33,16 @@
             "subEquipmentName": "GDU-V",
             "hasContainerPositionAndQuantity": [
                 {
-                    "position": "1A1",
+                    "position": "A1",
+                    "containerID":"1",
                     "quantity": {
                         "value": 1,
                         "unit": "mg"
                     }
                 },
                 {
-                    "position": "1B1",
+                    "position": "B1",
+                    "containerID":"1",
                     "quantity": {
                         "value": 4,
                         "unit": "mg"
@@ -101,14 +103,16 @@
             "subEquipmentName": "GDU-V",
             "hasContainerPositionAndQuantity": [
                 {
-                    "position": "1A1",
+                    "position": "A1",
+                    "containerID":"1",
                     "quantity": {
                         "value": 0.024,
                         "unit": "mg"
                     }
                 },
                 {
-                    "position": "1B1",
+                    "position": "B1",
+                    "containerID":"1",
                     "quantity": {
                         "value": 0.034,
                         "unit": "mg"
@@ -173,14 +177,16 @@
             "subEquipmentName": "GDU-V",
             "hasContainerPositionAndQuantity": [
                 {
-                    "position": "1A1",
+                    "position": "A1",
+                    "containerID":"1",
                     "quantity": {
                         "value": 0.035,
                         "unit": "mg"
                     }
                 },
                 {
-                    "position": "1B1",
+                    "position": "B1",
+                    "containerID":"1",
                     "quantity": {
                         "value": 0.034,
                         "unit": "mg"
@@ -245,14 +251,16 @@
             "subEquipmentName": "GDU-V",
             "hasContainerPositionAndQuantity": [
                 {
-                    "position": "1A1",
+                    "position": "A1",
+                    "containerID":"1",
                     "quantity": {
                         "value": 0.052,
                         "unit": "mg"
                     }
                 },
                 {
-                    "position": "1B1",
+                    "position": "B1",
+                    "containerID":"1",
                     "quantity": {
                         "value": 0.054,
                         "unit": "mg"

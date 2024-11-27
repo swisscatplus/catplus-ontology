@@ -41,44 +41,37 @@
         },
         {
             "actionName": "combination",
-            "numberOfWell": "1",
             "startTime": "2024-07-25_12:03:31",
             "endingTime": "2024-07-25_12:15:20",
-            "hasSample": {
-                "sampleFraction": [
-                    {
-                        "sampleID": 25,
-                        "containerID": 157,
-                        "containerBarcode": "1234858858754848",
-                        "position": "A1",
-                        "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809"
-                    },
-                    {
-                        "sampleID": 26,
-                        "containerID": 157,
-                        "containerBarcode": "1234858858754848",
-                        "position": "A2",
-                        "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809"
-                    },
-                    {
-                        "sampleID": 27,
-                        "containerID": 157,
-                        "containerBarcode": "1234858858754848",
-                        "position": "A3",
-                        "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809"
-                    }
-                ],
-                "hasSample": [
-                    {
-                        "sampleID": 28,
-                        "containerID": 158,
-                        "containerBarcode": "1234858858754849",
-                        "position": "A1",
-                        "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809",
-                        "order": "2"
-                    }
-                ]
-            }
+            "sampleID": 28,
+            "containerID": 158,
+            "containerBarcode": "1234858858754849",
+            "position": "A1",
+            "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809",
+            "sampleFraction": [
+                {
+                    "sampleID": 25,
+                    "containerID": 157,
+                    "containerBarcode": "1234858858754848",
+                    "position": "A1",
+                    "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809"
+                },
+                {
+                    "sampleID": 26,
+                    "containerID": 157,
+                    "containerBarcode": "1234858858754848",
+                    "position": "A2",
+                    "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809"
+                },
+                {
+                    "sampleID": 27,
+                    "containerID": 157,
+                    "containerBarcode": "1234858858754848",
+                    "position": "A3",
+                    "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809"
+                }
+            ],
+            "order": "2"
         },
         {
             "actionName": "evaporation",
