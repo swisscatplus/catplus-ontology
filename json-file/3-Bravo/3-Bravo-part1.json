@@ -10,7 +10,11 @@
             "endingTime": "2024-07-25_12:15:20",
             "temperature": {
                 "value": 156,
-                "unit": "°C"
+                "unit": "°C",
+                "errorMargin": {
+                    "value": 1,
+                    "unit": "°C"
+                }
             },
             "sampleID": 26,
             "containerID": 157,
@@ -35,7 +39,11 @@
                 },
                 "volume": {
                     "value": 0.5,
-                    "unit": "mL"
+                    "unit": "mL",
+                    "errorMargin": {
+                        "value": 0.01,
+                        "unit": "mL"
+                    }
                 }
             },
             "sampleID": 26,
@@ -94,7 +102,11 @@
                 },
                 "volume": {
                     "value": 50,
-                    "unit": "uL"
+                    "unit": "uL",
+                    "errorMargin": {
+                        "value": 0.5,
+                        "unit": "uL"
+                    }
                 }
             },
             "sampleID": 26,

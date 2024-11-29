@@ -5,15 +5,27 @@
             "actionName": "setTemperatureAction",
             "speedShaker": {
                 "value": 152,
-                "unit": "rpm"
+                "unit": "rpm",
+                "errorMargin": {
+                    "value": 5,
+                    "unit": "rpm"
+                }
             },
             "temperatureTumbleStirrer": {
                 "value": 25,
-                "unit": "°C"
+                "unit": "°C",
+                "errorMargin": {
+                    "value": 2,
+                    "unit": "°C"
+                }
             },
             "temperatureShaker": {
                 "value": 25,
-                "unit": "°C"
+                "unit": "°C",
+                "errorMargin": {
+                    "value": 1,
+                    "unit": "°C"
+                }
             },
             "startTime": "2024-07-25T12:00:00",
             "endingTime": "2024-07-25T12:00:02",
@@ -27,25 +39,37 @@
             "actionName": "AddAction",
             "speedShaker": {
                 "value": 152,
-                "unit": "rpm"
+                "unit": "rpm",
+                "errorMargin": {
+                    "value": 1,
+                    "unit": "rpm"
+                }
             },
             "equipmentName": "Chemspeed SWING XL",
             "subEquipmentName": "GDU-V",
             "hasContainerPositionAndQuantity": [
                 {
                     "position": "A1",
-                    "containerID":"1",
+                    "containerID": "1",
                     "quantity": {
                         "value": 1,
-                        "unit": "mg"
+                        "unit": "mg",
+                        "errorMargin": {
+                            "value": 0.05,
+                            "unit": "mg"
+                        }
                     }
                 },
                 {
                     "position": "B1",
-                    "containerID":"1",
+                    "containerID": "1",
                     "quantity": {
                         "value": 4,
-                        "unit": "mg"
+                        "unit": "mg",
+                        "errorMargin": {
+                            "value": 0.02,
+                            "unit": "mg"
+                        }
                     }
                 }
             ],
@@ -71,7 +95,11 @@
                         "internalBarCode": "1",
                         "measuredQuantity": {
                             "value": "",
-                            "unit": "mg"
+                            "unit": "mg",
+                            "errorMargin": {
+                                "value": 0.01,
+                                "unit": "mg"
+                            }
                         },
                         "physicalState": "Liquid",
                         "concentration": {
@@ -97,25 +125,37 @@
             "actionName": "AddAction",
             "speedShaker": {
                 "value": 152,
-                "unit": "rpm"
+                "unit": "rpm",
+                "errorMargin": {
+                    "value": 1,
+                    "unit": "rpm"
+                }
             },
             "equipmentName": "Chemspeed SWING XL",
             "subEquipmentName": "GDU-V",
             "hasContainerPositionAndQuantity": [
                 {
                     "position": "A1",
-                    "containerID":"1",
+                    "containerID": "1",
                     "quantity": {
                         "value": 0.024,
-                        "unit": "mg"
+                        "unit": "mg",
+                        "errorMargin": {
+                            "value": 0.001,
+                            "unit": "mg"
+                        }
                     }
                 },
                 {
                     "position": "B1",
-                    "containerID":"1",
+                    "containerID": "1",
                     "quantity": {
                         "value": 0.034,
-                        "unit": "mg"
+                        "unit": "mg",
+                        "errorMargin": {
+                            "value": 0.002,
+                            "unit": "mg"
+                        }
                     }
                 }
             ],
@@ -144,8 +184,12 @@
                             "unit": "mg"
                         },
                         "measuredQuantity": {
-                            "value": "",
-                            "unit": "mg"
+                            "value": "1",
+                            "unit": "mg",
+                            "errorMargin": {
+                                "value": 0.001,
+                                "unit": "mg"
+                            }
                         },
                         "physicalState": "Liquid",
                         "concentration": {
@@ -171,25 +215,37 @@
             "actionName": "AddAction",
             "speedShaker": {
                 "value": 152,
-                "unit": "rpm"
+                "unit": "rpm",
+                "errorMargin": {
+                    "value": 1,
+                    "unit": "rpm"
+                }
             },
             "equipmentName": "Chemspeed SWING XL",
             "subEquipmentName": "GDU-V",
             "hasContainerPositionAndQuantity": [
                 {
                     "position": "A1",
-                    "containerID":"1",
+                    "containerID": "1",
                     "quantity": {
                         "value": 0.035,
-                        "unit": "mg"
+                        "unit": "mg",
+                        "errorMargin": {
+                            "value": 0.002,
+                            "unit": "mg"
+                        }
                     }
                 },
                 {
                     "position": "B1",
-                    "containerID":"1",
+                    "containerID": "1",
                     "quantity": {
                         "value": 0.034,
-                        "unit": "mg"
+                        "unit": "mg",
+                        "errorMargin": {
+                            "value": 0.001,
+                            "unit": "mg"
+                        }
                     }
                 }
             ],
@@ -218,8 +274,12 @@
                             "unit": "mg"
                         },
                         "measuredQuantity": {
-                            "value": "",
-                            "unit": "mg"
+                            "value": "1",
+                            "unit": "mg",
+                            "errorMargin": {
+                                "value": 0.01,
+                                "unit": "mg"
+                            }
                         },
                         "physicalState": "Liquid",
                         "concentration": {
@@ -245,25 +305,37 @@
             "actionName": "AddAction",
             "speedShaker": {
                 "value": 152,
-                "unit": "rpm"
+                "unit": "rpm",
+                "errorMargin": {
+                    "value": 1,
+                    "unit": "rpm"
+                }
             },
             "equipmentName": "Chemspeed SWING XL",
             "subEquipmentName": "GDU-V",
             "hasContainerPositionAndQuantity": [
                 {
                     "position": "A1",
-                    "containerID":"1",
+                    "containerID": "1",
                     "quantity": {
                         "value": 0.052,
-                        "unit": "mg"
+                        "unit": "mg",
+                        "errorMargin": {
+                            "value": 0.001,
+                            "unit": "mg"
+                        }
                     }
                 },
                 {
                     "position": "B1",
-                    "containerID":"1",
+                    "containerID": "1",
                     "quantity": {
                         "value": 0.054,
-                        "unit": "mg"
+                        "unit": "mg",
+                        "errorMargin": {
+                            "value": 0.01,
+                            "unit": "mg"
+                        }
                     }
                 }
             ],
@@ -292,8 +364,12 @@
                             "unit": "mg"
                         },
                         "measuredQuantity": {
-                            "value": "",
-                            "unit": "mg"
+                            "value": "5",
+                            "unit": "mg",
+                            "errorMargin": {
+                                "value": 0.1,
+                                "unit": "mg"
+                            }
                         },
                         "physicalState": "Liquid",
                         "concentration": {
@@ -319,18 +395,30 @@
             "actionName": "shakeAction",
             "speedTumbleStirrer": {
                 "value": 600,
-                "unit": "rpm"
+                "unit": "rpm",
+                "errorMargin": {
+                    "value": 1,
+                    "unit": "rpm"
+                }
             },
             "startTime": "2024-07-25T12:03:31",
             "endingTime": "2024-07-25T12:15:20",
             "methodName": "shake",
             "temperatureTumbleStirrer": {
                 "value": 25,
-                "unit": "°C"
+                "unit": "°C",
+                "errorMargin": {
+                    "value": 1,
+                    "unit": "°C"
+                }
             },
             "temperatureShaker": {
                 "value": 25,
-                "unit": "°C"
+                "unit": "°C",
+                "errorMargin": {
+                    "value": 2,
+                    "unit": "°C"
+                }
             },
             "equipmentName": "Chemspeed SWING XL",
             "subEquipmentName": "Tumble Stirrer",
@@ -341,15 +429,27 @@
             "actionName": "setTemperatureAction",
             "speedShaker": {
                 "value": 1000,
-                "unit": "rpm"
+                "unit": "rpm",
+                "errorMargin": {
+                    "value": 1,
+                    "unit": "rpm"
+                }
             },
             "temperatureTumbleStirrer": {
                 "value": 59.99,
-                "unit": "°C"
+                "unit": "°C",
+                "errorMargin": {
+                    "value": 1,
+                    "unit": "°C"
+                }
             },
             "temperatureShaker": {
                 "value": 25,
-                "unit": "°C"
+                "unit": "°C",
+                "errorMargin": {
+                    "value": 1,
+                    "unit": "°C"
+                }
             },
             "startTime": "2024-07-25T12:03:31",
             "endingTime": "2024-07-25T12:03:41",
@@ -363,7 +463,11 @@
             "actionName": "setVacuumAction",
             "vacuum": {
                 "value": 20,
-                "unit": "bar"
+                "unit": "bar",
+                "errorMargin": {
+                    "value": 0.5,
+                    "unit": "bar"
+                }
             },
             "startTime": "2024-07-25T12:03:41",
             "endingTime": "2024-07-25T12:03:50",
@@ -377,7 +481,11 @@
             "actionName": "setPressureAction",
             "pressureMeasurement": {
                 "value": 5,
-                "unit": "bar"
+                "unit": "bar",
+                "errorMargin": {
+                    "value": 1,
+                    "unit": "bar"
+                }
             },
             "startTime": "2024-07-25T12:03:50",
             "endingTime": "2024-07-25T12:04:057",
@@ -391,15 +499,27 @@
             "actionName": "setTemperatureAction",
             "speedShaker": {
                 "value": 1000,
-                "unit": "rpm"
+                "unit": "rpm",
+                "errorMargin": {
+                    "value": 1,
+                    "unit": "rpm"
+                }
             },
             "temperatureTumbleStirrer": {
                 "value": 25,
-                "unit": "°C"
+                "unit": "°C",
+                "errorMargin": {
+                    "value": 1,
+                    "unit": "°C"
+                }
             },
             "temperatureShaker": {
                 "value": 25,
-                "unit": "°C"
+                "unit": "°C",
+                "errorMargin": {
+                    "value": 2,
+                    "unit": "°C"
+                }
             },
             "startTime": "2024-07-25T12:04:57",
             "endingTime": "2024-07-25T12:05:20",
@@ -412,10 +532,10 @@
         {
             "actionName": "filtrateAction",
             "startTime": "2024-07-25T12:15:23",
-            "endingTime":"2024-07-25T12:16:50",
+            "endingTime": "2024-07-25T12:16:50",
             "methodName": "filtrate",
             "equipmentName": "Chemspeed SWING XL",
-            "subEquipmentName": "Filtration station",
+            "subEquipmentName": "Filtration unit",
             "containerID": "1",
             "containerBarcode": "1"
         }

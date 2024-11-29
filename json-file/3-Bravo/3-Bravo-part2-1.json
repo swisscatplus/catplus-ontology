@@ -11,7 +11,11 @@
             "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809",
             "temperature": {
                 "value": 156,
-                "unit": "°C"
+                "unit": "°C",
+                "errorMargin": {
+                    "value": 1,
+                    "unit": "°C"
+                }
             },
             "sampleList": [
                 {
@@ -33,25 +37,41 @@
             "actionName": "dissolution",
             "equipmentName": "solvent addition",
             "subEquipmentName": "micropipette",
-            "sampleID": 25,
             "containerID": 157,
             "containerBarcode": "1234858858754848",
-            "position": "A1",
             "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809",
+            "sampleList": [
+                {
+                    "sampleID": 25,
+                    "position": "A1"
+                },
+                {
+                    "sampleID": 26,
+                    "position": "A2"
+                },
+                {
+                    "sampleID": 27,
+                    "position": "A3"
+                }
+            ],
             "hasSolvent": {
                 "hasChemical": {
                     "chemicalID": "",
-                    "chemicalName": "Tetrahydrofuran",
-                    "CASNumber": "109-99-9",
+                    "chemicalName": "Tetradeuteromethanol",
+                    "CASNumber": "811-98-3",
                     "molecularMass": {
-                        "value": 72.11,
+                        "value": 36.07,
                         "unit": "g/mol"
                     },
-                    "smiles": "C(Cl)(Cl)Cl"
+                    "smiles": "[2H]C([2H])([2H])O[2H]"
                 },
                 "volume": {
                     "value": 0.1,
-                    "unit": "mL"
+                    "unit": "mL",
+                    "errorMargin": {
+                        "value": 0.01,
+                        "unit": "mL"
+                    }
                 }
             },
             "order": "2"
@@ -60,42 +80,27 @@
             "actionName": "dissolution",
             "equipmentName": "solvent addition",
             "subEquipmentName": "micropipette",
-            "sampleID": 26,
             "containerID": 157,
             "containerBarcode": "1234858858754848",
-            "position": "A2",
             "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809",
-            "hasSolvent": {
-                "hasChemical": {
-                    "chemicalID": "",
-                    "chemicalName": "Chloroform",
-                    "CASNumber": "67-66-3",
-                    "molecularMass": {
-                        "value": 119.37,
-                        "unit": "g/mol"
-                    },
-                    "smiles": "C1CCOC1"
+            "sampleList": [
+                {
+                    "sampleID": 25,
+                    "position": "A1"
                 },
-                "volume": {
-                    "value": 0.1,
-                    "unit": "mL"
+                {
+                    "sampleID": 26,
+                    "position": "A2"
+                },
+                {
+                    "sampleID": 27,
+                    "position": "A3"
                 }
-            },
-            "order": "3"
-        },
-        {
-            "actionName": "dissolution",
-            "equipmentName": "solvent addition",
-            "subEquipmentName": "micropipette",
-            "sampleID": 27,
-            "containerID": 157,
-            "containerBarcode": "1234858858754848",
-            "position": "A3",
-            "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809",
+            ],
             "hasSolvent": {
                 "hasChemical": {
                     "chemicalID": "",
-                    "chemicalName": "Chloroform-deuterated",
+                    "chemicalName": "Chloroform deuterated",
                     "CASNumber": "865-49-6",
                     "molecularMass": {
                         "value": 120.38,
@@ -105,10 +110,14 @@
                 },
                 "volume": {
                     "value": 0.1,
-                    "unit": "mL"
+                    "unit": "mL",
+                    "errorMargin": {
+                        "value": 0.05,
+                        "unit": "mL"
+                    }
                 }
             },
-            "order": "4"
+            "order": "3"
         },
         {
             "actionName": "magneticStirrer",
@@ -121,7 +130,11 @@
             "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809",
             "speed": {
                 "value": 152,
-                "unit": "rpm"
+                "unit": "rpm",
+                "errorMargin": {
+                    "value": 1,
+                    "unit": "rpm"
+                }
             },
             "sampleFraction": [
                 {
@@ -137,7 +150,7 @@
                     "position": "A3"
                 }
             ],
-            "order": "5"
+            "order": "4"
         }
     ]
 }
