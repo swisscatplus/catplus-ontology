@@ -56,14 +56,21 @@
             ],
             "hasSolvent": {
                 "hasChemical": {
-                    "chemicalID": "",
+                    "chemicalID": "25",
                     "chemicalName": "Tetradeuteromethanol",
                     "CASNumber": "811-98-3",
                     "molecularMass": {
                         "value": 36.07,
                         "unit": "g/mol"
                     },
-                    "smiles": "[2H]C([2H])([2H])O[2H]"
+                    "smiles": "[2H]C([2H])([2H])O[2H]",
+                    "swissCatNumber": "",
+                    "Inchi": "1S/CH4O/c1-2/h2H,1H3/i1D3,2D",
+                    "molecularFormula": "CH4O",
+                    "density": {
+                        "value": "",
+                        "unit": "g/mL"
+                    }
                 },
                 "volume": {
                     "value": 0.1,
@@ -99,14 +106,21 @@
             ],
             "hasSolvent": {
                 "hasChemical": {
-                    "chemicalID": "",
-                    "chemicalName": "Chloroform deuterated",
-                    "CASNumber": "865-49-6",
+                    "chemicalID": "17",
+                    "chemicalName": "tert-Butyl methyl-d3 ether",
+                    "CASNumber": "29366-08-3",
                     "molecularMass": {
-                        "value": 120.38,
+                        "value": 91.17,
                         "unit": "g/mol"
                     },
-                    "smiles": "[2H]C(Cl)(Cl)Cl"
+                    "smiles": "[2H]C([2H])([2H])OC(C)(C)C",
+                    "swissCatNumber": "",
+                    "Inchi": "1S/C5H12O/c1-5(2,3)6-4/h1-4H3/i4D3",
+                    "molecularFormula": "C5H12O",
+                    "density": {
+                        "value": "",
+                        "unit": "g/mL"
+                    }
                 },
                 "volume": {
                     "value": 0.1,
