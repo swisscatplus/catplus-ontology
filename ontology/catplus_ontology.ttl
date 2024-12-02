@@ -253,7 +253,7 @@ cat:hasContainerPositionAndQuantity a rdf:Property ;
     skos:definition "A measurement that targets the pressure of some material entity. [Allotrope]" ;
     .
 
-    cat:errorMargin a rdf:Property ;
+cat:errorMargin a rdf:Property ;
     skos:prefLabel "error margin" ;
     skos:definition "it refers to the range within which the true value of a measured quantity is expected to lie, considering the inherent uncertainties of the instrument. It is typically expressed as a ± value indicating the possible deviation from the true measurement due to limitations in precision, accuracy, or sensitivity of the instrument, manipulation." ;
     .
