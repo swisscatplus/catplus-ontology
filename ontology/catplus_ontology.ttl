@@ -253,6 +253,100 @@ cat:hasContainerPositionAndQuantity a rdf:Property ;
     skos:definition "A measurement that targets the pressure of some material entity. [Allotrope]" ;
     .
 
+<http://purl.allotrope.org/ontologies/hdf5/1.8#HardLink> a rdf:Property ;
+    skos:prefLabel "hard link" ;
+    skos:definition "A hard link is a reference to a file or directory that is a pointer to the file or directory itself, rather than a copy of the file or directory." ;
+    .
+
+cat:optimizationType a rdf:Property ;
+    skos:prefLabel "optimization type" ;
+    skos:definition "The type of optimization that is part of the batch" ;
+    .
+
+cat:hasObjective a rdf:Property ;
+    skos:prefLabel "has objective" ;
+    skos:definition "The objective that is part of the batch" ;
+    .
+
+cat:reactionSubType a rdf:Property ;
+    skos:prefLabel "reaction subtype" ;
+    skos:definition "A reaction subtype is a specific type of reaction that is part of the batch." ;
+    .
+
+cat:hasCampaign a rdf:Property ;
+    skos:prefLabel "has campaign" ;
+    skos:definition "The campaign that is part of the batch" ;
+    .
+
+cat:hasBatch a rdf:Property ;
+    skos:prefLabel "has batch" ;
+    skos:definition "refers to a specific batch instance" ;
+    .
+
+allo-res:AFR_0002764 a rdf:Property ;
+    skos:prefLabel "reference" ;
+    skos:definition "Some link to a publication or paper, we want a less generic name to describe any note/reference" ;
+    . 
+
+cat:campaignClass a rdf:Property ;
+    skos:prefLabel "campaign class" ;
+    skos:definition "Categorization or grouping of related activities, tasks, or items, often used in contexts such as project management, operations, or production." ;
+    .
+
+cat:researchClassificaiton a rdf:Property ;
+    skos:prefLabel "research classification" ;
+    skos:definition "Categorization of research activities based on various criteria, including openness, complexity, and the level of confidentiality involved." ;
+    .
+
+<http://purl.allotrope.org/ontologies/common#AFC_0000090> a rdf:Property ;
+    skos:prefLabel "condition" ;
+    skos:definition "A condition is an information content entity that is about the portion of reality under which something occurs or is valid. The condition is limited by its scope and may have preconditions. It restricts the possible realizations. [Allotrope]" ; #todo check
+    .
+
+cat:criteria a rdf:Property ;
+    skos:prefLabel "criteria" ;
+    skos:definition "A criteria is a standard or rule by which the success of the experiment is judged." ;
+    .
+
+cat:swissCatNumber a rdf:Property ;
+    skos:prefLabel "SwissCAT number" ;
+    skos:definition "A SwissCAT number is a unique identifier assigned by the SwissCAT to every chemical substance described in the open scientific literature." ;
+    .
+
+schema:keywords a rdf:Property ;
+    skos:prefLabel "keywords" ;
+    skos:definition "Keywords or tags used to describe some item. Multiple textual entries in a keywords list are typically delimited by commas, or by repeating the property.[Schema.org]" ;
+    .
+cat:genericObjective a rdf:Property ;
+    skos:prefLabel "generic objective" ;
+    skos:definition "It serves as a guiding principle, focusing on enhancing overall performance in conducting chemical reactions, reducing errors, and increasing output without specifying particular methods or metrics." ;
+    .
+    
+allo-res:AFR_0001952 a rdf:Property ;
+    skos:prefLabel "molecular formula" ;
+    skos:definition "A molecular formula is a molecular entity facet which identifies each constituent element by its chemical symbol and indicates the number of atoms of each element found in each discrete molecular entity of that compound. [CHEMINF]" ;    .#tochceck
+
+allo-res:AFR_0002296 a rdf:Property ;
+    skos:prefLabel "InChI" ;
+    skos:definition "An InChI molecular structure is a molecular structure specified in IUPAC International Chemical Identifier (InChI) line notation. [edamontology.org]" ;
+    . 
+    
+allo-prop:AFX_0000211 a rdf:Property ;
+    skos:prefLabel "speed" ;
+    skos:definition "Speed in revolutions per minute (RPM) is a measure of the frequency of rotation, specifically the number of full rotations completed in one minute around a fixed axis." ;
+    .
+
+<http://purl.obolibrary.org/obo/PATO_0001019> a rdf:Property ;
+    skos:prefLabel "density" ;
+    skos:definition "A physical quality which inheres in a bearer by virtue of some influence is exerted by the bearer's mass per unit size." ; 
+    .
+
+cat:theoreticalRole a rdf:Property ;
+    skos:prefLabel "theoretical role" ;
+    skos:definition "The theoretical role is the role of the molecule in the context of the reaction." ;
+    .
+
+
 ###################################################################################################
 # Shapes
 
@@ -385,20 +479,17 @@ cat:Sample a rdfs:Class, sh:NodeShape ;
 
 <http://purl.obolibrary.org/obo/CHEBI_25367> a rdfs:Class, sh:NodeShape ;
     rdfs:subClassOf <https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI_36357> ;
-    sh:property [sh:path purl:CHEBIidentifier ; sh:datatype xsd:string] ;
-    sh:property [sh:path purl:identifier ; sh:datatype xsd:string] ; #make mincount1
-    sh:property [sh:path cat:casNumber; sh:datatype xsd:string] ; #CAS Number
+    sh:property [sh:path purl:identifier ; sh:datatype xsd:string ; sh:minCount 1 ; sh:maxCount 1] ;
+    sh:property [sh:xone([sh:path cat:casNumber; sh:datatype xsd:string] [sh:path cat:swissCatNumber; sh:datatype xsd:string] )]; #Swisscat number EXCLUSIVE OR CAS Number
     sh:property [sh:path allo-res:AFR_0002292 ; sh:datatype xsd:string] ; #chemical name
     sh:property [sh:path allo-res:AFR_0002295 ; sh:datatype xsd:string] ; #smiles
     sh:property [sh:path allo-res:AFR_0002294 ; sh:datatype xsd:string] ; #molecularMass
-    sh:property [sh:path cat:swissCatNumber; sh:datatype xsd:string] ; #Swisscat number
     sh:property [sh:path schema:keywords ; sh:datatype xsd:string] ; #keywords
     sh:property [sh:path allo-res:AFR_0001952 ; sh:datatype xsd:string] ; #molecular formula
     sh:property [sh:path allo-res:AFR_0002296 ; sh:datatype xsd:string] ; #inchi key
     sh:property [sh:path <http://purl.obolibrary.org/obo/PATO_0001019> ; sh:datatype xsd:string ;
                  sh:node [sh:property [sh:path qudt:unit ;
                                         sh:hasValue unit:GM-PER-MilliL]]] ; #mass densitity
-    sh:property [sh:path cat:theoreticalRole ; sh:datatype xsd:string] ; #theoretical role
     skos:prefLabel "molecule" ;
     skos:definition "Any polyatomic entity that is an electrically neutral entity consisting of more than one atom." ;
     .
@@ -436,115 +527,12 @@ cat:Batch a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path cat:hasCampaign ; sh:class cat:Campaign] ;
     sh:property [sh:path cat:reactionSubType ; sh:datatype xsd:string] ;
     sh:property [sh:path allo-res:AFR_0002764 ; sh:datatype xsd:string] ;
+    sh:property [sh:path <http://purl.alltrope.org/ontologies/hdf5/1.8#HardLink> ; sh:datatype xsd:string] ;
     sh:property [sh:path cat:optimizationType ; sh:datatype xsd:string] ;
     sh:property [sh:path cat:hasObjective ; sh:class <http://purl.obolibrary.org/obo/IAO_0000005>] ;
     sh:property [sh:path cat:hasChemical ; sh:class <http://purl.obolibrary.org/obo/CHEBI_25367>] ;
     .
 
-cat:Product a rdfs:Class, sh:NodeShape ;
-    skos:prefLabel "Product" ;
-    skos:definition "A product is a substance that is formed as a result of a chemical reaction." ;
-    sh:property [sh:path <http://purl.allotrope.org/ontologies/hdf5/1.8#HardLink> ; sh:datatype xsd:string] ;
-    sh:property [sh:path <http://purl.allotrope.org/ontologies/result#AFR_0000951> ; sh:datatype xsd:string] ;
-    .
-
-allo-res:AFR_0000951 a rdf:Property ;
-    skos:prefLabel "duration" ;
-    skos:definition "A measure of the magnitude of the time region in which the process occurs. [Allotrope]" ;
-    .
-
-<http://purl.allotrope.org/ontologies/hdf5/1.8#HardLink> a rdf:Property ;
-    skos:prefLabel "hard link" ;
-    skos:definition "A hard link is a reference to a file or directory that is a pointer to the file or directory itself, rather than a copy of the file or directory." ;
-    .
-
-cat:optimizationType a rdf:Property ;
-    skos:prefLabel "optimization type" ;
-    skos:definition "The type of optimization that is part of the batch" ;
-    .
-
-cat:hasObjective a rdf:Property ;
-    skos:prefLabel "has objective" ;
-    skos:definition "The objective that is part of the batch" ;
-    .
-
-cat:reactionSubType a rdf:Property ;
-    skos:prefLabel "reaction subtype" ;
-    skos:definition "A reaction subtype is a specific type of reaction that is part of the batch." ;
-    .
-
-cat:hasCampaign a rdf:Property ;
-    skos:prefLabel "has campaign" ;
-    skos:definition "The campaign that is part of the batch" ;
-    .
-
-cat:hasBatch a rdf:Property ;
-    skos:prefLabel "has batch" ;
-    skos:definition "refers to a specific batch instance" ;
-    .
-
-allo-res:AFR_0002764 a rdf:Property ;
-    skos:prefLabel "reference" ;
-    skos:definition "Some link to a publication or paper, we want a less generic name to describe any note/reference" ;
-    . 
-
-cat:campaignClass a rdf:Property ;
-    skos:prefLabel "campaign class" ;
-    skos:definition "Categorization or grouping of related activities, tasks, or items, often used in contexts such as project management, operations, or production." ;
-    .
-
-cat:researchClassificaiton a rdf:Property ;
-    skos:prefLabel "research classification" ;
-    skos:definition "Categorization of research activities based on various criteria, including openness, complexity, and the level of confidentiality involved." ;
-    .
-
-<http://purl.allotrope.org/ontologies/common#AFC_0000090> a rdf:Property ;
-    skos:prefLabel "condition" ;
-    skos:definition "A condition is an information content entity that is about the portion of reality under which something occurs or is valid. The condition is limited by its scope and may have preconditions. It restricts the possible realizations. [Allotrope]" ; #todo check
-    .
-
-cat:criteria a rdf:Property ;
-    skos:prefLabel "criteria" ;
-    skos:definition "A criteria is a standard or rule by which the success of the experiment is judged." ;
-    .
-
-cat:swissCatNumber a rdf:Property ;
-    skos:prefLabel "SwissCAT number" ;
-    skos:definition "A SwissCAT number is a unique identifier assigned by the SwissCAT to every chemical substance described in the open scientific literature." ;
-    .
-
-schema:keywords a rdf:Property ;
-    skos:prefLabel "keywords" ;
-    skos:definition "Keywords or tags used to describe some item. Multiple textual entries in a keywords list are typically delimited by commas, or by repeating the property.[Schema.org]" ;
-    .
-cat:genericObjective a rdf:Property ;
-    skos:prefLabel "generic objective" ;
-    skos:definition "It serves as a guiding principle, focusing on enhancing overall performance in conducting chemical reactions, reducing errors, and increasing output without specifying particular methods or metrics." ;
-    .
-    
-allo-res:AFR_0001952 a rdf:Property ;
-    skos:prefLabel "molecular formula" ;
-    skos:definition "A molecular formula is a molecular entity facet which identifies each constituent element by its chemical symbol and indicates the number of atoms of each element found in each discrete molecular entity of that compound. [CHEMINF]" ;    .#tochceck
-
-allo-res:AFR_0002296 a rdf:Property ;
-    skos:prefLabel "InChI" ;
-    skos:definition "An InChI molecular structure is a molecular structure specified in IUPAC International Chemical Identifier (InChI) line notation. [edamontology.org]" ;
-    . 
-    
-allo-prop:AFX_0000211 a rdf:Property ;
-    skos:prefLabel "speed" ;
-    skos:definition "Speed in revolutions per minute (RPM) is a measure of the frequency of rotation, specifically the number of full rotations completed in one minute around a fixed axis." ;
-    .
-
-<http://purl.obolibrary.org/obo/PATO_0001019> a rdf:Property ;
-    skos:prefLabel "density" ;
-    skos:definition "A physical quality which inheres in a bearer by virtue of some influence is exerted by the bearer's mass per unit size." ; 
-    .
-
-cat:theoreticalRole a rdf:Property ;
-    skos:prefLabel "theoretical role" ;
-    skos:definition "The theoretical role is the role of the molecule in the context of the reaction." ;
-    .
 
 
 
