@@ -1,56 +1,80 @@
 {
-  "hasCampaign": {
-    "campaignName": "de",
-    "Description": "de",
-    "Objective": "de",
-    "campaignClass": "de",
-    "Type": "de",
-    "Reference": "de",
-    "hasBatch": {
-      "batchID":"23",
-      "batchName": "20240516",
-      "ReactionType": "d",
-      "ReactionName": "",
-      "OptimizationType": "e",
-      "Link": "ede"
-    },
-    "hasObjective":{
-      "Criteria": "",
-      "Condition": "",
-      "Description": "",
-      "objectiveName": ""
-    },
-    "hasChemical":[
-      {
-        "chemicalName": null,
-        "CasNumber": "dd",
-        "SwissCatNumber": null,
-        "Keywords": null,
-        "Smiles": null,
-        "Inchi": null,
-        "MolecularFormula": null,
-        "Density": null
-      },
-      {
-        "chemicalName": "d",
-        "CasNumber": null,
-        "SwissCatNumber": "d",
-        "Keywords": "d",
-        "Smiles": null,
-        "Inchi": null,
-        "MolecularFormula": "d",
-        "Density": null
-      },
-      {
-        "chemicalName": null,
-        "CasNumber": null,
-        "SwissCatNumber": null,
-        "Keywords": null,
-        "Smiles": "d",
-        "Inchi": null,
-        "MolecularFormula": "d",
-        "Density": "d"
-      }
-    ]
-  }
+    "hasCampaign": {
+        "campaignName": "de",
+        "Description": "de",
+        "Objective": "de",
+        "campaignClass": "de",
+        "Type": "de",
+        "Reference": "de",
+        "hasBatch": {
+            "batchID": "23",
+            "batchName": "20240516",
+            "ReactionType": "d",
+            "ReactionName": "",
+            "OptimizationType": "e",
+            "Link": "ede"
+        },
+        "hasObjective": {
+            "Criteria": "",
+            "Condition": "",
+            "Description": "",
+            "objectiveName": ""
+        },
+        "hasChemical": [
+            {
+                "chemicalID": "19",
+                "chemicalName": null,
+                "CASNumber": "dd",
+                "molecularMass": {
+                    "value": "",
+                    "unit": "g/mol"
+                },
+                "smiles": null,
+                "swissCatNumber": null,
+                "keywords": "optional only in HCI file",
+                "Inchi": null,
+                "molecularFormula": null,
+                "density": {
+                    "value": "",
+                    "unit": "g/mL"
+                }
+            },
+            {
+                "chemicalID": "36",
+                "chemicalName": "d",
+                "CASNumber": null,
+                "molecularMass": {
+                    "value": "",
+                    "unit": "g/mol"
+                },
+                "smiles": null,
+                "swissCatNumber": null,
+                "keywords": "optional only in HCI file",
+                "Inchi": null,
+                "molecularFormula": null,
+                "density": {
+                    "value": "",
+                    "unit": "g/mL"
+                }
+            },
+            {
+                "chemicalID": "79",
+                "chemicalName": null,
+                "CASNumber": null,
+                "molecularMass": {
+                    "value": "",
+                    "unit": "g/mol"
+                },
+                "smiles": null,
+                "swissCatNumber": null,
+                "keywords": "optional only in HCI file",
+                "Inchi": null,
+                "molecularFormula": null,
+                "density": {
+                    "value": "",
+                    "unit": "g/mL"
+                }
+            }
+        ]
+    }
 }
