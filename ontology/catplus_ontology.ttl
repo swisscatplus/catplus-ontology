@@ -259,7 +259,189 @@ cat:errorMargin a rdf:Property ;
     skos:definition "it refers to the range within which the true value of a measured quantity is expected to lie, considering the inherent uncertainties of the instrument. It is typically expressed as a ± value indicating the possible deviation from the true measurement due to limitations in precision, accuracy, or sensitivity of the instrument, manipulation." ;
     .
 
-allo-hdf:HardLink a rdf:Property ;
+cat:SetTemperatureAction a rdfs:Class, sh:NodeShape ;
+    rdfs:subClassOf <http://purl.allotrope.org/ontologies/realizable#AFRE_0000001> ;
+    sh:property cat:speedShakerShape ;
+    sh:property cat:temperatureShakerShape ;
+    sh:property cat:temperatureTumbleStirrerShape ;
+    .
+
+cat:SetPressureAction a rdfs:Class, sh:NodeShape ;
+    rdfs:subClassOf <http://purl.allotrope.org/ontologies/realizable#AFRE_0000001> ;
+    sh:property [sh:path <http://purl.allotrope.org/ontologies/process#AFP_0002677> ;
+                 sh:node cat:Observation ; 
+                 sh:node [sh:property    [sh:path qudt:unit ; 
+                                         sh:hasValue unit:Bar] ]];
+    .
+
+cat:SetVacuumAction a rdfs:Class, sh:NodeShape ;
+    rdfs:subClassOf <http://purl.allotrope.org/ontologies/realizable#AFRE_0000001> ;
+    sh:property [sh:path cat:vacuum ; #vacuum
+                 sh:node cat:Observation ; 
+                 sh:node [sh:property    [sh:path qudt:unit ; 
+                                            sh:hasValue unit:bar] ]];
+    .
+
+cat:ShakeAction a rdfs:Class, sh:NodeShape ;
+    rdfs:subClassOf <http://purl.allotrope.org/ontologies/realizable#AFRE_0000001> ;
+    sh:property cat:speedTumbleStirrerShape ;
+    sh:property cat:temperatureShakerShape ;
+    sh:property cat:temperatureTumbleStirrerShape ;
+    .
+
+cat:FiltrateAction a rdfs:Class, sh:NodeShape ;
+    rdfs:subClassOf <http://purl.allotrope.org/ontologies/realizable#AFRE_0000001> ;
+    .
+
+<http://purl.allotrope.org/ontologies/realizable#AFRE_0000001> a rdfs:Class, sh:NodeShape ;
+    skos:prefLabel "Action" ;
+    skos:definition "An action is a unit element in a procedure and is a concretization of an action specification." ; 
+    sh:property [sh:path allo-res:AFR_0001723 ; sh:datatype xsd:string ] ;#Equipment name , 
+    sh:property [sh:path cat:subEquipmentName ; sh:datatype xsd:string ] ;#subEquipmentName
+    sh:property [sh:path <https://schema.org/name> ; sh:datatype xsd:string ] ; #name
+    sh:property [sh:path allo-prop:AFX_0000622 ; sh:datatype xsd:dateTime ] ;#startTime ,
+    sh:property [sh:path allo-res:AFR_0002423 ; sh:datatype xsd:dateTime ] ;#endTime , 
+    sh:property [sh:path allo-res:AFR_0001606 ; sh:datatype xsd:string ] ;#methodName
+    sh:property [sh:path cat:subEquipmentName ; sh:datatype xsd:string ] ;#subEquipmentName
+    sh:property [sh:path cat:containerBarcode ; sh:datatype xsd:string ] ;#containerBarcode
+    sh:property [sh:path cat:containerID ; sh:datatype xsd:string ] ;#containerID
+    sh:property [sh:path cat:hasBatch ; sh:class cat:Batch] ; #hasBatch
+.
+
+cat:ContainerPositionAndQuantity a rdfs:Class, sh:NodeShape ;
+    skos:prefLabel "Container, Position and Quantity" ;
+    rdfs:comment    """A class that represents the containers, positions and quantities of a sample. 
+                    It must have a value for the well location identifier property, and a property called 'quantity' that has 3 representations of the same quantity with different units and values. 
+                    The units are MilliL and MilliGM.""" ;
+    skos:definition "Refers to specific aspects related to the handling and organization of samples or materials" ;
+    sh:property [
+        sh:path allo-res:AFR_0002240 ;                 #Well location identifier, also known as "position"
+        sh:datatype xsd:string
+    ] ;
+    sh:property [sh:path qudt:quantity ;
+                sh:node cat:Observation ]
+    .
+
+cat:QuantityShape a sh:NodeShape ;
+    sh:targetObjectsOf qudt:quantity ;
+    sh:property [
+        sh:path qudt:value ;
+        sh:datatype xsd:decimal ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+    sh:property [sh:path qudt:unit ; 
+        sh:xone ([ sh:hasValue unit:MillGM ] 
+                [sh:hasValue unit:MilliL ] )]
+ .
+
+cat:Observation a rdfs:Class, sh:NodeShape ;
+    skos:prefLabel "Observation" ;
+    skos:definition "An observation is an abstract entity that captures the unit and value of a property into one node." ;
+    sh:property [sh:path qudt:unit  ; sh:minCount 1 ; sh:maxCount 1] ;
+    sh:property [sh:path qudt:value ; sh:minCount 1 ; sh:maxCount 1] ;
+    .
+
+cat:Sample a rdfs:Class, sh:NodeShape ;
+    skos:related <http://purl.allotrope.org/ontologies/material#AFM_0001099> ;
+    skos:prefLabel "Sample" ;
+    skos:altLabel  "chemical mixture" ;
+    skos:definition "A portion of chemical mixture is a chemical substance that is composed of chemical substances. [Allotrope]" ;
+    sh:property [sh:path cat:containerID ; sh:datatype xsd:string] ;
+    sh:property [sh:path allo-res:AFR_0002464 ; sh:datatype xsd:string] ; #VialID
+    sh:property cat:vialShape ; #vial type
+    sh:property [sh:path cat:role ] ;   #role
+    sh:property [sh:path purl:identifier ; sh:datatype xsd:string] ; #identifier/sampleID
+    sh:property [sh:path <http://purl.allotrope.org/ontologies/role#AFRL_0000474> ; sh:node cat:Observation] ; #expectedDatum/quantity
+    sh:property [sh:path cat:measuredQuantity ; sh:node cat:Observation] ; #measuredQuantity
+    sh:property [sh:path allo-qual:AFQ_0000111 ; 
+                sh:xone ([ sh:hasValue "Solid"] 
+                        [sh:hasValue "Liquid"]) ; ] ;  #dispense state
+    sh:property [sh:path cat:internalBarCode ; sh:datatype xsd:string] ; #internal barcode
+    sh:property [sh:path cat:containerBarcode ; sh:datatype xsd:string] ; #container barcode
+    sh:property [sh:path allo-res:AFR_0002036 ; #concentration
+                    sh:node cat:Observation ; 
+                    sh:node [sh:property    [sh:path qudt:unit ; 
+                                            sh:hasValue unit:MOL-PER-L] ]];
+    sh:property [sh:path allo-qual:AFQ_0000209 ; #purity
+                    sh:node cat:Observation ; 
+                    sh:node [sh:property    [sh:path qudt:unit ; 
+                                            sh:hasValue unit:PERCENT] ]];
+    sh:property [sh:path cat:hasSample ; sh:class cat:Sample] ; #hasSample
+    sh:property [sh:path cat:hasChemical ; sh:class <http://purl.obolibrary.org/obo/CHEBI_25367> ] ; #hasChemical
+    .
+
+<http://purl.obolibrary.org/obo/CHEBI_25367> a rdfs:Class, sh:NodeShape ;
+    rdfs:subClassOf <https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI_36357> ;
+    # sh:property [sh:path purl:CHEBIidentifier ; sh:datatype xsd:string] ;
+    sh:property [sh:path purl:identifier ; sh:datatype xsd:string] ; #make mincount1
+    sh:property [sh:path cat:casNumber; sh:datatype xsd:string] ; #CAS Number
+    sh:property [sh:path allo-res:AFR_0002292 ; sh:datatype xsd:string] ; #chemical name
+    sh:property [sh:path allo-res:AFR_0002295 ; sh:datatype xsd:string] ; #smiles
+    sh:property [sh:path allo-res:AFR_0002294 ; sh:datatype xsd:string] ; #molecularMass
+    # sh:property [sh:path cat:swissCatNumber; sh:datatype xsd:string] ; #Swisscat number
+    # sh:property [sh:path schema:keywords ; sh:datatype xsd:string] ; #keywords
+    # sh:property [sh:path allo-res:AFR_0001952 ; sh:datatype xsd:string] ; #molecular formula
+    # sh:property [sh:path allo-res:AFR_0002296 ; sh:datatype xsd:string] ; #inchi key
+    # sh:property [sh:path <http://purl.obolibrary.org/obo/PATO_0001019> ; sh:datatype xsd:string ;
+    #              sh:node [sh:property [sh:path qudt:unit ;
+    #                                     sh:hasValue unit:GM-PER-MilliL]]] ; #mass densitity
+    # sh:property [sh:path cat:theoreticalRole ; sh:datatype xsd:string] ; #theoretical role
+    skos:prefLabel "molecule" ;
+    skos:definition "Any polyatomic entity that is an electrically neutral entity consisting of more than one atom." ;
+    .
+
+<http://purl.obolibrary.org/obo/IAO_0000005> a rdfs:Class , sh:NodeShape ;
+    skos:prefLabel "Objective" ;
+    skos:definition "An objective is a goal or target to be achieved by the experiment." ;
+    sh:property [sh:path schema:name ; sh:datatype xsd:string] ;
+    sh:property [sh:path schema:description ; sh:datatype xsd:string] ;
+    sh:property [sh:path cat:criteria ; sh:datatype xsd:string] ;
+    sh:property [sh:path <http://purl.allotrope.org/ontologies/common#AFC_0000090> ; sh:datatype xsd:string] ;
+    .
+
+cat:Campaign a rdfs:Class, sh:NodeShape ;
+    skos:prefLabel "Campaign" ;
+    skos:definition "A campaign is a series of experiments that are conducted to achieve a specific objective." ;
+    sh:property [sh:path schema:name ; sh:datatype xsd:string] ;
+    sh:property [sh:path schema:description ; sh:datatype xsd:string] ;
+    sh:property [sh:path cat:genericObjective ; sh:datatype xsd:string] ;
+    sh:property [sh:path cat:campaignClass ; sh:datatype xsd:string ; 
+                         sh:xone ([ sh:hasValue "optimization"] 
+                                  [ sh:hasValue "discovery"]) ; ] ;
+    sh:property [sh:path cat:researchClassificaiton ; sh:datatype xsd:string ; 
+                         sh:xone ([ sh:hasValue "Open research"] 
+                                  [ sh:hasValue "Standard research"]
+                                  [ sh:hasValue "High level of confidentiality"]) ; ] ;
+    sh:property [sh:path allo-res:AFR_0002764 ; sh:datatype xsd:string] ;
+    sh:property [sh:path cat:hasBatch ; sh:class cat:Batch] ;
+.
+
+cat:Batch a rdfs:Class, sh:NodeShape ;
+    skos:prefLabel "Batch" ;
+    skos:definition "A batch is a group of samples that are processed together." ;
+    sh:property [sh:path schema:name ; sh:datatype xsd:string] ;
+    sh:property [sh:path cat:hasCampaign ; sh:class cat:Campaign] ;
+    sh:property [sh:path cat:reactionSubType ; sh:datatype xsd:string] ;
+    sh:property [sh:path allo-res:AFR_0002764 ; sh:datatype xsd:string] ;
+    sh:property [sh:path cat:optimizationType ; sh:datatype xsd:string] ;
+    sh:property [sh:path cat:hasObjective ; sh:class <http://purl.obolibrary.org/obo/IAO_0000005>] ;
+    sh:property [sh:path cat:hasChemical ; sh:class <http://purl.obolibrary.org/obo/CHEBI_25367>] ;
+    .
+
+cat:Product a rdfs:Class, sh:NodeShape ;
+    skos:prefLabel "Product" ;
+    skos:definition "A product is a substance that is formed as a result of a chemical reaction." ;
+    sh:property [sh:path <http://purl.allotrope.org/ontologies/hdf5/1.8#HardLink> ; sh:datatype xsd:string] ;
+    sh:property [sh:path <http://purl.allotrope.org/ontologies/result#AFR_0000951> ; sh:datatype xsd:string] ;
+    .
+
+allo-res:AFR_0000951 a rdf:Property ;
+    skos:prefLabel "duration" ;
+    skos:definition "A measure of the magnitude of the time region in which the process occurs. [Allotrope]" ;
+    .
+
+<http://purl.allotrope.org/ontologies/hdf5/1.8#HardLink> a rdf:Property ;
     skos:prefLabel "hard link" ;
     skos:definition "A hard link is a reference to a file or directory that is a pointer to the file or directory itself, rather than a copy of the file or directory." ;
     .
