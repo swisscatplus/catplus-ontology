@@ -254,12 +254,7 @@ allo-proc:AFP_0002677 a rdf:Property ;
     skos:definition "A measurement that targets the pressure of some material entity. [Allotrope]" ;
     .
 
-cat:errorMargin a rdf:Property ;
-    skos:prefLabel "error margin" ;
-    skos:definition "it refers to the range within which the true value of a measured quantity is expected to lie, considering the inherent uncertainties of the instrument. It is typically expressed as a ± value indicating the possible deviation from the true measurement due to limitations in precision, accuracy, or sensitivity of the instrument, manipulation." ;
-    .
-
-allo-hdf:HardLink a rdf:Property ;
+<http://purl.allotrope.org/ontologies/hdf5/1.8#HardLink> a rdf:Property ;
     skos:prefLabel "hard link" ;
     skos:definition "A hard link is a reference to a file or directory that is a pointer to the file or directory itself, rather than a copy of the file or directory." ;
     .
@@ -299,7 +294,12 @@ cat:campaignClass a rdf:Property ;
     skos:definition "Categorization or grouping of related activities, tasks, or items, often used in contexts such as project management, operations, or production." ;
     .
 
-allo-com:AFC_0000090 a rdf:Property ;
+cat:researchClassificaiton a rdf:Property ;
+    skos:prefLabel "research classification" ;
+    skos:definition "Categorization of research activities based on various criteria, including openness, complexity, and the level of confidentiality involved." ;
+    .
+
+<http://purl.allotrope.org/ontologies/common#AFC_0000090> a rdf:Property ;
     skos:prefLabel "condition" ;
     skos:definition "A condition is an information content entity that is about the portion of reality under which something occurs or is valid. The condition is limited by its scope and may have preconditions. It restricts the possible realizations. [Allotrope]" ; #todo check
     .
@@ -347,19 +347,13 @@ cat:theoreticalRole a rdf:Property ;
     skos:definition "The theoretical role is the role of the molecule in the context of the reaction." ;
     .
 
-cat:Product a rdfs:Class, sh:NodeShape ;
-    skos:prefLabel "Product" ;
-    skos:definition "A product is a substance that is formed as a result of a chemical reaction." ;
-    sh:property [sh:path <http://purl.allotrope.org/ontologies/hdf5/1.8#HardLink> ; sh:datatype xsd:string] ;
-    sh:property [sh:path <http://purl.allotrope.org/ontologies/result#AFR_0000951> ; sh:datatype xsd:string] ;
+
+cat:errorMargin a rdf:Property ;
+    skos:prefLabel "error margin" ;
+    skos:definition "it refers to the range within which the true value of a measured quantity is expected to lie, considering the inherent uncertainties of the instrument. It is typically expressed as a ± value indicating the possible deviation from the true measurement due to limitations in precision, accuracy, or sensitivity of the instrument, manipulation." ;
     .
 
-allo-res:AFR_0000951 a rdf:Property ;
-    skos:prefLabel "duration" ;
-    skos:definition "A measure of the magnitude of the time region in which the process occurs. [Allotrope]" ;
-    .
-
-<http://purl.allotrope.org/ontologies/hdf5/1.8#HardLink> a rdf:Property ;
+allo-hdf:HardLink a rdf:Property ;
     skos:prefLabel "hard link" ;
     skos:definition "A hard link is a reference to a file or directory that is a pointer to the file or directory itself, rather than a copy of the file or directory." ;
     .
@@ -486,6 +480,9 @@ cat:cartridgeComposition a rdf:Property ;
     skos:prefLabel "cartridge composition" ;
     skos:definition "It refers to the materials and specific sorbents packed within the SPE cartridge." ;
     .
+
+
+
 
 ###################################################################################################
 # Shapes
