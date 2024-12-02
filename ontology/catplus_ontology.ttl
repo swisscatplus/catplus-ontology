@@ -257,6 +257,99 @@ allo-proc:AFP_0002677 a rdf:Property ;
 cat:errorMargin a rdf:Property ;
     skos:prefLabel "error margin" ;
     skos:definition "it refers to the range within which the true value of a measured quantity is expected to lie, considering the inherent uncertainties of the instrument. It is typically expressed as a ± value indicating the possible deviation from the true measurement due to limitations in precision, accuracy, or sensitivity of the instrument, manipulation." ;
+.
+
+<http://purl.allotrope.org/ontologies/hdf5/1.8#HardLink> a rdf:Property ;
+    skos:prefLabel "hard link" ;
+    skos:definition "A hard link is a reference to a file or directory that is a pointer to the file or directory itself, rather than a copy of the file or directory." ;
+    .
+
+cat:optimizationType a rdf:Property ;
+    skos:prefLabel "optimization type" ;
+    skos:definition "The type of optimization that is part of the batch" ;
+    .
+
+cat:hasObjective a rdf:Property ;
+    skos:prefLabel "has objective" ;
+    skos:definition "The objective that is part of the batch" ;
+    .
+
+cat:reactionSubType a rdf:Property ;
+    skos:prefLabel "reaction subtype" ;
+    skos:definition "A reaction subtype is a specific type of reaction that is part of the batch." ;
+    .
+
+cat:hasCampaign a rdf:Property ;
+    skos:prefLabel "has campaign" ;
+    skos:definition "The campaign that is part of the batch" ;
+    .
+
+cat:hasBatch a rdf:Property ;
+    skos:prefLabel "has batch" ;
+    skos:definition "refers to a specific batch instance" ;
+    .
+
+allo-res:AFR_0002764 a rdf:Property ;
+    skos:prefLabel "reference" ;
+    skos:definition "Some link to a publication or paper, we want a less generic name to describe any note/reference" ;
+    . 
+
+cat:campaignClass a rdf:Property ;
+    skos:prefLabel "campaign class" ;
+    skos:definition "Categorization or grouping of related activities, tasks, or items, often used in contexts such as project management, operations, or production." ;
+    .
+
+cat:researchClassificaiton a rdf:Property ;
+    skos:prefLabel "research classification" ;
+    skos:definition "Categorization of research activities based on various criteria, including openness, complexity, and the level of confidentiality involved." ;
+    .
+
+<http://purl.allotrope.org/ontologies/common#AFC_0000090> a rdf:Property ;
+    skos:prefLabel "condition" ;
+    skos:definition "A condition is an information content entity that is about the portion of reality under which something occurs or is valid. The condition is limited by its scope and may have preconditions. It restricts the possible realizations. [Allotrope]" ; #todo check
+    .
+
+cat:criteria a rdf:Property ;
+    skos:prefLabel "criteria" ;
+    skos:definition "A criteria is a standard or rule by which the success of the experiment is judged." ;
+    .
+
+cat:swissCatNumber a rdf:Property ;
+    skos:prefLabel "SwissCAT number" ;
+    skos:definition "A SwissCAT number is a unique identifier assigned by the SwissCAT to every chemical substance described in the open scientific literature." ;
+    .
+
+schema:keywords a rdf:Property ;
+    skos:prefLabel "keywords" ;
+    skos:definition "Keywords or tags used to describe some item. Multiple textual entries in a keywords list are typically delimited by commas, or by repeating the property.[Schema.org]" ;
+    .
+cat:genericObjective a rdf:Property ;
+    skos:prefLabel "generic objective" ;
+    skos:definition "It serves as a guiding principle, focusing on enhancing overall performance in conducting chemical reactions, reducing errors, and increasing output without specifying particular methods or metrics." ;
+    .
+    
+allo-res:AFR_0001952 a rdf:Property ;
+    skos:prefLabel "molecular formula" ;
+    skos:definition "A molecular formula is a molecular entity facet which identifies each constituent element by its chemical symbol and indicates the number of atoms of each element found in each discrete molecular entity of that compound. [CHEMINF]" ;    .#tochceck
+
+allo-res:AFR_0002296 a rdf:Property ;
+    skos:prefLabel "InChI" ;
+    skos:definition "An InChI molecular structure is a molecular structure specified in IUPAC International Chemical Identifier (InChI) line notation. [edamontology.org]" ;
+    . 
+    
+allo-prop:AFX_0000211 a rdf:Property ;
+    skos:prefLabel "speed" ;
+    skos:definition "Speed in revolutions per minute (RPM) is a measure of the frequency of rotation, specifically the number of full rotations completed in one minute around a fixed axis." ;
+    .
+
+<http://purl.obolibrary.org/obo/PATO_0001019> a rdf:Property ;
+    skos:prefLabel "density" ;
+    skos:definition "A physical quality which inheres in a bearer by virtue of some influence is exerted by the bearer's mass per unit size." ; 
+    .
+
+cat:theoreticalRole a rdf:Property ;
+    skos:prefLabel "theoretical role" ;
+    skos:definition "The theoretical role is the role of the molecule in the context of the reaction." ;
     .
 
 cat:Product a rdfs:Class, sh:NodeShape ;
