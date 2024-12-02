@@ -253,6 +253,12 @@ cat:hasContainerPositionAndQuantity a rdf:Property ;
     skos:definition "A measurement that targets the pressure of some material entity. [Allotrope]" ;
     .
 
+    cat:errorMargin a rdf:Property ;
+    skos:prefLabel "error margin" ;
+    skos:definition "it refers to the range within which the true value of a measured quantity is expected to lie, considering the inherent uncertainties of the instrument. It is typically expressed as a ± value indicating the possible deviation from the true measurement due to limitations in precision, accuracy, or sensitivity of the instrument, manipulation." ;
+    .
+
+
 ###################################################################################################
 # Shapes
 
@@ -352,6 +358,8 @@ cat:Observation a rdfs:Class, sh:NodeShape ;
     skos:definition "An observation is an abstract entity that captures the unit and value of a property into one node." ;
     sh:property [sh:path qudt:unit  ; sh:minCount 1 ; sh:maxCount 1] ;
     sh:property [sh:path qudt:value ; sh:minCount 1 ; sh:maxCount 1] ;
+    sh:property [sh:path cat:errorMargin ; sh:datatype xsd:decimal; 
+                sh:node [sh:property [sh:path qudt:unit ; sh:minCount 1 ], [sh:path qudt:value ; sh:minCount 1 ]]] ;
     .
 
 cat:Sample a rdfs:Class, sh:NodeShape ;
