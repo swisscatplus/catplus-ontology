@@ -299,11 +299,6 @@ cat:campaignClass a rdf:Property ;
     skos:definition "Categorization or grouping of related activities, tasks, or items, often used in contexts such as project management, operations, or production." ;
     .
 
-cat:researchClassificaiton a rdf:Property ;
-    skos:prefLabel "research classification" ;
-    skos:definition "Categorization of research activities based on various criteria, including openness, complexity, and the level of confidentiality involved." ;
-    .
-
 <http://purl.allotrope.org/ontologies/common#AFC_0000090> a rdf:Property ;
     skos:prefLabel "condition" ;
     skos:definition "A condition is an information content entity that is about the portion of reality under which something occurs or is valid. The condition is limited by its scope and may have preconditions. It restricts the possible realizations. [Allotrope]" ; #todo check
