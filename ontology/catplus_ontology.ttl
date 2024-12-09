@@ -27,11 +27,11 @@ cat: a owl:Ontology ;
     dct:created "2024-04-01"^^xsd:date ;
     dct:creator "Robin Franken", "Jean-Charles Cousty" ;
     dct:description "The CAT+ ontology provides concepts (classes and properties) to model human and machine readable automated catalysis discovery experiment metadata. It is the result of re-using external pre-existing vocabularies such as Allotrope, schema.org and qudt, together with custom imaging specific objects and properties." ;    dct:license <https://spdx.org/licenses/CC-BY-SA-4.0.html> ;
-    dct:modified "2024-10-01"^^xsd:date ;
+    dct:modified "2024-12-09"^^xsd:date ;
     dct:title "CAT+ Ontology" ;
     vann:preferredNamespacePrefix "cat" ;
     vann:preferredNamespaceUri "http://example.org/cat#"^^xsd:string ;
-    owl:versionInfo "0.2.0"^^xsd:string ;
+    owl:versionInfo "0.3.0"^^xsd:string ;
     sh:entailment <http://www.w3.org/ns/entailment/RDFS>
     .
 
@@ -256,7 +256,7 @@ cat:hasContainerPositionAndQuantity a rdf:Property ;
 cat:errorMargin a rdf:Property ;
     skos:prefLabel "error margin" ;
     skos:definition "it refers to the range within which the true value of a measured quantity is expected to lie, considering the inherent uncertainties of the instrument. It is typically expressed as a ± value indicating the possible deviation from the true measurement due to limitations in precision, accuracy, or sensitivity of the instrument, manipulation." ;
-.
+    .
 
 <http://purl.allotrope.org/ontologies/hdf5/1.8#HardLink> a rdf:Property ;
     skos:prefLabel "hard link" ;
@@ -404,7 +404,7 @@ cat:FiltrateAction a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path cat:containerBarcode ; sh:datatype xsd:string ] ;#containerBarcode
     sh:property [sh:path cat:containerID ; sh:datatype xsd:string ] ;#containerID
     sh:property [sh:path cat:hasBatch ; sh:class cat:Batch] ; #hasBatch
-.
+    .
 
 cat:ContainerPositionAndQuantity a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Container, Position and Quantity" ;
@@ -433,7 +433,7 @@ cat:QuantityShape a sh:NodeShape ;
         sh:maxCount 1 ;
         sh:xone ([ sh:hasValue unit:MillGM ] 
                 [sh:hasValue unit:MilliL ] )]
- .
+    .
 
 cat:Observation a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Observation" ;
@@ -510,7 +510,7 @@ cat:Campaign a rdfs:Class, sh:NodeShape ;
                                   [ sh:hasValue "discovery"]) ; ] ;
     sh:property [sh:path allo-res:AFR_0002764 ; sh:datatype xsd:string] ;
     sh:property [sh:path cat:hasBatch ; sh:class cat:Batch] ;
-.
+    .
 
 cat:Batch a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Batch" ;
