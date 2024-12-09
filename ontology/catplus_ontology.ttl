@@ -151,11 +151,6 @@ cat:measuredQuantity a rdf:Property ;
     skos:definition "Actual measured value of a physical property, such as mass, volume, or concentration, as opposed to a theoretical or ideal value.";
     .
 
-allo-res:AFR_0001120 a rdf:Property ;
-    skos:prefLabel "batch identifier" ;
-    skos:definition "The batch identifier is measurement metadata that identifies the batch where a sample is taken from for being measured. [Allotrope]" ;
-    .
-
 cat:vialType a rdf:Property ;
     skos:prefLabel "vial type" ;
     skos:definition "classification and design of a vial used for particular purposes in laboratory settings, such as storage, preparation, sampling, or analysis." ;
@@ -171,6 +166,11 @@ cat:containerID a rdf:Property ;
     skos:definition "The identifier or number for the individual container storing each specific media type. " ;
     .
 
+cat:reactionType a rdf:Property ;
+    skos:prefLabel "reaction type" ;
+    skos:definition "The type of reaction that is part of the batch" ;
+    skos:example "Sonoshira coupling with ethanol" ;
+    .
 
 cat:containerBarcode a rdf:Property ;
     rdfs:subPropertyOf allo-prop:AFX_0000687 ;
@@ -296,11 +296,6 @@ allo-res:AFR_0002764 a rdf:Property ;
 cat:campaignClass a rdf:Property ;
     skos:prefLabel "campaign class" ;
     skos:definition "Categorization or grouping of related activities, tasks, or items, often used in contexts such as project management, operations, or production." ;
-    .
-
-cat:researchClassificaiton a rdf:Property ;
-    skos:prefLabel "research classification" ;
-    skos:definition "Categorization of research activities based on various criteria, including openness, complexity, and the level of confidentiality involved." ;
     .
 
 <http://purl.allotrope.org/ontologies/common#AFC_0000090> a rdf:Property ;
@@ -511,10 +506,6 @@ cat:Campaign a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path cat:campaignClass ; sh:datatype xsd:string ; 
                          sh:xone ([ sh:hasValue "optimization"] 
                                   [ sh:hasValue "discovery"]) ; ] ;
-    sh:property [sh:path cat:researchClassificaiton ; sh:datatype xsd:string ; 
-                         sh:xone ([ sh:hasValue "Open research"] 
-                                  [ sh:hasValue "Standard research"]
-                                  [ sh:hasValue "High level of confidentiality"]) ; ] ;
     sh:property [sh:path allo-res:AFR_0002764 ; sh:datatype xsd:string] ;
     sh:property [sh:path cat:hasBatch ; sh:class cat:Batch] ;
 .
@@ -524,6 +515,7 @@ cat:Batch a rdfs:Class, sh:NodeShape ;
     skos:definition "A batch is a group of samples that are processed together." ;
     sh:property [sh:path schema:name ; sh:datatype xsd:string] ;
     sh:property [sh:path cat:hasCampaign ; sh:class cat:Campaign] ;
+    sh:property [sh:path cat:reactionType ; sh:datatype xsd:string] ;
     sh:property [sh:path cat:reactionSubType ; sh:datatype xsd:string] ;
     sh:property [sh:path allo-res:AFR_0002764 ; sh:datatype xsd:string] ;
     sh:property [sh:path <http://purl.alltrope.org/ontologies/hdf5/1.8#HardLink> ; sh:datatype xsd:string] ;
