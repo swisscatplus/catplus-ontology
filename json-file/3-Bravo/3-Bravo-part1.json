@@ -28,14 +28,21 @@
             "actionName": "dilution",
             "hasSolvent": {
                 "hasChemical": {
-                    "chemicalID": "",
+                    "chemicalID": "14",
                     "chemicalName": "Water",
                     "CASNumber": "7732-18-5",
                     "molecularMass": {
                         "value": 18.015,
                         "unit": "g/mol"
                     },
-                    "smiles": "O"
+                    "smiles": "O",
+                    "swissCatNumber": "",
+                    "Inchi": "1S/H2O/h1H2",
+                    "molecularFormula": "H2O",
+                    "density": {
+                        "value": "1.000",
+                        "unit": "g/mL"
+                    }
                 },
                 "volume": {
                     "value": 0.5,
@@ -91,14 +98,21 @@
             ],
             "hasSolvent": {
                 "hasChemical": {
-                    "chemicalID": "",
+                    "chemicalID": "25",
                     "chemicalName": "Acetonitrile",
                     "CASNumber": "75-05-8",
                     "molecularMass": {
                         "value": 41.05,
                         "unit": "g/mol"
                     },
-                    "smiles": "CC#N"
+                    "smiles": "CC#N",
+                    "swissCatNumber": "",
+                    "Inchi": "1S/C2H3N/c1-2-3/h1H3",
+                    "molecularFormula": "C2H3N",
+                    "density": {
+                        "value": "0.787",
+                        "unit": "g/mL"
+                    }
                 },
                 "volume": {
                     "value": 50,
