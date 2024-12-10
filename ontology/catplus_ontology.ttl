@@ -299,7 +299,7 @@ cat:campaignClass a rdf:Property ;
     skos:definition "Categorization or grouping of related activities, tasks, or items, often used in contexts such as project management, operations, or production." ;
     .
 
-<http://purl.allotrope.org/ontologies/common#AFC_0000090> a rdf:Property ;
+allo-com:AFC_0000090 a rdf:Property ;
     skos:prefLabel "condition" ;
     skos:definition "A condition is an information content entity that is about the portion of reality under which something occurs or is valid. The condition is limited by its scope and may have preconditions. It restricts the possible realizations. [Allotrope]" ; #todo check
     .
@@ -337,7 +337,7 @@ allo-prop:AFX_0000211 a rdf:Property ;
     skos:definition "Speed in revolutions per minute (RPM) is a measure of the frequency of rotation, specifically the number of full rotations completed in one minute around a fixed axis." ;
     .
 
-<http://purl.obolibrary.org/obo/PATO_0001019> a rdf:Property ;
+obo:PATO_0001019 a rdf:Property ;
     skos:prefLabel "mass density" ;
     skos:definition "A physical quality which inheres in a bearer by virtue of some influence is exerted by the bearer's mass per unit size." ; 
     .
