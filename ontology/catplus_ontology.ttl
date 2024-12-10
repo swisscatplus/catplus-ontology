@@ -5,6 +5,7 @@ prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 prefix xsd: <http://www.w3.org/2001/XMLSchema#>
 prefix ex: <http://example.org/>
+prefix chebi: <https://www.ebi.ac.uk/chebi/searchId.do?chebiId=>
 prefix purl: <http://purl.allotrope.org/ontologies/>
 prefix schema: <https://schema.org/>
 prefix qudt: <http://qudt.org/schema/qudt/>
@@ -14,9 +15,14 @@ prefix dct: <http://purl.org/dc/terms/>
 prefix vann: <http://purl.org/vocab/vann/>
 prefix obo: <http://purl.obolibrary.org/obo/>
 prefix allo-res: <http://purl.allotrope.org/ontologies/result#> 
+prefix allo-hdf: <http://purl.allotrope.org/ontologies/hdf5/1.8#>
 prefix allo-prop: <http://purl.allotrope.org/ontologies/property#>
 prefix allo-real: <http://purl.allotrope.org/ontologies/realizable#>
 prefix allo-qual: <http://purl.allotrope.org/ontologies/quality#> 
+prefix allo-proc: <http://purl.allotrope.org/ontologies/process#>
+prefix allo-role: <http://purl.allotrope.org/ontologies/role#>
+prefix allo-com: <http://purl.allotrope.org/ontologies/common#>
+prefix allo-mat: <http://purl.allotrope.org/ontologies/material#>
 prefix obo: <http://purl.obolibrary.org/obo/>
 
 
@@ -26,7 +32,8 @@ cat: a owl:Ontology ;
     dct:contributor "Oksana Riba", "Robin Franken", "Jean-Charles Cousty","Laure VanCauwenberghe", "Pascal Miéville" ;
     dct:created "2024-04-01"^^xsd:date ;
     dct:creator "Robin Franken", "Jean-Charles Cousty" ;
-    dct:description "The CAT+ ontology provides concepts (classes and properties) to model human and machine readable automated catalysis discovery experiment metadata. It is the result of re-using external pre-existing vocabularies such as Allotrope, schema.org and qudt, together with custom imaging specific objects and properties." ;    dct:license <https://spdx.org/licenses/CC-BY-SA-4.0.html> ;
+    dct:description "The CAT+ ontology provides concepts (classes and properties) to model human and machine readable automated catalysis discovery experiment metadata. It is the result of re-using external pre-existing vocabularies such as Allotrope, schema.org and qudt, together with custom imaging specific objects and properties." ;    
+    dct:license <https://spdx.org/licenses/CC-BY-SA-4.0.html> ;
     dct:modified "2024-12-09"^^xsd:date ;
     dct:title "CAT+ Ontology" ;
     vann:preferredNamespacePrefix "cat" ;
@@ -52,24 +59,18 @@ allo-res:AFR_0002240 a rdf:Property ;
     .
 
 
-<http://purl.allotrope.org/ontologies/realizable#AFRE_0000001> a rdf:Property ;
+allo-real:AFRE_0000001 a rdf:Property ;
     skos:prefLabel "action" ;
     skos:altLabel "task" ;
     skos:definition "An action is a unit element in a procedure and is a concretization of an action specification." ;
     .
 
-<https://qudt.org/vocab/quantitykind/AngularVelocity> a rdf:Property ;
-    skos:prefLabel "angular velocity" ;
-    skos:altLabel "speed of revolution", "speed", "speed of rotation" ;
-    skos:definition "Angular Velocity refers to how fast an object rotates or revolves relative to another point.[QUDT]" ;
-    .
-
-<http://purl.allotrope.org/ontologies/process#AFP_0002677>  a rdf:Property ;
+allo-proc:AFP_0002677  a rdf:Property ;
     skos:prefLabel "pressure measurement" ;
     skos:definition "A measurement that targets the pressure of some material entity. [Allotrope]" ;
     .
     
-<http://purl.org/dc/terms/identifier> a rdf:Property ;
+dct:identifier a rdf:Property ;
     skos:prefLabel "identifier" ;
     skos:definition "An unambiguous reference to the resource within a given context." ;
     .
@@ -139,7 +140,7 @@ qudt:unit a rdf:Property ;
     skos:definition "A reference to the unit of measure of a quantity (variable or constant) of interest." ;
     .
 
-<http://purl.allotrope.org/ontologies/role#AFRL_0000474> a rdf:Property ;
+allo-role:AFRL_0000474 a rdf:Property ;
     rdfs:subPropertyOf qudt:quantity ;
     skos:prefLabel "expected datum" ;
     skos:definition "An expected datum is a descriptive datum that describes a information that was predicted or assumed to be the outcome of some process . [Allotrope]";
@@ -248,7 +249,7 @@ cat:hasContainerPositionAndQuantity a rdf:Property ;
     skos:definition "indicates the relationship between a action and it's description of the container posititions and quantities" ;
     .
 
-<http://purl.allotrope.org/ontologies/process#AFP_0002677> a rdf:Property ;
+allo-proc:AFP_0002677 a rdf:Property ;
     skos:prefLabel "pressure measurement" ;
     skos:definition "A measurement that targets the pressure of some material entity. [Allotrope]" ;
     .
@@ -258,7 +259,7 @@ cat:errorMargin a rdf:Property ;
     skos:definition "it refers to the range within which the true value of a measured quantity is expected to lie, considering the inherent uncertainties of the instrument. It is typically expressed as a ± value indicating the possible deviation from the true measurement due to limitations in precision, accuracy, or sensitivity of the instrument, manipulation." ;
     .
 
-<http://purl.allotrope.org/ontologies/hdf5/1.8#HardLink> a rdf:Property ;
+allo-hdf:HardLink a rdf:Property ;
     skos:prefLabel "hard link" ;
     skos:definition "A hard link is a reference to a file or directory that is a pointer to the file or directory itself, rather than a copy of the file or directory." ;
     .
@@ -298,7 +299,7 @@ cat:campaignClass a rdf:Property ;
     skos:definition "Categorization or grouping of related activities, tasks, or items, often used in contexts such as project management, operations, or production." ;
     .
 
-<http://purl.allotrope.org/ontologies/common#AFC_0000090> a rdf:Property ;
+allo-com:AFC_0000090 a rdf:Property ;
     skos:prefLabel "condition" ;
     skos:definition "A condition is an information content entity that is about the portion of reality under which something occurs or is valid. The condition is limited by its scope and may have preconditions. It restricts the possible realizations. [Allotrope]" ; #todo check
     .
@@ -336,7 +337,7 @@ allo-prop:AFX_0000211 a rdf:Property ;
     skos:definition "Speed in revolutions per minute (RPM) is a measure of the frequency of rotation, specifically the number of full rotations completed in one minute around a fixed axis." ;
     .
 
-<http://purl.obolibrary.org/obo/PATO_0001019> a rdf:Property ;
+obo:PATO_0001019 a rdf:Property ;
     skos:prefLabel "mass density" ;
     skos:definition "A physical quality which inheres in a bearer by virtue of some influence is exerted by the bearer's mass per unit size." ; 
     .
@@ -345,7 +346,7 @@ allo-prop:AFX_0000211 a rdf:Property ;
 # Shapes
 
 cat:AddAction a rdfs:Class, sh:NodeShape ;
-   rdfs:subClassOf <http://purl.allotrope.org/ontologies/realizable#AFRE_0000001> ;
+   rdfs:subClassOf allo-real:AFRE_0000001 ;
    sh:property [sh:path cat:dispenseType ; sh:datatype xsd:string] ;
    sh:property [sh:path cat:hasSample ; sh:class cat:Sample] ;
    sh:property [sh:path cat:hasContainerPositionAndQuantity ; sh:class cat:ContainerPositionAndQuantity] ;
@@ -358,22 +359,22 @@ cat:AddAction a rdfs:Class, sh:NodeShape ;
     .
 
 cat:SetTemperatureAction a rdfs:Class, sh:NodeShape ;
-    rdfs:subClassOf <http://purl.allotrope.org/ontologies/realizable#AFRE_0000001> ;
+    rdfs:subClassOf allo-real:AFRE_0000001 ;
     sh:property cat:speedShakerShape ;
     sh:property cat:temperatureShakerShape ;
     sh:property cat:temperatureTumbleStirrerShape ;
     .
 
 cat:SetPressureAction a rdfs:Class, sh:NodeShape ;
-    rdfs:subClassOf <http://purl.allotrope.org/ontologies/realizable#AFRE_0000001> ;
-    sh:property [sh:path <http://purl.allotrope.org/ontologies/process#AFP_0002677> ;
+    rdfs:subClassOf allo-real:AFRE_0000001 ;
+    sh:property [sh:path allo-proc:AFP_0002677> ;
                  sh:node cat:Observation ; 
                  sh:node [sh:property    [sh:path qudt:unit ; 
                                          sh:hasValue unit:Bar] ]];
     .
 
 cat:SetVacuumAction a rdfs:Class, sh:NodeShape ;
-    rdfs:subClassOf <http://purl.allotrope.org/ontologies/realizable#AFRE_0000001> ;
+    rdfs:subClassOf allo-real:AFRE_0000001 ;
     sh:property [sh:path cat:vacuum ; #vacuum
                  sh:node cat:Observation ; 
                  sh:node [sh:property    [sh:path qudt:unit ; 
@@ -381,22 +382,22 @@ cat:SetVacuumAction a rdfs:Class, sh:NodeShape ;
     .
 
 cat:ShakeAction a rdfs:Class, sh:NodeShape ;
-    rdfs:subClassOf <http://purl.allotrope.org/ontologies/realizable#AFRE_0000001> ;
+    rdfs:subClassOf allo-real:AFRE_0000001 ;
     sh:property cat:speedTumbleStirrerShape ;
     sh:property cat:temperatureShakerShape ;
     sh:property cat:temperatureTumbleStirrerShape ;
     .
 
 cat:FiltrateAction a rdfs:Class, sh:NodeShape ;
-    rdfs:subClassOf <http://purl.allotrope.org/ontologies/realizable#AFRE_0000001> ;
+    rdfs:subClassOf allo-real:AFRE_0000001 ;
     .
 
-<http://purl.allotrope.org/ontologies/realizable#AFRE_0000001> a rdfs:Class, sh:NodeShape ;
+allo-real:AFRE_0000001 a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Action" ;
     skos:definition "An action is a unit element in a procedure and is a concretization of an action specification." ; 
     sh:property [sh:path allo-res:AFR_0001723 ; sh:datatype xsd:string ] ;#Equipment name , 
     sh:property [sh:path cat:subEquipmentName ; sh:datatype xsd:string ] ;#subEquipmentName
-    sh:property [sh:path <https://schema.org/name> ; sh:datatype xsd:string ] ; #name
+    sh:property [sh:path schema:name ; sh:datatype xsd:string ] ; #name
     sh:property [sh:path allo-prop:AFX_0000622 ; sh:datatype xsd:dateTime ] ;#startTime ,
     sh:property [sh:path allo-res:AFR_0002423 ; sh:datatype xsd:dateTime ] ;#endTime , 
     sh:property [sh:path allo-res:AFR_0001606 ; sh:datatype xsd:string ] ;#methodName
@@ -445,7 +446,7 @@ cat:Observation a rdfs:Class, sh:NodeShape ;
     .
 
 cat:Sample a rdfs:Class, sh:NodeShape ;
-    skos:related <http://purl.allotrope.org/ontologies/material#AFM_0001099> ;
+    skos:related allo-mat:AFM_0001099 ;
     skos:prefLabel "Sample" ;
     skos:altLabel  "chemical mixture" ;
     skos:definition "A portion of chemical mixture is a chemical substance that is composed of chemical substances. [Allotrope]" ;
@@ -454,7 +455,7 @@ cat:Sample a rdfs:Class, sh:NodeShape ;
     sh:property cat:vialShape ; #vial type
     sh:property [sh:path cat:role ] ;   #role
     sh:property [sh:path purl:identifier ; sh:datatype xsd:string] ; #identifier/sampleID
-    sh:property [sh:path <http://purl.allotrope.org/ontologies/role#AFRL_0000474> ; sh:node cat:Observation] ; #expectedDatum/quantity
+    sh:property [sh:path allo-role:AFRL_0000474 ; sh:node cat:Observation] ; #expectedDatum/quantity
     sh:property [sh:path cat:measuredQuantity ; sh:node cat:Observation] ; #measuredQuantity
     sh:property [sh:path allo-qual:AFQ_0000111 ; 
                 sh:xone ([ sh:hasValue "Solid"] 
@@ -470,11 +471,11 @@ cat:Sample a rdfs:Class, sh:NodeShape ;
                     sh:node [sh:property    [sh:path qudt:unit ; 
                                             sh:hasValue unit:PERCENT] ]];
     sh:property [sh:path cat:hasSample ; sh:class cat:Sample] ; #hasSample
-    sh:property [sh:path cat:hasChemical ; sh:class <http://purl.obolibrary.org/obo/CHEBI_25367> ] ; #hasChemical
+    sh:property [sh:path cat:hasChemical ; sh:class obo:CHEBI_25367 ] ; #hasChemical
     .
 
-<http://purl.obolibrary.org/obo/CHEBI_25367> a rdfs:Class, sh:NodeShape ;
-    rdfs:subClassOf <https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI_36357> ;
+obo:CHEBI_25367 a rdfs:Class, sh:NodeShape ;
+    rdfs:subClassOf chebi:CHEBI_36357 ;
     sh:property [sh:path purl:identifier ; sh:datatype xsd:string ; sh:minCount 1 ; sh:maxCount 1] ;
     sh:property [sh:xone([sh:path cat:casNumber; sh:datatype xsd:string] [sh:path cat:swissCatNumber; sh:datatype xsd:string] )]; #Swisscat number EXCLUSIVE OR CAS Number
     sh:property [sh:path allo-res:AFR_0002292 ; sh:datatype xsd:string] ; #chemical name
@@ -483,20 +484,20 @@ cat:Sample a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path schema:keywords ; sh:datatype xsd:string] ; #keywords
     sh:property [sh:path allo-res:AFR_0001952 ; sh:datatype xsd:string] ; #molecular formula
     sh:property [sh:path allo-res:AFR_0002296 ; sh:datatype xsd:string] ; #inchi key
-    sh:property [sh:path <http://purl.obolibrary.org/obo/PATO_0001019> ; sh:datatype xsd:string ;
+    sh:property [sh:path obo:PATO_0001019 ; sh:datatype xsd:string ;
                  sh:node [sh:property [sh:path qudt:unit ;
                                         sh:hasValue unit:GM-PER-MilliL]]] ; #mass densitity
     skos:prefLabel "molecule" ;
     skos:definition "Any polyatomic entity that is an electrically neutral entity consisting of more than one atom." ;
     .
 
-<http://purl.obolibrary.org/obo/IAO_0000005> a rdfs:Class , sh:NodeShape ;
+obo:IAO_0000005 a rdfs:Class , sh:NodeShape ;
     skos:prefLabel "Objective" ;
     skos:definition "An objective is a goal or target to be achieved by the experiment." ;
     sh:property [sh:path schema:name ; sh:datatype xsd:string] ;
     sh:property [sh:path schema:description ; sh:datatype xsd:string] ;
     sh:property [sh:path cat:criteria ; sh:datatype xsd:string] ;
-    sh:property [sh:path <http://purl.allotrope.org/ontologies/common#AFC_0000090> ; sh:datatype xsd:string] ;
+    sh:property [sh:path allo-com:AFC_0000090 ; sh:datatype xsd:string] ;
     .
 
 cat:Campaign a rdfs:Class, sh:NodeShape ;
@@ -520,10 +521,10 @@ cat:Batch a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path cat:reactionType ; sh:datatype xsd:string] ;
     sh:property [sh:path cat:reactionSubType ; sh:datatype xsd:string] ;
     sh:property [sh:path allo-res:AFR_0002764 ; sh:datatype xsd:string] ;
-    sh:property [sh:path <http://purl.alltrope.org/ontologies/hdf5/1.8#HardLink> ; sh:datatype xsd:string] ;
+    sh:property [sh:path allo-hdf:HardLink ; sh:datatype xsd:string] ;
     sh:property [sh:path cat:optimizationType ; sh:datatype xsd:string] ;
-    sh:property [sh:path cat:hasObjective ; sh:class <http://purl.obolibrary.org/obo/IAO_0000005>] ;
-    sh:property [sh:path cat:hasChemical ; sh:class <http://purl.obolibrary.org/obo/CHEBI_25367>] ;
+    sh:property [sh:path cat:hasObjective ; sh:class obo:IAO_0000005] ;
+    sh:property [sh:path cat:hasChemical ; sh:class obo:CHEBI_25367] ;
     .
 
 
