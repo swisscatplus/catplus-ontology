@@ -367,7 +367,7 @@ cat:SetTemperatureAction a rdfs:Class, sh:NodeShape ;
 
 cat:SetPressureAction a rdfs:Class, sh:NodeShape ;
     rdfs:subClassOf allo-real:AFRE_0000001 ;
-    sh:property [sh:path allo-proc:AFP_0002677> ;
+    sh:property [sh:path allo-proc:AFP_0002677 ;
                  sh:node cat:Observation ; 
                  sh:node [sh:property    [sh:path qudt:unit ; 
                                          sh:hasValue unit:Bar] ]];
