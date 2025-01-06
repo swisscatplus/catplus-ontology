@@ -1,23 +1,23 @@
 {
     "hasCampaign": {
         "campaignName": "de",
-        "Description": "de",
-        "Objective": "de",
+        "description": "de",
+        "objective": "de",
         "campaignClass": "de",
-        "Type": "de",
-        "Reference": "de",
+        "type": "de",
+        "reference": "de",
         "hasBatch": {
             "batchID": "23",
             "batchName": "20240516",
-            "ReactionType": "d",
-            "ReactionName": "",
-            "OptimizationType": "e",
-            "Link": "ede"
+            "reactionType": "d",
+            "reactionName": "",
+            "optimizationType": "e",
+            "link": "ede"
         },
         "hasObjective": {
-            "Criteria": "",
-            "Condition": "",
-            "Description": "",
+            "criteria": "",
+            "condition": "",
+            "description": "",
             "objectiveName": ""
         },
         "hasChemical": [
