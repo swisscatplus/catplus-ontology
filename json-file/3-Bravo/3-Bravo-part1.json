@@ -1,13 +1,19 @@
 {
     "Actions": [
         {
-            "actionName": "evaporation",
+            "actionName": "EvaporationAction",
+            "equipmentName": "Evaporator",
+            "subEquipmentName": "item-1",
             "volumeEvaporationFinal": {
-                "value": "100",
+                "value": "50",
                 "unit": "%"
             },
             "startTime": "2024-07-25_12:03:31",
             "endingTime": "2024-07-25_12:15:20",
+            "sampleID": "26",
+            "containerID": "157",
+            "containerBarcode": "1234858858754848",
+            "position": "A1",
             "temperature": {
                 "value": 156,
                 "unit": "°C",
@@ -16,16 +22,20 @@
                     "unit": "°C"
                 }
             },
-            "sampleID": 26,
-            "containerID": 157,
-            "containerBarcode": "1234858858754848",
-            "position": "A1",
-            "equipmentName": "Evaporator",
-            "subEquipmentName": "item-1",
             "order": "1"
         },
         {
-            "actionName": "dilution",
+            "actionName": "AddAction",
+            "equipmentName": "Dilution with solvent",
+            "subEquipmentName": "Micropipette",
+            "startTime": "2024-07-25T12:02:39",
+            "endingTime": "2024-07-25T12:02:41",
+            "dispenseState": "Liquid",
+            "dispenseType": "volume",
+            "sampleID": "26",
+            "containerID": "157",
+            "containerBarcode": "1234858858754848",
+            "position": "A1",
             "hasSolvent": {
                 "hasChemical": {
                     "chemicalID": "14",
@@ -53,17 +63,17 @@
                     }
                 }
             },
-            "sampleID": 26,
-            "containerID": 157,
-            "containerBarcode": "1234858858754848",
-            "position": "A1",
-            "equipmentName": "solvent adddition",
-            "subEquipmentName": "micropipette",
             "order": "2"
         },
         {
             "actionName": "solventChange",
             "SPMEprocess": true,
+            "sampleID": "26",
+            "containerID": "157",
+            "containerBarcode": "1234858858754848",
+            "position": "A1",
+            "equipmentName": "SPE",
+            "subEquipmentName": "cartridge exchange",
             "hasSubAction": [
                 {
                     "subActionName": "separation-cartridge-part-1",
@@ -123,12 +133,6 @@
                     }
                 }
             },
-            "sampleID": 26,
-            "containerID": 157,
-            "containerBarcode": "1234858858754848",
-            "position": "A1",
-            "equipmentName": "SPE",
-            "subEquipmentName": "cartridge exchange",
             "order": "3"
         }
     ]
