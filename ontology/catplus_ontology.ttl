@@ -432,7 +432,7 @@ cat:QuantityShape a sh:NodeShape ;
     sh:property [sh:path qudt:unit ; 
         sh:minCount 1 ; 
         sh:maxCount 1 ;
-        sh:xone ([ sh:hasValue unit:MillGM ] 
+        sh:xone ([ sh:hasValue unit:MilliGM ] 
                 [sh:hasValue unit:MilliL ] )]
     .
 
@@ -441,7 +441,7 @@ cat:Observation a rdfs:Class, sh:NodeShape ;
     skos:definition "An observation is an abstract entity that captures the unit and value of a property into one node." ;
     sh:property [sh:path qudt:unit  ; sh:minCount 1 ; sh:maxCount 1] ;
     sh:property [sh:path qudt:value ; sh:minCount 1 ; sh:maxCount 1] ;
-    sh:property [sh:path cat:errorMargin ; sh:datatype xsd:decimal; 
+    sh:property [sh:path cat:errorMargin ; 
                 sh:node [sh:property [sh:path qudt:unit ; sh:minCount 1 ], [sh:path qudt:value ; sh:minCount 1 ]]] ;
     .
 
@@ -477,14 +477,15 @@ cat:Sample a rdfs:Class, sh:NodeShape ;
 obo:CHEBI_25367 a rdfs:Class, sh:NodeShape ;
     rdfs:subClassOf chebi:CHEBI_36357 ;
     sh:property [sh:path purl:identifier ; sh:datatype xsd:string ; sh:minCount 1 ; sh:maxCount 1] ;
-    sh:property [sh:xone([sh:path cat:casNumber; sh:datatype xsd:string] [sh:path cat:swissCatNumber; sh:datatype xsd:string] )]; #Swisscat number EXCLUSIVE OR CAS Number
+    sh:xone ([sh:property [sh:path cat:casNumber ; sh:datatype xsd:string ; sh:minCount 1] ] 
+             [sh:property [sh:path cat:swissCatNumber; sh:datatype xsd:string ; sh:minCount 1]] ); #Swisscat number EXCLUSIVE OR CAS Number
     sh:property [sh:path allo-res:AFR_0002292 ; sh:datatype xsd:string] ; #chemical name
     sh:property [sh:path allo-res:AFR_0002295 ; sh:datatype xsd:string] ; #smiles
     sh:property [sh:path allo-res:AFR_0002294 ; sh:datatype xsd:string] ; #molecularMass
     sh:property [sh:path schema:keywords ; sh:datatype xsd:string] ; #keywords
     sh:property [sh:path allo-res:AFR_0001952 ; sh:datatype xsd:string] ; #molecular formula
     sh:property [sh:path allo-res:AFR_0002296 ; sh:datatype xsd:string] ; #inchi key
-    sh:property [sh:path obo:PATO_0001019 ; sh:datatype xsd:string ;
+    sh:property [sh:path obo:PATO_0001019 ;
                  sh:node [sh:property [sh:path qudt:unit ;
                                         sh:hasValue unit:GM-PER-MilliL]]] ; #mass densitity
     skos:prefLabel "molecule" ;
