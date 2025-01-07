@@ -130,7 +130,6 @@ cat:myChemical123 a obo:CHEBI_25367 ;
     cat:chemicalName "Formaldehyde" ;
     allo-res:AFR_0002295 "C=O" ;
     allo-res:AFR_0002294 "30.03" ;
-    cat:swissCatNumber "SWISS001" ;
     schema:keywords "organic", "aldehyde" ;
     allo-res:AFR_0001952 "CH2O" ;
     allo-res:AFR_0002296 "WSFSSNUMVPVAAY" ;
@@ -184,20 +183,19 @@ cat:sample2 a cat:Sample ;
 
 # Instance data for Chemical
 cat:myChemical456 a obo:CHEBI_25367 ;
+    purl:identifier "MOL002" ;
     cat:chemicalName "Acetone" ;
     cat:chemicalFormula "C3H6O" ;
     cat:chemicalMolarMass "58.08" ;
-    cat:chemicalCAS "67-64-1" ;
     cat:theoreticalRole 2.0 ;
-    cat:swissCatNumber "SWISS002" ;
-    cat:casNumber "67-64-1" ;
+    cat:swissCatNumber "SWISS001" ;
     allo-res:AFR_0002295 "CC(=O)C" ;
     allo-res:AFR_0002294 "58.08" ;
     allo-res:AFR_0001952 "C3H6O" ;
     allo-res:AFR_0002296 "WSFSSNUMVPVAAY" ;
     schema:keywords "organic", "ketone" ;
-    obo:PATO_0001019 [qudt:value "0.79" ;
-                        qudt:unit unit:GM-PER-MilliL
+    obo:PATO_0001019 [qudt:value "0.79"^^xsd:decimal ;
+                      qudt:unit unit:GM-PER-MilliL
     ] .
 
 
@@ -217,7 +215,7 @@ cat:batch123 a cat:Batch ;
     cat:reactionSubType "Sample Reaction Subtype" ;
     allo-res:AFR_0002764 "Sample AFR value for batch" ;
     cat:optimizationType "Sample Optimization Type" ;
-    cat:hasObjective <http://purl.obolibrary.org/obo/IAO_0000005> ;
+    cat:hasObjective cat:someObjective ;
     cat:hasChemical cat:myChemical123 .
 
 cat:someObjective a obo:IAO_0000005 ;

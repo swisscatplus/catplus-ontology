@@ -1,0 +1,444 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX cat: <http://example.org/cat#>
+PREFIX schema: <https://schema.org/>
+PREFIX unit: <https://qudt.org/vocab/unit/>
+PREFIX allores: <http://purl.allotrope.org/ontologies/result#>
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX alloqual: <http://purl.allotrope.org/ontologies/quality#>
+PREFIX purl: <http://purl.allotrope.org/ontologies/>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+cat:instance1 a cat:SetPressureAction;
+  cat:containerBarcode "1";
+  cat:containerID "1";
+  cat:hasBatch _:c9037df0-ac66-4b30-ab4f-55c322267877;
+  cat:subEquipmentName "MTP_Pressure";
+  allores:AFR_0001606 "set_pressure";
+  allores:AFR_0001723 "Chemspeed SWING XL";
+  allores:AFR_0002423 "2024-07-25T12:04:05"^^xsd:dateTime;
+  allores:AFX_0000622 "2024-07-25T12:03:50"^^xsd:dateTime.
+
+cat:instance2 a cat:AddAction;
+  cat:dispenseType "volume";
+  cat:hasBatch _:c9037df0-ac66-4b30-ab4f-55c322267877;
+  cat:hasContainerPositionAndQuantity [ a cat:ContainerPositionAndQuantity;
+      cat:containerID "1";
+      allores:AFR_0002240 "A1";
+      qudt:quantity [
+          cat:errorMargin [
+              qudt:unit unit:MilliGM;
+              qudt:value "0.001"^^xsd:decimal];
+          qudt:unit unit:MilliGM;
+          qudt:value "0.024"^^xsd:decimal]
+          ],
+    [ a cat:ContainerPositionAndQuantity;
+      cat:containerID "1";
+      allores:AFR_0002240 "B1";
+      qudt:quantity [
+          cat:errorMargin [
+              qudt:unit unit:MilliGM;
+              qudt:value "0.002"^^xsd:decimal];
+          qudt:unit unit:MilliGM;
+          qudt:value "0.034"^^xsd:decimal]];
+  cat:hasSample [ a cat:Sample;
+      cat:containerBarcode "18";
+      cat:containerID "18";
+      cat:expectedDatum [
+          qudt:unit unit:MilliGM;
+          qudt:value "2"^^xsd:decimal];
+      cat:hasSample [ a cat:Sample;
+          cat:expectedDatum [
+              qudt:unit unit:MilliGM;
+              qudt:value "5"^^xsd:decimal];
+          cat:hasChemical [ a obo:CHEBI_25367;
+              cat:casNumber "123-11-5";
+              cat:chemicalName "4-methoxybenzaldehyde";
+              purl:identifier "134";
+              allores:AFR_0001952 "C8H8O2";
+              allores:AFR_0002294 "136.15";
+              allores:AFR_0002295 "COC1=CC=C(C=C1)C=O";
+              allores:AFR_0002296 "1S/C8H8O2/c1-10-8-4-2-7(6-9)3-5-8/h2-6H,1H3";
+              obo:PATO_0001019 [
+                  qudt:unit unit:GM-PER-MilliL;
+                  qudt:value "1.119"^^xsd:decimal]];
+          cat:internalBarCode "2";
+          cat:measuredQuantity [
+              cat:errorMargin [
+                  qudt:unit unit:MilliGM;
+                  qudt:value "0.001"^^xsd:decimal];
+              qudt:unit unit:MilliGM;
+              qudt:value "1"^^xsd:decimal];
+          cat:role "reagent";
+          purl:identifier "124";
+          alloqual:AFQ_0000111 "Liquid";
+          allores:AFR_0002036 [
+              cat:errorMargin [
+                  qudt:unit unit:MOL-PER-L;
+                  qudt:value "0.001"^^xsd:decimal];
+              qudt:unit unit:MOL-PER-L;
+              qudt:value "1"^^xsd:decimal]];
+      cat:role "reagent";
+      cat:vialShape "storage vial";
+      allores:AFR_0002464 "17"];
+  cat:speedInRPM [
+      cat:errorMargin [
+          qudt:unit unit:REV-PER-MIN;
+          qudt:value "1"^^xsd:decimal];
+      qudt:unit unit:REV-PER-MIN;
+      qudt:value "152"^^xsd:decimal];
+  cat:subEquipmentName "GDU-V";
+  alloqual:AFQ_0000111 "Liquid";
+  allores:AFR_0001606 "addition";
+  allores:AFR_0001723 "Chemspeed SWING XL";
+  allores:AFR_0002423 "2024-07-25T12:01:35"^^xsd:dateTime;
+  allores:AFX_0000622 "2024-07-25T12:01:29"^^xsd:dateTime.
+
+cat:instance3 a cat:SetVacuumAction;
+  cat:containerBarcode "1";
+  cat:containerID "1";
+  cat:hasBatch _:c9037df0-ac66-4b30-ab4f-55c322267877;
+  cat:subEquipmentName "vacuum";
+  allores:AFR_0001606 "set_vacuum";
+  allores:AFR_0001723 "Chemspeed SWING XL";
+  allores:AFR_0002423 "2024-07-25T12:03:50"^^xsd:dateTime;
+  allores:AFX_0000622 "2024-07-25T12:03:41"^^xsd:dateTime.
+
+cat:instance4 a cat:SetTemperatureAction;
+  cat:containerBarcode "1";
+  cat:containerID "1";
+  cat:hasBatch _:c9037df0-ac66-4b30-ab4f-55c322267877;
+  cat:speedInRPM [
+      cat:errorMargin [
+          qudt:unit unit:REV-PER-MIN;
+          qudt:value "5"^^xsd:decimal];
+      qudt:unit unit:REV-PER-MIN;
+      qudt:value "152"^^xsd:decimal];
+  cat:subEquipmentName "heater";
+  cat:temperatureShakerShape [
+      cat:errorMargin [
+          qudt:unit unit:DEG_C;
+          qudt:value "1"^^xsd:decimal];
+      qudt:unit unit:DEG_C;
+      qudt:value "25"^^xsd:decimal];
+  cat:temperatureTumbleStirrerShape [
+      cat:errorMargin [
+          qudt:unit unit:DEG_C;
+          qudt:value "2"^^xsd:decimal];
+      qudt:unit unit:DEG_C;
+      qudt:value "25"^^xsd:decimal];
+  allores:AFR_0001606 "set_temperature";
+  allores:AFR_0001723 "Chemspeed SWING XL";
+  allores:AFR_0002423 "2024-07-25T12:00:02"^^xsd:dateTime;
+  allores:AFX_0000622 "2024-07-25T12:00:00"^^xsd:dateTime.
+
+cat:instance5 a cat:AddAction;
+  cat:dispenseType "volume";
+  cat:hasBatch _:c9037df0-ac66-4b30-ab4f-55c322267877;
+  cat:hasContainerPositionAndQuantity [ a cat:ContainerPositionAndQuantity;
+      cat:containerID "1";
+      allores:AFR_0002240 "B1";
+      qudt:quantity [
+          cat:errorMargin [
+              qudt:unit unit:MilliGM;
+              qudt:value "0.02"^^xsd:decimal];
+          qudt:unit unit:MilliGM;
+          qudt:value "4"^^xsd:decimal]],
+    [ a cat:ContainerPositionAndQuantity;
+      cat:containerID "1";
+      allores:AFR_0002240 "A1";
+      qudt:quantity [
+          cat:errorMargin [
+              qudt:unit unit:MilliGM;
+              qudt:value "0.05"^^xsd:decimal];
+          qudt:unit unit:MilliGM;
+          qudt:value "1"^^xsd:decimal]];
+  cat:hasSample [ a cat:Sample;
+      cat:containerBarcode "17";
+      cat:containerID "17";
+      cat:expectedDatum [
+          qudt:unit unit:MilliGM;
+          qudt:value "2"^^xsd:decimal];
+      cat:hasSample [ a cat:Sample;
+          cat:hasChemical [ a obo:CHEBI_25367;
+              cat:casNumber "108-88-3";
+              cat:chemicalName "Toluene";
+              purl:identifier "134";
+              allores:AFR_0001952 "C7H8";
+              allores:AFR_0002294 "92.14";
+              allores:AFR_0002295 "CC1=CC=CC=C1";
+              allores:AFR_0002296 "1S/C7H8/c1-7-5-3-2-4-6-7/h2-6H,1H3";
+              obo:PATO_0001019 [
+                  qudt:unit unit:GM-PER-MilliL;
+                  qudt:value "0.8623"^^xsd:decimal]];
+          cat:internalBarCode "1";
+          cat:role "solvent";
+          purl:identifier "123";
+          alloqual:AFQ_0000111 "Liquid"];
+      cat:role "solvent";
+      cat:vialShape "storage vial";
+      allores:AFR_0002464 "15"];
+  cat:speedInRPM [
+      cat:errorMargin [
+          qudt:unit unit:REV-PER-MIN;
+          qudt:value "1"^^xsd:decimal];
+      qudt:unit unit:REV-PER-MIN;
+      qudt:value "152"^^xsd:decimal];
+  cat:subEquipmentName "GDU-V";
+  alloqual:AFQ_0000111 "Liquid";
+  allores:AFR_0001606 "addition";
+  allores:AFR_0001723 "Chemspeed SWING XL";
+  allores:AFR_0002423 "2024-07-25T12:00:17"^^xsd:dateTime;
+  allores:AFX_0000622 "2024-07-25T12:00:13"^^xsd:dateTime.
+
+cat:instance6 a cat:ShakeAction;
+  cat:containerBarcode "1";
+  cat:containerID "1";
+  cat:hasBatch _:c9037df0-ac66-4b30-ab4f-55c322267877;
+  cat:subEquipmentName "Tumble Stirrer";
+  cat:temperatureShakerShape [
+      cat:errorMargin [
+          qudt:unit unit:DEG_C;
+          qudt:value "2"^^xsd:decimal];
+      qudt:unit unit:DEG_C;
+      qudt:value "25"^^xsd:decimal];
+  cat:temperatureTumbleStirrerShape [
+      cat:errorMargin [
+          qudt:unit unit:DEG_C;
+          qudt:value "1"^^xsd:decimal];
+      qudt:unit unit:DEG_C;
+      qudt:value "25"^^xsd:decimal];
+  allores:AFR_0001606 "shake";
+  allores:AFR_0001723 "Chemspeed SWING XL";
+  allores:AFR_0002423 "2024-07-25T12:15:20"^^xsd:dateTime;
+  allores:AFX_0000622 "2024-07-25T12:03:31"^^xsd:dateTime.
+
+cat:instance7 a cat:SetTemperatureAction;
+  cat:containerBarcode "1";
+  cat:containerID "1";
+  cat:hasBatch _:c9037df0-ac66-4b30-ab4f-55c322267877;
+  cat:speedInRPM [
+      cat:errorMargin [
+          qudt:unit unit:REV-PER-MIN;
+          qudt:value "1"^^xsd:decimal];
+      qudt:unit unit:REV-PER-MIN;
+      qudt:value "1000"^^xsd:decimal];
+  cat:subEquipmentName "heater";
+  cat:temperatureShakerShape [
+      cat:errorMargin [
+          qudt:unit unit:DEG_C;
+          qudt:value "2"^^xsd:decimal];
+      qudt:unit unit:DEG_C;
+      qudt:value "25"^^xsd:decimal];
+  cat:temperatureTumbleStirrerShape [
+      cat:errorMargin [
+          qudt:unit unit:DEG_C;
+          qudt:value "1"^^xsd:decimal];
+      qudt:unit unit:DEG_C;
+      qudt:value "25"^^xsd:decimal];
+  allores:AFR_0001606 "set_temperature";
+  allores:AFR_0001723 "Chemspeed SWING XL";
+  allores:AFR_0002423 "2024-07-25T12:05:20"^^xsd:dateTime;
+  allores:AFX_0000622 "2024-07-25T12:04:57"^^xsd:dateTime.
+
+cat:instance8 a cat:AddAction;
+  cat:dispenseType "mass";
+  cat:hasBatch _:c9037df0-ac66-4b30-ab4f-55c322267877;
+  cat:hasContainerPositionAndQuantity [ a cat:ContainerPositionAndQuantity;
+      cat:containerID "1";
+      allores:AFR_0002240 "A1";
+      qudt:quantity [
+          cat:errorMargin [
+              qudt:unit unit:MilliGM;
+              qudt:value "0.002"^^xsd:decimal];
+          qudt:unit unit:MilliGM;
+          qudt:value "0.035"^^xsd:decimal]],
+    [ a cat:ContainerPositionAndQuantity;
+      cat:containerID "1";
+      allores:AFR_0002240 "B1";
+      qudt:quantity [
+          cat:errorMargin [
+              qudt:unit unit:MilliGM;
+              qudt:value "0.001"^^xsd:decimal];
+          qudt:unit unit:MilliGM;
+          qudt:value "0.034"^^xsd:decimal]];
+  cat:hasSample [ a cat:Sample;
+      cat:containerBarcode "20";
+      cat:containerID "20";
+      cat:expectedDatum [
+          qudt:unit unit:MilliGM;
+          qudt:value "5"^^xsd:decimal];
+      cat:hasSample [ a cat:Sample;
+          cat:expectedDatum [
+              qudt:unit unit:MilliGM;
+              qudt:value "20"^^xsd:decimal];
+          cat:hasChemical [ a obo:CHEBI_25367;
+              cat:casNumber "100-42-5"^^xsd:string ;
+              cat:chemicalName "Styrene";
+              purl:identifier "135";
+              allores:AFR_0001952 "C8H8";
+              allores:AFR_0002294 "104.15";
+              allores:AFR_0002295 "C=CC1=CC=CC=C1";
+              allores:AFR_0002296 "1S/C8H8/c1-2-8-6-4-3-5-7-8/h2-7H,1H2";
+              obo:PATO_0001019 [
+                  qudt:unit unit:GM-PER-MilliL;
+                  qudt:value "0.902"^^xsd:decimal]];
+          cat:internalBarCode "3";
+          cat:measuredQuantity [
+              cat:errorMargin [
+                  qudt:unit unit:MilliGM;
+                  qudt:value "0.01"^^xsd:decimal];
+              qudt:unit unit:MilliGM;
+              qudt:value "1"^^xsd:decimal];
+          cat:role "reagent";
+          purl:identifier "147";
+          alloqual:AFQ_0000111 "Liquid";
+          allores:AFR_0002036 [
+              cat:errorMargin [
+                  qudt:unit unit:MOL-PER-L;
+                  qudt:value "0.01"^^xsd:decimal];
+              qudt:unit unit:MOL-PER-L;
+              qudt:value "1"^^xsd:decimal]];
+      cat:role "reagent";
+      cat:vialShape "storage vial";
+      allores:AFR_0002464 "19"];
+  cat:speedInRPM [
+      cat:errorMargin [
+          qudt:unit unit:REV-PER-MIN;
+          qudt:value "1"^^xsd:decimal];
+      qudt:unit unit:REV-PER-MIN;
+      qudt:value "152"^^xsd:decimal];
+  cat:subEquipmentName "GDU-V";
+  alloqual:AFQ_0000111 "Solid";
+  allores:AFR_0001606 "addition";
+  allores:AFR_0001723 "Chemspeed SWING XL";
+  allores:AFR_0002423 "2024-07-25T12:02:03"^^xsd:dateTime;
+  allores:AFX_0000622 "2024-07-25T12:02:01"^^xsd:dateTime.
+
+_:c9037df0-ac66-4b30-ab4f-55c322267877 a cat:Batch;
+  schema:name "23".
+
+cat:instance9 a cat:SetTemperatureAction;
+  cat:containerBarcode "1";
+  cat:containerID "1";
+  cat:hasBatch _:c9037df0-ac66-4b30-ab4f-55c322267877;
+  cat:speedInRPM [
+      cat:errorMargin [
+          qudt:unit unit:REV-PER-MIN;
+          qudt:value "1"^^xsd:decimal];
+      qudt:unit unit:REV-PER-MIN;
+      qudt:value "1000"^^xsd:decimal];
+  cat:subEquipmentName "heater";
+  cat:temperatureShakerShape [
+      cat:errorMargin [
+          qudt:unit unit:DEG_C;
+          qudt:value "1"^^xsd:decimal];
+      qudt:unit unit:DEG_C;
+      qudt:value "25"^^xsd:decimal];
+  cat:temperatureTumbleStirrerShape [
+      cat:errorMargin [
+          qudt:unit unit:DEG_C;
+          qudt:value "1"^^xsd:decimal];
+      qudt:unit unit:DEG_C;
+      qudt:value "59.99"^^xsd:decimal];
+  allores:AFR_0001606 "set_temperature";
+  allores:AFR_0001723 "Chemspeed SWING XL";
+  allores:AFR_0002423 "2024-07-25T12:03:41"^^xsd:dateTime;
+  allores:AFX_0000622 "2024-07-25T12:03:31"^^xsd:dateTime.
+
+cat:instance10 a cat:AddAction;
+  cat:dispenseType "volume";
+  cat:hasBatch _:c9037df0-ac66-4b30-ab4f-55c322267877;
+  cat:hasContainerPositionAndQuantity [ a cat:ContainerPositionAndQuantity;
+      cat:containerID "1";
+      allores:AFR_0002240 "B1";
+      qudt:quantity [
+          cat:errorMargin [
+              qudt:unit unit:MilliGM;
+              qudt:value "0.01"^^xsd:decimal];
+          qudt:unit unit:MilliGM;
+          qudt:value "0.054"^^xsd:decimal]],
+    [ a cat:ContainerPositionAndQuantity;
+      cat:containerID "1";
+      allores:AFR_0002240 "A1";
+      qudt:quantity [
+          cat:errorMargin [
+              qudt:unit unit:MilliGM;
+              qudt:value "0.001"^^xsd:decimal];
+          qudt:unit unit:MilliGM;
+          qudt:value "0.052"^^xsd:decimal]];
+  cat:hasSample [ a cat:Sample;
+      cat:containerBarcode "24";
+      cat:containerID "24";
+      cat:expectedDatum [
+          qudt:unit unit:MilliGM;
+          qudt:value "10"^^xsd:decimal];
+      cat:hasSample [ a cat:Sample;
+          cat:expectedDatum [
+              qudt:unit unit:MilliGM;
+              qudt:value "5"^^xsd:decimal];
+          cat:hasChemical [ a obo:CHEBI_25367;
+              cat:casNumber "873373-34-3";
+              cat:chemicalName "4-(Difluoromethyl)benzyl bromide";
+              purl:identifier "137";
+              allores:AFR_0001952 "C8H7BrF2";
+              allores:AFR_0002294 "221.042";
+              allores:AFR_0002295 "BrCc1ccc(cc1)C(F)(F)F";
+              allores:AFR_0002296 "1S/C8H7BrF2/c9-5-6-1-3-7(4-2-6)8(10)11/h1-4,8H,5H2"];
+          cat:internalBarCode "5";
+          cat:measuredQuantity [
+              cat:errorMargin [
+                  qudt:unit unit:MilliGM;
+                  qudt:value "0.1"^^xsd:decimal];
+              qudt:unit unit:MilliGM;
+              qudt:value "5"^^xsd:decimal];
+          cat:role "reagent";
+          purl:identifier "147";
+          alloqual:AFQ_0000111 "Liquid";
+          allores:AFR_0002036 [
+              cat:errorMargin [
+                  qudt:unit unit:MOL-PER-L;
+                  qudt:value "0.1"^^xsd:decimal];
+              qudt:unit unit:MOL-PER-L;
+              qudt:value "5"^^xsd:decimal]];
+      cat:role "reagent";
+      cat:vialShape "storage vial";
+      allores:AFR_0002464 "20"];
+  cat:speedInRPM [
+      cat:errorMargin [
+          qudt:unit unit:REV-PER-MIN;
+          qudt:value "1"^^xsd:decimal];
+      qudt:unit unit:REV-PER-MIN;
+      qudt:value "152"^^xsd:decimal];
+  cat:subEquipmentName "GDU-V";
+  alloqual:AFQ_0000111 "Liquid";
+  allores:AFR_0001606 "addition";
+  allores:AFR_0001723 "Chemspeed SWING XL";
+  allores:AFR_0002423 "2024-07-25T12:02:41"^^xsd:dateTime;
+  allores:AFX_0000622 "2024-07-25T12:02:39"^^xsd:dateTime.
+
+cat:instance11 a cat:FiltrateAction;
+  cat:containerBarcode "1";
+  cat:containerID "1";
+  cat:hasBatch _:c9037df0-ac66-4b30-ab4f-55c322267877;
+  cat:subEquipmentName "Filtration unit";
+  allores:AFR_0001606 "filtrate";
+  allores:AFR_0001723 "Chemspeed SWING XL";
+  allores:AFR_0002423 "2024-07-25T12:16:50"^^xsd:dateTime;
+  allores:AFX_0000622 "2024-07-25T12:15:23"^^xsd:dateTime.
+
+
+unit:MilliGM a qudt:Unit;
+  schema:name "MilliGM".
+
+unit:DEG_C a qudt:Unit;
+    schema:name "DEG_C".
+
+unit:REV-PER-MIN a qudt:Unit;
+    schema:name "REV-PER-MIN".
+
+unit:MOL-PER-L a qudt:Unit;
+    schema:name "MOL-PER-L".
+
+unit:GM-PER-MilliL a qudt:Unit;
+    schema:name "GM-PER-MilliL".
