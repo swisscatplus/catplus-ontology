@@ -177,7 +177,7 @@
                             "unit": "mg"
                         },
                         "measuredQuantity": {
-                            "value": "1",
+                            "value": 1,
                             "unit": "mg",
                             "errorMargin": {
                                 "value": 0.001,
@@ -268,7 +268,7 @@
                             "unit": "mg"
                         },
                         "measuredQuantity": {
-                            "value": "1",
+                            "value": 1,
                             "unit": "mg",
                             "errorMargin": {
                                 "value": 0.01,
@@ -359,7 +359,7 @@
                             "unit": "mg"
                         },
                         "measuredQuantity": {
-                            "value": "5",
+                            "value": 5,
                             "unit": "mg",
                             "errorMargin": {
                                 "value": 0.1,
