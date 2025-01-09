@@ -2,14 +2,15 @@
     "Actions": [
         {
             "actionName": "EvaporationAction",
+            "subActionName": "",
             "equipmentName": "Evaporator",
             "subEquipmentName": "item-1",
             "volumeEvaporationFinal": {
                 "value": "50",
                 "unit": "%"
             },
-            "startTime": "2024-07-25_12:03:31",
-            "endingTime": "2024-07-25_12:15:20",
+            "startTime": "2024-07-25T12:03:31",
+            "endingTime": "2024-07-25T12:15:20",
             "sampleID": "26",
             "containerID": "157",
             "containerBarcode": "1234858858754848",
@@ -26,8 +27,9 @@
         },
         {
             "actionName": "AddAction",
-            "equipmentName": "Dilution with solvent",
-            "subEquipmentName": "Micropipette",
+            "subActionName": "Dilution",
+            "equipmentName": "Micropipette",
+            "subEquipmentName": "",
             "startTime": "2024-07-25T12:02:39",
             "endingTime": "2024-07-25T12:02:41",
             "dispenseState": "Liquid",
@@ -67,45 +69,26 @@
         },
         {
             "actionName": "solventChange",
+            "subActionName": "separation-cartridge-part-1",
+            "equipmentName": "SPE",
+            "subEquipmentName": "cartridge exchange",
             "SPMEprocess": true,
             "sampleID": "26",
             "containerID": "157",
             "containerBarcode": "1234858858754848",
             "position": "A1",
-            "equipmentName": "SPE",
-            "subEquipmentName": "cartridge exchange",
-            "hasSubAction": [
-                {
-                    "subActionName": "separation-cartridge-part-1",
-                    "hasCartridge": {
-                        "cartridgeName": "unknown-cartridge",
-                        "cartridgeComposition": "unknown-material"
-                    },
-                    "startTime": {
-                        "value": 0,
-                        "unit": "min"
-                    },
-                    "endingTime": {
-                        "value": 1,
-                        "unit": "min"
-                    }
-                },
-                {
-                    "subActionName": "separation-cartridge-part2",
-                    "hasCartridge": {
-                        "cartridgeName": "C18Cartridge",
-                        "cartridgeComposition": "C18"
-                    },
-                    "startTime": {
-                        "value": 1,
-                        "unit": "min"
-                    },
-                    "endingTime": {
-                        "value": 7,
-                        "unit": "min"
-                    }
-                }
-            ],
+            "hasCartridge": {
+                "cartridgeName": "test-cartridge",
+                "cartridgeComposition": "test-material"
+            },
+            "startTime": {
+                "value": 0,
+                "unit": "min"
+            },
+            "endingTime": {
+                "value": 1,
+                "unit": "min"
+            },
             "hasSolvent": {
                 "hasChemical": {
                     "chemicalID": "25",
@@ -134,6 +117,57 @@
                 }
             },
             "order": "3"
+        },
+        {
+            "actionName": "solventChange",
+            "subActionName": "separation-cartridge-part-2",
+            "equipmentName": "SPE",
+            "subEquipmentName": "cartridge exchange",
+            "SPMEprocess": true,
+            "sampleID": "26",
+            "containerID": "157",
+            "containerBarcode": "1234858858754848",
+            "position": "A1",
+            "hasCartridge": {
+                "cartridgeName": "C18cartridge",
+                "cartridgeComposition": "C18"
+            },
+            "startTime": {
+                "value": 1,
+                "unit": "min"
+            },
+            "endingTime": {
+                "value": 7,
+                "unit": "min"
+            },
+            "hasSolvent": {
+                "hasChemical": {
+                    "chemicalID": "25",
+                    "chemicalName": "Acetonitrile",
+                    "CASNumber": "75-05-8",
+                    "molecularMass": {
+                        "value": 41.05,
+                        "unit": "g/mol"
+                    },
+                    "smiles": "CC#N",
+                    "swissCatNumber": "",
+                    "Inchi": "1S/C2H3N/c1-2-3/h1H3",
+                    "molecularFormula": "C2H3N",
+                    "density": {
+                        "value": "0.787",
+                        "unit": "g/mL"
+                    }
+                },
+                "volume": {
+                    "value": 50,
+                    "unit": "uL",
+                    "errorMargin": {
+                        "value": 0.5,
+                        "unit": "uL"
+                    }
+                }
+            },
+            "order": "4"
         }
     ]
 }
