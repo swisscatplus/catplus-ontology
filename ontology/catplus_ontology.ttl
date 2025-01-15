@@ -10,15 +10,15 @@ prefix purl: <http://purl.allotrope.org/ontologies/>
 prefix schema: <https://schema.org/>
 prefix qudt: <http://qudt.org/schema/qudt/>
 prefix unit: <https://qudt.org/vocab/unit/>
-prefix owl: <http://www.w3.org/2002/07/owl#> 
+prefix owl: <http://www.w3.org/2002/07/owl#>
 prefix dct: <http://purl.org/dc/terms/>
 prefix vann: <http://purl.org/vocab/vann/>
 prefix obo: <http://purl.obolibrary.org/obo/>
-prefix allo-res: <http://purl.allotrope.org/ontologies/result#> 
+prefix allo-res: <http://purl.allotrope.org/ontologies/result#>
 prefix allo-hdf: <http://purl.allotrope.org/ontologies/hdf5/1.8#>
 prefix allo-prop: <http://purl.allotrope.org/ontologies/property#>
 prefix allo-real: <http://purl.allotrope.org/ontologies/realizable#>
-prefix allo-qual: <http://purl.allotrope.org/ontologies/quality#> 
+prefix allo-qual: <http://purl.allotrope.org/ontologies/quality#>
 prefix allo-proc: <http://purl.allotrope.org/ontologies/process#>
 prefix allo-role: <http://purl.allotrope.org/ontologies/role#>
 prefix allo-com: <http://purl.allotrope.org/ontologies/common#>
@@ -69,7 +69,7 @@ allo-proc:AFP_0002677  a rdf:Property ;
     skos:prefLabel "pressure measurement" ;
     skos:definition "A measurement that targets the pressure of some material entity. [Allotrope]" ;
     .
-    
+
 dct:identifier a rdf:Property ;
     skos:prefLabel "identifier" ;
     skos:definition "An unambiguous reference to the resource within a given context." ;
@@ -89,7 +89,7 @@ allo-qual:AFQ_0000111 a rdf:Property ;
     skos:prefLabel "state of matter" ;
     skos:altLabel "material state" , "dispense state" ;
     skos:definition "A state of matter is a quality of material that is one of the distinct forms in which matter can exist. Four states of matter are observable in everyday life: solid, liquid, gas, and plasma. Many other states are known to exist only in extreme situations, such as Bose-Einstein condensates, neutron-degenerate matter, and quark-gluon plasma, which only occur in situations of extreme cold, extreme density, and extremely high-energy color-charged matter respectively. [Wikipedia]" ;
-    . 
+    .
 
 
 allo-res:AFR_0002295 a rdf:Property ;
@@ -292,7 +292,7 @@ cat:hasBatch a rdf:Property ;
 allo-res:AFR_0002764 a rdf:Property ;
     skos:prefLabel "reference" ;
     skos:definition "Some link to a publication or paper, we want a less generic name to describe any note/reference" ;
-    . 
+    .
 
 cat:campaignClass a rdf:Property ;
     skos:prefLabel "campaign class" ;
@@ -322,7 +322,7 @@ cat:genericObjective a rdf:Property ;
     skos:prefLabel "generic objective" ;
     skos:definition "It serves as a guiding principle, focusing on enhancing overall performance in conducting chemical reactions, reducing errors, and increasing output without specifying particular methods or metrics." ;
     .
-    
+
 allo-res:AFR_0001952 a rdf:Property ;
     skos:prefLabel "molecular formula" ;
     skos:definition "A molecular formula is a molecular entity facet which identifies each constituent element by its chemical symbol and indicates the number of atoms of each element found in each discrete molecular entity of that compound. [CHEMINF]" ;    .#tochceck
@@ -330,8 +330,8 @@ allo-res:AFR_0001952 a rdf:Property ;
 allo-res:AFR_0002296 a rdf:Property ;
     skos:prefLabel "InChI" ;
     skos:definition "An InChI molecular structure is a molecular structure specified in IUPAC International Chemical Identifier (InChI) line notation. [edamontology.org]" ;
-    . 
-    
+    .
+
 allo-prop:AFX_0000211 a rdf:Property ;
     skos:prefLabel "speed" ;
     skos:definition "Speed in revolutions per minute (RPM) is a measure of the frequency of rotation, specifically the number of full rotations completed in one minute around a fixed axis." ;
@@ -350,8 +350,8 @@ cat:AddAction a rdfs:Class, sh:NodeShape ;
    sh:property [sh:path cat:dispenseType ; sh:datatype xsd:string] ;
    sh:property [sh:path cat:hasSample ; sh:class cat:Sample] ;
    sh:property [sh:path cat:hasContainerPositionAndQuantity ; sh:class cat:ContainerPositionAndQuantity] ;
-   sh:property [sh:path allo-qual:AFQ_0000111 ; 
-                sh:xone ([ sh:hasValue "Solid"] 
+   sh:property [sh:path allo-qual:AFQ_0000111 ;
+                sh:xone ([ sh:hasValue "Solid"]
                         [sh:hasValue "Liquid"]) ; ] ; #state of matter / dispense state
    sh:property cat:speedShaker ;
    sh:property cat:temperatureShakerShape ;
@@ -368,16 +368,16 @@ cat:SetTemperatureAction a rdfs:Class, sh:NodeShape ;
 cat:SetPressureAction a rdfs:Class, sh:NodeShape ;
     rdfs:subClassOf allo-real:AFRE_0000001 ;
     sh:property [sh:path allo-proc:AFP_0002677 ;
-                 sh:node cat:Observation ; 
-                 sh:node [sh:property    [sh:path qudt:unit ; 
+                 sh:node cat:Observation ;
+                 sh:node [sh:property    [sh:path qudt:unit ;
                                          sh:hasValue unit:Bar] ]];
     .
 
 cat:SetVacuumAction a rdfs:Class, sh:NodeShape ;
     rdfs:subClassOf allo-real:AFRE_0000001 ;
     sh:property [sh:path cat:vacuum ; #vacuum
-                 sh:node cat:Observation ; 
-                 sh:node [sh:property    [sh:path qudt:unit ; 
+                 sh:node cat:Observation ;
+                 sh:node [sh:property    [sh:path qudt:unit ;
                                             sh:hasValue unit:bar] ]];
     .
 
@@ -394,12 +394,12 @@ cat:FiltrateAction a rdfs:Class, sh:NodeShape ;
 
 allo-real:AFRE_0000001 a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Action" ;
-    skos:definition "An action is a unit element in a procedure and is a concretization of an action specification." ; 
-    sh:property [sh:path allo-res:AFR_0001723 ; sh:datatype xsd:string ] ;#Equipment name , 
+    skos:definition "An action is a unit element in a procedure and is a concretization of an action specification." ;
+    sh:property [sh:path allo-res:AFR_0001723 ; sh:datatype xsd:string ] ;#Equipment name ,
     sh:property [sh:path cat:subEquipmentName ; sh:datatype xsd:string ] ;#subEquipmentName
     sh:property [sh:path schema:name ; sh:datatype xsd:string ] ; #name
     sh:property [sh:path allo-prop:AFX_0000622 ; sh:datatype xsd:dateTime ] ;#startTime ,
-    sh:property [sh:path allo-res:AFR_0002423 ; sh:datatype xsd:dateTime ] ;#endTime , 
+    sh:property [sh:path allo-res:AFR_0002423 ; sh:datatype xsd:dateTime ] ;#endTime ,
     sh:property [sh:path allo-res:AFR_0001606 ; sh:datatype xsd:string ] ;#methodName
     sh:property [sh:path cat:subEquipmentName ; sh:datatype xsd:string ] ;#subEquipmentName
     sh:property [sh:path cat:containerBarcode ; sh:datatype xsd:string ] ;#containerBarcode
@@ -409,7 +409,7 @@ allo-real:AFRE_0000001 a rdfs:Class, sh:NodeShape ;
 
 cat:ContainerPositionAndQuantity a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Container, Position and Quantity" ;
-    rdfs:comment    """A class that represents the containers, positions and quantities of a sample. 
+    rdfs:comment    """A class that represents the containers, positions and quantities of a sample.
                     It must have a value for the well location identifier property, and a property called 'quantity' that has 3 representations of the same quantity with different units and values. 
                     The units are MilliL and MilliGM.""" ;
     skos:definition "Refers to specific aspects related to the handling and organization of samples or materials" ;
@@ -425,14 +425,14 @@ cat:QuantityShape a sh:NodeShape ;
     sh:targetObjectsOf qudt:quantity ;
     sh:property [
         sh:path qudt:value ;
-        sh:datatype xsd:decimal ;
+        sh:datatype xsd:double ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
     ] ;
-    sh:property [sh:path qudt:unit ; 
-        sh:minCount 1 ; 
+    sh:property [sh:path qudt:unit ;
+        sh:minCount 1 ;
         sh:maxCount 1 ;
-        sh:xone ([ sh:hasValue unit:MilliGM ] 
+        sh:xone ([ sh:hasValue unit:MilliGM ]
                 [sh:hasValue unit:MilliL ] )]
     .
 
@@ -441,7 +441,7 @@ cat:Observation a rdfs:Class, sh:NodeShape ;
     skos:definition "An observation is an abstract entity that captures the unit and value of a property into one node." ;
     sh:property [sh:path qudt:unit  ; sh:minCount 1 ; sh:maxCount 1] ;
     sh:property [sh:path qudt:value ; sh:minCount 1 ; sh:maxCount 1] ;
-    sh:property [sh:path cat:errorMargin ; 
+    sh:property [sh:path cat:errorMargin ;
                 sh:node [sh:property [sh:path qudt:unit ; sh:minCount 1 ], [sh:path qudt:value ; sh:minCount 1 ]]] ;
     .
 
@@ -457,18 +457,18 @@ cat:Sample a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path purl:identifier ; sh:datatype xsd:string] ; #identifier/sampleID
     sh:property [sh:path allo-role:AFRL_0000474 ; sh:node cat:Observation] ; #expectedDatum/quantity
     sh:property [sh:path cat:measuredQuantity ; sh:node cat:Observation] ; #measuredQuantity
-    sh:property [sh:path allo-qual:AFQ_0000111 ; 
-                sh:xone ([ sh:hasValue "Solid"] 
+    sh:property [sh:path allo-qual:AFQ_0000111 ;
+                sh:xone ([ sh:hasValue "Solid"]
                         [sh:hasValue "Liquid"]) ; ] ;  #dispense state
     sh:property [sh:path cat:internalBarCode ; sh:datatype xsd:string] ; #internal barcode
     sh:property [sh:path cat:containerBarcode ; sh:datatype xsd:string] ; #container barcode
     sh:property [sh:path allo-res:AFR_0002036 ; #concentration
-                    sh:node cat:Observation ; 
-                    sh:node [sh:property    [sh:path qudt:unit ; 
+                    sh:node cat:Observation ;
+                    sh:node [sh:property    [sh:path qudt:unit ;
                                             sh:hasValue unit:MOL-PER-L] ]];
     sh:property [sh:path allo-qual:AFQ_0000209 ; #purity
-                    sh:node cat:Observation ; 
-                    sh:node [sh:property    [sh:path qudt:unit ; 
+                    sh:node cat:Observation ;
+                    sh:node [sh:property    [sh:path qudt:unit ;
                                             sh:hasValue unit:PERCENT] ]];
     sh:property [sh:path cat:hasSample ; sh:class cat:Sample] ; #hasSample
     sh:property [sh:path cat:hasChemical ; sh:class obo:CHEBI_25367 ] ; #hasChemical
@@ -477,7 +477,7 @@ cat:Sample a rdfs:Class, sh:NodeShape ;
 obo:CHEBI_25367 a rdfs:Class, sh:NodeShape ;
     rdfs:subClassOf chebi:CHEBI_36357 ;
     sh:property [sh:path purl:identifier ; sh:datatype xsd:string ; sh:minCount 1 ; sh:maxCount 1] ;
-    sh:xone ([sh:property [sh:path cat:casNumber ; sh:datatype xsd:string ; sh:minCount 1] ] 
+    sh:xone ([sh:property [sh:path cat:casNumber ; sh:datatype xsd:string ; sh:minCount 1] ]
              [sh:property [sh:path cat:swissCatNumber; sh:datatype xsd:string ; sh:minCount 1]] ); #Swisscat number EXCLUSIVE OR CAS Number
     sh:property [sh:path allo-res:AFR_0002292 ; sh:datatype xsd:string] ; #chemical name
     sh:property [sh:path allo-res:AFR_0002295 ; sh:datatype xsd:string] ; #smiles
@@ -507,8 +507,8 @@ cat:Campaign a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path schema:name ; sh:datatype xsd:string] ;
     sh:property [sh:path schema:description ; sh:datatype xsd:string] ;
     sh:property [sh:path cat:genericObjective ; sh:datatype xsd:string] ;
-    sh:property [sh:path cat:campaignClass ; sh:datatype xsd:string ; 
-                         sh:xone ([ sh:hasValue "optimization"] 
+    sh:property [sh:path cat:campaignClass ; sh:datatype xsd:string ;
+                         sh:xone ([ sh:hasValue "optimization"]
                                   [ sh:hasValue "discovery"]) ; ] ;
     sh:property [sh:path allo-res:AFR_0002764 ; sh:datatype xsd:string] ;
     sh:property [sh:path cat:hasBatch ; sh:class cat:Batch] ;
