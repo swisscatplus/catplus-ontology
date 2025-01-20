@@ -185,7 +185,7 @@ cat:internalBarCode a rdf:Property ;
 
 cat:vacuum a rdf:Property ;
     skos:prefLabel "vacuum" ;
-    skos:definition "the state of a gas at which its pressure in a vessel and therefore its particle density is lower than that of the ambient surrounding atmosphere or in which the pressure of the gas is lower than 300 mbar, i. e. lower than the pressure of the atmosphere on the Earth's surface." ; #todo to be defined with the chemist
+    skos:definition "the state of a gas at which its pressure in a vessel and therefore its particle density is lower than that of the ambient surrounding atmosphere or in which the pressure of the gas is lower than 300 mbar, i. e. lower than the pressure of the atmosphere on the Earth's surface." ;
     .
 
 allo-prop:AFX_0000060 a rdf:Property ;
@@ -290,7 +290,7 @@ cat:campaignClass a rdf:Property ;
 
 allo-com:AFC_0000090 a rdf:Property ;
     skos:prefLabel "condition" ;
-    skos:definition "A condition is an information content entity that is about the portion of reality under which something occurs or is valid. The condition is limited by its scope and may have preconditions. It restricts the possible realizations. [Allotrope]" ; #todo check
+    skos:definition "A condition is an information content entity that is about the portion of reality under which something occurs or is valid. The condition is limited by its scope and may have preconditions. It restricts the possible realizations. [Allotrope]" ; 
     .
 
 cat:criteria a rdf:Property ;
@@ -390,8 +390,7 @@ cat:AddAction a rdfs:Class, sh:NodeShape ;
    sh:property cat:speedShaker ;
    sh:property cat:temperatureShakerShape ;
    sh:property cat:temperatureTumbleStirrerShape ;
-   sh:property [sh:path cat:hasSolvent ; sh:class cat:Solvent ] #todo
-
+   sh:property [sh:path cat:hasSolvent ; sh:class cat:Solvent ] 
     .
 
 cat:SetTemperatureAction a rdfs:Class, sh:NodeShape ;
@@ -436,7 +435,7 @@ cat:EvaporationAction a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path purl:identifier ; sh:datatype xsd:string] ; #identifier/sampleID
     .
 
-cat:solventChangeAction a rdfs:Class, sh:NodeShape ;
+cat:SolventChangeAction a rdfs:Class, sh:NodeShape ;
     rdfs:subClassOf allo-real:AFRE_0000001 ;
     skos:prefLabel "Solvent Change" ;
     skos:definition "A solvent that is selected to replace an existing one. This process involves considering the solvent's properties, compatibility with the analytes, and the analytical techniques employed, ensuring optimal performance and results in the analysis." ; 
@@ -453,7 +452,6 @@ allo-real:AFRE_0000001 a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path allo-prop:AFX_0000622 ; sh:datatype xsd:dateTime ] ;#startTime ,
     sh:property [sh:path allo-res:AFR_0002423 ; sh:datatype xsd:dateTime ] ;#endTime ,
     sh:property [sh:path allo-res:AFR_0001606 ; sh:datatype xsd:string ] ;#methodName
-    sh:property [sh:path cat:subEquipmentName ; sh:datatype xsd:string ] ;#subEquipmentName
     sh:property [sh:path cat:containerBarcode ; sh:datatype xsd:string ] ;#containerBarcode
     sh:property [sh:path cat:containerID ; sh:datatype xsd:string ] ;#containerID
     sh:property [sh:path cat:hasBatch ; sh:class cat:Batch] ; #hasBatch
