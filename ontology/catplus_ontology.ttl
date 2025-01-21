@@ -10,15 +10,15 @@ prefix purl: <http://purl.allotrope.org/ontologies/>
 prefix schema: <https://schema.org/>
 prefix qudt: <http://qudt.org/schema/qudt/>
 prefix unit: <https://qudt.org/vocab/unit/>
-prefix owl: <http://www.w3.org/2002/07/owl#> 
+prefix owl: <http://www.w3.org/2002/07/owl#>
 prefix dct: <http://purl.org/dc/terms/>
 prefix vann: <http://purl.org/vocab/vann/>
 prefix obo: <http://purl.obolibrary.org/obo/>
-prefix allo-res: <http://purl.allotrope.org/ontologies/result#> 
+prefix allo-res: <http://purl.allotrope.org/ontologies/result#>
 prefix allo-hdf: <http://purl.allotrope.org/ontologies/hdf5/1.8#>
 prefix allo-prop: <http://purl.allotrope.org/ontologies/property#>
 prefix allo-real: <http://purl.allotrope.org/ontologies/realizable#>
-prefix allo-qual: <http://purl.allotrope.org/ontologies/quality#> 
+prefix allo-qual: <http://purl.allotrope.org/ontologies/quality#>
 prefix allo-proc: <http://purl.allotrope.org/ontologies/process#>
 prefix allo-role: <http://purl.allotrope.org/ontologies/role#>
 prefix allo-com: <http://purl.allotrope.org/ontologies/common#>
@@ -58,18 +58,11 @@ allo-res:AFR_0002240 a rdf:Property ;
     skos:definition "A well location identifier is a local identifier that identifies the location of a well on the container submitted to the experiment in the scope of the container." ;
     .
 
-
-allo-real:AFRE_0000001 a rdf:Property ;
-    skos:prefLabel "action" ;
-    skos:altLabel "task" ;
-    skos:definition "An action is a unit element in a procedure and is a concretization of an action specification." ;
-    .
-
 allo-proc:AFP_0002677  a rdf:Property ;
     skos:prefLabel "pressure measurement" ;
     skos:definition "A measurement that targets the pressure of some material entity. [Allotrope]" ;
     .
-    
+
 dct:identifier a rdf:Property ;
     skos:prefLabel "identifier" ;
     skos:definition "An unambiguous reference to the resource within a given context." ;
@@ -89,8 +82,7 @@ allo-qual:AFQ_0000111 a rdf:Property ;
     skos:prefLabel "state of matter" ;
     skos:altLabel "material state" , "dispense state" ;
     skos:definition "A state of matter is a quality of material that is one of the distinct forms in which matter can exist. Four states of matter are observable in everyday life: solid, liquid, gas, and plasma. Many other states are known to exist only in extreme situations, such as Bose-Einstein condensates, neutron-degenerate matter, and quark-gluon plasma, which only occur in situations of extreme cold, extreme density, and extremely high-energy color-charged matter respectively. [Wikipedia]" ;
-    . 
-
+    .
 
 allo-res:AFR_0002295 a rdf:Property ;
     skos:prefLabel "SMILES molecular structure" ;
@@ -193,7 +185,7 @@ cat:internalBarCode a rdf:Property ;
 
 cat:vacuum a rdf:Property ;
     skos:prefLabel "vacuum" ;
-    skos:definition "the state of a gas at which its pressure in a vessel and therefore its particle density is lower than that of the ambient surrounding atmosphere or in which the pressure of the gas is lower than 300 mbar, i. e. lower than the pressure of the atmosphere on the Earth's surface." ; #todo to be defined with the chemist
+    skos:definition "the state of a gas at which its pressure in a vessel and therefore its particle density is lower than that of the ambient surrounding atmosphere or in which the pressure of the gas is lower than 300 mbar, i. e. lower than the pressure of the atmosphere on the Earth's surface." ;
     .
 
 allo-prop:AFX_0000060 a rdf:Property ;
@@ -229,19 +221,10 @@ allo-res:AFR_0002292 a rdf:Property ;
     skos:definition "A chemical name is the written name of a chemical substance that shows the names of each of its elements or subcompounds. [Allotrope]" ;
     skos:example "ethanol", "2-propanol", "sodium chloride" ;
     .
-allo-res:AFR_0002464 a rdf:Property ;
-    skos:prefLabel "vial location identifier" ;
-    skos:definition "A vial location identifier is a local identifier that identifies the location of a vial in the vial plate in the scope of the vial plate. [Allotrope]" ;
-    .
 
 cat:hasChemical a rdf:Property ;
     skos:prefLabel "has chemical" ;
     skos:definition "The chemical that is part of the sample" ;
-    .
-
-cat:subEquipmentName a rdf:Property ;
-    skos:prefLabel "sub equipment name" ;
-    skos:definition "The name of the sub equipment used in the experiment" ;
     .
 
 cat:hasContainerPositionAndQuantity a rdf:Property ;
@@ -252,6 +235,12 @@ cat:hasContainerPositionAndQuantity a rdf:Property ;
 allo-proc:AFP_0002677 a rdf:Property ;
     skos:prefLabel "pressure measurement" ;
     skos:definition "A measurement that targets the pressure of some material entity. [Allotrope]" ;
+    .
+
+
+cat:theoreticalRole a rdf:Property ;
+    skos:prefLabel "theoretical role" ;
+    skos:definition "The theoretical role is the role of the molecule in the context of the reaction." ;
     .
 
 cat:errorMargin a rdf:Property ;
@@ -301,7 +290,7 @@ cat:campaignClass a rdf:Property ;
 
 allo-com:AFC_0000090 a rdf:Property ;
     skos:prefLabel "condition" ;
-    skos:definition "A condition is an information content entity that is about the portion of reality under which something occurs or is valid. The condition is limited by its scope and may have preconditions. It restricts the possible realizations. [Allotrope]" ; #todo check
+    skos:definition "A condition is an information content entity that is about the portion of reality under which something occurs or is valid. The condition is limited by its scope and may have preconditions. It restricts the possible realizations. [Allotrope]" ; 
     .
 
 cat:criteria a rdf:Property ;
@@ -322,7 +311,7 @@ cat:genericObjective a rdf:Property ;
     skos:prefLabel "generic objective" ;
     skos:definition "It serves as a guiding principle, focusing on enhancing overall performance in conducting chemical reactions, reducing errors, and increasing output without specifying particular methods or metrics." ;
     .
-    
+
 allo-res:AFR_0001952 a rdf:Property ;
     skos:prefLabel "molecular formula" ;
     skos:definition "A molecular formula is a molecular entity facet which identifies each constituent element by its chemical symbol and indicates the number of atoms of each element found in each discrete molecular entity of that compound. [CHEMINF]" ;    .#tochceck
@@ -331,7 +320,7 @@ allo-res:AFR_0002296 a rdf:Property ;
     skos:prefLabel "InChI" ;
     skos:definition "An InChI molecular structure is a molecular structure specified in IUPAC International Chemical Identifier (InChI) line notation. [edamontology.org]" ;
     . 
-    
+
 allo-prop:AFX_0000211 a rdf:Property ;
     skos:prefLabel "speed" ;
     skos:definition "Speed in revolutions per minute (RPM) is a measure of the frequency of rotation, specifically the number of full rotations completed in one minute around a fixed axis." ;
@@ -342,6 +331,51 @@ obo:PATO_0001019 a rdf:Property ;
     skos:definition "A physical quality which inheres in a bearer by virtue of some influence is exerted by the bearer's mass per unit size." ; 
     .
 
+cat:volumeEvaporationFinal a rdf:Property ;
+    skos:prefLabel "volume evaporation final" ;
+    skos:definition "It indicates the percentage of a liquid's initial volume that has evaporated by the end of a process." ;
+    .
+
+cat:order a rdf:Property ;
+    skos:prefLabel "order" ;
+    skos:definition "The order of the action in the procedure." ;
+    .
+
+cat:hasSolvent a rdf:Property ;
+    skos:prefLabel "has solvent" ;
+    skos:definition "The solvent that is part of the sample" ;
+    .
+
+cat:volume a rdf:Property ;
+    skos:prefLabel "volume" ;
+    skos:definition "The volume of the sample" ;
+    .
+    
+cat:isSpmeProcess a rdf:Property ;
+    skos:prefLabel "is SPME process" ;
+    skos:definition "Solid-phase microextraction (SPME) is a solvent-free sample preparation technique that involves the extraction of analytes from a sample into a solid phase, followed by the desorption of the analytes into a solvent for analysis." ;
+    .
+
+cat:hasSubAction a rdf:Property ;
+    skos:prefLabel "has sub action" ;
+    skos:definition "The sub action that is part of the action" ;
+    .
+
+cat:hasCartridge a rdf:Property ;
+    skos:prefLabel "has cartridge" ;
+    skos:definition "The cartridge that is part of the sub action" ;
+    .
+
+cat:cartridgeName a rdf:Property ;
+    skos:prefLabel "cartridge name" ;
+    skos:definition "It refers to the specific type or brand of cartridge used, which often indicates the nature of the sorbent material inside." ;
+    .
+
+cat:cartridgeComposition a rdf:Property ;
+    skos:prefLabel "cartridge composition" ;
+    skos:definition "It refers to the materials and specific sorbents packed within the SPE cartridge." ;
+    .
+
 ###################################################################################################
 # Shapes
 
@@ -350,12 +384,13 @@ cat:AddAction a rdfs:Class, sh:NodeShape ;
    sh:property [sh:path cat:dispenseType ; sh:datatype xsd:string] ;
    sh:property [sh:path cat:hasSample ; sh:class cat:Sample] ;
    sh:property [sh:path cat:hasContainerPositionAndQuantity ; sh:class cat:ContainerPositionAndQuantity] ;
-   sh:property [sh:path allo-qual:AFQ_0000111 ; 
-                sh:xone ([ sh:hasValue "Solid"] 
+   sh:property [sh:path allo-qual:AFQ_0000111 ;
+                sh:xone ([ sh:hasValue "Solid"]
                         [sh:hasValue "Liquid"]) ; ] ; #state of matter / dispense state
    sh:property cat:speedShaker ;
    sh:property cat:temperatureShakerShape ;
    sh:property cat:temperatureTumbleStirrerShape ;
+   sh:property [sh:path cat:hasSolvent ; sh:class cat:Solvent ] 
     .
 
 cat:SetTemperatureAction a rdfs:Class, sh:NodeShape ;
@@ -376,8 +411,8 @@ cat:SetPressureAction a rdfs:Class, sh:NodeShape ;
 cat:SetVacuumAction a rdfs:Class, sh:NodeShape ;
     rdfs:subClassOf allo-real:AFRE_0000001 ;
     sh:property [sh:path cat:vacuum ; #vacuum
-                 sh:node cat:Observation ; 
-                 sh:node [sh:property    [sh:path qudt:unit ; 
+                 sh:node cat:Observation ;
+                 sh:node [sh:property    [sh:path qudt:unit ;
                                             sh:hasValue unit:bar] ]];
     .
 
@@ -392,24 +427,72 @@ cat:FiltrateAction a rdfs:Class, sh:NodeShape ;
     rdfs:subClassOf allo-real:AFRE_0000001 ;
     .
 
+cat:EvaporationAction a rdfs:Class, sh:NodeShape ;
+    rdfs:subClassOf allo-real:AFRE_0000001 ;
+    sh:property [sh:path allo-prop:AFX_0000060 ; sh:datatype xsd:double] ; #temperature
+    sh:property [sh:path cat:hasSample ; sh:class cat:Sample] ;#hasSample
+    sh:property [sh:path cat:volumeEvaporationFinal ; sh:node cat:Observation] ; #volumeEvaporationFinal
+    sh:property [sh:path purl:identifier ; sh:datatype xsd:string] ; #identifier/sampleID
+    .
+
+cat:SolventChangeAction a rdfs:Class, sh:NodeShape ;
+    rdfs:subClassOf allo-real:AFRE_0000001 ;
+    skos:prefLabel "Solvent Change" ;
+    skos:definition "A solvent that is selected to replace an existing one. This process involves considering the solvent's properties, compatibility with the analytes, and the analytical techniques employed, ensuring optimal performance and results in the analysis." ; 
+    sh:property [sh:path cat:isSpmeProcess ; sh:datatype xsd:boolean] ; #isSpmeProcess
+    sh:property [sh:path cat:hasSubAction ; sh:class allo-real:AFRE_0000001] ; #hasSubAction
+    .
+
 allo-real:AFRE_0000001 a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Action" ;
-    skos:definition "An action is a unit element in a procedure and is a concretization of an action specification." ; 
-    sh:property [sh:path allo-res:AFR_0001723 ; sh:datatype xsd:string ] ;#Equipment name , 
+    skos:definition "An action is a unit element in a procedure and is a concretization of an action specification." ;
+    sh:property [sh:path allo-res:AFR_0001723 ; sh:datatype xsd:string ] ;#Equipment name ,
     sh:property [sh:path cat:subEquipmentName ; sh:datatype xsd:string ] ;#subEquipmentName
     sh:property [sh:path schema:name ; sh:datatype xsd:string ] ; #name
     sh:property [sh:path allo-prop:AFX_0000622 ; sh:datatype xsd:dateTime ] ;#startTime ,
-    sh:property [sh:path allo-res:AFR_0002423 ; sh:datatype xsd:dateTime ] ;#endTime , 
+    sh:property [sh:path allo-res:AFR_0002423 ; sh:datatype xsd:dateTime ] ;#endTime ,
     sh:property [sh:path allo-res:AFR_0001606 ; sh:datatype xsd:string ] ;#methodName
-    sh:property [sh:path cat:subEquipmentName ; sh:datatype xsd:string ] ;#subEquipmentName
     sh:property [sh:path cat:containerBarcode ; sh:datatype xsd:string ] ;#containerBarcode
     sh:property [sh:path cat:containerID ; sh:datatype xsd:string ] ;#containerID
     sh:property [sh:path cat:hasBatch ; sh:class cat:Batch] ; #hasBatch
+    sh:property [sh:path cat:order ; sh:datatype xsd:string ] #order
+    .
+
+cat:Solvent a rdfs:Class, sh:NodeShape ;
+    skos:prefLabel "Solvent" ;
+    skos:definition "A solvent is a substance that dissolves a solute, resulting in a solution." ;
+    sh:property [sh:path cat:hasChemical ; sh:class obo:CHEBI_25367 ] ; #hasChemical
+    sh:property [sh:path cat:volume ; sh:node cat:Observation ; #volume
+                 sh:node [sh:property    [sh:path qudt:unit ; 
+                                         sh:hasValue unit:MilliL] ]]
+    .
+
+cat:SubAction a rdfs:Class, sh:NodeShape ;
+    skos:prefLabel "Sub Action" ;
+    skos:definition "A sub action is a smaller, constituent action that is part of a larger action." ;
+    sh:property [sh:path schema:name ; sh:datatype xsd:string] ; #subActionName
+    sh:property [sh:path allo-prop:AFX_0000622 ; sh:datatype xsd:dateTime] ; #startTime
+    sh:property [sh:path allo-res:AFR_0002423 ; sh:datatype xsd:dateTime] ; #endTime
+
+    .
+
+cat:SeparationSubAction a rdfs:Class, sh:NodeShape ;
+    rdfs:subClassOf cat:SubAction ;
+    skos:prefLabel "Separation Sub Action" ;
+    skos:definition "A separation sub action is a sub action that involves the separation of substances or components from a mixture." ;
+    sh:property [sh:path cat:hasCartridge ; sh:class cat:Cartridge] ;
+    .
+
+cat:Cartridge a rdfs:Class, sh:NodeShape ;
+    skos:prefLabel "Cartridge" ;
+    skos:definition "A cartridge is a container that holds a sample or a solvent." ;
+    sh:property [sh:path cat:cartridgeName ; sh:datatype xsd:string] ; #cartridgeName
+    sh:property [sh:path cat:cartridgeComposition ; sh:datatype xsd:string ] ; #cartridgeComposition
     .
 
 cat:ContainerPositionAndQuantity a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Container, Position and Quantity" ;
-    rdfs:comment    """A class that represents the containers, positions and quantities of a sample. 
+    rdfs:comment    """A class that represents the containers, positions and quantities of a sample.
                     It must have a value for the well location identifier property, and a property called 'quantity' that has 3 representations of the same quantity with different units and values. 
                     The units are MilliL and MilliGM.""" ;
     skos:definition "Refers to specific aspects related to the handling and organization of samples or materials" ;
@@ -425,12 +508,12 @@ cat:QuantityShape a sh:NodeShape ;
     sh:targetObjectsOf qudt:quantity ;
     sh:property [
         sh:path qudt:value ;
-        sh:datatype xsd:decimal ;
+        sh:datatype xsd:double ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
     ] ;
-    sh:property [sh:path qudt:unit ; 
-        sh:minCount 1 ; 
+    sh:property [sh:path qudt:unit ;
+        sh:minCount 1 ;
         sh:maxCount 1 ;
         sh:xone ([ sh:hasValue unit:MilliGM ] 
                 [sh:hasValue unit:MilliL ] )]
@@ -457,18 +540,18 @@ cat:Sample a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path purl:identifier ; sh:datatype xsd:string] ; #identifier/sampleID
     sh:property [sh:path allo-role:AFRL_0000474 ; sh:node cat:Observation] ; #expectedDatum/quantity
     sh:property [sh:path cat:measuredQuantity ; sh:node cat:Observation] ; #measuredQuantity
-    sh:property [sh:path allo-qual:AFQ_0000111 ; 
-                sh:xone ([ sh:hasValue "Solid"] 
+    sh:property [sh:path allo-qual:AFQ_0000111 ;
+                sh:xone ([ sh:hasValue "Solid"]
                         [sh:hasValue "Liquid"]) ; ] ;  #dispense state
     sh:property [sh:path cat:internalBarCode ; sh:datatype xsd:string] ; #internal barcode
     sh:property [sh:path cat:containerBarcode ; sh:datatype xsd:string] ; #container barcode
     sh:property [sh:path allo-res:AFR_0002036 ; #concentration
-                    sh:node cat:Observation ; 
-                    sh:node [sh:property    [sh:path qudt:unit ; 
+                    sh:node cat:Observation ;
+                    sh:node [sh:property    [sh:path qudt:unit ;
                                             sh:hasValue unit:MOL-PER-L] ]];
     sh:property [sh:path allo-qual:AFQ_0000209 ; #purity
-                    sh:node cat:Observation ; 
-                    sh:node [sh:property    [sh:path qudt:unit ; 
+                    sh:node cat:Observation ;
+                    sh:node [sh:property    [sh:path qudt:unit ;
                                             sh:hasValue unit:PERCENT] ]];
     sh:property [sh:path cat:hasSample ; sh:class cat:Sample] ; #hasSample
     sh:property [sh:path cat:hasChemical ; sh:class obo:CHEBI_25367 ] ; #hasChemical
@@ -477,7 +560,7 @@ cat:Sample a rdfs:Class, sh:NodeShape ;
 obo:CHEBI_25367 a rdfs:Class, sh:NodeShape ;
     rdfs:subClassOf chebi:CHEBI_36357 ;
     sh:property [sh:path purl:identifier ; sh:datatype xsd:string ; sh:minCount 1 ; sh:maxCount 1] ;
-    sh:xone ([sh:property [sh:path cat:casNumber ; sh:datatype xsd:string ; sh:minCount 1] ] 
+    sh:xone ([sh:property [sh:path cat:casNumber ; sh:datatype xsd:string ; sh:minCount 1] ]
              [sh:property [sh:path cat:swissCatNumber; sh:datatype xsd:string ; sh:minCount 1]] ); #Swisscat number EXCLUSIVE OR CAS Number
     sh:property [sh:path allo-res:AFR_0002292 ; sh:datatype xsd:string] ; #chemical name
     sh:property [sh:path allo-res:AFR_0002295 ; sh:datatype xsd:string] ; #smiles
@@ -507,8 +590,8 @@ cat:Campaign a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path schema:name ; sh:datatype xsd:string] ;
     sh:property [sh:path schema:description ; sh:datatype xsd:string] ;
     sh:property [sh:path cat:genericObjective ; sh:datatype xsd:string] ;
-    sh:property [sh:path cat:campaignClass ; sh:datatype xsd:string ; 
-                         sh:xone ([ sh:hasValue "optimization"] 
+    sh:property [sh:path cat:campaignClass ; sh:datatype xsd:string ;
+                         sh:xone ([ sh:hasValue "optimization"]
                                   [ sh:hasValue "discovery"]) ; ] ;
     sh:property [sh:path allo-res:AFR_0002764 ; sh:datatype xsd:string] ;
     sh:property [sh:path cat:hasBatch ; sh:class cat:Batch] ;
