@@ -590,7 +590,7 @@ cat:SolventChangeAction a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Solvent Change" ;
     skos:definition "A solvent that is selected to replace an existing one. This process involves considering the solvent's properties, compatibility with the analytes, and the analytical techniques employed, ensuring optimal performance and results in the analysis." ; 
     sh:property [sh:path cat:isSpmeProcess ; sh:datatype xsd:boolean] ; #isSpmeProcess
-    sh:property [sh:path cat:hasSubAction ; sh:class allo-real:AFRE_0000001] ; #hasSubAction
+    sh:property [sh:path cat:hasSubAction ; sh:class cat:SubAction] ; #hasSubAction
     .
 
 allo-real:AFRE_0000001 a rdfs:Class, sh:NodeShape ;
@@ -938,7 +938,7 @@ cat:PeakStart a rdfs:Class, sh:NodeShape ;
     sh:node cat:Measurement ;
     .
 
-cat:RelatiePeakArea a rdfs:Class, sh:NodeShape ;
+cat:RelativePeakArea a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Relative Peak Area" ;
     skos:definition "A class representing the area of a peak relative to the total area or a reference peak, used for normalization or comparison." ;
     sh:node cat:Measurement ;
