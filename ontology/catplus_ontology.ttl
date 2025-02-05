@@ -714,7 +714,9 @@ obo:CHEBI_25367 a rdfs:Class, sh:NodeShape ;
              [sh:property [sh:path cat:swissCatNumber; sh:datatype xsd:string ; sh:minCount 1]] ); #Swisscat number EXCLUSIVE OR CAS Number
     sh:property [sh:path allo-res:AFR_0002292 ; sh:datatype xsd:string] ; #chemical name
     sh:property [sh:path allo-res:AFR_0002295 ; sh:datatype xsd:string] ; #smiles
-    sh:property [sh:path allo-res:AFR_0002294 ; sh:datatype xsd:string] ; #molecularMass
+    sh:property [sh:path allo-res:AFR_0002294 ;
+                sh:node [sh:property [sh:path qudt:unit ;
+                                        sh:hasValue unit:GM-PER-MOL]]] ; #molecularMass
     sh:property [sh:path schema:keywords ; sh:datatype xsd:string] ; #keywords
     sh:property [sh:path allo-res:AFR_0001952 ; sh:datatype xsd:string] ; #molecular formula
     sh:property [sh:path allo-res:AFR_0002296 ; sh:datatype xsd:string] ; #inchi key
@@ -731,7 +733,7 @@ obo:IAO_0000005 a rdfs:Class , sh:NodeShape ;
     sh:property [sh:path schema:name ; sh:datatype xsd:string] ;
     sh:property [sh:path schema:description ; sh:datatype xsd:string] ;
     sh:property [sh:path cat:criteria ; sh:datatype xsd:string] ;
-    sh:property [sh:path allo-com:AFC_0000090 ; sh:datatype xsd:string] ;
+    sh:property [sh:path allo-com:AFC_0000090 ; sh:datatype xsd:string] ; #Condition
     .
 
 cat:Campaign a rdfs:Class, sh:NodeShape ;
