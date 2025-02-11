@@ -3,9 +3,9 @@
         "campaignName": "Caffeine Synthesis",
         "description": "1-step N-methylation of theobromine to caffeine",
         "objective": "High caffeine yield at the end",
-        "campaignClass": "Substitution reaction - SN2",
-        "type": "N-methylation",
-        "reference": "https://www.sciencedirect.com/science/article/pii/S0187893X15720926",
+        "campaignClass": "Standard Research",
+        "type": "optimization",
+        "reference": "Substitution reaction - SN2",
         "hasBatch": {
             "batchID": "23",
             "batchName": "20240516",
