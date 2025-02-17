@@ -4,7 +4,6 @@ prefix sh: <http://www.w3.org/ns/shacl#>
 prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 prefix xsd: <http://www.w3.org/2001/XMLSchema#>
-prefix ex: <http://example.org/>
 prefix chebi: <https://www.ebi.ac.uk/chebi/searchId.do?chebiId=>
 prefix purl: <http://purl.allotrope.org/ontologies/>
 prefix schema: <https://schema.org/>
@@ -228,11 +227,6 @@ allo-res:AFR_0002292 a rdf:Property ;
 cat:hasChemical a rdf:Property ;
     skos:prefLabel "has chemical" ;
     skos:definition "The chemical that is part of the sample" ;
-    .
-
-cat:hasContainerPositionAndQuantity a rdf:Property ;
-    skos:prefLabel "has Container Position and Quantity" ;
-    skos:definition "indicates the relationship between a action and it's description of the container posititions and quantities" ;
     .
 
 allo-proc:AFP_0002677 a rdf:Property ;
@@ -519,9 +513,104 @@ allo-dchdf:Index a rdf:Property;
   skos:definition "An index is part of index structure definition and defined for at least one dimension component of a data structure definition. [Allotrope]";
   skos:prefLabel "index" .
 
-cat:peakHeight a rdf:Property ;
+allo-res:AFR_0000948 a rdf:Property ;
     skos:prefLabel "Peak Height" ;
-    skos:definition "A property representing the height of a peak in a chromatogram or spectrum, measured from the baseline to the peak maximum." ;
+    skos:definition "The distance between the peak maximum and the peak base, measured in a direction parallel to the axis representing the detector response resp. the measured quantity. [IUPAC Orange Book]" ;
+    .
+
+allo-res:AFR_0001606 a rdf:Property ;
+    skos:prefLabel "method name" ;
+    skos:definition "A method name is a name that denotes a plan specification (method). [Allotrope]"
+    .
+
+cat:hasPlate a rdf:Property ;
+    skos:prefLabel "has Plate" ;
+    skos:definition "The plate that is part of the batch" ;
+    .
+
+allo-dc:componentDataType a rdf:Property ;
+    skos:prefLabel "component data type" ;
+    skos:definition "The data type of the component" ;
+    .
+
+rdfs:label a rdf:Property ;
+    skos:prefLabel "label" ;
+    skos:definition "A label is a textual or numeric identifier that is used to identify or describe an object, entity, or concept." ;
+    .
+
+allo-res:AFR_0001121 a rdf:Property ;
+    skos:prefLabel "measurement ID" ;
+    skos:definition "Measurement id is measurement metadata that identifies the measuring run. [Allotrope]" ;
+    .
+
+allo-res:AFR_0002722 a rdf:Property ;
+    skos:prefLabel "has Device control aggregate document" ;
+    skos:definition "A property which aggregates device control documents. [Allotrope]" ;
+    .
+
+allo-res:AFR_0002534 a rdf:Property ;
+    skos:prefLabel "detection type" ;
+    skos:definition "A detection type is a classification datum that classifies the type of detection performed by the detector. [Allotrope]" ;
+    .
+
+
+allo-res:AFR_0001116 a rdf:Property ;
+    skos:prefLabel "analyst" ;
+    skos:definition "Analyst is measurement metadata about the name or identifier of a person that has the role of an analyst in the measurement. [Allotrope]" ;
+    .
+
+allo-res:AFR_0002374 a rdf:Property ;
+    skos:prefLabel "has Measurement aggregate document" ;
+    skos:definition "A property which aggregates measurement documents." ;
+    .
+
+purl:identifier a rdf:Property ;
+    skos:prefLabel "identifier" ;
+    skos:definition "an identifier of a sample" ;
+    .
+
+cat:hasWell a rdf:Property ;
+    skos:prefLabel "has Well" ;
+    skos:definition "A property to indicate the well something has" ;
+    .
+
+qudt:value a rdf:Property ;
+    skos:prefLabel "value" ;
+    skos:definition "The value of a quantity" ;
+    .
+
+cat:hasSample a rdf:Property ;
+    skos:prefLabel "has Sample" ;
+    skos:definition "A property to indicate the sample something has" ;
+    .
+
+cat:peak a rdf:Property ;
+    skos:prefLabel "peak" ;
+    skos:definition "A peak is a local maximum in the chromatogram that represents the presence of a specific compound or analyte." ;
+    .
+allo-res:AFR_0001118 a rdf:Property ;
+    skos:prefLabel "sample Identifier" ;
+    skos:definition "Sample id is a measurement metadata that identifies a sample being measured. [Allotrope]" ;
+    .
+
+obo:IAO_0000590 a rdf:Property ;
+    skos:prefLabel "written name" ;
+    skos:definition "A textual entity that denotes a particular in reality. [IAO]" ;
+    .
+
+allo-res:AFR_0001267 a rdf:Property ;
+    skos:prefLabel "autosampler injection volume setting" ;
+    skos:definition "An autosampler parameter specification that specifies the volume of sample the autosampler is to inject into the mobile phase for separation. [Allotrope]" ;
+    .
+
+allo-res:AFR_0002535 a rdf:Property ;
+    skos:prefLabel "injection identifier" ;
+    skos:definition "An injection identifier is an identifier that identifies some injection. [Allotrope]" ;
+    .
+
+allo-res:AFR_0002536 a rdf:Property ;
+    skos:prefLabel "injection time" ;
+    skos:definition "An injection time is a time that indicates when an injection is performed. [Allotrope]" ;
     .
 
 cat:type a rdf:Property ;
@@ -531,14 +620,14 @@ cat:type a rdf:Property ;
 
 
 
+
 ###################################################################################################
 # Shapes
 
 cat:AddAction a rdfs:Class, sh:NodeShape ;
    rdfs:subClassOf allo-real:AFRE_0000001 ;
    sh:property [sh:path cat:dispenseType ; sh:datatype xsd:string] ;
-   sh:property [sh:path cat:hasSample ; sh:class cat:Sample] ;
-   sh:property [sh:path cat:hasContainerPositionAndQuantity ; sh:class cat:ContainerPositionAndQuantity] ;
+   sh:property [sh:path cat:hasWell ; sh:class cat:Well ] ;
    sh:property [sh:path allo-qual:AFQ_0000111 ;
                 sh:xone ([ sh:hasValue "Solid"]
                         [sh:hasValue "Liquid"]) ; ] ; #state of matter / dispense state
@@ -585,7 +674,7 @@ cat:FiltrateAction a rdfs:Class, sh:NodeShape ;
 cat:EvaporationAction a rdfs:Class, sh:NodeShape ;
     rdfs:subClassOf allo-real:AFRE_0000001 ;
     sh:property [sh:path allo-prop:AFX_0000060 ; sh:datatype xsd:double] ; #temperature
-    sh:property [sh:path cat:hasSample ; sh:class cat:Sample] ;#hasSample
+    sh:property [sh:path cat:hasWell ; sh:class cat:Well] ; #hasWell
     sh:property [sh:path cat:volumeEvaporationFinal ; sh:node cat:Observation] ; #volumeEvaporationFinal
     sh:property [sh:path purl:identifier ; sh:datatype xsd:string] ; #identifier/sampleID
     .
@@ -607,8 +696,7 @@ allo-real:AFRE_0000001 a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path allo-prop:AFX_0000622 ; sh:datatype xsd:dateTime ] ;#startTime ,
     sh:property [sh:path allo-res:AFR_0002423 ; sh:datatype xsd:dateTime ] ;#endTime ,
     sh:property [sh:path allo-res:AFR_0001606 ; sh:datatype xsd:string ] ;#methodName
-    sh:property [sh:path cat:containerBarcode ; sh:datatype xsd:string ] ;#containerBarcode
-    sh:property [sh:path cat:containerID ; sh:datatype xsd:string ] ;#containerID
+    sh:property [sh:path cat:hasPlate ; sh:class cat:Plate] ; #hasPlate
     sh:property [sh:path cat:hasBatch ; sh:class cat:Batch] ; #hasBatch
     sh:property [sh:path cat:order ; sh:datatype xsd:string ] #order
     .
@@ -645,20 +733,6 @@ cat:Cartridge a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path cat:cartridgeComposition ; sh:datatype xsd:string ] ; #cartridgeComposition
     .
 
-cat:ContainerPositionAndQuantity a rdfs:Class, sh:NodeShape ;
-    skos:prefLabel "Container, Position and Quantity" ;
-    rdfs:comment    """A class that represents the containers, positions and quantities of a sample.
-                    It must have a value for the well location identifier property, and a property called 'quantity' that has 3 representations of the same quantity with different units and values. 
-                    The units are MilliL and MilliGM.""" ;
-    skos:definition "Refers to specific aspects related to the handling and organization of samples or materials" ;
-    sh:property [
-        sh:path allo-res:AFR_0002240 ;                 #Well location identifier, also known as "position"
-        sh:datatype xsd:string
-    ] ;
-    sh:property [sh:path qudt:quantity ;
-                sh:node cat:Observation ]
-    .
-
 cat:QuantityShape a sh:NodeShape ;
     sh:targetObjectsOf qudt:quantity ;
     sh:property [
@@ -688,7 +762,6 @@ cat:Sample a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Sample" ;
     skos:altLabel  "chemical mixture" ;
     skos:definition "A portion of chemical mixture is a chemical substance that is composed of chemical substances. [Allotrope]" ;
-    sh:property [sh:path cat:containerID ; sh:datatype xsd:string] ;
     sh:property [sh:path allo-res:AFR_0002464 ; sh:datatype xsd:string] ; #VialID
     sh:property cat:vialShape ; #vial type
     sh:property [sh:path cat:role ] ;   #role
@@ -698,8 +771,6 @@ cat:Sample a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path allo-qual:AFQ_0000111 ;
                 sh:xone ([ sh:hasValue "Solid"]
                         [sh:hasValue "Liquid"]) ; ] ;  #dispense state
-    sh:property [sh:path cat:internalBarCode ; sh:datatype xsd:string] ; #internal barcode
-    sh:property [sh:path cat:containerBarcode ; sh:datatype xsd:string] ; #container barcode
     sh:property [sh:path allo-res:AFR_0002036 ; #concentration
                     sh:node cat:Observation ;
                     sh:node [sh:property    [sh:path qudt:unit ;
@@ -710,6 +781,7 @@ cat:Sample a rdfs:Class, sh:NodeShape ;
                                             sh:hasValue unit:PERCENT] ]];
     sh:property [sh:path cat:hasSample ; sh:class cat:Sample] ; #hasSample
     sh:property [sh:path cat:hasChemical ; sh:class obo:CHEBI_25367 ] ; #hasChemical
+    sh:property [sh:path allo-res:AFR_0000432 ; sh:class cat:PeakList ] ; #peak list
     .
 
 obo:CHEBI_25367 a rdfs:Class, sh:NodeShape ;
@@ -756,6 +828,7 @@ cat:Campaign a rdfs:Class, sh:NodeShape ;
                                   [ sh:hasValue "optimization"]) ; ] ;
     sh:property [sh:path allo-res:AFR_0002764 ; sh:datatype xsd:string] ;
     sh:property [sh:path cat:hasBatch ; sh:class cat:Batch] ;
+    sh:property [sh:path cat:hasObjective ; sh:class obo:IAO_0000005] ;
     .
 
 cat:Batch a rdfs:Class, sh:NodeShape ;
@@ -768,9 +841,29 @@ cat:Batch a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path allo-res:AFR_0002764 ; sh:datatype xsd:string] ;
     sh:property [sh:path allo-hdf:HardLink ; sh:datatype xsd:string] ;
     sh:property [sh:path cat:optimizationType ; sh:datatype xsd:string] ;
-    sh:property [sh:path cat:hasObjective ; sh:class obo:IAO_0000005] ;
     sh:property [sh:path cat:hasChemical ; sh:class obo:CHEBI_25367] ;
+    sh:property [sh:path cat:hasPlate ; sh:class cat:Plate] ;
     .
+
+cat:Plate a rdfs:Class, sh:NodeShape ;
+    skos:prefLabel "Plate" ;
+    skos:definition "A plate is a flat, rigid structure that holds samples or reagents in an experiment." ;
+    sh:property [sh:path cat:hasWell ; sh:class cat:Well] ; #hasWell
+    sh:property [sh:path cat:internalBarCode ; sh:datatype xsd:string] ; #internal barcode
+    sh:property [sh:path cat:containerBarcode ; sh:datatype xsd:string] ; #container barcode
+    sh:property [sh:path cat:containerID ; sh:datatype xsd:string] ; #containerID
+    .
+
+cat:Well a rdfs:Class, sh:NodeShape ;
+    skos:prefLabel "Well" ;
+    skos:definition "A well is a small container used to hold samples or reagents in an experiment." ; 
+    sh:property [sh:path allo-res:AFR_0002240 ; sh:datatype xsd:string] ; #Well location identifier
+    sh:property [sh:path qudt:quantity ;
+                 sh:node cat:Observation ] ;
+        sh:xone ([sh:property [sh:path cat:hasSample ; sh:class cat:Sample ]]  #hasSample
+                 [sh:property [sh:path cat:peak ; sh:class allo-res:AFR_0000413 ]] ); #peak
+
+    .   
 
 allo-res:AFR_0002525 a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Liquid Chromatography Document" ;
@@ -792,6 +885,12 @@ allo-res:AFR_0002375 a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path allo-res:AFR_0002551 ; sh:class cat:ThreeDimensionalUltravioletSpectrumDataCube] ; #three-dimensional ultraviolet spectrum data cube-> ThreeDimensionalUltravioletSpectrumDataCube
     sh:property [sh:path allo-res:AFR_0002878 ; sh:class cat:ThreeDimensionalMassSpectrumDataCube] ; #three-dimensional mass spectrum data cube -> ThreeDimensionalMassSpectrumDataCube
 
+    .
+
+allo-res:AFR_0002723 a sh:NodeShape, rdfs:Class ;
+    rdfs:subClassOf allo-res:AFR_0002567 ;
+    skos:prefLabel "Device Control Document" ;
+    skos:definition "A device control document is a document that encompasses the information associated with a device control. [Allotrope]" ;
     .
 
 cat:ThreeDimensionalUltravioletSpectrumDataCube a rdfs:Class, sh:NodeShape ;
@@ -819,7 +918,7 @@ cat:Dataframe a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path cat:dimension ; sh:class cat:Dimension] ; #dimension
     .
 
-cat:CubeDataset a rdfs:Class, sh:NodeShape ;
+cat:CubeStructure a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Cube Dataset" ;
     skos:definition "A dataset represented as a multidimensional cube, used for structured data analysis in various contexts such as spectroscopy and mass spectrometry." ;
     sh:property [sh:path cat:measure ; sh:class allo-role:AFRL_0000157 ] ; #measure
@@ -873,7 +972,7 @@ cat:ChromatogramDataCube a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Chromatogram Data Cube" ;
     skos:definition "A three-dimensional representation of chromatographic data, enabling analysis of time, intensity, and other parameters." ;
     sh:property [sh:path obo:IAO_0000009 ; sh:datatype xsd:string] ; #label
-    sh:property [sh:path qb:DataSet ; sh:class cat:something] ; #cube-structure
+    sh:property [sh:path qb:DataSet ; sh:class cat:CubeStructure] ; #cube-structure
     sh:property [sh:path allo-hdf:Dataset ; sh:class cat:Dataframe] ; #dataset
     sh:property [sh:path allo-res:AFR_0000917 ; sh:datatype xsd:string] ; #identifier
     .
@@ -890,12 +989,33 @@ cat:PeakList a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path cat:peak ; sh:class allo-res:AFR_0000413] ; #peak
     .
 
+allo-res:AFR_0000413 a rdfs:Class, sh:NodeShape ;
+    skos:prefLabel "Peak" ;
+    skos:definition "A peak describes a part of a spectrum/chromatogram/plot at a definite range of the experimental parameter (independent variable) of the spectrum. This definition includes a single data point of the spectrum. [Allotrope]" ;
+    sh:property [sh:path <http://purl.allotrope.org/ontologies/datacube-hdf-map#Index> ; sh:datatype xsd:integer] ; #index
+    sh:property [sh:path allo-res:AFR_0001073 ; sh:class cat:PeakArea] ; #peak area
+    sh:property [sh:path allo-res:AFR_0001089 ; sh:class cat:RetentionTime ] ; #retentiontime
+    sh:property [sh:path allo-res:AFR_0001164 ; sh:datatype xsd:string ] ; #peak identifier
+    sh:property [sh:path allo-res:AFR_0001178 ; sh:class cat:PeakStart] ; #peak start
+    sh:property [sh:path allo-res:AFR_0001180 ; sh:class cat:PeakEnd] ; #peak end
+    sh:property [sh:path allo-res:AFR_0000948 ; sh:class cat:PeakHeight] ; #peak height
+    sh:property [sh:path allo-res:AFR_0000949 ; sh:class cat:RelativePeakHeight] ; #relative peak height
+    sh:property [sh:path allo-res:AFR_0001179 ; sh:class cat:PeakValueAtStart] ; #peak value at start
+    sh:property [sh:path allo-res:AFR_0001181 ; sh:class cat:PeakValueAtEnd] ; #peak value at end
+    sh:property [sh:path allo-res:AFR_0001165 ; sh:class cat:RelativePeakArea] ; #relative peak area
+    sh:property [sh:path allo-res:AFR_0002551 ; sh:class cat:ThreeDimensionalUltravioletSpectrumDataCube] ; #three-dimensional ultraviolet spectrum data cube
+    sh:property [sh:path allo-res:AFR_0002878 ; sh:class cat:ThreeDimensionalMassSpectrumDataCube] ; #three-dimensional mass spectrum data cube
+    sh:property [sh:path allo-res:AFR_0002526 ; sh:class cat:DeviceSystemDocument ] ; #device system document
+    sh:property [sh:path allo-res:AFR_0001976 ; sh:datatype xsd:string] ; #asset management identifier 
+    .
+
 cat:DeviceSystemDocument a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Device System Document" ;
     skos:definition "A document describing a system of devices, including identifiers and associated metadata for asset management." ;
     sh:property [sh:path allo-res:AFR_0001976 ; sh:datatype xsd:string] ; #asset management identifier
     sh:property [sh:path cat:deviceDocument ; sh:class allo-res:AFR_0002567] ; #device document
     .
+    
 allo-res:AFR_0002567 a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Device Document" ;
     skos:definition "A device document is a document that encompasses the information associated with a device. [Allotrope]" ;
