@@ -524,6 +524,11 @@ cat:peakHeight a rdf:Property ;
     skos:definition "A property representing the height of a peak in a chromatogram or spectrum, measured from the baseline to the peak maximum." ;
     .
 
+cat:type a rdf:Property ;
+    skos:prefLabel "type" ;
+    skos:definition "A type refers to the classification of a process or approach based on its purpose, which can be: Optimization: The process of refining or improving a system, model, or reaction to achieve the best possible performance, efficiency, or yield. Discovery: The process of identifying new compounds, reactions, or principles, often through exploration, experimentation, or computational methods." ;
+    .
+
 
 
 ###################################################################################################
@@ -743,8 +748,12 @@ cat:Campaign a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path schema:description ; sh:datatype xsd:string] ;
     sh:property [sh:path cat:genericObjective ; sh:datatype xsd:string] ;
     sh:property [sh:path cat:campaignClass ; sh:datatype xsd:string ;
-                         sh:xone ([ sh:hasValue "optimization"]
-                                  [ sh:hasValue "discovery"]) ; ] ;
+                         sh:xone ([ sh:hasValue "Open Research"]
+                                  [ sh:hasValue "Standard Research"]
+                                  [ sh:hasValue "High level of Confidentiality"]) ; ] ;
+    sh:property [sh:path cat:type ; sh:datatype xsd:string ;
+                         sh:xone ([ sh:hasValue "discovery"]
+                                  [ sh:hasValue "optimization"]) ; ] ;
     sh:property [sh:path allo-res:AFR_0002764 ; sh:datatype xsd:string] ;
     sh:property [sh:path cat:hasBatch ; sh:class cat:Batch] ;
     .
