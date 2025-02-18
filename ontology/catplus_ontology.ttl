@@ -618,6 +618,10 @@ cat:type a rdf:Property ;
     skos:definition "A type refers to the classification of a process or approach based on its purpose, which can be: Optimization: The process of refining or improving a system, model, or reaction to achieve the best possible performance, efficiency, or yield. Discovery: The process of identifying new compounds, reactions, or principles, often through exploration, experimentation, or computational methods." ;
     .
 
+cat:reactionName a rdf:Property ;
+    skos:prefLabel "reaction name" ;
+    skos:definition "the specific name given to a well-known chemical reaction, often named after its discoverer(s) or key feature, to describe a particular transformation of reactants into products" ;
+    .
 
 
 
@@ -843,6 +847,7 @@ cat:Batch a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path cat:optimizationType ; sh:datatype xsd:string] ;
     sh:property [sh:path cat:hasChemical ; sh:class obo:CHEBI_25367] ;
     sh:property [sh:path cat:hasPlate ; sh:class cat:Plate] ;
+    sh:property [sh:path cat:reactionName ; sh:datatype xsd:string] ;
     .
 
 cat:Plate a rdfs:Class, sh:NodeShape ;
