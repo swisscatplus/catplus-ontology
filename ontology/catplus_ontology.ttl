@@ -260,11 +260,6 @@ cat:hasObjective a rdf:Property ;
     skos:definition "The objective that is part of the batch" ;
     .
 
-cat:reactionSubType a rdf:Property ;
-    skos:prefLabel "reaction subtype" ;
-    skos:definition "A reaction subtype is a specific type of reaction that is part of the batch." ;
-    .
-
 cat:hasCampaign a rdf:Property ;
     skos:prefLabel "has campaign" ;
     skos:definition "The campaign that is part of the batch" ;
@@ -841,7 +836,6 @@ cat:Batch a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path schema:name ; sh:datatype xsd:string] ;
     sh:property [sh:path cat:hasCampaign ; sh:class cat:Campaign] ;
     sh:property [sh:path cat:reactionType ; sh:datatype xsd:string] ;
-    sh:property [sh:path cat:reactionSubType ; sh:datatype xsd:string] ;
     sh:property [sh:path allo-res:AFR_0002764 ; sh:datatype xsd:string] ;
     sh:property [sh:path allo-hdf:HardLink ; sh:datatype xsd:string] ;
     sh:property [sh:path cat:optimizationType ; sh:datatype xsd:string] ;
@@ -1012,6 +1006,19 @@ allo-res:AFR_0000413 a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path allo-res:AFR_0002878 ; sh:class cat:ThreeDimensionalMassSpectrumDataCube] ; #three-dimensional mass spectrum data cube
     sh:property [sh:path allo-res:AFR_0002526 ; sh:class cat:DeviceSystemDocument ] ; #device system document
     sh:property [sh:path allo-res:AFR_0001976 ; sh:datatype xsd:string] ; #asset management identifier 
+    .
+
+cat:Agilent-Peak a rdfs:Class, sh:NodeShape ;
+    skos:prefLabel "Agilent Peak" ;
+    skos:definition "A peak identified in an Agilent chromatogram or spectrum, typically used for further analysis in experiments." ;
+    rdfs:subClassOf allo-res:AFR_0000413 ;
+    .
+
+cat:UV-IR-NMR-Peak a rdfs:Class, sh:NodeShape ;
+    skos:prefLabel "UV-IR-NMR Peak" ;
+    skos:definition "A peak identified in a UV, IR, or NMR spectrum, typically used for further analysis in experiments." ;
+    rdfs:subClassOf allo-res:AFR_0000413 ;
+    #properties to be added
     .
 
 cat:DeviceSystemDocument a rdfs:Class, sh:NodeShape ;
