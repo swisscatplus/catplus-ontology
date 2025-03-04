@@ -574,6 +574,11 @@ qudt:value a rdf:Property ;
     skos:definition "The value of a quantity" ;
     .
 
+cat:hasProduct a rdf:Property ;
+    skos:prefLabel "has Product" ;
+    skos:definition "A property to indicate the product (unknown mix of chemicals) something has" ;
+    .
+
 cat:hasSample a rdf:Property ;
     skos:prefLabel "has Sample" ;
     skos:definition "A property to indicate the sample something has" ;
@@ -756,11 +761,21 @@ cat:Observation a rdfs:Class, sh:NodeShape ;
                 sh:node [sh:property [sh:path qudt:unit ; sh:minCount 1 ], [sh:path qudt:value ; sh:minCount 1 ]]] ;
     .
 
+cat:Product a rdfs:Class, sh:NodeShape ;
+    skos:related allo-mat:AFM_0001099 ;
+    skos:prefLabel "Unknown Sample" ;
+    skos:altLabel  "chemical mixture" ;
+    skos:definition "A chemical mixture where the chemical substances are unknown." ;
+    sh:property [sh:path purl:identifier ; sh:datatype xsd:string] ; #identifier/sampleID
+    sh:property [sh:path cat:hasChemical ; sh:class obo:CHEBI_25367 ] ; #hasChemical
+    sh:property [sh:path allo-res:AFR_0000432 ; sh:class cat:PeakList ] ; #peak list
+    .
+
 cat:Sample a rdfs:Class, sh:NodeShape ;
     skos:related allo-mat:AFM_0001099 ;
     skos:prefLabel "Sample" ;
     skos:altLabel  "chemical mixture" ;
-    skos:definition "A portion of chemical mixture is a chemical substance that is composed of chemical substances. [Allotrope]" ;
+    skos:definition "A chemical mixture where the chemical substances are known." ;
     sh:property [sh:path allo-res:AFR_0002464 ; sh:datatype xsd:string] ; #VialID
     sh:property cat:vialShape ; #vial type
     sh:property [sh:path cat:role ] ;   #role
@@ -780,7 +795,6 @@ cat:Sample a rdfs:Class, sh:NodeShape ;
                                             sh:hasValue unit:PERCENT] ]];
     sh:property [sh:path cat:hasSample ; sh:class cat:Sample] ; #hasSample
     sh:property [sh:path cat:hasChemical ; sh:class obo:CHEBI_25367 ] ; #hasChemical
-    sh:property [sh:path allo-res:AFR_0000432 ; sh:class cat:PeakList ] ; #peak list
     .
 
 obo:CHEBI_25367 a rdfs:Class, sh:NodeShape ;
@@ -859,7 +873,7 @@ cat:Well a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path allo-res:AFR_0002240 ; sh:datatype xsd:string] ; #Well location identifier
     sh:property [sh:path qudt:quantity ;
                  sh:node cat:Observation ] ;
-        sh:xone ([sh:property [sh:path cat:hasSample ; sh:class cat:Sample ]]  #hasSample
+        sh:xone ([sh:property [sh:path cat:hasProduct ; sh:class cat:Product ]]  #hasProduct
                  [sh:property [sh:path cat:peak ; sh:class allo-res:AFR_0000413 ]] ); #peak
 
     .   
