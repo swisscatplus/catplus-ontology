@@ -36,11 +36,11 @@ cat: a owl:Ontology ;
     dct:creator "Robin Franken", "Jean-Charles Cousty" ;
     dct:description "The CAT+ ontology provides concepts (classes and properties) to model human and machine readable automated catalysis discovery experiment metadata. It is the result of re-using external pre-existing vocabularies such as Allotrope, schema.org and qudt, together with custom imaging specific objects and properties." ;    
     dct:license <https://spdx.org/licenses/CC-BY-SA-4.0.html> ;
-    dct:modified "2024-12-09"^^xsd:date ;
+    dct:modified "2025-02-19"^^xsd:date ;
     dct:title "CAT+ Ontology" ;
     vann:preferredNamespacePrefix "cat" ;
     vann:preferredNamespaceUri "http://example.org/cat#"^^xsd:string ;
-    owl:versionInfo "0.3.0"^^xsd:string ;
+    owl:versionInfo "0.4.0"^^xsd:string ;
     sh:entailment <http://www.w3.org/ns/entailment/RDFS>
     .
 
@@ -638,7 +638,8 @@ cat:AddAction a rdfs:Class, sh:NodeShape ;
    sh:property cat:speedShaker ;
    sh:property cat:temperatureShakerShape ;
    sh:property cat:temperatureTumbleStirrerShape ;
-   sh:property [sh:path cat:hasSolvent ; sh:class cat:Solvent ] 
+   sh:property [sh:path cat:hasSolvent ; sh:class cat:Solvent ] ;
+   sh:property [sh:path cat:hasSample ; sh:class cat:Sample ] ;
     .
 
 cat:SetTemperatureAction a rdfs:Class, sh:NodeShape ;
@@ -797,6 +798,13 @@ cat:Sample a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path cat:hasChemical ; sh:class obo:CHEBI_25367 ] ; #hasChemical
     .
 
+cat:Product a sh:NodeShape, rdfs:Class ;
+    skos:prefLabel "Product" ;
+    skos:definition "An uknown sample." ;
+    sh:property [sh:path allo-res:AFR_0000432 ; sh:class cat:PeakList ] ; #peak list
+    sh:property [sh:path purl:identifier ; sh:datatype xsd:string] ; #identifier/sampleID
+    .
+
 obo:CHEBI_25367 a rdfs:Class, sh:NodeShape ;
     rdfs:subClassOf chebi:CHEBI_36357 ;
     sh:property [sh:path purl:identifier ; sh:datatype xsd:string ; sh:minCount 1 ; sh:maxCount 1] ;
@@ -839,16 +847,16 @@ cat:Campaign a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path cat:type ; sh:datatype xsd:string ;
                          sh:xone ([ sh:hasValue "discovery"]
                                   [ sh:hasValue "optimization"]) ; ] ;
-    sh:property [sh:path allo-res:AFR_0002764 ; sh:datatype xsd:string] ;
+    sh:property [sh:path allo-res:AFR_0002764 ; sh:datatype xsd:string] ; #reference
     sh:property [sh:path cat:hasBatch ; sh:class cat:Batch] ;
     sh:property [sh:path cat:hasObjective ; sh:class obo:IAO_0000005] ;
+    sh:property [sh:path cat:hasChemical ; sh:class obo:CHEBI_25367] ;
     .
 
 cat:Batch a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Batch" ;
     skos:definition "A batch is a group of samples that are processed together." ;
     sh:property [sh:path schema:name ; sh:datatype xsd:string] ;
-    sh:property [sh:path cat:hasCampaign ; sh:class cat:Campaign] ;
     sh:property [sh:path cat:reactionType ; sh:datatype xsd:string] ;
     sh:property [sh:path allo-res:AFR_0002764 ; sh:datatype xsd:string] ;
     sh:property [sh:path allo-hdf:HardLink ; sh:datatype xsd:string] ;
