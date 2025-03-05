@@ -406,11 +406,6 @@ cat:dimension a rdf:Property ;
     skos:definition "A property representing a measurable extent of a particular kind, such as length, width, height, or time, in a specified context." ;
     .
 
-cat:deviceDocument a rdf:Property ;
-    skos:prefLabel "device document" ;
-    skos:definition "A property representing documentation or information related to a device, including specifications, manuals, or calibration details." ;
-    .
-
 allo-res:AFR_0002659 a rdf:Property;
   skos:definition "A processed data document is a document that encompasses the output of some data processing operation. [Allotrope]";
   skos:prefLabel "processed data document" .
@@ -899,7 +894,7 @@ allo-res:AFR_0002375 a rdfs:Class, sh:NodeShape ;
     skos:definition "A measurement document is a document that encompasses the information associated with a measurement. [Allotrope]" ;
     sh:property [sh:path allo-res:AFR_0001121 ; sh:datatype xsd:string] ; #measurement id
     sh:property [sh:path allo-res:AFR_0002607 ; sh:class cat:ChromatographyColumnDocument ] ; #chromatographyColumnDocument -> ChromatographyColumnDocument
-    sh:property [sh:path cat:deviceDocument ; sh:class allo-res:AFR_0002567] ; #deviceDocument -> DeviceDocument
+    sh:property [sh:path allo-res:AFR_0002722 ; sh:class allo-res:AFR_0002567] ; #deviceDocument -> DeviceDocument
     sh:property [sh:path allo-res:AFR_0002083 ; sh:class cat:SampleDocument ] ; #hasSampleDocument -> cat:SampleDocument
     sh:property [sh:path allo-res:AFR_0002529 ; sh:class cat:InjectionDocument] ; #injectionDocument -> cat:InjectionDocument
     sh:property [sh:path allo-res:AFR_0002534 ; sh:datatype xsd:string] ; #detection type
@@ -1039,7 +1034,7 @@ cat:DeviceSystemDocument a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Device System Document" ;
     skos:definition "A document describing a system of devices, including identifiers and associated metadata for asset management." ;
     sh:property [sh:path allo-res:AFR_0001976 ; sh:datatype xsd:string] ; #asset management identifier
-    sh:property [sh:path cat:deviceDocument ; sh:class allo-res:AFR_0002567] ; #device document
+    sh:property [sh:path allo-res:AFR_0002722 ; sh:class allo-res:AFR_0002567] ; #device document
     .
     
 allo-res:AFR_0002567 a rdfs:Class, sh:NodeShape ;
