@@ -899,7 +899,7 @@ allo-res:AFR_0002375 a rdfs:Class, sh:NodeShape ;
     skos:definition "A measurement document is a document that encompasses the information associated with a measurement. [Allotrope]" ;
     sh:property [sh:path allo-res:AFR_0001121 ; sh:datatype xsd:string] ; #measurement id
     sh:property [sh:path allo-res:AFR_0002607 ; sh:class cat:ChromatographyColumnDocument ] ; #chromatographyColumnDocument -> ChromatographyColumnDocument
-    sh:property [sh:path allo-res:AFR_0002722 ; sh:class allo-res:AFR_0002723 ] ; #hasDeviceControlAggregateDocument -> DeviceControlDocument
+    sh:property [sh:path cat:deviceDocument ; sh:class allo-res:AFR_0002567] ; #deviceDocument -> DeviceDocument
     sh:property [sh:path allo-res:AFR_0002083 ; sh:class cat:SampleDocument ] ; #hasSampleDocument -> cat:SampleDocument
     sh:property [sh:path allo-res:AFR_0002529 ; sh:class cat:InjectionDocument] ; #injectionDocument -> cat:InjectionDocument
     sh:property [sh:path allo-res:AFR_0002534 ; sh:datatype xsd:string] ; #detection type
@@ -909,11 +909,6 @@ allo-res:AFR_0002375 a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path cat:hasProcessedDataDocument ; sh:class cat:ProcessedDataDocument] ; #hasProcessedDataDocument -> ProcessedDataDocument
 .
 
-allo-res:AFR_0002723 a sh:NodeShape, rdfs:Class ;
-    rdfs:subClassOf allo-res:AFR_0002567 ;
-    skos:prefLabel "Device Control Document" ;
-    skos:definition "A device control document is a document that encompasses the information associated with a device control. [Allotrope]" ;
-    .
 
 cat:ThreeDimensionalUltravioletSpectrumDataCube a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Three-Dimensional Ultraviolet Spectrum Data Cube" ;
