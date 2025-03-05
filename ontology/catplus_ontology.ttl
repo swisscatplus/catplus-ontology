@@ -907,8 +907,7 @@ allo-res:AFR_0002375 a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path allo-res:AFR_0002551 ; sh:class cat:ThreeDimensionalUltravioletSpectrumDataCube] ; #three-dimensional ultraviolet spectrum data cube-> ThreeDimensionalUltravioletSpectrumDataCube
     sh:property [sh:path allo-res:AFR_0002878 ; sh:class cat:ThreeDimensionalMassSpectrumDataCube] ; #three-dimensional mass spectrum data cube -> ThreeDimensionalMassSpectrumDataCube
     sh:property [sh:path cat:hasProcessedDataDocument ; sh:class cat:ProcessedDataDocument] ; #hasProcessedDataDocument -> ProcessedDataDocument
-
-    .
+.
 
 allo-res:AFR_0002723 a sh:NodeShape, rdfs:Class ;
     rdfs:subClassOf allo-res:AFR_0002567 ;
