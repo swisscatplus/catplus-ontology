@@ -368,11 +368,6 @@ cat:cartridgeComposition a rdf:Property ;
     skos:definition "It refers to the materials and specific sorbents packed within the SPE cartridge." ;
     .
 
-allo-res:AFR_0002524 a rdf:Property ;
-    skos:prefLabel "liquid chromatography aggregate document" ;
-    skos:definition "A liquid chromatography aggregate document is a document that aggregates LC documents. [Allotrope]"
-    .
-
 allo-res:AFR_0002526 a rdf:Property ;
     skos:prefLabel "device system document" ;
     skos:definition "A device system document is a document that encompasses the information associated with a device system. [Allotrope]" ;
@@ -552,6 +547,11 @@ allo-res:AFR_0002534 a rdf:Property ;
 allo-res:AFR_0001116 a rdf:Property ;
     skos:prefLabel "analyst" ;
     skos:definition "Analyst is measurement metadata about the name or identifier of a person that has the role of an analyst in the measurement. [Allotrope]" ;
+    .
+
+cat:hasProcessedDataDocument a rdf:Property ;
+    skos:prefLabel "has processed data document" ;
+    skos:definition "A property which associates to a processed data document." ;
     .
 
 allo-res:AFR_0002374 a rdf:Property ;
@@ -891,6 +891,7 @@ allo-res:AFR_0002525 a rdfs:Class, sh:NodeShape ;
     skos:definition "A liquid chromatography document is a document that encompasses the information associated with a liquid chromatography run. [Allotrope]" ;
     sh:property [sh:path allo-res:AFR_0001116 ; sh:datatype xsd:string] ; #analyst
     sh:property [sh:path allo-res:AFR_0002374 ; sh:class allo-res:AFR_0002375] ; #hasMeasurementAggregateDocument -> MeasurementDocument
+    sh:property [sh:path allo-res:AFR_0002526 ; sh:class cat:DeviceSystemDocument ] ; #device system document
 .
 
 allo-res:AFR_0002375 a rdfs:Class, sh:NodeShape ;
@@ -905,6 +906,7 @@ allo-res:AFR_0002375 a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path allo-res:AFR_0002550 ; sh:class cat:ChromatogramDataCube] ; #chromatogram data cube
     sh:property [sh:path allo-res:AFR_0002551 ; sh:class cat:ThreeDimensionalUltravioletSpectrumDataCube] ; #three-dimensional ultraviolet spectrum data cube-> ThreeDimensionalUltravioletSpectrumDataCube
     sh:property [sh:path allo-res:AFR_0002878 ; sh:class cat:ThreeDimensionalMassSpectrumDataCube] ; #three-dimensional mass spectrum data cube -> ThreeDimensionalMassSpectrumDataCube
+    sh:property [sh:path cat:hasProcessedDataDocument ; sh:class cat:ProcessedDataDocument] ; #hasProcessedDataDocument -> ProcessedDataDocument
 
     .
 
@@ -1026,9 +1028,7 @@ allo-res:AFR_0000413 a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path allo-res:AFR_0001165 ; sh:class cat:RelativePeakArea] ; #relative peak area
     sh:property [sh:path allo-res:AFR_0002551 ; sh:class cat:ThreeDimensionalUltravioletSpectrumDataCube] ; #three-dimensional ultraviolet spectrum data cube
     sh:property [sh:path allo-res:AFR_0002878 ; sh:class cat:ThreeDimensionalMassSpectrumDataCube] ; #three-dimensional mass spectrum data cube
-    sh:property [sh:path allo-res:AFR_0002526 ; sh:class cat:DeviceSystemDocument ] ; #device system document
-    sh:property [sh:path allo-res:AFR_0001976 ; sh:datatype xsd:string] ; #asset management identifier 
-    .
+.
 
 cat:Agilent-Peak a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Agilent Peak" ;
