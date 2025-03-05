@@ -1047,6 +1047,7 @@ allo-res:AFR_0002567 a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path obo:IAO_0000017 ; sh:datatype xsd:string] ; #model number
     sh:property [sh:path allo-res:AFR_0001259; sh:datatype xsd:string] ; #firmware version
     sh:property [sh:path <http://purl.allotrope.org/ontologies/datacube-hdf-map#Index> ; sh:datatype xsd:integer] ; #index
+    sh:property [sh:path allo-res:AFR_0002534 ; sh:datatype xsd:string] ; #detection type
     .
 
 cat:Measurement a sh:NodeShape ;
