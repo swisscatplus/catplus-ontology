@@ -1025,8 +1025,6 @@ allo-res:AFR_0000413 a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path allo-res:AFR_0001179 ; sh:class cat:PeakValueAtStart] ; #peak value at start
     sh:property [sh:path allo-res:AFR_0001181 ; sh:class cat:PeakValueAtEnd] ; #peak value at end
     sh:property [sh:path allo-res:AFR_0001165 ; sh:class cat:RelativePeakArea] ; #relative peak area
-    sh:property [sh:path allo-res:AFR_0002551 ; sh:class cat:ThreeDimensionalUltravioletSpectrumDataCube] ; #three-dimensional ultraviolet spectrum data cube
-    sh:property [sh:path allo-res:AFR_0002878 ; sh:class cat:ThreeDimensionalMassSpectrumDataCube] ; #three-dimensional mass spectrum data cube
 .
 
 cat:Agilent-Peak a rdfs:Class, sh:NodeShape ;
