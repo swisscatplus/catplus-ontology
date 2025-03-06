@@ -544,11 +544,6 @@ allo-res:AFR_0001116 a rdf:Property ;
     skos:definition "Analyst is measurement metadata about the name or identifier of a person that has the role of an analyst in the measurement. [Allotrope]" ;
     .
 
-cat:hasProcessedDataDocument a rdf:Property ;
-    skos:prefLabel "has processed data document" ;
-    skos:definition "A property which associates to a processed data document." ;
-    .
-
 allo-res:AFR_0002374 a rdf:Property ;
     skos:prefLabel "has Measurement aggregate document" ;
     skos:definition "A property which aggregates measurement documents." ;
