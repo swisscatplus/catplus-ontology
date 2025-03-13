@@ -1066,6 +1066,7 @@ cat:PeakArea a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Peak Area" ;
     skos:definition "A class representing the area under a peak in a chromatogram or spectrum, indicative of the quantity of analyte." ;
     sh:node cat:Measurement ;
+    sh:node [sh:property [sh:path qudt:unit ; sh:hasValue <http://purl.allotrope.org/ontology/qudt-ext/unit#MilliAbsorbanceUnitTimesSecond>] ] ;
     .
 
 cat:RetentionTime a rdfs:Class, sh:NodeShape ;
@@ -1108,12 +1109,14 @@ cat:PeakValueAtStart a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Peak Value at Start" ;
     skos:definition "A class representing the value or intensity of a peak at the start point, often used in peak characterization." ;
     sh:node cat:Measurement ;
+    sh:node [sh:property [sh:path qudt:unit ; sh:hasValue <http://purl.allotrope.org/ontology/qudt-ext/unit#MilliAbsorbanceUnit>] ] ;
     .
 
 cat:PeakValueAtEnd a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Peak Value at End" ;
     skos:definition "A class representing the value or intensity of a peak at the end point, often used in peak characterization." ;
     sh:node cat:Measurement ;
+    sh:node [sh:property [sh:path qudt:unit ; sh:hasValue <http://purl.allotrope.org/ontology/qudt-ext/unit#MilliAbsorbanceUnit>] ] ;
     .
 
 cat:temperatureTumbleStirrerShape a sh:PropertyShape ;
