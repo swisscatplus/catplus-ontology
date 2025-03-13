@@ -1098,6 +1098,27 @@ cat:PeakStart a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Peak Start" ;
     skos:definition "A class representing the point at which a chromatographic or spectrometric peak begins, typically defined as the initial rise above the baseline." ;
     sh:node cat:Measurement ;
+    sh:property [
+        sh:path qudt:unit ;
+        sh:sparql [
+            a sh:SPARQLConstraint ;
+            sh:select """
+                PREFIX qudt: <http://qudt.org/schema/qudt/>
+                PREFIX unit: <https://qudt.org/vocab/unit/>
+                SELECT $this $value
+                WHERE {
+                    $this qudt:unit ?unit
+                    FILTER NOT EXISTS {<https://qudt.org/vocab/quantitykind/Time> qudt:applicableUnit ?unit}.
+                }
+            """ ;
+            sh:message "The unit must be a unit applicable to Time." ;
+        ] ;
+    ] .
+
+<https://qudt.org/vocab/quantitykind/Time> a qudt:QuantityKind ;
+    rdfs:label "Time" ;
+    qudt:applicableUnit unit:SEC ;
+    qudt:applicableUnit unit:MIN ;
     .
 
 cat:RelativePeakArea a rdfs:Class, sh:NodeShape ;
