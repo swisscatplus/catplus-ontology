@@ -876,12 +876,23 @@ cat:Well a rdfs:Class, sh:NodeShape ;
 
     .   
 
+cat:hasLiquidChromatography a rdf:Property ;
+    skos:prefLabel "has a liquid chromatography" ;
+    skos:definition "The belonging of a liquid chromatography"
+.
+
+allo-res:AFR_0002524 a rdfs:Class, sh:NodeShape ;
+    skos:prefLabel "Liquid Chromatography Document" ;
+    skos:definition "A liquid chromatography aggregate document is a document that aggregates LC documents. [Allotrope]" ;
+    sh:property [sh:path allo-res:AFR_0002526 ; sh:class cat:DeviceSystemDocument ] ; #device system document
+    sh:property [sh:path cat:hasLiquidChromatography ; sh:class allo-res:AFR_0002525 ] ; #liquid chromatography
+.
+
 allo-res:AFR_0002525 a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Liquid Chromatography Document" ;
     skos:definition "A liquid chromatography document is a document that encompasses the information associated with a liquid chromatography run. [Allotrope]" ;
     sh:property [sh:path allo-res:AFR_0001116 ; sh:datatype xsd:string] ; #analyst
     sh:property [sh:path allo-res:AFR_0002374 ; sh:class allo-res:AFR_0002375] ; #hasMeasurementAggregateDocument -> MeasurementDocument
-    sh:property [sh:path allo-res:AFR_0002526 ; sh:class cat:DeviceSystemDocument ] ; #device system document
 .
 
 allo-res:AFR_0002375 a rdfs:Class, sh:NodeShape ;
