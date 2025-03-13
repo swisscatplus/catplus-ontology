@@ -406,6 +406,11 @@ cat:dimension a rdf:Property ;
     skos:definition "A property representing a measurable extent of a particular kind, such as length, width, height, or time, in a specified context." ;
     .
 
+cat:hasLiquidChromatography a rdf:Property ;
+    skos:prefLabel "has a liquid chromatography" ;
+    skos:definition "The belonging of a liquid chromatography"
+.
+
 allo-res:AFR_0002659 a rdf:Property;
   skos:definition "A processed data document is a document that encompasses the output of some data processing operation. [Allotrope]";
   skos:prefLabel "processed data document" .
@@ -876,17 +881,13 @@ cat:Well a rdfs:Class, sh:NodeShape ;
 
     .   
 
-cat:hasLiquidChromatography a rdf:Property ;
-    skos:prefLabel "has a liquid chromatography" ;
-    skos:definition "The belonging of a liquid chromatography"
-.
-
 allo-res:AFR_0002524 a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Liquid Chromatography Document" ;
     skos:definition "A liquid chromatography aggregate document is a document that aggregates LC documents. [Allotrope]" ;
     sh:property [sh:path allo-res:AFR_0002526 ; sh:class cat:DeviceSystemDocument ] ; #device system document
     sh:property [sh:path cat:hasLiquidChromatography ; sh:class allo-res:AFR_0002525 ] ; #liquid chromatography
 .
+
 
 allo-res:AFR_0002525 a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Liquid Chromatography Document" ;
