@@ -1086,6 +1086,7 @@ cat:RelativePeakHeight a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Relative Peak Height" ;
     skos:definition "A class representing the height of a peak relative to a reference peak or baseline, used for comparative analysis." ;
     sh:node cat:Measurement ;
+    sh:node [sh:property [sh:path qudt:unit ; sh:hasValue unit:PERCENT] ] ;
     .
 
 cat:PeakHeight a rdfs:Class, sh:NodeShape ;
@@ -1125,6 +1126,7 @@ cat:RelativePeakArea a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Relative Peak Area" ;
     skos:definition "A class representing the area of a peak relative to the total area or a reference peak, used for normalization or comparison." ;
     sh:node cat:Measurement ;
+    sh:node [sh:property [sh:path qudt:unit ; sh:hasValue unit:PERCENT] ] ;
     .
 
 cat:PeakValueAtStart a rdfs:Class, sh:NodeShape ;
