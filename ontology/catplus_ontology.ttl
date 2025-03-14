@@ -901,7 +901,7 @@ allo-res:AFR_0002375 a rdfs:Class, sh:NodeShape ;
     skos:definition "A measurement document is a document that encompasses the information associated with a measurement. [Allotrope]" ;
     sh:property [sh:path allo-res:AFR_0001121 ; sh:datatype xsd:string] ; #measurement id
     sh:property [sh:path allo-res:AFR_0002607 ; sh:class cat:ChromatographyColumnDocument ] ; #chromatographyColumnDocument -> ChromatographyColumnDocument
-    sh:property [sh:path allo-res:AFR_0002722 ; sh:class allo-res:AFR_0002567] ; #deviceDocument -> DeviceDocument
+    sh:property [sh:path allo-res:AFR_0002526 ; sh:class cat:DeviceSystemDocument ] ; #device system document aka device control aggregate document -> list of Device document
     sh:property [sh:path allo-res:AFR_0002083 ; sh:class cat:SampleDocument ] ; #hasSampleDocument -> cat:SampleDocument
     sh:property [sh:path allo-res:AFR_0002529 ; sh:class cat:InjectionDocument] ; #injectionDocument -> cat:InjectionDocument
     sh:property [sh:path allo-res:AFR_0002534 ; sh:datatype xsd:string] ; #detection type
