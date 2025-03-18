@@ -260,11 +260,6 @@ cat:hasObjective a rdf:Property ;
     skos:definition "The objective that is part of the batch" ;
     .
 
-cat:hasCampaign a rdf:Property ;
-    skos:prefLabel "has campaign" ;
-    skos:definition "The campaign that is part of the batch" ;
-    .
-
 cat:hasBatch a rdf:Property ;
     skos:prefLabel "has batch" ;
     skos:definition "refers to a specific batch instance" ;
@@ -561,7 +556,7 @@ allo-res:AFR_0002374 a rdf:Property ;
 
 purl:identifier a rdf:Property ;
     skos:prefLabel "identifier" ;
-    skos:definition "an identifier of a sample" ;
+    skos:definition "An unambiguous reference to the resource within a given context." ;
     .
 
 cat:hasWell a rdf:Property ;
@@ -857,6 +852,7 @@ cat:Batch a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Batch" ;
     skos:definition "A batch is a group of samples that are processed together." ;
     sh:property [sh:path schema:name ; sh:datatype xsd:string] ;
+    sh:property [sh:path purl:identifier ; sh:datatype xsd:string] ;
     sh:property [sh:path cat:reactionType ; sh:datatype xsd:string] ;
     sh:property [sh:path allo-res:AFR_0002764 ; sh:datatype xsd:string] ;
     sh:property [sh:path allo-hdf:HardLink ; sh:datatype xsd:string] ;
