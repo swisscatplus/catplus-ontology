@@ -803,7 +803,7 @@ cat:Product a sh:NodeShape, rdfs:Class ;
 obo:CHEBI_25367 a rdfs:Class, sh:NodeShape ;
     rdfs:subClassOf chebi:CHEBI_36357 ;
     sh:property [sh:path purl:identifier ; sh:datatype xsd:string ; sh:minCount 1 ; sh:maxCount 1] ;
-    sh:property [sh:path cat:swissCatNumber; sh:datatype xsd:string ; sh:minCount 1 ; sh:maxCount 1] ;
+    sh:property [sh:path cat:swissCatNumber; sh:datatype xsd:string ; sh:minCount 1] ;
     sh:property [sh:path cat:casNumber ; sh:datatype xsd:string] ;
     sh:property [sh:path allo-res:AFR_0002292 ; sh:datatype xsd:string] ; #chemical name
     sh:property [sh:path allo-res:AFR_0002295 ; sh:datatype xsd:string] ; #smiles
