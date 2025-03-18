@@ -857,6 +857,7 @@ cat:Batch a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Batch" ;
     skos:definition "A batch is a group of samples that are processed together." ;
     sh:property [sh:path schema:name ; sh:datatype xsd:string] ;
+    sh:property [sh:path purl:identifier ; sh:datatype xsd:string] ;
     sh:property [sh:path cat:reactionType ; sh:datatype xsd:string] ;
     sh:property [sh:path allo-res:AFR_0002764 ; sh:datatype xsd:string] ;
     sh:property [sh:path allo-hdf:HardLink ; sh:datatype xsd:string] ;
