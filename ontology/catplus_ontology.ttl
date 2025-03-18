@@ -260,11 +260,6 @@ cat:hasObjective a rdf:Property ;
     skos:definition "The objective that is part of the batch" ;
     .
 
-cat:hasCampaign a rdf:Property ;
-    skos:prefLabel "has campaign" ;
-    skos:definition "The campaign that is part of the batch" ;
-    .
-
 cat:hasBatch a rdf:Property ;
     skos:prefLabel "has batch" ;
     skos:definition "refers to a specific batch instance" ;
