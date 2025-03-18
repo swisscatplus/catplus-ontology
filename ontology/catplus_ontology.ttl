@@ -26,6 +26,8 @@ prefix allo-com: <http://purl.allotrope.org/ontologies/common#>
 prefix allo-mat: <http://purl.allotrope.org/ontologies/material#>
 prefix obo: <http://purl.obolibrary.org/obo/>
 prefix qb: <http://purl.org/linked-data/cube#> 
+prefix quantitykind: <http://qudt.org/vocab/quantitykind/>
+prefix qudt-ext: <http://purl.allotrope.org/ontology/qudt-ext/unit#>
 
 
 #ontology for catalysis, chemistry
@@ -882,7 +884,7 @@ cat:Well a rdfs:Class, sh:NodeShape ;
     .   
 
 allo-res:AFR_0002524 a rdfs:Class, sh:NodeShape ;
-    skos:prefLabel "Liquid Chromatography Document" ;
+    skos:prefLabel "Liquid Chromatography Aggregate Document" ;
     skos:definition "A liquid chromatography aggregate document is a document that aggregates LC documents. [Allotrope]" ;
     sh:property [sh:path allo-res:AFR_0002526 ; sh:class cat:DeviceSystemDocument ] ; #device system document
     sh:property [sh:path cat:hasLiquidChromatography ; sh:class allo-res:AFR_0002525 ] ; #liquid chromatography
@@ -1012,7 +1014,7 @@ cat:PeakList a rdfs:Class, sh:NodeShape ;
 allo-res:AFR_0000413 a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Peak" ;
     skos:definition "A peak describes a part of a spectrum/chromatogram/plot at a definite range of the experimental parameter (independent variable) of the spectrum. This definition includes a single data point of the spectrum. [Allotrope]" ;
-    sh:property [sh:path <http://purl.allotrope.org/ontologies/datacube-hdf-map#Index> ; sh:datatype xsd:integer] ; #index
+    sh:property [sh:path allo-dchdf:Index ; sh:datatype xsd:integer] ; #index
     sh:property [sh:path allo-res:AFR_0001073 ; sh:class cat:PeakArea] ; #peak area
     sh:property [sh:path allo-res:AFR_0001089 ; sh:class cat:RetentionTime ] ; #retentiontime
     sh:property [sh:path allo-res:AFR_0001164 ; sh:datatype xsd:string ] ; #peak identifier
@@ -1054,7 +1056,7 @@ allo-res:AFR_0002567 a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path allo-res:AFR_0001119 ; sh:datatype xsd:string] ; #equipment serial number
     sh:property [sh:path obo:IAO_0000017 ; sh:datatype xsd:string] ; #model number
     sh:property [sh:path allo-res:AFR_0001259; sh:datatype xsd:string] ; #firmware version
-    sh:property [sh:path <http://purl.allotrope.org/ontologies/datacube-hdf-map#Index> ; sh:datatype xsd:integer] ; #index
+    sh:property [sh:path allo-dchdf:Index ; sh:datatype xsd:integer] ; #index
     sh:property [sh:path allo-res:AFR_0002534 ; sh:datatype xsd:string] ; #detection type
     .
 
@@ -1067,7 +1069,7 @@ cat:PeakArea a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Peak Area" ;
     skos:definition "A class representing the area under a peak in a chromatogram or spectrum, indicative of the quantity of analyte." ;
     sh:node cat:Measurement ;
-    sh:node [sh:property [sh:path qudt:unit ; sh:hasValue <http://purl.allotrope.org/ontology/qudt-ext/unit#MilliAbsorbanceUnitTimesSecond>] ] ;
+    sh:node [sh:property [sh:path qudt:unit ; sh:hasValue qudt-ext:MilliAbsorbanceUnitTimesSecond] ] ;
     .
 
 cat:RetentionTime a rdfs:Class, sh:NodeShape ;
@@ -1106,17 +1108,18 @@ cat:PeakStart a rdfs:Class, sh:NodeShape ;
             sh:select """
                 PREFIX qudt: <http://qudt.org/schema/qudt/>
                 PREFIX unit: <https://qudt.org/vocab/unit/>
+                PREFIX quantitykind: <http://qudt.org/vocab/quantitykind/>
                 SELECT $this $value
                 WHERE {
                     $this qudt:unit ?unit
-                    FILTER NOT EXISTS {<https://qudt.org/vocab/quantitykind/Time> qudt:applicableUnit ?unit}.
+                    FILTER NOT EXISTS {quantitykind:Time qudt:applicableUnit ?unit}.
                 }
             """ ;
             sh:message "The unit must be a unit applicable to Time." ;
         ] ;
     ] .
 
-<https://qudt.org/vocab/quantitykind/Time> a qudt:QuantityKind ;
+quantitykind:Time a qudt:QuantityKind ;
     rdfs:label "Time" ;
     qudt:applicableUnit unit:SEC ;
     qudt:applicableUnit unit:MIN ;
@@ -1133,14 +1136,14 @@ cat:PeakValueAtStart a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Peak Value at Start" ;
     skos:definition "A class representing the value or intensity of a peak at the start point, often used in peak characterization." ;
     sh:node cat:Measurement ;
-    sh:node [sh:property [sh:path qudt:unit ; sh:hasValue <http://purl.allotrope.org/ontology/qudt-ext/unit#MilliAbsorbanceUnit>] ] ;
+    sh:node [sh:property [sh:path qudt:unit ; sh:hasValue qudt-ext:MilliAbsorbanceUnit] ] ;
     .
 
 cat:PeakValueAtEnd a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Peak Value at End" ;
     skos:definition "A class representing the value or intensity of a peak at the end point, often used in peak characterization." ;
     sh:node cat:Measurement ;
-    sh:node [sh:property [sh:path qudt:unit ; sh:hasValue <http://purl.allotrope.org/ontology/qudt-ext/unit#MilliAbsorbanceUnit>] ] ;
+    sh:node [sh:property [sh:path qudt:unit ; sh:hasValue qudt-ext:MilliAbsorbanceUnit] ] ;
     .
 
 cat:temperatureTumbleStirrerShape a sh:PropertyShape ;
