@@ -620,7 +620,10 @@ cat:reactionName a rdf:Property ;
     skos:definition "the specific name given to a well-known chemical reaction, often named after its discoverer(s) or key feature, to describe a particular transformation of reactants into products" ;
     .
 
-
+schema:contentUrl a rdf:Property ;
+    skos:prefLabel "content URL" ;
+    skos:definition "A url pointing to the actual bytes of the media object, for example the agilent data file." ;
+.
 
 ###################################################################################################
 # Shapes
@@ -888,6 +891,7 @@ allo-res:AFR_0002524 a rdfs:Class, sh:NodeShape ;
     skos:definition "A liquid chromatography aggregate document is a document that aggregates LC documents. [Allotrope]" ;
     sh:property [sh:path allo-res:AFR_0002526 ; sh:class cat:DeviceSystemDocument ] ; #device system document
     sh:property [sh:path cat:hasLiquidChromatography ; sh:class allo-res:AFR_0002525 ] ; #liquid chromatography
+    sh:property [sh:path schema:contentUrl ; sh:datatype xsd:string] ; #content URL to the S3 data storage containing the file that this document is about
 .
 
 
