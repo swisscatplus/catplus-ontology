@@ -891,7 +891,6 @@ allo-res:AFR_0002524 a rdfs:Class, sh:NodeShape ;
     skos:definition "A liquid chromatography aggregate document is a document that aggregates LC documents. [Allotrope]" ;
     sh:property [sh:path allo-res:AFR_0002526 ; sh:class cat:DeviceSystemDocument ] ; #device system document
     sh:property [sh:path cat:hasLiquidChromatography ; sh:class allo-res:AFR_0002525 ] ; #liquid chromatography
-    sh:property [sh:path schema:contentUrl ; sh:datatype xsd:string] ; #content URL to the S3 data storage containing the file that this document is about
 .
 
 
@@ -926,6 +925,7 @@ cat:ThreeDimensionalUltravioletSpectrumDataCube a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path qb:DataSet ; sh:class cat:something] ; #cube-structure
     sh:property [sh:path allo-hdf:Dataset ; sh:class cat:Dataframe] ; #dataset
     sh:property [sh:path allo-res:AFR_0000917 ; sh:datatype xsd:string] ; #identifier
+    sh:property [sh:path schema:contentUrl ; sh:datatype xsd:string] ; #content URL to the S3 data storage containing the data cube
     .
 
 cat:ThreeDimensionalMassSpectrumDataCube a rdfs:Class, sh:NodeShape ;
@@ -935,6 +935,7 @@ cat:ThreeDimensionalMassSpectrumDataCube a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path qb:DataSet ; sh:class cat:something] ; #cube-structure
     sh:property [sh:path allo-hdf:Dataset ; sh:class cat:Dataframe] ; #dataset
     sh:property [sh:path allo-res:AFR_0000917 ; sh:datatype xsd:string] ; #identifier
+    sh:property [sh:path schema:contentUrl ; sh:datatype xsd:string] ; #content URL to the S3 data storage containing the data cube
     .
 
 cat:Dataframe a rdfs:Class, sh:NodeShape ;
@@ -1001,6 +1002,7 @@ cat:ChromatogramDataCube a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path qb:DataSet ; sh:class cat:CubeStructure] ; #cube-structure
     sh:property [sh:path allo-hdf:Dataset ; sh:class cat:Dataframe] ; #dataset
     sh:property [sh:path allo-res:AFR_0000917 ; sh:datatype xsd:string] ; #identifier
+    sh:property [sh:path schema:contentUrl ; sh:datatype xsd:string] ; #content URL to the S3 data storage containing the data cube
     .
 
 cat:ProcessedDataDocument a rdfs:Class, sh:NodeShape ;
