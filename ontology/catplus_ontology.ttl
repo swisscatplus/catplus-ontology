@@ -879,6 +879,9 @@ cat:Well a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path cat:hasPlate ; sh:class cat:Plate] ; #hasPlate
     sh:property [sh:path qudt:quantity ;
                  sh:node cat:Observation ] ;
+    # enforce sh:xone for Product or Peak once the data conforms
+    # sh:xone ([sh:property [sh:path cat:hasProduct ; sh:class cat:Product ]]  #hasProduct
+    #          [sh:property [sh:path cat:peak ; sh:class allo-res:AFR_0000413 ]] ); #peak
     sh:property [sh:path cat:hasProduct ; sh:class cat:Product ] ;  #hasProduct
     sh:property [sh:path cat:peak ; sh:class allo-res:AFR_0000413 ] ; #peak
     .
