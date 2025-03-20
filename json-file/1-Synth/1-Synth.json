@@ -47,7 +47,7 @@
             },
             "equipmentName": "Chemspeed SWING XL",
             "subEquipmentName": "GDU-V",
-            "hasContainerPositionAndQuantity": [
+            "hasWell": [
                 {
                     "position": "A1",
                     "containerID": "1",
@@ -126,7 +126,7 @@
             },
             "equipmentName": "Chemspeed SWING XL",
             "subEquipmentName": "GDU-V",
-            "hasContainerPositionAndQuantity": [
+            "hasWell": [
                 {
                     "position": "A1",
                     "containerID": "1",
@@ -217,7 +217,7 @@
             },
             "equipmentName": "Chemspeed SWING XL",
             "subEquipmentName": "GDU-V",
-            "hasContainerPositionAndQuantity": [
+            "hasWell": [
                 {
                     "position": "A1",
                     "containerID": "1",
@@ -308,7 +308,7 @@
             },
             "equipmentName": "Chemspeed SWING XL",
             "subEquipmentName": "GDU-V",
-            "hasContainerPositionAndQuantity": [
+            "hasWell": [
                 {
                     "position": "A1",
                     "containerID": "1",
