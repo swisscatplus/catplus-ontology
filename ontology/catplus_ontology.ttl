@@ -876,7 +876,7 @@ cat:Well a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Well" ;
     skos:definition "A well is a small container used to hold samples or reagents in an experiment." ; 
     sh:property [sh:path allo-res:AFR_0002240 ; sh:datatype xsd:string] ; #Well location identifier
-    sh:property [sh:path cat:hasWell ; sh:class cat:Plate] ; #hasPlate
+    sh:property [sh:path cat:hasPlate ; sh:class cat:Plate] ; #hasPlate
     sh:property [sh:path qudt:quantity ;
                  sh:node cat:Observation ] ;
         sh:xone ([sh:property [sh:path cat:hasProduct ; sh:class cat:Product ]]  #hasProduct
