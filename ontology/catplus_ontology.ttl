@@ -773,6 +773,7 @@ cat:Sample a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Sample" ;
     skos:altLabel  "chemical mixture" ;
     skos:definition "A chemical mixture where the chemical substances are known." ;
+    sh:property [sh:path cat:internalBarCode ; sh:datatype xsd:string] ; #internal barcode
     sh:property [sh:path allo-res:AFR_0002464 ; sh:datatype xsd:string] ; #VialID
     sh:property cat:vialShape ; #vial type
     sh:property [sh:path cat:role ] ;   #role
@@ -867,7 +868,6 @@ cat:Batch a rdfs:Class, sh:NodeShape ;
 cat:Plate a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Plate" ;
     skos:definition "A plate is a flat, rigid structure that holds samples or reagents in an experiment." ;
-    sh:property [sh:path cat:internalBarCode ; sh:datatype xsd:string] ; #internal barcode
     sh:property [sh:path cat:containerBarcode ; sh:datatype xsd:string] ; #container barcode
     sh:property [sh:path cat:containerID ; sh:datatype xsd:string] ; #containerID
     .
