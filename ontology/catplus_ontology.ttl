@@ -77,6 +77,19 @@ allo-prop:AFX_0000622 a rdf:Property ;
     skos:definition "Point in time when an event starts." ;
     .
 
+
+cat:startDuration a rdf:Property ;
+    skos:prefLabel "duration start interval" ;
+    skos:definition "Start duration in minutes" ;
+    .
+
+
+cat:endingDuration a rdf:Property ;
+    skos:prefLabel "duration end interval" ;
+    skos:definition "End duration in minutes" ;
+    .
+
+
 allo-prop:AFX_0000687 a rdf:Property ;
     skos:prefLabel "barcode" ;
     skos:definition "A barcode is an optical machine-readable representation of data relating to the object to which it is attached. [Wikipedia]" ;
@@ -339,7 +352,7 @@ cat:volume a rdf:Property ;
     skos:prefLabel "volume" ;
     skos:definition "The volume of the sample" ;
     .
-    
+
 cat:isSpmeProcess a rdf:Property ;
     skos:prefLabel "is SPME process" ;
     skos:definition "Solid-phase microextraction (SPME) is a solvent-free sample preparation technique that involves the extraction of analytes from a sample into a solid phase, followed by the desorption of the analytes into a solvent for analysis." ;
@@ -347,7 +360,7 @@ cat:isSpmeProcess a rdf:Property ;
 
 cat:hasSubAction a rdf:Property ;
     skos:prefLabel "has sub action" ;
-    skos:definition "The sub action that is part of the action" ;
+    skos:definition "A narrower specification of the action" ;
     .
 
 cat:hasCartridge a rdf:Property ;
@@ -682,6 +695,14 @@ cat:SolventChangeAction a rdfs:Class, sh:NodeShape ;
     rdfs:subClassOf allo-real:AFRE_0000001 ;
     skos:prefLabel "Solvent Change" ;
     skos:definition "A solvent that is selected to replace an existing one. This process involves considering the solvent's properties, compatibility with the analytes, and the analytical techniques employed, ensuring optimal performance and results in the analysis." ; 
+    sh:property [sh:path cat:startDuration ;
+                 sh:node cat:Observation ;
+                 sh:node [sh:property    [sh:path qudt:unit ;
+                                        sh:hasValue unit:MIN] ]];
+    sh:property [sh:path cat:endingDuration ;
+                 sh:node cat:Observation ;
+                 sh:node [sh:property    [sh:path qudt:unit ;
+                                        sh:hasValue unit:MIN] ]];
     sh:property [sh:path cat:isSpmeProcess ; sh:datatype xsd:boolean] ; #isSpmeProcess
     sh:property [sh:path cat:hasSubAction ; sh:class cat:SubAction] ; #hasSubAction
     .
@@ -693,6 +714,7 @@ allo-real:AFRE_0000001 a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path cat:hasPlate ; sh:class cat:Plate] ; #hasPlate
     sh:property [sh:path cat:hasWell ; sh:class cat:Well] ; #hasWell
     sh:property [sh:path allo-res:AFR_0001723 ; sh:datatype xsd:string ] ;#Equipment name ,
+    sh:property [sh:path cat:subAction ; sh:datatype xsd:string ] ;# Subaction name ,
     sh:property [sh:path cat:subEquipmentName ; sh:datatype xsd:string ] ;#subEquipmentName
     sh:property [sh:path schema:name ; sh:datatype xsd:string ] ; #name
     sh:property [sh:path allo-prop:AFX_0000622 ; sh:datatype xsd:dateTime ] ;#startTime ,
@@ -707,17 +729,14 @@ cat:Solvent a rdfs:Class, sh:NodeShape ;
     skos:definition "A solvent is a substance that dissolves a solute, resulting in a solution." ;
     sh:property [sh:path cat:hasChemical ; sh:class obo:CHEBI_25367 ] ; #hasChemical
     sh:property [sh:path cat:volume ; sh:node cat:Observation ; #volume
-                 sh:node [sh:property    [sh:path qudt:unit ; 
+                 sh:node [sh:property    [sh:path qudt:unit ;
                                          sh:hasValue unit:MilliL] ]]
-    .
+
 
 cat:SubAction a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Sub Action" ;
     skos:definition "A sub action is a smaller, constituent action that is part of a larger action." ;
     sh:property [sh:path schema:name ; sh:datatype xsd:string] ; #subActionName
-    sh:property [sh:path allo-prop:AFX_0000622 ; sh:datatype xsd:dateTime] ; #startTime
-    sh:property [sh:path allo-res:AFR_0002423 ; sh:datatype xsd:dateTime] ; #endTime
-
     .
 
 cat:SeparationSubAction a rdfs:Class, sh:NodeShape ;
