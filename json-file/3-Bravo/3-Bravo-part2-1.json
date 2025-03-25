@@ -2,7 +2,7 @@
     "Actions": [
         {
             "actionName": "EvaporationAction",
-            "subActionName": "",
+            "methodName": "Evaporate",
             "equipmentName": "Evaporator",
             "subEquipmentName": "item-1",
             "volumeEvaporationFinal": {
@@ -11,11 +11,15 @@
             },
             "startTime": "2024-07-25T12:03:31",
             "endingTime": "2024-07-25T12:15:20",
-            "sampleID": "25",
-            "containerID": "157",
-            "containerBarcode": "1234858858754848",
-            "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809",
-            "position": "A1",
+            "productIdentification": {
+                "sampleID": "25",
+                "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809"
+                },
+            "atWell": {
+                "containerID": "157",
+                "containerBarcode": "1234858858754848",
+                "position": "A1"
+            },
             "temperature": {
                 "value": 156,
                 "unit": "°C",
@@ -28,7 +32,7 @@
         },
         {
             "actionName": "EvaporationAction",
-            "subActionName": "",
+            "methodName": "Evaporate",
             "equipmentName": "Evaporator",
             "subEquipmentName": "item-1",
             "volumeEvaporationFinal": {
@@ -37,11 +41,15 @@
             },
             "startTime": "2024-07-25T12:03:31",
             "endingTime": "2024-07-25T12:15:20",
-            "sampleID": "26",
-            "containerID": "158",
-            "containerBarcode": "1234858858754849",
-            "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809",
-            "position": "A1",
+            "productIdentification": {
+                "sampleID": "26",
+                "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809"
+            },
+            "atWell": {
+                "containerID": "157",
+                "containerBarcode": "1234858858754848",
+                "position": "A1"
+            },
             "temperature": {
                 "value": 156,
                 "unit": "°C",
@@ -54,18 +62,21 @@
         },
         {
             "actionName": "AddAction",
-            "subActionName": "Dissolution",
+            "methodName": "DissolutionAddAction",
             "equipmentName": "Micropipette",
-            "subEquipmentName": "",
             "startTime": "2024-07-25T12:02:39",
             "endingTime": "2024-07-25T12:02:41",
             "dispenseState": "Liquid",
             "dispenseType": "volume",
-            "sampleID": "25",
-            "containerID": "157",
-            "containerBarcode": "1234858858754848",
-            "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809",
-            "position": "A1",
+            "productIdentification":{
+                "sampleID": "26",
+                "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809"
+            },
+            "atWell": {
+                "containerID": "157",
+                "containerBarcode": "1234858858754848",
+                "position": "A1"
+            },
             "hasSolvent": {
                 "hasChemical": {
                     "chemicalID": "25",
@@ -76,11 +87,11 @@
                         "unit": "g/mol"
                     },
                     "smiles": "[2H]C([2H])([2H])O[2H]",
-                    "swissCatNumber": "",
+                    "swissCatNumber": "SwissCAT-71568",
                     "Inchi": "1S/CH4O/c1-2/h2H,1H3/i1D3,2D",
                     "molecularFormula": "CH4O",
                     "density": {
-                        "value": "",
+                        "value": 0.89,
                         "unit": "g/mL"
                     }
                 },
@@ -97,18 +108,21 @@
         },
         {
             "actionName": "AddAction",
-            "subActionName": "Dissolution",
+            "methodName": "DissolutionAddAction",
             "equipmentName": "Micropipette",
-            "subEquipmentName": "",
             "startTime": "2024-07-25T12:02:39",
             "endingTime": "2024-07-25T12:02:41",
             "dispenseState": "Liquid",
             "dispenseType": "volume",
-            "sampleID": "26",
-            "containerID": "158",
-            "containerBarcode": "1234858858754849",
-            "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809",
-            "position": "A1",
+            "productIdentification" : {
+                "sampleID": "26",
+                "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809"
+            },
+            "atWell": {
+                "containerID": "157",
+                "containerBarcode": "1234858858754848",
+                "position": "A1"
+            },
             "hasSolvent": {
                 "hasChemical": {
                     "chemicalID": "59",
@@ -119,11 +133,11 @@
                         "unit": "g/mol"
                     },
                     "smiles": "[2H]C([2H])([2H])OC(C)(C)C",
-                    "swissCatNumber": "",
+                    "swissCatNumber": "SwissCAT-16212833",
                     "Inchi": "1S/C5H12O/c1-5(2,3)6-4/h1-4H3/i4D3",
                     "molecularFormula": "C5H12O",
                     "density": {
-                        "value": "",
+                        "value": 0.765,
                         "unit": "g/mL"
                     }
                 },
@@ -140,16 +154,20 @@
         },
         {
             "actionName": "ShakeAction",
-            "subActionName": "",
+            "methodName": "Shaking",
             "equipmentName": "magneticStirrer",
             "subEquipmentName": "item-1",
             "startTime": "2024-07-25T12:03:31",
             "endingTime": "2024-07-25T12:15:20",
-            "sampleID": "25",
-            "containerID": "157",
-            "containerBarcode": "1234858858754848",
-            "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809",
-            "position": "A1",
+            "productIdentification": {
+                "sampleID": "25",
+                "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809"
+            },
+            "atWell": {
+                "containerID": "157",
+                "containerBarcode": "1234858858754848",
+                "position": "A1"
+            },
             "speedShaker": {
                 "value": 152,
                 "unit": "rpm",
@@ -162,16 +180,20 @@
         },
         {
             "actionName": "ShakeAction",
-            "subActionName": "",
+            "methodName": "Shaking",
             "equipmentName": "magneticStirrer",
             "subEquipmentName": "item-1",
             "startTime": "2024-07-25T12:03:31",
             "endingTime": "2024-07-25T12:15:20",
-            "sampleID": "26",
-            "containerID": "158",
-            "containerBarcode": "1234858858754849",
-            "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809",
-            "position": "A1",
+            "productIdentification": {
+                "sampleID": "26",
+                "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809"
+            },
+            "atWell": {
+                "containerID": "158",
+                "containerBarcode": "1234858858754849",
+                "position": "A1"
+            },
             "speedShaker": {
                 "value": 152,
                 "unit": "rpm",
@@ -184,18 +206,21 @@
         },
         {
             "actionName": "AddAction",
-            "subActionName": "Sampling",
+            "methodName": "SamplingAddAction",
             "equipmentName": "Micropipette",
-            "subEquipmentName": "",
             "startTime": "2024-07-25T12:02:39",
             "endingTime": "2024-07-25T12:02:41",
             "dispenseState": "Liquid",
             "dispenseType": "volume",
-            "sampleID": "29",
-            "containerID": "159",
-            "containerBarcode": "1234858858754850",
-            "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809",
-            "position": "A1",
+            "productIdentification":{
+                "sampleID": "29",
+                "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809"
+            },
+            "atWell": {
+                "containerID": "159",
+                "containerBarcode": "1234858858754850",
+                "position": "A1"
+            },
             "hasSample": {
                 "sampleID": "25",
                 "containerID":"157",
@@ -203,11 +228,11 @@
                 "position": "A1",
                 "physicalState": "Liquid",
                 "concentration": {
-                            "value": "",
-                            "unit": "mol/L"
-                        },
+                    "value": 0,
+                    "unit": "mol/L"
+                },
                 "volume": {
-                    "value": "?",
+                    "value": 0,
                     "unit": "mL",
                     "errorMargin": {
                         "value": 0.01,
@@ -219,18 +244,21 @@
         },
         {
             "actionName": "AddAction",
-            "subActionName": "Sampling",
+            "methodName": "SamplingAddAction",
             "equipmentName": "Micropipette",
-            "subEquipmentName": "",
             "startTime": "2024-07-25T12:02:39",
             "endingTime": "2024-07-25T12:02:41",
             "dispenseState": "Liquid",
             "dispenseType": "volume",
-            "sampleID": "30",
-            "containerID": "160",
-            "containerBarcode": "1234858858754851",
-            "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809",
-            "position": "A1",
+            "productIdentification":{
+                "sampleID": "30",
+                "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809"
+            },
+            "atWell": {
+                "containerID": "160",
+                "containerBarcode": "1234858858754851",
+                "position": "A1"
+            },
             "hasSample": {
                 "sampleID": "25",
                 "containerID":"157",
@@ -238,11 +266,11 @@
                 "position": "A1",
                 "physicalState": "Liquid",
                 "concentration": {
-                            "value": "",
-                            "unit": "mol/L"
-                        },
+                    "value": 0,
+                    "unit": "mol/L"
+                },
                 "volume": {
-                    "value": "?",
+                    "value": 0,
                     "unit": "mL",
                     "errorMargin": {
                         "value": 0.01,
@@ -254,18 +282,21 @@
         },
         {
             "actionName": "AddAction",
-            "subActionName": "Sampling",
+            "methodName": "SamplingAddAction",
             "equipmentName": "Micropipette",
-            "subEquipmentName": "",
             "startTime": "2024-07-25T12:02:39",
             "endingTime": "2024-07-25T12:02:41",
             "dispenseState": "Liquid",
             "dispenseType": "volume",
-            "sampleID": "31",
-            "containerID": "161",
-            "containerBarcode": "1234858858754852",
-            "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809",
-            "position": "A1",
+            "productIdentification":{
+                "sampleID": "31",
+                "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809"
+            },
+            "atWell": {
+                "containerID": "161",
+                "containerBarcode": "1234858858754852",
+                "position": "A1"
+            },
             "hasSample": {
                 "sampleID": "26",
                 "containerID":"158",
@@ -273,11 +304,11 @@
                 "position": "A1",
                 "physicalState": "Liquid",
                 "concentration": {
-                            "value": "",
-                            "unit": "mol/L"
-                        },
+                    "value": 0,
+                    "unit": "mol/L"
+                },
                 "volume": {
-                    "value": "?",
+                    "value": 0,
                     "unit": "mL",
                     "errorMargin": {
                         "value": 0.01,
@@ -289,18 +320,21 @@
         },
         {
             "actionName": "AddAction",
-            "subActionName": "Sampling",
+            "methodName": "SamplingAddAction",
             "equipmentName": "Micropipette",
-            "subEquipmentName": "",
             "startTime": "2024-07-25T12:02:39",
             "endingTime": "2024-07-25T12:02:41",
             "dispenseState": "Liquid",
             "dispenseType": "volume",
-            "sampleID": "32",
-            "containerID": "162",
-            "containerBarcode": "1234858858754853",
-            "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809",
-            "position": "A1",
+            "productIdentification":{
+                "sampleID": "32",
+                "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809"
+            },
+            "atWell": {
+                "containerID": "162",
+                "containerBarcode": "1234858858754853",
+                "position": "A1"
+            },
             "hasSample": {
                 "sampleID": "26",
                 "containerID":"158",
@@ -308,11 +342,11 @@
                 "position": "A1",
                 "physicalState": "Liquid",
                 "concentration": {
-                            "value": "",
+                            "value": 0,
                             "unit": "mol/L"
                         },
                 "volume": {
-                    "value": "?",
+                    "value": 0,
                     "unit": "mL",
                     "errorMargin": {
                         "value": 0.01,
@@ -324,18 +358,21 @@
         },
         {
             "actionName": "AddAction",
-            "subActionName": "Dilution",
+            "methodName": "DilutionAddAction",
             "equipmentName": "Micropipette",
-            "subEquipmentName": "",
             "startTime": "2024-07-25T12:02:39",
             "endingTime": "2024-07-25T12:02:41",
             "dispenseState": "Liquid",
             "dispenseType": "volume",
-            "sampleID": "29",
-            "containerID": "159",
-            "containerBarcode": "1234858858754850",
-            "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809",
-            "position": "A1",
+            "productIdentification":{
+                "sampleID": "29",
+                "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809"
+            },
+            "atWell": {
+                "containerID": "159",
+                "containerBarcode": "1234858858754850",
+                "position": "A1"
+            },
             "hasSolvent": {
                 "hasChemical": {
                     "chemicalID": "105",
@@ -346,7 +383,7 @@
                         "unit": "g/mol"
                     },
                     "smiles": "C(Cl)(Cl)Cl",
-                    "swissCatNumber": "",
+                    "swissCatNumber": "SwissCAT-6212",
                     "Inchi": "1S/CHCl3/c2-1(3)4/h1H",
                     "molecularFormula": "CHCl3",
                     "density": {
@@ -355,7 +392,7 @@
                     }
                 },
                 "volume": {
-                    "value": "?",
+                    "value": 0,
                     "unit": "mL",
                     "errorMargin": {
                         "value": 0.01,
@@ -367,18 +404,21 @@
         },
         {
             "actionName": "AddAction",
-            "subActionName": "Dilution",
+            "methodName": "DilutionAddAction",
             "equipmentName": "Micropipette",
-            "subEquipmentName": "",
             "startTime": "2024-07-25T12:02:39",
             "endingTime": "2024-07-25T12:02:41",
             "dispenseState": "Liquid",
             "dispenseType": "volume",
-            "sampleID": "30",
-            "containerID": "160",
-            "containerBarcode": "1234858858754851",
-            "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809",
-            "position": "A1",
+            "productIdentification":{
+                "sampleID": "30",
+                "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809"
+            },
+            "atWell": {
+                "containerID": "160",
+                "containerBarcode": "1234858858754851",
+                "position": "A1"
+            },
             "hasSolvent": {
                 "hasChemical": {
                     "chemicalID": "105",
@@ -389,7 +429,7 @@
                         "unit": "g/mol"
                     },
                     "smiles": "C(Cl)(Cl)Cl",
-                    "swissCatNumber": "",
+                    "swissCatNumber": "SwissCAT-6212",
                     "Inchi": "1S/CHCl3/c2-1(3)4/h1H",
                     "molecularFormula": "CHCl3",
                     "density": {
@@ -398,7 +438,7 @@
                     }
                 },
                 "volume": {
-                    "value": "?",
+                    "value": 0,
                     "unit": "mL",
                     "errorMargin": {
                         "value": 0.01,
@@ -410,18 +450,21 @@
         },
         {
             "actionName": "AddAction",
-            "subActionName": "Dilution",
+            "methodName": "DilutionAddAction",
             "equipmentName": "Micropipette",
-            "subEquipmentName": "",
             "startTime": "2024-07-25T12:02:39",
             "endingTime": "2024-07-25T12:02:41",
             "dispenseState": "Liquid",
             "dispenseType": "volume",
-            "sampleID": "31",
-            "containerID": "161",
-            "containerBarcode": "1234858858754852",
-            "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809",
-            "position": "A1",
+            "productIdentification": {
+                "sampleID": "31",
+                "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809"
+            },
+            "atWell": {
+                "containerID": "161",
+                "containerBarcode": "1234858858754852",
+                "position": "A1"
+            },
             "hasSolvent": {
                 "hasChemical": {
                     "chemicalID": "105",
@@ -432,7 +475,7 @@
                         "unit": "g/mol"
                     },
                     "smiles": "C(Cl)(Cl)Cl",
-                    "swissCatNumber": "",
+                    "swissCatNumber": "SwissCAT-6212",
                     "Inchi": "1S/CHCl3/c2-1(3)4/h1H",
                     "molecularFormula": "CHCl3",
                     "density": {
@@ -441,7 +484,7 @@
                     }
                 },
                 "volume": {
-                    "value": "?",
+                    "value": 0,
                     "unit": "mL",
                     "errorMargin": {
                         "value": 0.01,
@@ -453,18 +496,21 @@
         },
         {
             "actionName": "AddAction",
-            "subActionName": "Dilution",
+            "methodName": "DilutionAddAction",
             "equipmentName": "Micropipette",
-            "subEquipmentName": "",
             "startTime": "2024-07-25T12:02:39",
             "endingTime": "2024-07-25T12:02:41",
             "dispenseState": "Liquid",
             "dispenseType": "volume",
-            "sampleID": "32",
-            "containerID": "162",
-            "containerBarcode": "1234858858754853",
-            "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809",
-            "position": "A1",
+            "productIdentification": {
+                "sampleID": "32",
+                "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809"
+            },
+            "atWell": {
+                "containerID": "162",
+                "containerBarcode": "1234858858754853",
+                "position": "A1"
+            },
             "hasSolvent": {
                 "hasChemical": {
                     "chemicalID": "105",
@@ -475,7 +521,7 @@
                         "unit": "g/mol"
                     },
                     "smiles": "C(Cl)(Cl)Cl",
-                    "swissCatNumber": "",
+                    "swissCatNumber": "SwissCAT-6212",
                     "Inchi": "1S/CHCl3/c2-1(3)4/h1H",
                     "molecularFormula": "CHCl3",
                     "density": {
@@ -484,7 +530,7 @@
                     }
                 },
                 "volume": {
-                    "value": "?",
+                    "value": 0,
                     "unit": "mL",
                     "errorMargin": {
                         "value": 0.01,
