@@ -11,9 +11,7 @@
             },
             "startTime": "2024-07-25T12:03:31",
             "endingTime": "2024-07-25T12:15:20",
-            "relatesTo": {
-                "sampleID": "26"
-            },
+            "sampleID": "26",
             "atWell": {
                 "containerID": "157",
                 "containerBarcode": "1234858858754848",
@@ -31,16 +29,13 @@
         },
         {
             "actionName": "AddAction",
-            "methodName": "dilution",
-            "subActionName": "Dilution",
+            "methodName": "Dilution",
             "equipmentName": "Micropipette",
             "startTime": "2024-07-25T12:02:39",
             "endingTime": "2024-07-25T12:02:41",
             "dispenseState": "Liquid",
             "dispenseType": "volume",
-            "relatesTo": {
-                "sampleID": "26"
-            },
+            "sampleID": "26",
             "atWell": {
                 "containerID": "157",
                 "containerBarcode": "1234858858754848",
@@ -76,14 +71,11 @@
         },
         {
             "actionName": "solventChangeAction",
-            "methodName": "separation-cartridge-part-1",
-            "subActionName": "separation-cartridge-part-1",
+            "MethodName": "separation-cartridge-part-1",
             "equipmentName": "SPE",
             "subEquipmentName": "cartridge exchange",
             "SPMEprocess": true,
-            "relatesTo": {
-                "sampleID": "26"
-            },
+            "sampleID": "26",
             "atWell": {
                 "containerID": "157",
                 "containerBarcode": "1234858858754848",
@@ -132,13 +124,10 @@
         {
             "actionName": "solventChangeAction",
             "methodName": "separation-cartridge-part-2",
-            "subActionName": "separation-cartridge-part-2",
             "equipmentName": "SPE",
             "subEquipmentName": "cartridge exchange",
             "SPMEprocess": true,
-            "relatesTo": {
-                "sampleID": "26"
-            },
+            "sampleID": "26",
             "atWell": {
                 "containerID": "157",
                 "containerBarcode": "1234858858754848",

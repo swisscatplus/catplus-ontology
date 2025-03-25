@@ -11,10 +11,8 @@
             },
             "startTime": "2024-07-25T12:03:31",
             "endingTime": "2024-07-25T12:15:20",
-            "relatesTo": {
-                "sampleID": "26",
-                "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809"
-            },
+            "sampleID": "26",
+            "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809",
             "atWell": {
                 "containerID": "157",
                 "containerBarcode": "1234858858754848",
@@ -32,6 +30,7 @@
         },
         {
             "actionName": "EvaporationAction",
+            "methodName": "evaporation",
             "equipmentName": "Evaporator",
             "subEquipmentName": "item-1",
             "volumeEvaporationFinal": {
@@ -60,18 +59,15 @@
             "order": "2"
         },
         {
-            "actionName": "DissolutionAddAction",
-            "subActionName": "Dissolution",
-            "methodName": "dissolution",
+            "actionName": "AddAction",
+            "methodName": "Dissolution",
             "equipmentName": "Micropipette",
             "startTime": "2024-07-25T12:02:39",
             "endingTime": "2024-07-25T12:02:41",
             "dispenseState": "Liquid",
             "dispenseType": "volume",
-            "relatesTo": {
-                "sampleID": "26",
-                "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809"
-            },
+            "sampleID": "26",
+            "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809",
             "atWell": {
                 "containerID": "157",
                 "containerBarcode": "1234858858754848",
@@ -102,18 +98,15 @@
             "order": "3"
         },
         {
-            "actionName": "DissolutionAddAction",
-            "subActionName": "Dissolution",
-            "methodName": "dissolution",
+            "actionName": "AddAction",
+            "methodName": "Dissolution",
             "equipmentName": "Micropipette",
             "startTime": "2024-07-25T12:02:39",
             "endingTime": "2024-07-25T12:02:41",
             "dispenseState": "Liquid",
             "dispenseType": "volume",
-            "relatesTo": {
-                "sampleID": "26",
-                "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809"
-            },
+            "sampleID": "26",
+            "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809",
             "atWell": {
                 "containerID": "157",
                 "containerBarcode": "1234858858754848",
@@ -145,14 +138,13 @@
         },
         {
             "actionName": "ShakeAction",
+            "methodName": "Shaking",
             "equipmentName": "magneticStirrer",
             "subEquipmentName": "item-1",
             "startTime": "2024-07-25T12:03:31",
             "endingTime": "2024-07-25T12:15:20",
-            "relatesTo": {
-                "sampleID": "26",
-                "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809"
-            },
+            "sampleID": "26",
+            "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809",
             "atWell": {
                 "containerID": "157",
                 "containerBarcode": "1234858858754848",
@@ -170,14 +162,13 @@
         },
         {
             "actionName": "ShakeAction",
+            "methodName": "Shaking",
             "equipmentName": "magneticStirrer",
             "subEquipmentName": "item-1",
             "startTime": "2024-07-25T12:03:31",
             "endingTime": "2024-07-25T12:15:20",
-            "relatesTo": {
-                "sampleID": "26",
-                "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809"
-            },
+            "sampleID": "26",
+            "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809",
             "atWell": {
                 "containerID": "157",
                 "containerBarcode": "1234858858754848",
@@ -194,18 +185,15 @@
             "order": "6"
         },
         {
-            "actionName": "SamplingAddAction",
-            "subActionName": "Sampling",
-            "methodName": "sampling",
+            "actionName": "AddAction",
+            "methodName": "Sampling",
             "equipmentName": "Micropipette",
             "startTime": "2024-07-25T12:02:39",
             "endingTime": "2024-07-25T12:02:41",
             "dispenseState": "Liquid",
             "dispenseType": "volume",
-            "relatesTo": {
-                "sampleID": "26",
-                "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809"
-            },
+            "sampleID": "26",
+            "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809",
             "atWell": {
                 "containerID": "157",
                 "containerBarcode": "1234858858754848",
@@ -229,18 +217,15 @@
             "order": "7"
         },
         {
-            "actionName": "SamplingAddAction",
-            "subActionName": "Sampling",
-            "methodName": "sampling",
+            "actionName": "AddAction",
+            "methodName": "Sampling",
             "equipmentName": "Micropipette",
             "startTime": "2024-07-25T12:02:39",
             "endingTime": "2024-07-25T12:02:41",
             "dispenseState": "Liquid",
             "dispenseType": "volume",
-            "relatesTo": {
-                "sampleID": "26",
-                "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809"
-            },
+            "sampleID": "26",
+            "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809",
             "atWell": {
                 "containerID": "157",
                 "containerBarcode": "1234858858754848",
@@ -264,18 +249,15 @@
             "order": "8"
         },
         {
-            "actionName": "SamplingAddAction",
-            "subActionName": "Sampling",
-            "methodName": "sampling",
+            "actionName": "AddAction",
+            "methodName": "Sampling",
             "equipmentName": "Micropipette",
             "startTime": "2024-07-25T12:02:39",
             "endingTime": "2024-07-25T12:02:41",
             "dispenseState": "Liquid",
             "dispenseType": "volume",
-            "relatesTo": {
-                "sampleID": "31",
-                "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809"
-            },
+            "sampleID": "31",
+            "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809",
             "atWell": {
                 "containerID": "161",
                 "containerBarcode": "1234858858754852",
@@ -299,18 +281,15 @@
             "order": "9"
         },
         {
-            "actionName": "SamplingAddAction",
-            "subActionName": "Sampling",
-            "methodName": "sampling",
+            "actionName": "AddAction",
+            "methodName": "Sampling",
             "equipmentName": "Micropipette",
             "startTime": "2024-07-25T12:02:39",
             "endingTime": "2024-07-25T12:02:41",
             "dispenseState": "Liquid",
             "dispenseType": "volume",
-            "relatesTo": {
-                "sampleID": "32",
-                "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809"
-            },
+            "sampleID": "32",
+            "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809",
             "atWell": {
                 "containerID": "162",
                 "containerBarcode": "1234858858754853",
@@ -334,18 +313,15 @@
             "order": "10"
         },
         {
-            "actionName": "DissolutionAddAction",
-            "subActionName": "Dissolution",
-            "methodName": "dissolution",
+            "actionName": "AddAction",
+            "methodName": "Dilution",
             "equipmentName": "Micropipette",
             "startTime": "2024-07-25T12:02:39",
             "endingTime": "2024-07-25T12:02:41",
             "dispenseState": "Liquid",
             "dispenseType": "volume",
-            "relatesTo": {
-                "sampleID": "29",
-                "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809"
-            },
+            "sampleID": "29",
+            "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809",
             "atWell": {
                 "containerID": "159",
                 "containerBarcode": "1234858858754850",
@@ -380,18 +356,15 @@
             "order": "11"
         },
         {
-            "actionName": "DissolutionAddAction",
-            "subActionName": "Dissolution",
-            "methodName": "dissolution",
+            "actionName": "AddAction",
+            "methodName": "Dilution",
             "equipmentName": "Micropipette",
             "startTime": "2024-07-25T12:02:39",
             "endingTime": "2024-07-25T12:02:41",
             "dispenseState": "Liquid",
             "dispenseType": "volume",
-            "relatesTo": {
-                "sampleID": "30",
-                "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809"
-            },
+            "sampleID": "30",
+            "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809",
             "atWell": {
                 "containerID": "160",
                 "containerBarcode": "1234858858754851",
@@ -426,9 +399,8 @@
             "order": "12"
         },
         {
-            "actionName": "DissolutionAddAction",
-            "subActionName": "Dissolution",
-            "methodName": "dissolution",
+            "actionName": "AddAction",
+            "methodName": "Dilution",
             "equipmentName": "Micropipette",
             "startTime": "2024-07-25T12:02:39",
             "endingTime": "2024-07-25T12:02:41",
@@ -472,9 +444,8 @@
             "order": "13"
         },
         {
-            "actionName": "DissolutionAddAction",
-            "subActionName": "Dissolution",
-            "methodName": "dissolution",
+            "actionName": "AddAction",
+            "methodName": "Dilution",
             "equipmentName": "Micropipette",
             "startTime": "2024-07-25T12:02:39",
             "endingTime": "2024-07-25T12:02:41",
