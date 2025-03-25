@@ -76,7 +76,7 @@
         },
         {
             "actionName": "solventChangeAction",
-            "MethodName": "separation-cartridge-part-1",
+            "methodName": "separation-cartridge-part-1",
             "equipmentName": "SPE",
             "subEquipmentName": "cartridge exchange",
             "startTime": "2024-07-25T12:03:31",

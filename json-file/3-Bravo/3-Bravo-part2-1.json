@@ -91,7 +91,7 @@
                     "Inchi": "1S/CH4O/c1-2/h2H,1H3/i1D3,2D",
                     "molecularFormula": "CH4O",
                     "density": {
-                        "value": "0.89",
+                        "value": 0.89,
                         "unit": "g/mL"
                     }
                 },
@@ -137,7 +137,7 @@
                     "Inchi": "1S/C5H12O/c1-5(2,3)6-4/h1-4H3/i4D3",
                     "molecularFormula": "C5H12O",
                     "density": {
-                        "value": "0.765",
+                        "value": 0.765,
                         "unit": "g/mL"
                     }
                 },
@@ -228,11 +228,11 @@
                 "position": "A1",
                 "physicalState": "Liquid",
                 "concentration": {
-                    "value": "?",
+                    "value": 0,
                     "unit": "mol/L"
                 },
                 "volume": {
-                    "value": "?",
+                    "value": 0,
                     "unit": "mL",
                     "errorMargin": {
                         "value": 0.01,
@@ -266,11 +266,11 @@
                 "position": "A1",
                 "physicalState": "Liquid",
                 "concentration": {
-                    "value": "",
+                    "value": 0,
                     "unit": "mol/L"
                 },
                 "volume": {
-                    "value": "?",
+                    "value": 0,
                     "unit": "mL",
                     "errorMargin": {
                         "value": 0.01,
@@ -304,11 +304,11 @@
                 "position": "A1",
                 "physicalState": "Liquid",
                 "concentration": {
-                    "value": "?",
+                    "value": 0,
                     "unit": "mol/L"
                 },
                 "volume": {
-                    "value": "?",
+                    "value": 0,
                     "unit": "mL",
                     "errorMargin": {
                         "value": 0.01,
@@ -342,11 +342,11 @@
                 "position": "A1",
                 "physicalState": "Liquid",
                 "concentration": {
-                            "value": "?",
+                            "value": 0,
                             "unit": "mol/L"
                         },
                 "volume": {
-                    "value": "?",
+                    "value": 0,
                     "unit": "mL",
                     "errorMargin": {
                         "value": 0.01,
@@ -392,7 +392,7 @@
                     }
                 },
                 "volume": {
-                    "value": "?",
+                    "value": 0,
                     "unit": "mL",
                     "errorMargin": {
                         "value": 0.01,
@@ -438,7 +438,7 @@
                     }
                 },
                 "volume": {
-                    "value": "?",
+                    "value": 0,
                     "unit": "mL",
                     "errorMargin": {
                         "value": 0.01,
@@ -484,7 +484,7 @@
                     }
                 },
                 "volume": {
-                    "value": "?",
+                    "value": 0,
                     "unit": "mL",
                     "errorMargin": {
                         "value": 0.01,
@@ -530,7 +530,7 @@
                     }
                 },
                 "volume": {
-                    "value": "?",
+                    "value": 0,
                     "unit": "mL",
                     "errorMargin": {
                         "value": 0.01,
