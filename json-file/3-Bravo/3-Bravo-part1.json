@@ -2,7 +2,7 @@
     "Actions": [
         {
             "actionName": "EvaporationAction",
-            "methodName": "evaporate",
+            "methodName": "Evaporate",
             "equipmentName": "Evaporator",
             "subEquipmentName": "item-1",
             "volumeEvaporationFinal": {
@@ -11,7 +11,9 @@
             },
             "startTime": "2024-07-25T12:03:31",
             "endingTime": "2024-07-25T12:15:20",
-            "sampleID": "26",
+            "productIdentification":{
+                "sampleID": "26"
+            },
             "atWell": {
                 "containerID": "157",
                 "containerBarcode": "1234858858754848",
@@ -29,13 +31,15 @@
         },
         {
             "actionName": "AddAction",
-            "methodName": "Dilution",
+            "methodName": "DilutionAddAction",
             "equipmentName": "Micropipette",
             "startTime": "2024-07-25T12:02:39",
             "endingTime": "2024-07-25T12:02:41",
             "dispenseState": "Liquid",
             "dispenseType": "volume",
-            "sampleID": "26",
+            "productIdentification":{
+                "sampleID": "26"
+            },
             "atWell": {
                 "containerID": "157",
                 "containerBarcode": "1234858858754848",
@@ -51,6 +55,7 @@
                         "unit": "g/mol"
                     },
                     "smiles": "O",
+                    "swissCatNumber": "SwissCAT-962",
                     "Inchi": "1S/H2O/h1H2",
                     "molecularFormula": "H2O",
                     "density": {
@@ -74,8 +79,12 @@
             "MethodName": "separation-cartridge-part-1",
             "equipmentName": "SPE",
             "subEquipmentName": "cartridge exchange",
+            "startTime": "2024-07-25T12:03:31",
+            "endingTime": "2024-07-25T12:15:20",
             "SPMEprocess": true,
-            "sampleID": "26",
+            "productIdentification":{
+                "sampleID": "26"
+            },
             "atWell": {
                 "containerID": "157",
                 "containerBarcode": "1234858858754848",
@@ -103,6 +112,7 @@
                         "unit": "g/mol"
                     },
                     "smiles": "CC#N",
+                    "swissCatNumber": "SwissCAT-6342",
                     "Inchi": "1S/C2H3N/c1-2-3/h1H3",
                     "molecularFormula": "C2H3N",
                     "density": {
@@ -126,8 +136,12 @@
             "methodName": "separation-cartridge-part-2",
             "equipmentName": "SPE",
             "subEquipmentName": "cartridge exchange",
+            "startTime": "2024-07-25T12:03:31",
+            "endingTime": "2024-07-25T12:15:20",
             "SPMEprocess": true,
-            "sampleID": "26",
+            "productIdentification": {
+                "sampleID": "26"
+            },
             "atWell": {
                 "containerID": "157",
                 "containerBarcode": "1234858858754848",
@@ -155,6 +169,7 @@
                         "unit": "g/mol"
                     },
                     "smiles": "CC#N",
+                    "swissCatNumber": "SwissCAT-6342",
                     "Inchi": "1S/C2H3N/c1-2-3/h1H3",
                     "molecularFormula": "C2H3N",
                     "density": {
