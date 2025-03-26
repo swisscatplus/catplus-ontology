@@ -153,8 +153,8 @@
             "order": "4"
         },
         {
-            "actionName": "ShakeAction",
-            "methodName": "Shaking",
+            "actionName": "shakeAction",
+            "methodName": "shake",
             "equipmentName": "magneticStirrer",
             "subEquipmentName": "item-1",
             "startTime": "2024-07-25T12:03:31",
@@ -179,8 +179,8 @@
             "order": "5"
         },
         {
-            "actionName": "ShakeAction",
-            "methodName": "Shaking",
+            "actionName": "shakeAction",
+            "methodName": "shake",
             "equipmentName": "magneticStirrer",
             "subEquipmentName": "item-1",
             "startTime": "2024-07-25T12:03:31",
