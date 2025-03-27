@@ -1022,7 +1022,9 @@ allo-res:AFR_0000413 a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path allo-proc:AFR_0001073 ; sh:node cat:Measurement ;
                 sh:node [sh:property [sh:path qudt:unit ; 
                                     sh:hasValue qudt-ext:MilliAbsorbanceUnitTimesSecond] ]] ; #peak area
-    sh:property [sh:path allo-res:AFR_0001089 ; sh:node cat:Measurement ] ; #retentiontime
+    sh:property [sh:path allo-res:AFR_0001089 ; sh:node cat:Measurement ] ;
+                          sh:node [sh:property [sh:path qudt:unit ; 
+                                         sh:hasValue unit:MIN] ]] ;  #retentiontime
     sh:property [sh:path allo-res:AFR_0001178 ; sh:node cat:Measurement;
                 sh:property [
                 sh:path qudt:unit ;
