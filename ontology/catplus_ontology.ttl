@@ -677,7 +677,9 @@ cat:ShakeAction a rdfs:Class, sh:NodeShape ;
     sh:property cat:speedTumbleStirrerShape ;
     sh:property cat:temperatureShakerShape ;
     sh:property cat:temperatureTumbleStirrerShape ;
+    sh:property cat:temperatureInDegC ;
     .
+
 
 cat:FiltrateAction a rdfs:Class, sh:NodeShape ;
     rdfs:subClassOf allo-real:AFRE_0000001 ;
