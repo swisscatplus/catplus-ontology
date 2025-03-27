@@ -1037,16 +1037,47 @@ allo-res:AFR_0000413 a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Peak" ;
     skos:definition "A peak describes a part of a spectrum/chromatogram/plot at a definite range of the experimental parameter (independent variable) of the spectrum. This definition includes a single data point of the spectrum. [Allotrope]" ;
     sh:property [sh:path allo-dchdf:Index ; sh:datatype xsd:integer] ; #index
-    sh:property [sh:path allo-res:AFR_0001073 ; sh:class cat:PeakArea] ; #peak area
-    sh:property [sh:path allo-res:AFR_0001089 ; sh:class cat:RetentionTime ] ; #retentiontime
     sh:property [sh:path allo-res:AFR_0001164 ; sh:datatype xsd:string ] ; #peak identifier
-    sh:property [sh:path allo-res:AFR_0001178 ; sh:class cat:PeakStart] ; #peak start
-    sh:property [sh:path allo-res:AFR_0001180 ; sh:class cat:PeakEnd] ; #peak end
-    sh:property [sh:path allo-res:AFR_0000948 ; sh:class cat:PeakHeight] ; #peak height
-    sh:property [sh:path allo-res:AFR_0000949 ; sh:class cat:RelativePeakHeight] ; #relative peak height
-    sh:property [sh:path allo-res:AFR_0001179 ; sh:class cat:PeakValueAtStart] ; #peak value at start
-    sh:property [sh:path allo-res:AFR_0001181 ; sh:class cat:PeakValueAtEnd] ; #peak value at end
-    sh:property [sh:path allo-res:AFR_0001165 ; sh:class cat:RelativePeakArea] ; #relative peak area
+    sh:property [sh:path allo-proc:AFR_0001073 ; sh:node cat:Measurement ;
+                sh:node [sh:property [sh:path qudt:unit ; 
+                                    sh:hasValue qudt-ext:MilliAbsorbanceUnitTimesSecond] ]] ; #peak area
+    sh:property [sh:path allo-res:AFR_0001089 ; sh:node cat:Measurement ] ;
+                          sh:node [sh:property [sh:path qudt:unit ; 
+                                         sh:hasValue unit:MIN] ]] ;  #retentiontime
+    sh:property [sh:path allo-res:AFR_0001178 ; sh:node cat:Measurement;
+                sh:property [
+                sh:path qudt:unit ;
+                sh:sparql [
+                    a sh:SPARQLConstraint ;
+                    sh:select """
+                        PREFIX qudt: <http://qudt.org/schema/qudt/>
+                        PREFIX unit: <https://qudt.org/vocab/unit/>
+                        PREFIX quantitykind: <http://qudt.org/vocab/quantitykind/>
+                        SELECT $this $value
+                        WHERE {
+                            $this qudt:unit ?unit
+                            FILTER NOT EXISTS {quantitykind:Time qudt:applicableUnit ?unit}.
+                        }
+                    """ ;
+                    sh:message "The unit must be a unit applicable to Time." ; ] ]] ; #peak start
+    sh:property [sh:path allo-res:AFR_0001180 ; sh:node cat:Measurement ] ;
+                          sh:node [sh:property [sh:path qudt:unit ; 
+                                         sh:hasValue unit:MIN] ]] ;  #peak end
+    sh:property [sh:path allo-res:AFR_0000948 ; sh:node cat:Measurement ] ;
+                          sh:node [sh:property [sh:path qudt:unit ; 
+                                         sh:hasValue unit:MilliAbsorbanceUnit] ]] ;  #peak height
+    sh:property [sh:path allo-res:AFR_0001165 ; sh:node cat:Measurement ]  ;
+                          sh:node [sh:property [sh:path qudt:unit ; 
+                                         sh:hasValue unit:PERCENT] ]] ;  #relative peak area
+    sh:property [sh:path allo-res:AFR_0000949 ; sh:node cat:Measurement ;
+                sh:node [sh:property [sh:path qudt:unit ; 
+                                    sh:hasValue unit:PERCENT] ] ] ; #relative peak height
+    sh:property [sh:path allo-res:AFR_0000949 ; sh:node cat:Measurement ;
+                          sh:node [sh:property [sh:path qudt:unit ; 
+                                         sh:hasValue unit:MilliAbsorbanceUnit] ]] ;  #peak value at start
+    sh:property [sh:path allo-res:AFR_0001181 ; sh:node cat:Measurement ] ;
+                          sh:node [sh:property [sh:path qudt:unit ; 
+                                         sh:hasValue unit:MilliAbsorbanceUnit] ]] ;  #peak value at end
 .
 
 cat:Agilent-Peak a rdfs:Class, sh:NodeShape ;
@@ -1086,60 +1117,6 @@ cat:Measurement a sh:NodeShape ;
     sh:property [sh:path qudt:value] ;
     sh:property [sh:path qudt:unit] ;
     .
-
-cat:PeakArea a rdfs:Class, sh:NodeShape ;
-    skos:prefLabel "Peak Area" ;
-    skos:definition "A class representing the area under a peak in a chromatogram or spectrum, indicative of the quantity of analyte." ;
-    sh:node cat:Measurement ;
-    sh:node [sh:property [sh:path qudt:unit ; sh:hasValue qudt-ext:MilliAbsorbanceUnitTimesSecond] ] ;
-    .
-
-cat:RetentionTime a rdfs:Class, sh:NodeShape ;
-    skos:prefLabel "Retention Time" ;
-    skos:definition "A class representing the time taken for an analyte to elute from a chromatography column, measured as the time from injection to detection." ;
-    sh:node cat:Measurement ;
-    .
-
-cat:PeakEnd a rdfs:Class, sh:NodeShape ;
-    skos:prefLabel "Peak End" ;
-    skos:definition "A class representing the point at which a chromatographic or spectrometric peak ends, typically defined as the baseline return after a peak." ;
-    sh:node cat:Measurement ;
-    .
-
-cat:RelativePeakHeight a rdfs:Class, sh:NodeShape ;
-    skos:prefLabel "Relative Peak Height" ;
-    skos:definition "A class representing the height of a peak relative to a reference peak or baseline, used for comparative analysis." ;
-    sh:node cat:Measurement ;
-    sh:node [sh:property [sh:path qudt:unit ; sh:hasValue unit:PERCENT] ] ;
-    .
-
-cat:PeakHeight a rdfs:Class, sh:NodeShape ;
-    skos:prefLabel "Peak Height" ;
-    skos:definition "A class representing the vertical height of a peak in a chromatogram or spectrum, measured from the baseline to the peak apex." ;
-    sh:node cat:Measurement ;
-    .
-
-cat:PeakStart a rdfs:Class, sh:NodeShape ;
-    skos:prefLabel "Peak Start" ;
-    skos:definition "A class representing the point at which a chromatographic or spectrometric peak begins, typically defined as the initial rise above the baseline." ;
-    sh:node cat:Measurement ;
-    sh:property [
-        sh:path qudt:unit ;
-        sh:sparql [
-            a sh:SPARQLConstraint ;
-            sh:select """
-                PREFIX qudt: <http://qudt.org/schema/qudt/>
-                PREFIX unit: <https://qudt.org/vocab/unit/>
-                PREFIX quantitykind: <http://qudt.org/vocab/quantitykind/>
-                SELECT $this $value
-                WHERE {
-                    $this qudt:unit ?unit
-                    FILTER NOT EXISTS {quantitykind:Time qudt:applicableUnit ?unit}.
-                }
-            """ ;
-            sh:message "The unit must be a unit applicable to Time." ;
-        ] ;
-    ] .
 
 quantitykind:Time a qudt:QuantityKind ;
     rdfs:label "Time" ;
