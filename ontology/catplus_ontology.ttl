@@ -1041,7 +1041,9 @@ allo-res:AFR_0000413 a rdfs:Class, sh:NodeShape ;
                         }
                     """ ;
                     sh:message "The unit must be a unit applicable to Time." ; ] ]] ; #peak start
-    sh:property [sh:path allo-res:AFR_0001180 ; sh:node cat:Measurement ] ; #peak end
+    sh:property [sh:path allo-res:AFR_0001180 ; sh:node cat:Measurement ] ;
+                          sh:node [sh:property [sh:path qudt:unit ; 
+                                         sh:hasValue unit:MIN] ]] ;  #peak end
     sh:property [sh:path allo-res:AFR_0000948 ; sh:node cat:Measurement ] ; #peak height
     sh:property [sh:path allo-res:AFR_0001165 ; sh:node cat:Measurement ] ; #relative peak area
     sh:property [sh:path allo-res:AFR_0000949 ; sh:node cat:Measurement ;
