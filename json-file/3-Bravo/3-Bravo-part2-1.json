@@ -20,7 +20,7 @@
                 "containerBarcode": "1234858858754848",
                 "position": "A1"
             },
-            "temperature": {
+            "temperatureShaker": {
                 "value": 156,
                 "unit": "°C",
                 "errorMargin": {
@@ -50,7 +50,7 @@
                 "containerBarcode": "1234858858754848",
                 "position": "A1"
             },
-            "temperature": {
+            "temperatureShaker": {
                 "value": 156,
                 "unit": "°C",
                 "errorMargin": {
