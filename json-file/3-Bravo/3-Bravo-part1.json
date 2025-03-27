@@ -6,7 +6,7 @@
             "equipmentName": "Evaporator",
             "subEquipmentName": "item-1",
             "volumeEvaporationFinal": {
-                "value": "50",
+                "value": 50,
                 "unit": "%"
             },
             "startTime": "2024-07-25T12:03:31",
@@ -59,7 +59,7 @@
                     "Inchi": "1S/H2O/h1H2",
                     "molecularFormula": "H2O",
                     "density": {
-                        "value": "1.000",
+                        "value": 1.000,
                         "unit": "g/mL"
                     }
                 },
@@ -116,7 +116,7 @@
                     "Inchi": "1S/C2H3N/c1-2-3/h1H3",
                     "molecularFormula": "C2H3N",
                     "density": {
-                        "value": "0.787",
+                        "value": 0.787,
                         "unit": "g/mL"
                     }
                 },
@@ -173,7 +173,7 @@
                     "Inchi": "1S/C2H3N/c1-2-3/h1H3",
                     "molecularFormula": "C2H3N",
                     "density": {
-                        "value": "0.787",
+                        "value": 0.787,
                         "unit": "g/mL"
                     }
                 },
