@@ -6,7 +6,7 @@
             "equipmentName": "Evaporator",
             "subEquipmentName": "item-1",
             "volumeEvaporationFinal": {
-                "value": "100",
+                "value": 100,
                 "unit": "%"
             },
             "startTime": "2024-07-25T12:03:31",
@@ -36,7 +36,7 @@
             "equipmentName": "Evaporator",
             "subEquipmentName": "item-1",
             "volumeEvaporationFinal": {
-                "value": "100",
+                "value": 100,
                 "unit": "%"
             },
             "startTime": "2024-07-25T12:03:31",
