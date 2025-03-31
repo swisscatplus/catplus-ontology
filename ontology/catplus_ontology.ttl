@@ -733,7 +733,7 @@ cat:Solvent a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path cat:volume ; sh:node cat:Observation ; #volume
                  sh:node [sh:property    [sh:path qudt:unit ;
                                          sh:hasValue unit:MilliL] ]]
-
+.
 
 cat:SubAction a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Sub Action" ;
@@ -1043,7 +1043,7 @@ allo-res:AFR_0000413 a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path allo-proc:AFR_0001073 ; sh:node cat:Measurement ;
                 sh:node [sh:property [sh:path qudt:unit ; 
                                     sh:hasValue qudt-ext:MilliAbsorbanceUnitTimesSecond] ]] ; #peak area
-    sh:property [sh:path allo-res:AFR_0001089 ; sh:node cat:Measurement ] ;
+    sh:property [sh:path allo-res:AFR_0001089 ; sh:node cat:Measurement ;
                           sh:node [sh:property [sh:path qudt:unit ; 
                                          sh:hasValue unit:MIN] ]] ;  #retentiontime
     sh:property [sh:path allo-res:AFR_0001178 ; sh:node cat:Measurement;
@@ -1062,13 +1062,13 @@ allo-res:AFR_0000413 a rdfs:Class, sh:NodeShape ;
                         }
                     """ ;
                     sh:message "The unit must be a unit applicable to Time." ; ] ]] ; #peak start
-    sh:property [sh:path allo-res:AFR_0001180 ; sh:node cat:Measurement ] ;
+    sh:property [sh:path allo-res:AFR_0001180 ; sh:node cat:Measurement  ;
                           sh:node [sh:property [sh:path qudt:unit ; 
                                          sh:hasValue unit:MIN] ]] ;  #peak end
-    sh:property [sh:path allo-res:AFR_0000948 ; sh:node cat:Measurement ] ;
+    sh:property [sh:path allo-res:AFR_0000948 ; sh:node cat:Measurement  ;
                           sh:node [sh:property [sh:path qudt:unit ; 
                                          sh:hasValue unit:MilliAbsorbanceUnit] ]] ;  #peak height
-    sh:property [sh:path allo-res:AFR_0001165 ; sh:node cat:Measurement ]  ;
+    sh:property [sh:path allo-res:AFR_0001165 ; sh:node cat:Measurement  ;
                           sh:node [sh:property [sh:path qudt:unit ; 
                                          sh:hasValue unit:PERCENT] ]] ;  #relative peak area
     sh:property [sh:path allo-res:AFR_0000949 ; sh:node cat:Measurement ;
@@ -1077,7 +1077,7 @@ allo-res:AFR_0000413 a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path allo-res:AFR_0000949 ; sh:node cat:Measurement ;
                           sh:node [sh:property [sh:path qudt:unit ; 
                                          sh:hasValue unit:MilliAbsorbanceUnit] ]] ;  #peak value at start
-    sh:property [sh:path allo-res:AFR_0001181 ; sh:node cat:Measurement ] ;
+    sh:property [sh:path allo-res:AFR_0001181 ; sh:node cat:Measurement ;
                           sh:node [sh:property [sh:path qudt:unit ; 
                                          sh:hasValue unit:MilliAbsorbanceUnit] ]] ;  #peak value at end
 .
