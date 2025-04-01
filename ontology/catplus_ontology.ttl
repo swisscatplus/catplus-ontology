@@ -358,10 +358,6 @@ cat:isSpmeProcess a rdf:Property ;
     skos:definition "Solid-phase microextraction (SPME) is a solvent-free sample preparation technique that involves the extraction of analytes from a sample into a solid phase, followed by the desorption of the analytes into a solvent for analysis." ;
     .
 
-cat:hasSubAction a rdf:Property ;
-    skos:prefLabel "has sub action" ;
-    skos:definition "A narrower specification of the action" ;
-    .
 
 cat:hasCartridge a rdf:Property ;
     skos:prefLabel "has cartridge" ;
@@ -705,8 +701,8 @@ cat:SolventChangeAction a rdfs:Class, sh:NodeShape ;
                  sh:node cat:Observation ;
                  sh:node [sh:property    [sh:path qudt:unit ;
                                         sh:hasValue unit:MIN] ]];
+    sh:property [sh:path cat:hasCartridge ; sh:class cat:Cartridge] ;
     sh:property [sh:path cat:isSpmeProcess ; sh:datatype xsd:boolean] ; #isSpmeProcess
-    sh:property [sh:path cat:hasSubAction ; sh:class cat:SubAction] ; #hasSubAction
     .
 
 allo-real:AFRE_0000001 a rdfs:Class, sh:NodeShape ;
@@ -716,7 +712,6 @@ allo-real:AFRE_0000001 a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path cat:hasPlate ; sh:class cat:Plate] ; #hasPlate
     sh:property [sh:path cat:hasWell ; sh:class cat:Well] ; #hasWell
     sh:property [sh:path allo-res:AFR_0001723 ; sh:datatype xsd:string ] ;#Equipment name ,
-    sh:property [sh:path cat:subAction ; sh:datatype xsd:string ] ;# Subaction name ,
     sh:property [sh:path cat:subEquipmentName ; sh:datatype xsd:string ] ;#subEquipmentName
     sh:property [sh:path schema:name ; sh:datatype xsd:string ] ; #name
     sh:property [sh:path allo-prop:AFX_0000622 ; sh:datatype xsd:dateTime ] ;#startTime ,
@@ -733,20 +728,7 @@ cat:Solvent a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path cat:volume ; sh:node cat:Observation ; #volume
                  sh:node [sh:property    [sh:path qudt:unit ;
                                          sh:hasValue unit:MilliL] ]]
-.
 
-cat:SubAction a rdfs:Class, sh:NodeShape ;
-    skos:prefLabel "Sub Action" ;
-    skos:definition "A sub action is a smaller, constituent action that is part of a larger action." ;
-    sh:property [sh:path schema:name ; sh:datatype xsd:string] ; #subActionName
-    .
-
-cat:SeparationSubAction a rdfs:Class, sh:NodeShape ;
-    rdfs:subClassOf cat:SubAction ;
-    skos:prefLabel "Separation Sub Action" ;
-    skos:definition "A separation sub action is a sub action that involves the separation of substances or components from a mixture." ;
-    sh:property [sh:path cat:hasCartridge ; sh:class cat:Cartridge] ;
-    .
 
 cat:Cartridge a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Cartridge" ;
@@ -754,6 +736,7 @@ cat:Cartridge a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path cat:cartridgeName ; sh:datatype xsd:string] ; #cartridgeName
     sh:property [sh:path cat:cartridgeComposition ; sh:datatype xsd:string ] ; #cartridgeComposition
     .
+
 
 cat:QuantityShape a sh:NodeShape ;
     sh:targetObjectsOf qudt:quantity ;
