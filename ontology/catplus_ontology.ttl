@@ -6,7 +6,7 @@ prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 prefix xsd: <http://www.w3.org/2001/XMLSchema#>
 prefix chebi: <https://www.ebi.ac.uk/chebi/searchId.do?chebiId=>
 prefix purl: <http://purl.allotrope.org/ontologies/>
-prefix schema: <https://schema.org/>
+prefix schema: <http://schema.org/>
 prefix qudt: <http://qudt.org/schema/qudt/>
 prefix unit: <http://qudt.org/vocab/unit/>
 prefix owl: <http://www.w3.org/2002/07/owl#>
