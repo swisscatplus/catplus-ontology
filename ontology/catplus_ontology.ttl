@@ -1167,9 +1167,11 @@ unit:MIN a qudt:Unit.
 unit:MilliL a qudt:Unit.
 unit:MilliGM a qudt:Unit.
 unit:MOL-PER-L a qudt:Unit.
+unit:NanoM a qudt:Unit.
 unit:PERCENT a qudt:Unit.
 unit:REV-PER-MIN a qudt:Unit.
 unit:SEC a qudt:Unit.
+unit:UNITLESS a qudt:Unit.
 
 qudt-ext:MilliAbsorbanceUnit a qudt:Unit.
 qudt-ext:MilliAbsorbanceUnitTimesSecond a qudt:Unit.
