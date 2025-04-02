@@ -1052,7 +1052,7 @@ allo-res:AFR_0000413 a rdfs:Class, sh:NodeShape ;
                                          sh:hasValue unit:MIN] ]] ;  #peak end
     sh:property [sh:path allo-res:AFR_0000948 ; sh:node cat:Measurement  ;
                           sh:node [sh:property [sh:path qudt:unit ; 
-                                         sh:hasValue unit:MilliAbsorbanceUnit] ]] ;  #peak height
+                                         sh:hasValue qudt-ext:MilliAbsorbanceUnit] ]] ;  #peak height
     sh:property [sh:path allo-res:AFR_0001165 ; sh:node cat:Measurement  ;
                           sh:node [sh:property [sh:path qudt:unit ; 
                                          sh:hasValue unit:PERCENT] ]] ;  #relative peak area
@@ -1061,10 +1061,10 @@ allo-res:AFR_0000413 a rdfs:Class, sh:NodeShape ;
                                     sh:hasValue unit:PERCENT] ] ] ; #relative peak height
     sh:property [sh:path allo-res:AFR_0001179 ; sh:node cat:Measurement ;
                           sh:node [sh:property [sh:path qudt:unit ; 
-                                         sh:hasValue unit:MilliAbsorbanceUnit] ]] ;  #peak value at start
+                                         sh:hasValue qudt-ext:MilliAbsorbanceUnit] ]] ;  #peak value at start
     sh:property [sh:path allo-res:AFR_0001181 ; sh:node cat:Measurement ;
                           sh:node [sh:property [sh:path qudt:unit ; 
-                                         sh:hasValue unit:MilliAbsorbanceUnit] ]] ;  #peak value at end
+                                         sh:hasValue qudt-ext:MilliAbsorbanceUnit] ]] ;  #peak value at end
 .
 
 cat:Agilent-Peak a rdfs:Class, sh:NodeShape ;
