@@ -636,6 +636,37 @@ schema:contentUrl a rdf:Property ;
 ###################################################################################################
 # Shapes
 
+
+cat:SynthAddAction a rdfs:Class, sh:NodeShape ;
+    rdfs:subClassOf cat:AddAction ;
+    sh:property [sh:path cat:hasWell ; sh:class cat:SynthesisWell] ; #hasWell
+    sh:property [sh:path cat:hasSample ; sh:class cat:Sample ] ;
+    sh:property [sh:path qudt:quantity ;
+                 sh:node cat:Observation ] ;
+    .
+
+
+cat:BravoAddAction a rdfs:Class, sh:NodeShape ;
+    rdfs:subClassOf cat:AddAction ;
+    sh:property [sh:path cat:hasWell ; sh:class cat:BravoWell] ; #hasWell
+    sh:property [sh:path cat:hasSolvent ; sh:class cat:Solvent ] ;
+    sh:property [sh:path cat:volume ]
+    .
+    
+
+cat:SynthesisWell a rdfs:Class, sh:NodeShape ;
+    rdfs:subClassOf cat:Well ;
+    sh:property [sh:path cat:produces ; sh:class cat:Product ] ;  #hasProduct
+    .
+#we miss cat:produces
+
+cat:BravoWell a rdfs:Class, sh:NodeShape ;
+    rdfs:subClassOf cat:Well ;
+    sh:property [sh:path cat:uses ; sh:class cat:Product ] ;  #hasProduct
+    sh:property [sh:path cat:peak ; sh:class allo-res:AFR_0000413 ] ; #peak
+    .
+
+
 cat:AddAction a rdfs:Class, sh:NodeShape ;
    rdfs:subClassOf allo-real:AFRE_0000001 ;
    sh:property [sh:path cat:dispenseType ; sh:datatype xsd:string] ;
