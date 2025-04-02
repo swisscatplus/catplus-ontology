@@ -1045,21 +1045,8 @@ allo-res:AFR_0000413 a rdfs:Class, sh:NodeShape ;
                           sh:node [sh:property [sh:path qudt:unit ; 
                                          sh:hasValue unit:MIN] ]] ;  #retentiontime
     sh:property [sh:path allo-res:AFR_0001178 ; sh:node cat:Measurement;
-                sh:property [
-                sh:path qudt:unit ;
-                sh:sparql [
-                    a sh:SPARQLConstraint ;
-                    sh:select """
-                        PREFIX qudt: <http://qudt.org/schema/qudt/>
-                        PREFIX unit: <https://qudt.org/vocab/unit/>
-                        PREFIX quantitykind: <http://qudt.org/vocab/quantitykind/>
-                        SELECT $this $value
-                        WHERE {
-                            $this qudt:unit ?unit
-                            FILTER NOT EXISTS {quantitykind:Time qudt:applicableUnit ?unit}.
-                        }
-                    """ ;
-                    sh:message "The unit must be a unit applicable to Time." ; ] ]] ; #peak start
+                    sh:node [sh:property [sh:path qudt:unit ; 
+                                         sh:hasValue unit:MIN] ]];  #peak start
     sh:property [sh:path allo-res:AFR_0001180 ; sh:node cat:Measurement  ;
                           sh:node [sh:property [sh:path qudt:unit ; 
                                          sh:hasValue unit:MIN] ]] ;  #peak end
