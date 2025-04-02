@@ -1200,6 +1200,6 @@ qudt-ext:MilliAbsorbanceUnitTimesSecond a qudt-ext:Unit .
 
 unit:DEG_C a qudt:Unit .
 unit:SEC a qudt:Unit.
-unit:REV-PER-MIN a qudt:Unit
+unit:REV-PER-MIN a qudt:Unit.
 #... etc
 qudt-ext:Unit rdfs:subClassOf qudt:Unit.
