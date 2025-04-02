@@ -1173,10 +1173,16 @@ cat:vialShape a sh:PropertyShape ;
         [ sh:hasValue "other" ]
     ) .
 
-qudt-ext:MilliAbsorbanceUnitTimesSecond a qudt-ext:Unit .
-
 unit:DEG_C a qudt:Unit .
-unit:SEC a qudt:Unit.
+unit:GM-PER-MOL a qudt:Unit.
+unit:GM-PER-MilliL a qudt:Unit.
+unit:MIN a qudt:Unit.
+unit:MilliL a qudt:Unit.
+unit:MilliGM a qudt:Unit.
+unit:MOL-PER-L a qudt:Unit.
+unit:PERCENT a qudt:Unit.
 unit:REV-PER-MIN a qudt:Unit.
-#... etc
-qudt-ext:Unit rdfs:subClassOf qudt:Unit.
+unit:SEC a qudt:Unit.
+
+qudt-ext:MilliAbsorbanceUnit a qudt:Unit.
+qudt-ext:MilliAbsorbanceUnitTimesSecond a qudt:Unit.
