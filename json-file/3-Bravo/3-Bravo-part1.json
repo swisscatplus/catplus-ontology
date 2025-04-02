@@ -18,7 +18,11 @@
             "atWell": {
                 "containerID": "157",
                 "containerBarcode": "1234858858754848",
-                "position": "A1"
+                "position": "A1",
+                "productIdentification":{
+                    "sampleID": "26",
+                    "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809"
+                }
             },
             "temperature": {
                 "value": 156,
@@ -38,14 +42,14 @@
             "endingTime": "2024-07-25T12:02:41",
             "dispenseState": "Liquid",
             "dispenseType": "volume",
-            "productIdentification":{
-                "sampleID": "26",
-                "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809"
-            },
             "atWell": {
                 "containerID": "157",
                 "containerBarcode": "1234858858754848",
-                "position": "A1"
+                "position": "A1",
+                "productIdentification":{
+                    "sampleID": "26",
+                    "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809"
+                }
             },
             "hasSolvent": {
                 "hasChemical": {
@@ -84,14 +88,14 @@
             "startTime": "2024-07-25T12:03:31",
             "endingTime": "2024-07-25T12:15:20",
             "SPMEprocess": true,
-            "productIdentification":{
-                "sampleID": "26",
-                "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809"
-            },
             "atWell": {
                 "containerID": "157",
                 "containerBarcode": "1234858858754848",
-                "position": "A1"
+                "position": "A1",
+                "productIdentification":{
+                    "sampleID": "26",
+                    "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809"
+                }
             },
             "hasCartridge": {
                 "cartridgeName": "test-cartridge",
