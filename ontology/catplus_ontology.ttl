@@ -429,7 +429,7 @@ obo:IAO_0000009 a rdf:Property;
   skos:definition "A label is a symbol that is part of some other datum and is used to either partially define  the denotation of that datum or to provide a means for identifying the datum as a member of the set of data with the same label [IAO]";
   skos:prefLabel "datum label" .
 
-qb:DataSet a rdf:Property;
+qb:structure a rdf:Property;
   skos:definition "Represents a collection of observations, possibly organized into various slices, conforming to some common dimensional structure. [QB]";
   skos:prefLabel "data cube" .
 
@@ -938,13 +938,21 @@ allo-res:AFR_0002375 a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path allo-res:AFR_0002659  ; sh:class cat:ProcessedDataDocument] ; #hasProcessedDataDocument -> ProcessedDataDocument
 .
 
+cat:ChromatogramDataCube a rdfs:Class, sh:NodeShape ;
+    skos:prefLabel "Chromatogram Data Cube" ;
+    skos:definition "A three-dimensional representation of chromatographic data, enabling analysis of time, intensity, and other parameters." ;
+    sh:property [sh:path obo:IAO_0000009 ; sh:datatype xsd:string] ; #label
+    sh:property [sh:path qb:structure ; sh:class cat:CubeStructure] ; #cube-structure
+    sh:property [sh:path allo-hdf:Dataset ; sh:class cat:Dataframe] ; #dataset
+    sh:property [sh:path allo-res:AFR_0000917 ; sh:datatype xsd:string] ; #identifier
+.
+
 
 cat:ThreeDimensionalUltravioletSpectrumDataCube a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Three-Dimensional Ultraviolet Spectrum Data Cube" ;
     skos:definition "A data structure representing a three-dimensional cube of ultraviolet spectral data, often used for analyzing spectroscopic information across multiple dimensions." ;
     sh:property [sh:path obo:IAO_0000009 ; sh:datatype xsd:string] ; #label
-    sh:property [sh:path qb:DataSet ; sh:class cat:something] ; #cube-structure
-    sh:property [sh:path allo-hdf:Dataset ; sh:class cat:Dataframe] ; #dataset
+    sh:property [sh:path qb:structure ; sh:class cat:CubeStructure] ; #cube-structure
     sh:property [sh:path allo-res:AFR_0000917 ; sh:datatype xsd:string] ; #identifier
     .
 
@@ -952,8 +960,7 @@ cat:ThreeDimensionalMassSpectrumDataCube a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Three-Dimensional Mass Spectrum Data Cube" ;
     skos:definition "A data structure representing a three-dimensional cube of mass spectrometry data, used to analyze molecular compositions and fragmentations across dimensions." ;
     sh:property [sh:path obo:IAO_0000009 ; sh:datatype xsd:string] ; #label
-    sh:property [sh:path qb:DataSet ; sh:class cat:something] ; #cube-structure
-    sh:property [sh:path allo-hdf:Dataset ; sh:class cat:Dataframe] ; #dataset
+    sh:property [sh:path qb:structure ; sh:class cat:CubeStructure] ; #cube-structure
     sh:property [sh:path allo-res:AFR_0000917 ; sh:datatype xsd:string] ; #identifier
 .
 
@@ -1013,15 +1020,6 @@ cat:AutosamplerInjectionVolumeSetting a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path qudt:value ] ;
     sh:property [sh:path qudt:unit ] ;
     .
-
-cat:ChromatogramDataCube a rdfs:Class, sh:NodeShape ;
-    skos:prefLabel "Chromatogram Data Cube" ;
-    skos:definition "A three-dimensional representation of chromatographic data, enabling analysis of time, intensity, and other parameters." ;
-    sh:property [sh:path obo:IAO_0000009 ; sh:datatype xsd:string] ; #label
-    sh:property [sh:path qb:DataSet ; sh:class cat:CubeStructure] ; #cube-structure
-    sh:property [sh:path allo-hdf:Dataset ; sh:class cat:Dataframe] ; #dataset
-    sh:property [sh:path allo-res:AFR_0000917 ; sh:datatype xsd:string] ; #identifier
-.
 
 cat:ProcessedDataDocument a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Processed Data Document" ;
@@ -1124,27 +1122,6 @@ quantitykind:Time a qudt:QuantityKind ;
     rdfs:label "Time" ;
     qudt:applicableUnit unit:SEC ;
     qudt:applicableUnit unit:MIN ;
-    .
-
-cat:RelativePeakArea a rdfs:Class, sh:NodeShape ;
-    skos:prefLabel "Relative Peak Area" ;
-    skos:definition "A class representing the area of a peak relative to the total area or a reference peak, used for normalization or comparison." ;
-    sh:node cat:Measurement ;
-    sh:node [sh:property [sh:path qudt:unit ; sh:hasValue unit:PERCENT] ] ;
-    .
-
-cat:PeakValueAtStart a rdfs:Class, sh:NodeShape ;
-    skos:prefLabel "Peak Value at Start" ;
-    skos:definition "A class representing the value or intensity of a peak at the start point, often used in peak characterization." ;
-    sh:node cat:Measurement ;
-    sh:node [sh:property [sh:path qudt:unit ; sh:hasValue qudt-ext:MilliAbsorbanceUnit] ] ;
-    .
-
-cat:PeakValueAtEnd a rdfs:Class, sh:NodeShape ;
-    skos:prefLabel "Peak Value at End" ;
-    skos:definition "A class representing the value or intensity of a peak at the end point, often used in peak characterization." ;
-    sh:node cat:Measurement ;
-    sh:node [sh:property [sh:path qudt:unit ; sh:hasValue qudt-ext:MilliAbsorbanceUnit] ] ;
     .
 
 cat:temperatureTumbleStirrerShape a sh:PropertyShape ;
