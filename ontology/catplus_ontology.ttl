@@ -943,7 +943,6 @@ cat:ChromatogramDataCube a rdfs:Class, sh:NodeShape ;
     skos:definition "A three-dimensional representation of chromatographic data, enabling analysis of time, intensity, and other parameters." ;
     sh:property [sh:path obo:IAO_0000009 ; sh:datatype xsd:string] ; #label
     sh:property [sh:path qb:structure ; sh:class cat:CubeStructure] ; #cube-structure
-    sh:property [sh:path allo-hdf:Dataset ; sh:class cat:Dataframe] ; #dataset
     sh:property [sh:path allo-res:AFR_0000917 ; sh:datatype xsd:string] ; #identifier
 .
 
