@@ -643,6 +643,16 @@ cat:preparesProduct a rdf:Property ;
     skos:definition "A property to indicate which product gets prepared for analysis (for bravo)" ;
     .
 
+cat:hasProductID a rdf:Property ;
+    skos:prefLabel "has product ID" ;
+    skos:definition "A property to indicate the product ID that a sample document refers to " ;
+    .
+
+cat:isAnalysisOutputOf a rdf:Property ;
+    skos:prefLabel "is analysis output of" ;
+    skos:definition "A property to relate a peaklist to the product it is an analysis of" ;
+    .
+
 ###################################################################################################
 # Shapes
 
@@ -825,8 +835,6 @@ cat:Product a rdfs:Class, sh:NodeShape ;
     skos:altLabel  "chemical mixture" ;
     skos:definition "A chemical mixture where the chemical substances are unknown." ;
     sh:property [sh:path purl:identifier ; sh:datatype xsd:string] ; #identifier/sampleID
-    # Not sure whether the product has Chemicals: when are they added?
-    sh:property [sh:path allo-res:AFR_0000432 ; sh:class cat:PeakList ] ; #peak list
     .
 
 cat:Sample a rdfs:Class, sh:NodeShape ;
@@ -855,13 +863,6 @@ cat:Sample a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path cat:hasPlate ; sh:class cat:Plate] ; # hasPlate
     sh:property [sh:path cat:hasSample ; sh:class cat:Sample] ; #hasSample
     sh:property [sh:path cat:hasChemical ; sh:class obo:CHEBI_25367 ] ; #hasChemical
-    .
-
-cat:Product a sh:NodeShape, rdfs:Class ;
-    skos:prefLabel "Product" ;
-    skos:definition "An uknown sample." ;
-    sh:property [sh:path allo-res:AFR_0000432 ; sh:class cat:PeakList ] ; #peak list
-    sh:property [sh:path purl:identifier ; sh:datatype xsd:string] ; #identifier/sampleID
     .
 
 obo:CHEBI_25367 a rdfs:Class, sh:NodeShape ;
@@ -1033,12 +1034,10 @@ cat:ChromatographyColumnDocument a rdfs:Class, sh:NodeShape ;
     .
 
 cat:SampleDocument a rdfs:Class, sh:NodeShape ;
-    # TODO The sample identifier here is a product identifier
     skos:prefLabel "Sample Document" ;
     skos:definition "A document describing a sample, including identifiers and names for traceability in experimental contexts." ;
-    sh:property [sh:path allo-res:AFR_0001118 ; sh:datatype xsd:string] ; #sample identifier
+    sh:property [sh:path cat:hasProductID ; sh:class cat:Product ] ; #sample identifier
     sh:property [sh:path obo:IAO_0000590 ; sh:datatype xsd:string ] ; #written name
-    sh:property [sh:path cat:analyzes ; sh:class cat:Product ] ;
     .
 
 cat:InjectionDocument a rdfs:Class, sh:NodeShape ;
@@ -1075,7 +1074,8 @@ cat:PeakList a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Peak List" ;
     skos:definition "A collection of peaks identified in chromatograms or spectra, typically used for further analysis in experiments." ;
     sh:property [sh:path cat:peak ; sh:class allo-res:AFR_0000413] ; #peak
-    .
+    sh:property [sh:path cat:belongsToProduct ; sh:class cat:Product].
+
 
 allo-res:AFR_0000413 a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Peak" ;
