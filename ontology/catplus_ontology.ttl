@@ -816,7 +816,7 @@ cat:Product a rdfs:Class, sh:NodeShape ;
     skos:altLabel  "chemical mixture" ;
     skos:definition "A chemical mixture where the chemical substances are unknown." ;
     sh:property [sh:path purl:identifier ; sh:datatype xsd:string] ; #identifier/sampleID
-    sh:property [sh:path cat:hasChemical ; sh:class obo:CHEBI_25367 ] ; #hasChemical
+    # Not sure whether the product has Chemicals: when are they added?
     sh:property [sh:path allo-res:AFR_0000432 ; sh:class cat:PeakList ] ; #peak list
     .
 
@@ -1024,10 +1024,12 @@ cat:ChromatographyColumnDocument a rdfs:Class, sh:NodeShape ;
     .
 
 cat:SampleDocument a rdfs:Class, sh:NodeShape ;
+    # TODO The sample identifier here is a product identifier
     skos:prefLabel "Sample Document" ;
     skos:definition "A document describing a sample, including identifiers and names for traceability in experimental contexts." ;
     sh:property [sh:path allo-res:AFR_0001118 ; sh:datatype xsd:string] ; #sample identifier
     sh:property [sh:path obo:IAO_0000590 ; sh:datatype xsd:string ] ; #written name
+    sh:property [sh:path cat:analyzes ; sh:class cat:Product ] ;
     .
 
 cat:InjectionDocument a rdfs:Class, sh:NodeShape ;
