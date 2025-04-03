@@ -728,6 +728,7 @@ cat:Solvent a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path cat:volume ; sh:node cat:Observation ; #volume
                  sh:node [sh:property    [sh:path qudt:unit ;
                                          sh:hasValue unit:MilliL] ]]
+.
 
 
 cat:Cartridge a rdfs:Class, sh:NodeShape ;
@@ -1015,6 +1016,7 @@ cat:PeakList a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path cat:peak ; sh:class allo-res:AFR_0000413] ; #peak
     .
 
+
 allo-res:AFR_0000413 a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Peak" ;
     skos:definition "A peak describes a part of a spectrum/chromatogram/plot at a definite range of the experimental parameter (independent variable) of the spectrum. This definition includes a single data point of the spectrum. [Allotrope]" ;
@@ -1034,7 +1036,8 @@ allo-res:AFR_0000413 a rdfs:Class, sh:NodeShape ;
                                          sh:hasValue unit:MIN] ]] ;  #peak end
     sh:property [sh:path allo-res:AFR_0000948 ; sh:node cat:Measurement  ;
                           sh:node [sh:property [sh:path qudt:unit ; 
-                                         sh:hasValue qudt-ext:MilliAbsorbanceUnit] ]] ;  #peak height
+                          sh:xone ([ sh:hasValue qudt-ext:MilliAbsorbanceUnit]
+                                    [sh:hasValue unit:UNITLESS]) ]]] ;  #peak height
     sh:property [sh:path allo-res:AFR_0001165 ; sh:node cat:Measurement  ;
                           sh:node [sh:property [sh:path qudt:unit ; 
                                          sh:hasValue unit:PERCENT] ]] ;  #relative peak area
@@ -1043,10 +1046,12 @@ allo-res:AFR_0000413 a rdfs:Class, sh:NodeShape ;
                                     sh:hasValue unit:PERCENT] ] ] ; #relative peak height
     sh:property [sh:path allo-res:AFR_0001179 ; sh:node cat:Measurement ;
                           sh:node [sh:property [sh:path qudt:unit ; 
-                                         sh:hasValue qudt-ext:MilliAbsorbanceUnit] ]] ;  #peak value at start
+                          sh:xone ([ sh:hasValue qudt-ext:MilliAbsorbanceUnit]
+                                    [sh:hasValue unit:UNITLESS]) ]]] ;   #peak value at start
     sh:property [sh:path allo-res:AFR_0001181 ; sh:node cat:Measurement ;
                           sh:node [sh:property [sh:path qudt:unit ; 
-                                         sh:hasValue qudt-ext:MilliAbsorbanceUnit] ]] ;  #peak value at end
+                          sh:xone ([ sh:hasValue qudt-ext:MilliAbsorbanceUnit]
+                                    [sh:hasValue unit:UNITLESS]) ]]] ;   #peak value at end
 .
 
 cat:Agilent-Peak a rdfs:Class, sh:NodeShape ;
