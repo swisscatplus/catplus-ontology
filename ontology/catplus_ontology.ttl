@@ -633,6 +633,16 @@ schema:contentUrl a rdf:Property ;
     skos:definition "A url pointing to the actual bytes of the media object, for example the agilent data file." ;
 .
 
+cat:producesProduct a rdf:Property ;
+    skos:prefLabel "produces product" ;
+    skos:definition "A property to indicate the product that a synthesis step produces" ;
+    .
+
+cat:preparesProduct a rdf:Property ;
+    skos:prefLabel "prepares product" ;
+    skos:definition "A property to indicate which product gets prepared for analysis (for bravo)" ;
+    .
+
 ###################################################################################################
 # Shapes
 
@@ -656,13 +666,12 @@ cat:BravoAddAction a rdfs:Class, sh:NodeShape ;
 
 cat:SynthesisWell a rdfs:Class, sh:NodeShape ;
     rdfs:subClassOf cat:Well ;
-    sh:property [sh:path cat:produces ; sh:class cat:Product ] ;  #hasProduct
+    sh:property [sh:path cat:producesProduct ; sh:class cat:Product ] ;  #hasProduct
     .
-#we miss cat:produces
 
 cat:BravoWell a rdfs:Class, sh:NodeShape ;
     rdfs:subClassOf cat:Well ;
-    sh:property [sh:path cat:uses ; sh:class cat:Product ] ;  #hasProduct
+    sh:property [sh:path cat:preparesProduct ; sh:class cat:Product ] ;  #hasProduct
     sh:property [sh:path cat:peak ; sh:class allo-res:AFR_0000413 ] ; #peak
     .
 
