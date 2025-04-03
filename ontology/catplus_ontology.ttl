@@ -6,9 +6,9 @@ prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 prefix xsd: <http://www.w3.org/2001/XMLSchema#>
 prefix chebi: <https://www.ebi.ac.uk/chebi/searchId.do?chebiId=>
 prefix purl: <http://purl.allotrope.org/ontologies/>
-prefix schema: <https://schema.org/>
+prefix schema: <http://schema.org/>
 prefix qudt: <http://qudt.org/schema/qudt/>
-prefix unit: <https://qudt.org/vocab/unit/>
+prefix unit: <http://qudt.org/vocab/unit/>
 prefix owl: <http://www.w3.org/2002/07/owl#>
 prefix dct: <http://purl.org/dc/terms/>
 prefix vann: <http://purl.org/vocab/vann/>
@@ -358,10 +358,6 @@ cat:isSpmeProcess a rdf:Property ;
     skos:definition "Solid-phase microextraction (SPME) is a solvent-free sample preparation technique that involves the extraction of analytes from a sample into a solid phase, followed by the desorption of the analytes into a solvent for analysis." ;
     .
 
-cat:hasSubAction a rdf:Property ;
-    skos:prefLabel "has sub action" ;
-    skos:definition "A narrower specification of the action" ;
-    .
 
 cat:hasCartridge a rdf:Property ;
     skos:prefLabel "has cartridge" ;
@@ -429,7 +425,7 @@ obo:IAO_0000009 a rdf:Property;
   skos:definition "A label is a symbol that is part of some other datum and is used to either partially define  the denotation of that datum or to provide a means for identifying the datum as a member of the set of data with the same label [IAO]";
   skos:prefLabel "datum label" .
 
-qb:DataSet a rdf:Property;
+qb:structure a rdf:Property;
   skos:definition "Represents a collection of observations, possibly organized into various slices, conforming to some common dimensional structure. [QB]";
   skos:prefLabel "data cube" .
 
@@ -705,8 +701,8 @@ cat:SolventChangeAction a rdfs:Class, sh:NodeShape ;
                  sh:node cat:Observation ;
                  sh:node [sh:property    [sh:path qudt:unit ;
                                         sh:hasValue unit:MIN] ]];
+    sh:property [sh:path cat:hasCartridge ; sh:class cat:Cartridge] ;
     sh:property [sh:path cat:isSpmeProcess ; sh:datatype xsd:boolean] ; #isSpmeProcess
-    sh:property [sh:path cat:hasSubAction ; sh:class cat:SubAction] ; #hasSubAction
     .
 
 allo-real:AFRE_0000001 a rdfs:Class, sh:NodeShape ;
@@ -716,7 +712,6 @@ allo-real:AFRE_0000001 a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path cat:hasPlate ; sh:class cat:Plate] ; #hasPlate
     sh:property [sh:path cat:hasWell ; sh:class cat:Well] ; #hasWell
     sh:property [sh:path allo-res:AFR_0001723 ; sh:datatype xsd:string ] ;#Equipment name ,
-    sh:property [sh:path cat:subAction ; sh:datatype xsd:string ] ;# Subaction name ,
     sh:property [sh:path cat:subEquipmentName ; sh:datatype xsd:string ] ;#subEquipmentName
     sh:property [sh:path schema:name ; sh:datatype xsd:string ] ; #name
     sh:property [sh:path allo-prop:AFX_0000622 ; sh:datatype xsd:dateTime ] ;#startTime ,
@@ -733,20 +728,7 @@ cat:Solvent a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path cat:volume ; sh:node cat:Observation ; #volume
                  sh:node [sh:property    [sh:path qudt:unit ;
                                          sh:hasValue unit:MilliL] ]]
-.
 
-cat:SubAction a rdfs:Class, sh:NodeShape ;
-    skos:prefLabel "Sub Action" ;
-    skos:definition "A sub action is a smaller, constituent action that is part of a larger action." ;
-    sh:property [sh:path schema:name ; sh:datatype xsd:string] ; #subActionName
-    .
-
-cat:SeparationSubAction a rdfs:Class, sh:NodeShape ;
-    rdfs:subClassOf cat:SubAction ;
-    skos:prefLabel "Separation Sub Action" ;
-    skos:definition "A separation sub action is a sub action that involves the separation of substances or components from a mixture." ;
-    sh:property [sh:path cat:hasCartridge ; sh:class cat:Cartridge] ;
-    .
 
 cat:Cartridge a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Cartridge" ;
@@ -754,6 +736,7 @@ cat:Cartridge a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path cat:cartridgeName ; sh:datatype xsd:string] ; #cartridgeName
     sh:property [sh:path cat:cartridgeComposition ; sh:datatype xsd:string ] ; #cartridgeComposition
     .
+
 
 cat:QuantityShape a sh:NodeShape ;
     sh:targetObjectsOf qudt:quantity ;
@@ -938,13 +921,20 @@ allo-res:AFR_0002375 a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path allo-res:AFR_0002659  ; sh:class cat:ProcessedDataDocument] ; #hasProcessedDataDocument -> ProcessedDataDocument
 .
 
+cat:ChromatogramDataCube a rdfs:Class, sh:NodeShape ;
+    skos:prefLabel "Chromatogram Data Cube" ;
+    skos:definition "A three-dimensional representation of chromatographic data, enabling analysis of time, intensity, and other parameters." ;
+    sh:property [sh:path obo:IAO_0000009 ; sh:datatype xsd:string] ; #label
+    sh:property [sh:path qb:structure ; sh:class cat:CubeStructure] ; #cube-structure
+    sh:property [sh:path allo-res:AFR_0000917 ; sh:datatype xsd:string] ; #identifier
+.
+
 
 cat:ThreeDimensionalUltravioletSpectrumDataCube a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Three-Dimensional Ultraviolet Spectrum Data Cube" ;
     skos:definition "A data structure representing a three-dimensional cube of ultraviolet spectral data, often used for analyzing spectroscopic information across multiple dimensions." ;
     sh:property [sh:path obo:IAO_0000009 ; sh:datatype xsd:string] ; #label
-    sh:property [sh:path qb:DataSet ; sh:class cat:something] ; #cube-structure
-    sh:property [sh:path allo-hdf:Dataset ; sh:class cat:Dataframe] ; #dataset
+    sh:property [sh:path qb:structure ; sh:class cat:CubeStructure] ; #cube-structure
     sh:property [sh:path allo-res:AFR_0000917 ; sh:datatype xsd:string] ; #identifier
     .
 
@@ -952,8 +942,7 @@ cat:ThreeDimensionalMassSpectrumDataCube a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Three-Dimensional Mass Spectrum Data Cube" ;
     skos:definition "A data structure representing a three-dimensional cube of mass spectrometry data, used to analyze molecular compositions and fragmentations across dimensions." ;
     sh:property [sh:path obo:IAO_0000009 ; sh:datatype xsd:string] ; #label
-    sh:property [sh:path qb:DataSet ; sh:class cat:something] ; #cube-structure
-    sh:property [sh:path allo-hdf:Dataset ; sh:class cat:Dataframe] ; #dataset
+    sh:property [sh:path qb:structure ; sh:class cat:CubeStructure] ; #cube-structure
     sh:property [sh:path allo-res:AFR_0000917 ; sh:datatype xsd:string] ; #identifier
 .
 
@@ -1014,15 +1003,6 @@ cat:AutosamplerInjectionVolumeSetting a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path qudt:unit ] ;
     .
 
-cat:ChromatogramDataCube a rdfs:Class, sh:NodeShape ;
-    skos:prefLabel "Chromatogram Data Cube" ;
-    skos:definition "A three-dimensional representation of chromatographic data, enabling analysis of time, intensity, and other parameters." ;
-    sh:property [sh:path obo:IAO_0000009 ; sh:datatype xsd:string] ; #label
-    sh:property [sh:path qb:DataSet ; sh:class cat:CubeStructure] ; #cube-structure
-    sh:property [sh:path allo-hdf:Dataset ; sh:class cat:Dataframe] ; #dataset
-    sh:property [sh:path allo-res:AFR_0000917 ; sh:datatype xsd:string] ; #identifier
-.
-
 cat:ProcessedDataDocument a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Processed Data Document" ;
     skos:definition "A document containing processed experimental data, often derived from raw measurements, such as peak lists." ;
@@ -1047,39 +1027,26 @@ allo-res:AFR_0000413 a rdfs:Class, sh:NodeShape ;
                           sh:node [sh:property [sh:path qudt:unit ; 
                                          sh:hasValue unit:MIN] ]] ;  #retentiontime
     sh:property [sh:path allo-res:AFR_0001178 ; sh:node cat:Measurement;
-                sh:property [
-                sh:path qudt:unit ;
-                sh:sparql [
-                    a sh:SPARQLConstraint ;
-                    sh:select """
-                        PREFIX qudt: <http://qudt.org/schema/qudt/>
-                        PREFIX unit: <https://qudt.org/vocab/unit/>
-                        PREFIX quantitykind: <http://qudt.org/vocab/quantitykind/>
-                        SELECT $this $value
-                        WHERE {
-                            $this qudt:unit ?unit
-                            FILTER NOT EXISTS {quantitykind:Time qudt:applicableUnit ?unit}.
-                        }
-                    """ ;
-                    sh:message "The unit must be a unit applicable to Time." ; ] ]] ; #peak start
+                    sh:node [sh:property [sh:path qudt:unit ; 
+                                         sh:hasValue unit:MIN] ]];  #peak start
     sh:property [sh:path allo-res:AFR_0001180 ; sh:node cat:Measurement  ;
                           sh:node [sh:property [sh:path qudt:unit ; 
                                          sh:hasValue unit:MIN] ]] ;  #peak end
     sh:property [sh:path allo-res:AFR_0000948 ; sh:node cat:Measurement  ;
                           sh:node [sh:property [sh:path qudt:unit ; 
-                                         sh:hasValue unit:MilliAbsorbanceUnit] ]] ;  #peak height
+                                         sh:hasValue qudt-ext:MilliAbsorbanceUnit] ]] ;  #peak height
     sh:property [sh:path allo-res:AFR_0001165 ; sh:node cat:Measurement  ;
                           sh:node [sh:property [sh:path qudt:unit ; 
                                          sh:hasValue unit:PERCENT] ]] ;  #relative peak area
     sh:property [sh:path allo-res:AFR_0000949 ; sh:node cat:Measurement ;
                 sh:node [sh:property [sh:path qudt:unit ; 
                                     sh:hasValue unit:PERCENT] ] ] ; #relative peak height
-    sh:property [sh:path allo-res:AFR_0000949 ; sh:node cat:Measurement ;
+    sh:property [sh:path allo-res:AFR_0001179 ; sh:node cat:Measurement ;
                           sh:node [sh:property [sh:path qudt:unit ; 
-                                         sh:hasValue unit:MilliAbsorbanceUnit] ]] ;  #peak value at start
+                                         sh:hasValue qudt-ext:MilliAbsorbanceUnit] ]] ;  #peak value at start
     sh:property [sh:path allo-res:AFR_0001181 ; sh:node cat:Measurement ;
                           sh:node [sh:property [sh:path qudt:unit ; 
-                                         sh:hasValue unit:MilliAbsorbanceUnit] ]] ;  #peak value at end
+                                         sh:hasValue qudt-ext:MilliAbsorbanceUnit] ]] ;  #peak value at end
 .
 
 cat:Agilent-Peak a rdfs:Class, sh:NodeShape ;
@@ -1124,27 +1091,6 @@ quantitykind:Time a qudt:QuantityKind ;
     rdfs:label "Time" ;
     qudt:applicableUnit unit:SEC ;
     qudt:applicableUnit unit:MIN ;
-    .
-
-cat:RelativePeakArea a rdfs:Class, sh:NodeShape ;
-    skos:prefLabel "Relative Peak Area" ;
-    skos:definition "A class representing the area of a peak relative to the total area or a reference peak, used for normalization or comparison." ;
-    sh:node cat:Measurement ;
-    sh:node [sh:property [sh:path qudt:unit ; sh:hasValue unit:PERCENT] ] ;
-    .
-
-cat:PeakValueAtStart a rdfs:Class, sh:NodeShape ;
-    skos:prefLabel "Peak Value at Start" ;
-    skos:definition "A class representing the value or intensity of a peak at the start point, often used in peak characterization." ;
-    sh:node cat:Measurement ;
-    sh:node [sh:property [sh:path qudt:unit ; sh:hasValue qudt-ext:MilliAbsorbanceUnit] ] ;
-    .
-
-cat:PeakValueAtEnd a rdfs:Class, sh:NodeShape ;
-    skos:prefLabel "Peak Value at End" ;
-    skos:definition "A class representing the value or intensity of a peak at the end point, often used in peak characterization." ;
-    sh:node cat:Measurement ;
-    sh:node [sh:property [sh:path qudt:unit ; sh:hasValue qudt-ext:MilliAbsorbanceUnit] ] ;
     .
 
 cat:temperatureTumbleStirrerShape a sh:PropertyShape ;
@@ -1195,3 +1141,19 @@ cat:vialShape a sh:PropertyShape ;
         [ sh:hasValue "sample vial" ]
         [ sh:hasValue "other" ]
     ) .
+
+unit:DEG_C a qudt:Unit .
+unit:GM-PER-MOL a qudt:Unit.
+unit:GM-PER-MilliL a qudt:Unit.
+unit:MIN a qudt:Unit.
+unit:MilliL a qudt:Unit.
+unit:MilliGM a qudt:Unit.
+unit:MOL-PER-L a qudt:Unit.
+unit:NanoM a qudt:Unit.
+unit:PERCENT a qudt:Unit.
+unit:REV-PER-MIN a qudt:Unit.
+unit:SEC a qudt:Unit.
+unit:UNITLESS a qudt:Unit.
+
+qudt-ext:MilliAbsorbanceUnit a qudt:Unit.
+qudt-ext:MilliAbsorbanceUnitTimesSecond a qudt:Unit.
