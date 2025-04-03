@@ -629,8 +629,58 @@ schema:contentUrl a rdf:Property ;
     skos:definition "A url pointing to the actual bytes of the media object, for example the agilent data file." ;
 .
 
+cat:producesProduct a rdf:Property ;
+    skos:prefLabel "produces product" ;
+    skos:definition "A property to indicate the product that a synthesis step produces" ;
+    .
+
+cat:preparesProduct a rdf:Property ;
+    skos:prefLabel "prepares product" ;
+    skos:definition "A property to indicate which product gets prepared for analysis (for bravo)" ;
+    .
+
+cat:hasProductID a rdf:Property ;
+    skos:prefLabel "has product ID" ;
+    skos:definition "A property to indicate the product ID that a sample document refers to " ;
+    .
+
+cat:isAnalysisOutputOf a rdf:Property ;
+    skos:prefLabel "is analysis output of" ;
+    skos:definition "A property to relate a peaklist to the product it is an analysis of" ;
+    .
+
 ###################################################################################################
 # Shapes
+
+
+cat:SynthAddAction a rdfs:Class, sh:NodeShape ;
+    rdfs:subClassOf cat:AddAction ;
+    sh:property [sh:path cat:hasWell ; sh:class cat:SynthesisWell] ; #hasWell
+    sh:property [sh:path cat:hasSample ; sh:class cat:Sample ] ;
+    sh:property [sh:path qudt:quantity ;
+                 sh:node cat:Observation ] ;
+    .
+
+
+cat:BravoAddAction a rdfs:Class, sh:NodeShape ;
+    rdfs:subClassOf cat:AddAction ;
+    sh:property [sh:path cat:hasWell ; sh:class cat:BravoWell] ; #hasWell
+    sh:property [sh:path cat:hasSolvent ; sh:class cat:Solvent ] ;
+    sh:property [sh:path cat:volume ]
+    .
+    
+
+cat:SynthesisWell a rdfs:Class, sh:NodeShape ;
+    rdfs:subClassOf cat:Well ;
+    sh:property [sh:path cat:producesProduct ; sh:class cat:Product ] ;  #hasProduct
+    .
+
+cat:BravoWell a rdfs:Class, sh:NodeShape ;
+    rdfs:subClassOf cat:Well ;
+    sh:property [sh:path cat:preparesProduct ; sh:class cat:Product ] ;  #hasProduct
+    sh:property [sh:path cat:peak ; sh:class allo-res:AFR_0000413 ] ; #peak
+    .
+
 
 cat:AddAction a rdfs:Class, sh:NodeShape ;
    rdfs:subClassOf allo-real:AFRE_0000001 ;
@@ -769,8 +819,6 @@ cat:Product a rdfs:Class, sh:NodeShape ;
     skos:altLabel  "chemical mixture" ;
     skos:definition "A chemical mixture where the chemical substances are unknown." ;
     sh:property [sh:path purl:identifier ; sh:datatype xsd:string] ; #identifier/sampleID
-    sh:property [sh:path cat:hasChemical ; sh:class obo:CHEBI_25367 ] ; #hasChemical
-    sh:property [sh:path allo-res:AFR_0000432 ; sh:class cat:PeakList ] ; #peak list
     .
 
 cat:Sample a rdfs:Class, sh:NodeShape ;
@@ -799,13 +847,6 @@ cat:Sample a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path cat:hasPlate ; sh:class cat:Plate] ; # hasPlate
     sh:property [sh:path cat:hasSample ; sh:class cat:Sample] ; #hasSample
     sh:property [sh:path cat:hasChemical ; sh:class obo:CHEBI_25367 ] ; #hasChemical
-    .
-
-cat:Product a sh:NodeShape, rdfs:Class ;
-    skos:prefLabel "Product" ;
-    skos:definition "An uknown sample." ;
-    sh:property [sh:path allo-res:AFR_0000432 ; sh:class cat:PeakList ] ; #peak list
-    sh:property [sh:path purl:identifier ; sh:datatype xsd:string] ; #identifier/sampleID
     .
 
 obo:CHEBI_25367 a rdfs:Class, sh:NodeShape ;
@@ -985,7 +1026,7 @@ cat:ChromatographyColumnDocument a rdfs:Class, sh:NodeShape ;
 cat:SampleDocument a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Sample Document" ;
     skos:definition "A document describing a sample, including identifiers and names for traceability in experimental contexts." ;
-    sh:property [sh:path allo-res:AFR_0001118 ; sh:datatype xsd:string] ; #sample identifier
+    sh:property [sh:path cat:hasProductID ; sh:class cat:Product ] ; #sample identifier
     sh:property [sh:path obo:IAO_0000590 ; sh:datatype xsd:string ] ; #written name
     .
 
@@ -1014,7 +1055,8 @@ cat:PeakList a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Peak List" ;
     skos:definition "A collection of peaks identified in chromatograms or spectra, typically used for further analysis in experiments." ;
     sh:property [sh:path cat:peak ; sh:class allo-res:AFR_0000413] ; #peak
-    .
+    sh:property [sh:path cat:belongsToProduct ; sh:class cat:Product].
+
 
 
 allo-res:AFR_0000413 a rdfs:Class, sh:NodeShape ;
