@@ -654,85 +654,83 @@ cat:isAnalysisOutputOf a rdf:Property ;
 
 
 cat:SynthAddAction a rdfs:Class, sh:NodeShape ;
-    rdfs:subClassOf cat:AddAction ;
-    sh:property [sh:path cat:hasWell ; sh:class cat:SynthesisWell] ; #hasWell
+    rdfs:subClassOf cat:SynthAction ;
+    sh:property [sh:path cat:hasWell ; sh:class cat:Well] ; #hasWell
     sh:property [sh:path cat:hasSample ; sh:class cat:Sample ] ;
     sh:property [sh:path qudt:quantity ;
                  sh:node cat:Observation ] ;
+    sh:property cat:speedShaker ;
+    sh:property cat:temperatureShakerShape ;
+    sh:property cat:temperatureTumbleStirrerShape ;
+    sh:property [sh:path cat:dispenseType ; sh:datatype xsd:string] ;
+    sh:property [sh:path allo-qual:AFQ_0000111 ;
+                sh:xone ([ sh:hasValue "Solid"]
+                        [sh:hasValue "Liquid"]) ; ] ; #state of matter / dispense state
     .
 
 
 cat:BravoAddAction a rdfs:Class, sh:NodeShape ;
-    rdfs:subClassOf cat:AddAction ;
-    sh:property [sh:path cat:hasWell ; sh:class cat:BravoWell] ; #hasWell
+    rdfs:subClassOf cat:BravoAction ;
+    sh:property [sh:path cat:hasWell ; sh:class cat:Well] ; #hasWell
     sh:property [sh:path cat:hasSolvent ; sh:class cat:Solvent ] ;
-    sh:property [sh:path cat:volume ]
-    .
-    
-
-cat:SynthesisWell a rdfs:Class, sh:NodeShape ;
-    rdfs:subClassOf cat:Well ;
-    sh:property [sh:path cat:producesProduct ; sh:class cat:Product ] ;  #hasProduct
-    .
-
-cat:BravoWell a rdfs:Class, sh:NodeShape ;
-    rdfs:subClassOf cat:Well ;
-    sh:property [sh:path cat:preparesProduct ; sh:class cat:Product ] ;  #hasProduct
-    sh:property [sh:path cat:peak ; sh:class allo-res:AFR_0000413 ] ; #peak
-    .
-
-
-cat:AddAction a rdfs:Class, sh:NodeShape ;
-   rdfs:subClassOf allo-real:AFRE_0000001 ;
-   sh:property [sh:path cat:dispenseType ; sh:datatype xsd:string] ;
-   sh:property [sh:path allo-qual:AFQ_0000111 ;
+    sh:property [sh:path cat:hasSample ; sh:class cat:Sample ] ;
+    sh:property [sh:path cat:volume ] ;
+    sh:property [sh:path cat:dispenseType ; sh:datatype xsd:string] ;
+    sh:property [sh:path allo-qual:AFQ_0000111 ;
                 sh:xone ([ sh:hasValue "Solid"]
                         [sh:hasValue "Liquid"]) ; ] ; #state of matter / dispense state
-   sh:property cat:speedShaker ;
-   sh:property cat:temperatureShakerShape ;
-   sh:property cat:temperatureTumbleStirrerShape ;
-   sh:property [sh:path cat:hasSolvent ; sh:class cat:Solvent ] ;
-   sh:property [sh:path cat:hasSample ; sh:class cat:Sample ] ;
     .
 
+
 cat:SetTemperatureAction a rdfs:Class, sh:NodeShape ;
-    rdfs:subClassOf allo-real:AFRE_0000001 ;
+    rdfs:subClassOf allo-real:AFRE_0000001, cat:SynthAction ;
+    sh:property [sh:path cat:hasPlate ; sh:class cat:Plate] ; # hasPlate
     sh:property cat:speedShakerShape ;
     sh:property cat:temperatureShakerShape ;
     sh:property cat:temperatureTumbleStirrerShape ;
     .
 
+
 cat:SetPressureAction a rdfs:Class, sh:NodeShape ;
-    rdfs:subClassOf allo-real:AFRE_0000001 ;
+    rdfs:subClassOf allo-real:AFRE_0000001, cat:SynthAction ;
+    sh:property [sh:path cat:hasPlate ; sh:class cat:Plate] ; # hasPlate
     sh:property [sh:path allo-proc:AFP_0002677 ;
-                 sh:node cat:Observation ; 
-                 sh:node [sh:property    [sh:path qudt:unit ; 
+                 sh:node cat:Observation ;
+                 sh:node [sh:property    [sh:path qudt:unit ;
                                          sh:hasValue unit:Bar] ]];
     .
 
 cat:SetVacuumAction a rdfs:Class, sh:NodeShape ;
-    rdfs:subClassOf allo-real:AFRE_0000001 ;
+    rdfs:subClassOf allo-real:AFRE_0000001, cat:SynthAction ;
+    sh:property [sh:path cat:hasPlate ; sh:class cat:Plate] ; # hasPlate
     sh:property [sh:path cat:vacuum ; #vacuum
                  sh:node cat:Observation ;
                  sh:node [sh:property    [sh:path qudt:unit ;
                                             sh:hasValue unit:Bar] ]];
     .
 
-cat:ShakeAction a rdfs:Class, sh:NodeShape ;
-    rdfs:subClassOf allo-real:AFRE_0000001 ;
+cat:ShakeSynthAction a rdfs:Class, sh:NodeShape ;
+    rdfs:subClassOf allo-real:AFRE_0000001, cat:SynthAction ;
+    sh:property [sh:path cat:hasPlate ; sh:class cat:Plate] ; # hasPlate
     sh:property cat:speedTumbleStirrerShape ;
     sh:property cat:temperatureShakerShape ;
     sh:property cat:temperatureTumbleStirrerShape ;
+    .
+
+cat:ShakeBravoAction a rdfs:Class, sh:NodeShape ;
+    rdfs:subClassOf allo-real:AFRE_0000001, cat:BravoAction ;
+    sh:property [sh:path cat:hasPlate ; sh:class cat:Plate] ; # hasPlate
     sh:property cat:temperatureInDegC ;
     .
 
 
 cat:FiltrateAction a rdfs:Class, sh:NodeShape ;
-    rdfs:subClassOf allo-real:AFRE_0000001 ;
+    rdfs:subClassOf allo-real:AFRE_0000001, cat:SynthAction ;
+    sh:property [sh:path cat:hasPlate ; sh:class cat:Plate] ; # hasPlate
     .
 
 cat:EvaporationAction a rdfs:Class, sh:NodeShape ;
-    rdfs:subClassOf allo-real:AFRE_0000001 ;
+    rdfs:subClassOf allo-real:AFRE_0000001, cat:BravoAction ;
     sh:property [sh:path allo-prop:AFX_0000060 ; sh:datatype xsd:double] ; #temperature
     sh:property [sh:path cat:hasWell ; sh:class cat:Well] ; #hasWell
     sh:property [sh:path cat:volumeEvaporationFinal ; sh:node cat:Observation] ; #volumeEvaporationFinal
@@ -740,7 +738,7 @@ cat:EvaporationAction a rdfs:Class, sh:NodeShape ;
     .
 
 cat:SolventChangeAction a rdfs:Class, sh:NodeShape ;
-    rdfs:subClassOf allo-real:AFRE_0000001 ;
+    rdfs:subClassOf allo-real:AFRE_0000001, cat:BravoAction ;
     skos:prefLabel "Solvent Change" ;
     skos:definition "A solvent that is selected to replace an existing one. This process involves considering the solvent's properties, compatibility with the analytes, and the analytical techniques employed, ensuring optimal performance and results in the analysis." ; 
     sh:property [sh:path cat:startDuration ;
@@ -753,23 +751,33 @@ cat:SolventChangeAction a rdfs:Class, sh:NodeShape ;
                                         sh:hasValue unit:MIN] ]];
     sh:property [sh:path cat:hasCartridge ; sh:class cat:Cartridge] ;
     sh:property [sh:path cat:isSpmeProcess ; sh:datatype xsd:boolean] ; #isSpmeProcess
+    sh:property [sh:path cat:hasWell ; sh:class cat:Well] ; #hasWell
     .
 
-allo-real:AFRE_0000001 a rdfs:Class, sh:NodeShape ;
+cat:Action a rdfs:Class, sh:NodeShape ;
+    rdfs:subClassOf allo-real:AFRE_0000001 ;
     skos:prefLabel "Action" ;
     skos:definition "An action is a unit element in a procedure and is a concretization of an action specification." ;
-    # an action can either relates to several wells or to the full plate
-    sh:property [sh:path cat:hasPlate ; sh:class cat:Plate] ; #hasPlate
-    sh:property [sh:path cat:hasWell ; sh:class cat:Well] ; #hasWell
     sh:property [sh:path allo-res:AFR_0001723 ; sh:datatype xsd:string ] ;#Equipment name ,
     sh:property [sh:path cat:subEquipmentName ; sh:datatype xsd:string ] ;#subEquipmentName
     sh:property [sh:path schema:name ; sh:datatype xsd:string ] ; #name
     sh:property [sh:path allo-prop:AFX_0000622 ; sh:datatype xsd:dateTime ] ;#startTime ,
     sh:property [sh:path allo-res:AFR_0002423 ; sh:datatype xsd:dateTime ] ;#endTime ,
     sh:property [sh:path allo-res:AFR_0001606 ; sh:datatype xsd:string ] ;#methodName
-    sh:property [sh:path cat:hasBatch ; sh:class cat:Batch] ; #hasBatch
-    sh:property [sh:path cat:order ; sh:datatype xsd:string ] #order
     .
+
+cat:SynthAction a rdfs:Class, sh:NodeShape ;
+    rdfs:subClassOf cat:Action ;
+    sh:property [sh:path cat:hasBatch ; sh:class cat:Batch] ; #hasBatch
+    sh:property [sh:path cat:producesProduct ; sh:class cat:Product ] ;  #hasProduct
+.
+
+
+cat:BravoAction a rdfs:Class, sh:NodeShape ;
+    rdfs:subClassOf cat:Action ;
+    sh:property [sh:path cat:preparesProduct ; sh:class cat:Product ] ;  #hasProduct
+    sh:property [sh:path cat:order ; sh:datatype xsd:string ] ; #order
+.
 
 cat:Solvent a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Solvent" ;
