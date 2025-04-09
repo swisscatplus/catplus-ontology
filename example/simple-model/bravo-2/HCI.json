@@ -1,0 +1,98 @@
+{
+    "hasCampaign": {
+        "campaignName": "Caffeine Synthesis",
+        "description": "1-step N-methylation of theobromine to caffeine",
+        "objective": "High caffeine yield at the end",
+        "campaignClass": "Standard Research",
+        "type": "optimization",
+        "reference": "Substitution reaction - SN2",
+        "hasBatch": {
+            "batchID": "23",
+            "batchName": "20240516",
+            "reactionType": "N-methylation",
+            "reactionName": "Caffeine synthesis",
+            "optimizationType": "Yield optimization",
+            "link": "https://www.sciencedirect.com/science/article/pii/S0187893X15720926"
+        },
+        "hasObjective": {
+            "criteria": "Yield ≥ 90%",
+            "condition": "Reflux in acetone with methyl iodide and potassium carbonate",
+            "description": "Optimize reaction conditions to maximize caffeine yield from theobromine using methyl iodide",
+            "objectiveName": "Maximize caffeine formation"
+        },
+        "hasChemical": [
+            {
+                "chemicalID": "19",
+                "chemicalName": "Sodium methoxide",
+                "CASNumber": "124-41-4",
+                "molecularMass": {
+                    "value": 54.024,
+                    "unit": "g/mol"
+                },
+                "smiles": "C[O-].[Na+]",
+                "swissCatNumber": "SwissCAT-10942334",
+                "keywords": "optional only in HCI file",
+                "Inchi": "InChI=1S/CH3O.Na/c1-2;/h1H3;/q-1;+1",
+                "molecularFormula": "CH3NaO",
+                "density": {
+                    "value": 1.3,
+                    "unit": "g/mL"
+                }
+            },
+            {
+                "chemicalID": "36",
+                "chemicalName": "theobromine",
+                "CASNumber": "83-67-0",
+                "molecularMass": {
+                    "value": 180.160,
+                    "unit": "g/mol"
+                },
+                "smiles": "CN1C=NC2=C1C(=O)NC(=O)N2C",
+                "swissCatNumber": "SwissCAT-5429",
+                "keywords": "optional only in HCI file",
+                "Inchi": "InChI=1S/C7H8N4O2/c1-10-3-8-5-4(10)6(12)9-7(13)11(5)2/h3H,1-2H3,(H,9,12,13)",
+                "molecularFormula": "C7H8N4O2",
+                "density": {
+                    "value": 1.522,
+                    "unit": "g/mL"
+                }
+            },
+            {
+                "chemicalID": "25",
+                "chemicalName": "methyl iodide",
+                "CASNumber": "74-88-4",
+                "molecularMass": {
+                    "value": 141.939,
+                    "unit": "g/mol"
+                },
+                "smiles": "CI",
+                "swissCatNumber": "SwissCAT-6328",
+                "keywords": "optional only in HCI file",
+                "Inchi": "InChI=1S/CH3I/c1-2/h1H3",
+                "molecularFormula": "CH3I",
+                "density": {
+                    "value": 2.28,
+                    "unit": "g/mL"
+                }
+            },
+            {
+                "chemicalID": "79",
+                "chemicalName": "methanol",
+                "CASNumber": "67-56-1",
+                "molecularMass": {
+                    "value": 32.042,
+                    "unit": "g/mol"
+                },
+                "smiles": "CO",
+                "swissCatNumber": "SwissCAT-887",
+                "keywords": "optional only in HCI file",
+                "Inchi": "InChI=1S/CH4O/c1-2/h2H,1H3",
+                "molecularFormula": "CH4O",
+                "density": {
+                    "value": 0.79,
+                    "unit": "g/mL"
+                }
+            }
+        ]
+    }
+}
