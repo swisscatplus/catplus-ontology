@@ -776,6 +776,7 @@ cat:SynthAction a rdfs:Class, sh:NodeShape ;
 cat:BravoAction a rdfs:Class, sh:NodeShape ;
     rdfs:subClassOf cat:Action ;
     sh:property [sh:path cat:preparesProduct ; sh:class cat:Product ] ;  #hasProduct
+    sh:property [sh:path allo-res:AFR_0001164 ; sh:datatype xsd:string ] ; #peak identifier
     sh:property [sh:path cat:order ; sh:datatype xsd:string ] ; #order
 .
 
