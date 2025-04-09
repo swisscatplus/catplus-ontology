@@ -1,4 +1,5 @@
 import json
+import os
 import argparse
 
 def transform_numeric_lists(data):
@@ -50,11 +51,15 @@ def main():
     """Parses command-line arguments and processes the JSON file."""
     parser = argparse.ArgumentParser(description="Transforms numeric lists in JSON.")
     parser.add_argument("input_file", help="Path to the input JSON file.")
-    parser.add_argument("output_file", help="Path to the output JSON file.")
 
     args = parser.parse_args()
+    input_file = args.input_file
 
-    process_json_file(args.input_file, args.output_file)
+    # Derive output file name
+    base_name, extension = os.path.splitext(input_file)
+    output_file = f"{base_name}-no-data{extension}"
+
+    process_json_file(args.input_file, output_file)
 
 if __name__ == "__main__":
     main()
