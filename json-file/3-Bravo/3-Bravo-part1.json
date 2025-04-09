@@ -38,14 +38,14 @@
             "endingTime": "2024-07-25T12:02:41",
             "dispenseState": "Liquid",
             "dispenseType": "volume",
-            "atWell": {
+            "productIdentification":{
+                "sampleID": "1-A1",
+                "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809"
+            },
+            "hasWell": {
                 "containerID": "157",
                 "containerBarcode": "1234858858754848",
                 "position": "A1",
-                "productIdentification":{
-                    "sampleID": "1-A1",
-                    "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809"
-                }
             },
             "hasSolvent": {
                 "hasChemical": {
@@ -84,14 +84,14 @@
             "startTime": "2024-07-25T12:03:31",
             "endingTime": "2024-07-25T12:15:20",
             "SPMEprocess": true,
-            "atWell": {
+            "productIdentification":{
+                "sampleID": "1-A1",
+                "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809"
+            },
+            "hasWell": {
                 "containerID": "157",
                 "containerBarcode": "1234858858754848",
-                "position": "A1",
-                "productIdentification":{
-                    "sampleID": "1-A1",
-                    "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809"
-                }
+                "position": "A1"
             },
             "hasCartridge": {
                 "cartridgeName": "test-cartridge",
@@ -142,14 +142,14 @@
             "startTime": "2024-07-25T12:03:31",
             "endingTime": "2024-07-25T12:15:20",
             "SPMEprocess": true,
-            "atWell": {
+            "productIdentification": {
+                "sampleID": "1-A1",
+                "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809"
+            },
+            "hasWell": {
                 "containerID": "157",
                 "containerBarcode": "1234858858754848",
-                "position": "A1",
-                "productIdentification": {
-                    "sampleID": "1-A1",
-                    "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809"
-                }
+                "position": "A1"
             },
             "hasCartridge": {
                 "cartridgeName": "C18cartridge",
