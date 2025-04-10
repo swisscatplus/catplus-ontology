@@ -11,15 +11,6 @@
             },
             "startTime": "2024-07-25T12:03:31",
             "endingTime": "2024-07-25T12:15:20",
-            "atWell": {
-                "containerID": "157",
-                "containerBarcode": "1234858858754848",
-                "position": "A1",
-                "productIdentification": {
-                    "sampleID": "1-A1",
-                    "peakIdentifier": "f81b4bcb-4d4a-41c7-8b34-5610e940d3ca"
-                }
-            },
             "temperature": {
                 "value": 156,
                 "unit": "°C",
@@ -28,7 +19,16 @@
                     "unit": "°C"
                 }
             },
-            "order": "1"
+            "order": "1",
+            "productIdentification": {
+                "sampleID": "1-A1",
+                "peakIdentifier": "f81b4bcb-4d4a-41c7-8b34-5610e940d3ca"
+            },
+            "hasWell": {
+                "containerID": "157",
+                "containerBarcode": "1234858858754848",
+                "position": "A1"
+            }
         },
         {
             "actionName": "EvaporationAction",
@@ -41,15 +41,6 @@
             },
             "startTime": "2024-07-25T12:03:31",
             "endingTime": "2024-07-25T12:15:20",
-            "atWell": {
-                "containerID": "157",
-                "containerBarcode": "1234858858754848",
-                "position": "A2",
-                "productIdentification": {
-                    "sampleID": "1-A1",
-                    "peakIdentifier": "f81b4bcb-4d4a-41c7-8b34-5610e940d3ca"
-                }
-            },
             "temperature": {
                 "value": 156,
                 "unit": "°C",
@@ -58,7 +49,16 @@
                     "unit": "°C"
                 }
             },
-            "order": "2"
+            "order": "2",
+            "productIdentification": {
+                "sampleID": "1-A1",
+                "peakIdentifier": "f81b4bcb-4d4a-41c7-8b34-5610e940d3ca"
+            },
+            "hasWell": {
+                "containerID": "157",
+                "containerBarcode": "1234858858754848",
+                "position": "A2"
+            }
         },
         {
             "actionName": "AddAction",
@@ -68,15 +68,6 @@
             "endingTime": "2024-07-25T12:02:41",
             "dispenseState": "Liquid",
             "dispenseType": "volume",
-            "atWell": {
-                "containerID": "157",
-                "containerBarcode": "1234858858754848",
-                "position": "A1",
-                "productIdentification":{
-                    "sampleID": "1-A1",
-                    "peakIdentifier": "f81b4bcb-4d4a-41c7-8b34-5610e940d3ca"
-                }
-            },
             "hasSolvent": {
                 "hasChemical": {
                     "chemicalID": "25",
@@ -104,7 +95,16 @@
                     }
                 }
             },
-            "order": "3"
+            "order": "3",
+            "productIdentification": {
+                "sampleID": "1-A1",
+                "peakIdentifier": "f81b4bcb-4d4a-41c7-8b34-5610e940d3ca"
+            },
+            "hasWell": {
+                "containerID": "157",
+                "containerBarcode": "1234858858754848",
+                "position": "A1"
+            }
         },
         {
             "actionName": "AddAction",
@@ -114,15 +114,6 @@
             "endingTime": "2024-07-25T12:02:41",
             "dispenseState": "Liquid",
             "dispenseType": "volume",
-            "atWell": {
-                "containerID": "157",
-                "containerBarcode": "1234858858754848",
-                "position": "A2",
-                "productIdentification" : {
-                    "sampleID": "1-A1",
-                    "peakIdentifier": "f81b4bcb-4d4a-41c7-8b34-5610e940d3ca"
-                }
-            },
             "hasSolvent": {
                 "hasChemical": {
                     "chemicalID": "59",
@@ -150,7 +141,16 @@
                     }
                 }
             },
-            "order": "4"
+            "order": "4",
+            "productIdentification": {
+                "sampleID": "1-A1",
+                "peakIdentifier": "f81b4bcb-4d4a-41c7-8b34-5610e940d3ca"
+            },
+            "hasWell": {
+                "containerID": "157",
+                "containerBarcode": "1234858858754848",
+                "position": "A2"
+            }
         },
         {
             "actionName": "shakeAction",
@@ -159,14 +159,6 @@
             "subEquipmentName": "item-1",
             "startTime": "2024-07-25T12:03:31",
             "endingTime": "2024-07-25T12:15:20",
-            "atWell": {
-                "containerID": "157",
-                "containerBarcode": "1234858858754848",
-                "productIdentification": {
-                    "sampleID": "1-A1",
-                    "peakIdentifier": "f81b4bcb-4d4a-41c7-8b34-5610e940d3ca"
-                }
-            },
             "speedShaker": {
                 "value": 152,
                 "unit": "rpm",
@@ -175,7 +167,13 @@
                     "unit": "rpm"
                 }
             },
-            "order": "5"
+            "order": "5",
+            "productIdentification": {
+                "sampleID": "1-A1",
+                "peakIdentifier": "f81b4bcb-4d4a-41c7-8b34-5610e940d3ca"
+            },
+            "containerID": "157",
+            "containerBarcode": "1234858858754848"
         },
         {
             "actionName": "AddAction",
@@ -185,19 +183,10 @@
             "endingTime": "2024-07-25T12:02:41",
             "dispenseState": "Liquid",
             "dispenseType": "volume",
-            "atWell": {
-                "containerID": "158",
-                "containerBarcode": "1234858858754850",
-                "position": "A1",
-                "productIdentification":{
-                    "sampleID": "1-A1",
-                    "peakIdentifier": "f81b4bcb-4d4a-41c7-8b34-5610e940d3ca"
-                }
-            },
             "hasSample": {
                 "sampleID": "157-A1",
-                "containerID":"157",
-                "containerBarcode":"1234858858754848",
+                "containerID": "157",
+                "containerBarcode": "1234858858754848",
                 "position": "A1",
                 "physicalState": "Liquid",
                 "concentration": {
@@ -213,67 +202,67 @@
                     }
                 }
             },
-            "order": "6"
-        },
-        {
-            "actionName": "AddAction",
-            "methodName": "SamplingAddAction",
-            "equipmentName": "Micropipette",
-            "startTime": "2024-07-25T12:02:39",
-            "endingTime": "2024-07-25T12:02:41",
-            "dispenseState": "Liquid",
-            "dispenseType": "volume",
-            "atWell": {
-                "containerID": "159",
-                "containerBarcode": "1234858858754851",
-                "position": "A1",
-                "productIdentification":{
-                    "sampleID": "1-A1",
-                    "peakIdentifier": "f81b4bcb-4d4a-41c7-8b34-5610e940d3ca"
-                }
+            "order": "6",
+            "productIdentification": {
+                "sampleID": "1-A1",
+                "peakIdentifier": "f81b4bcb-4d4a-41c7-8b34-5610e940d3ca"
             },
-            "hasSample": {
-                "sampleID": "157-A1",
-                "containerID":"157",
-                "containerBarcode":"1234858858754848",
-                "position": "A1",
-                "physicalState": "Liquid",
-                "concentration": {
-                    "value": 0,
-                    "unit": "mol/L"
-                },
-                "volume": {
-                    "value": 0,
-                    "unit": "mL",
-                    "errorMargin": {
-                        "value": 0.01,
-                        "unit": "mL"
-                    }
-                }
-            },
-            "order": "7"
-        },
-        {
-            "actionName": "AddAction",
-            "methodName": "SamplingAddAction",
-            "equipmentName": "Micropipette",
-            "startTime": "2024-07-25T12:02:39",
-            "endingTime": "2024-07-25T12:02:41",
-            "dispenseState": "Liquid",
-            "dispenseType": "volume",
-            "atWell": {
+            "hasWell": {
                 "containerID": "158",
                 "containerBarcode": "1234858858754850",
-                "position": "A2",
-                "productIdentification":{
-                    "sampleID": "1-A1",
-                    "peakIdentifier": "f81b4bcb-4d4a-41c7-8b34-5610e940d3ca"
+                "position": "A1"
+            }
+        },
+        {
+            "actionName": "AddAction",
+            "methodName": "SamplingAddAction",
+            "equipmentName": "Micropipette",
+            "startTime": "2024-07-25T12:02:39",
+            "endingTime": "2024-07-25T12:02:41",
+            "dispenseState": "Liquid",
+            "dispenseType": "volume",
+            "hasSample": {
+                "sampleID": "157-A1",
+                "containerID": "157",
+                "containerBarcode": "1234858858754848",
+                "position": "A1",
+                "physicalState": "Liquid",
+                "concentration": {
+                    "value": 0,
+                    "unit": "mol/L"
+                },
+                "volume": {
+                    "value": 0,
+                    "unit": "mL",
+                    "errorMargin": {
+                        "value": 0.01,
+                        "unit": "mL"
+                    }
                 }
             },
+            "order": "7",
+            "productIdentification": {
+                "sampleID": "1-A1",
+                "peakIdentifier": "f81b4bcb-4d4a-41c7-8b34-5610e940d3ca"
+            },
+            "hasWell": {
+                "containerID": "159",
+                "containerBarcode": "1234858858754851",
+                "position": "A1"
+            }
+        },
+        {
+            "actionName": "AddAction",
+            "methodName": "SamplingAddAction",
+            "equipmentName": "Micropipette",
+            "startTime": "2024-07-25T12:02:39",
+            "endingTime": "2024-07-25T12:02:41",
+            "dispenseState": "Liquid",
+            "dispenseType": "volume",
             "hasSample": {
                 "sampleID": "157-A2",
-                "containerID":"157",
-                "containerBarcode":"1234858858754848",
+                "containerID": "157",
+                "containerBarcode": "1234858858754848",
                 "position": "A2",
                 "physicalState": "Liquid",
                 "concentration": {
@@ -289,7 +278,16 @@
                     }
                 }
             },
-            "order": "8"
+            "order": "8",
+            "productIdentification": {
+                "sampleID": "1-A1",
+                "peakIdentifier": "f81b4bcb-4d4a-41c7-8b34-5610e940d3ca"
+            },
+            "hasWell": {
+                "containerID": "158",
+                "containerBarcode": "1234858858754850",
+                "position": "A2"
+            }
         },
         {
             "actionName": "AddAction",
@@ -299,25 +297,16 @@
             "endingTime": "2024-07-25T12:02:41",
             "dispenseState": "Liquid",
             "dispenseType": "volume",
-            "atWell": {
-                "containerID": "159",
-                "containerBarcode": "1234858858754851",
-                "position": "A2",
-                "productIdentification":{
-                    "sampleID": "1-A1",
-                    "peakIdentifier": "f81b4bcb-4d4a-41c7-8b34-5610e940d3ca"
-                }
-            },
             "hasSample": {
                 "sampleID": "157-A2",
-                "containerID":"157",
-                "containerBarcode":"1234858858754848",
+                "containerID": "157",
+                "containerBarcode": "1234858858754848",
                 "position": "A2",
                 "physicalState": "Liquid",
                 "concentration": {
-                            "value": 0,
-                            "unit": "mol/L"
-                        },
+                    "value": 0,
+                    "unit": "mol/L"
+                },
                 "volume": {
                     "value": 0,
                     "unit": "mL",
@@ -327,7 +316,16 @@
                     }
                 }
             },
-            "order": "9"
+            "order": "9",
+            "productIdentification": {
+                "sampleID": "1-A1",
+                "peakIdentifier": "f81b4bcb-4d4a-41c7-8b34-5610e940d3ca"
+            },
+            "hasWell": {
+                "containerID": "159",
+                "containerBarcode": "1234858858754851",
+                "position": "A2"
+            }
         },
         {
             "actionName": "AddAction",
@@ -337,15 +335,6 @@
             "endingTime": "2024-07-25T12:02:41",
             "dispenseState": "Liquid",
             "dispenseType": "volume",
-            "atWell": {
-                "containerID": "158",
-                "containerBarcode": "1234858858754850",
-                "position": "A1",
-                "productIdentification":{
-                    "sampleID": "1-A1",
-                    "peakIdentifier": "f81b4bcb-4d4a-41c7-8b34-5610e940d3ca"
-                }
-            },
             "hasSolvent": {
                 "hasChemical": {
                     "chemicalID": "105",
@@ -373,7 +362,16 @@
                     }
                 }
             },
-            "order": "10"
+            "order": "10",
+            "productIdentification": {
+                "sampleID": "1-A1",
+                "peakIdentifier": "f81b4bcb-4d4a-41c7-8b34-5610e940d3ca"
+            },
+            "hasWell": {
+                "containerID": "158",
+                "containerBarcode": "1234858858754850",
+                "position": "A1"
+            }
         },
         {
             "actionName": "AddAction",
@@ -383,15 +381,6 @@
             "endingTime": "2024-07-25T12:02:41",
             "dispenseState": "Liquid",
             "dispenseType": "volume",
-            "atWell": {
-                "containerID": "159",
-                "containerBarcode": "1234858858754851",
-                "position": "A1",
-                "productIdentification":{
-                    "sampleID": "1-A1",
-                    "peakIdentifier": "f81b4bcb-4d4a-41c7-8b34-5610e940d3ca"
-                }
-            },
             "hasSolvent": {
                 "hasChemical": {
                     "chemicalID": "105",
@@ -465,7 +454,16 @@
                     }
                 }
             },
-            "order": "12"
+            "order": "12",
+            "productIdentification": {
+                "sampleID": "1-A1",
+                "peakIdentifier": "f81b4bcb-4d4a-41c7-8b34-5610e940d3ca"
+            },
+            "hasWell": {
+                "containerID": "158",
+                "containerBarcode": "1234858858754850",
+                "position": "A2"
+            }
         },
         {
             "actionName": "AddAction",
@@ -475,15 +473,6 @@
             "endingTime": "2024-07-25T12:02:41",
             "dispenseState": "Liquid",
             "dispenseType": "volume",
-            "atWell": {
-                "containerID": "159",
-                "containerBarcode": "1234858858754851",
-                "position": "A2",
-                "productIdentification": {
-                    "sampleID": "1-A1",
-                    "peakIdentifier": "f81b4bcb-4d4a-41c7-8b34-5610e940d3ca"
-                }
-            },
             "hasSolvent": {
                 "hasChemical": {
                     "chemicalID": "105",
@@ -511,7 +500,16 @@
                     }
                 }
             },
-            "order": "13"
+            "order": "13",
+            "productIdentification": {
+                "sampleID": "1-A1",
+                "peakIdentifier": "f81b4bcb-4d4a-41c7-8b34-5610e940d3ca"
+            },
+            "hasWell": {
+                "containerID": "159",
+                "containerBarcode": "1234858858754851",
+                "position": "A2"
+            }
         }
     ]
 }

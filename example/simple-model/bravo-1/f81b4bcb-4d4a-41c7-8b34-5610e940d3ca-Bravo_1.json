@@ -11,15 +11,6 @@
             },
             "startTime": "2024-07-25T12:03:31",
             "endingTime": "2024-07-25T12:15:20",
-            "atWell": {
-                "containerID": "157",
-                "containerBarcode": "1234858858754848",
-                "position": "A1",
-                "productIdentification":{
-                    "sampleID": "100-A1",
-                    "peakIdentifier": "f81b4bcb-4d4a-41c7-8b34-5610e940d3ca"
-                }
-            },
             "temperature": {
                 "value": 156,
                 "unit": "°C",
@@ -28,7 +19,16 @@
                     "unit": "°C"
                 }
             },
-            "order": "1"
+            "order": "1",
+            "productIdentification": {
+                "sampleID": "100-A1",
+                "peakIdentifier": "f81b4bcb-4d4a-41c7-8b34-5610e940d3ca"
+            },
+            "hasWell": {
+                "containerID": "157",
+                "containerBarcode": "1234858858754848",
+                "position": "A1"
+            }
         },
         {
             "actionName": "AddAction",
@@ -38,15 +38,6 @@
             "endingTime": "2024-07-25T12:02:41",
             "dispenseState": "Liquid",
             "dispenseType": "volume",
-            "atWell": {
-                "containerID": "157",
-                "containerBarcode": "1234858858754848",
-                "position": "A1",
-                "productIdentification":{
-                    "sampleID": "100-A1",
-                    "peakIdentifier": "f81b4bcb-4d4a-41c7-8b34-5610e940d3ca"
-                }
-            },
             "hasSolvent": {
                 "hasChemical": {
                     "chemicalID": "14",
@@ -74,7 +65,16 @@
                     }
                 }
             },
-            "order": "2"
+            "order": "2",
+            "productIdentification": {
+                "sampleID": "100-A1",
+                "peakIdentifier": "f81b4bcb-4d4a-41c7-8b34-5610e940d3ca"
+            },
+            "hasWell": {
+                "containerID": "157",
+                "containerBarcode": "1234858858754848",
+                "position": "A1"
+            }
         },
         {
             "actionName": "solventChangeAction",
@@ -84,15 +84,6 @@
             "startTime": "2024-07-25T12:03:31",
             "endingTime": "2024-07-25T12:15:20",
             "SPMEprocess": true,
-            "atWell": {
-                "containerID": "157",
-                "containerBarcode": "1234858858754848",
-                "position": "A1",
-                "productIdentification":{
-                    "sampleID": "100-A1",
-                    "peakIdentifier": "f81b4bcb-4d4a-41c7-8b34-5610e940d3ca"
-                }
-            },
             "hasCartridge": {
                 "cartridgeName": "test-cartridge",
                 "cartridgeComposition": "test-material"
@@ -132,7 +123,16 @@
                     }
                 }
             },
-            "order": "3"
+            "order": "3",
+            "productIdentification": {
+                "sampleID": "100-A1",
+                "peakIdentifier": "f81b4bcb-4d4a-41c7-8b34-5610e940d3ca"
+            },
+            "hasWell": {
+                "containerID": "157",
+                "containerBarcode": "1234858858754848",
+                "position": "A1"
+            }
         },
         {
             "actionName": "solventChangeAction",
@@ -142,15 +142,6 @@
             "startTime": "2024-07-25T12:03:31",
             "endingTime": "2024-07-25T12:15:20",
             "SPMEprocess": true,
-            "atWell": {
-                "containerID": "157",
-                "containerBarcode": "1234858858754848",
-                "position": "A1",
-                "productIdentification": {
-                    "sampleID": "100-A1",
-                    "peakIdentifier": "f81b4bcb-4d4a-41c7-8b34-5610e940d3ca"
-                }
-            },
             "hasCartridge": {
                 "cartridgeName": "C18cartridge",
                 "cartridgeComposition": "C18"
@@ -190,7 +181,16 @@
                     }
                 }
             },
-            "order": "4"
+            "order": "4",
+            "productIdentification": {
+                "sampleID": "100-A1",
+                "peakIdentifier": "f81b4bcb-4d4a-41c7-8b34-5610e940d3ca"
+            },
+            "hasWell": {
+                "containerID": "157",
+                "containerBarcode": "1234858858754848",
+                "position": "A1"
+            }
         }
     ]
 }
