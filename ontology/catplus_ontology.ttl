@@ -683,7 +683,7 @@ cat:BravoAddAction a rdfs:Class, sh:NodeShape ;
 
 
 cat:SetTemperatureAction a rdfs:Class, sh:NodeShape ;
-    rdfs:subClassOf allo-real:AFRE_0000001, cat:SynthAction ;
+    rdfs:subClassOf cat:SynthAction ;
     sh:property [sh:path cat:hasPlate ; sh:class cat:Plate] ; # hasPlate
     sh:property cat:speedShakerShape ;
     sh:property cat:temperatureShakerShape ;
@@ -692,7 +692,7 @@ cat:SetTemperatureAction a rdfs:Class, sh:NodeShape ;
 
 
 cat:SetPressureAction a rdfs:Class, sh:NodeShape ;
-    rdfs:subClassOf allo-real:AFRE_0000001, cat:SynthAction ;
+    rdfs:subClassOf cat:SynthAction ;
     sh:property [sh:path cat:hasPlate ; sh:class cat:Plate] ; # hasPlate
     sh:property [sh:path allo-proc:AFP_0002677 ;
                  sh:node cat:Observation ;
@@ -701,7 +701,7 @@ cat:SetPressureAction a rdfs:Class, sh:NodeShape ;
     .
 
 cat:SetVacuumAction a rdfs:Class, sh:NodeShape ;
-    rdfs:subClassOf allo-real:AFRE_0000001, cat:SynthAction ;
+    rdfs:subClassOf cat:SynthAction ;
     sh:property [sh:path cat:hasPlate ; sh:class cat:Plate] ; # hasPlate
     sh:property [sh:path cat:vacuum ; #vacuum
                  sh:node cat:Observation ;
@@ -710,7 +710,7 @@ cat:SetVacuumAction a rdfs:Class, sh:NodeShape ;
     .
 
 cat:ShakeSynthAction a rdfs:Class, sh:NodeShape ;
-    rdfs:subClassOf allo-real:AFRE_0000001, cat:SynthAction ;
+    rdfs:subClassOf cat:SynthAction ;
     sh:property [sh:path cat:hasPlate ; sh:class cat:Plate] ; # hasPlate
     sh:property cat:speedTumbleStirrerShape ;
     sh:property cat:temperatureShakerShape ;
@@ -718,19 +718,19 @@ cat:ShakeSynthAction a rdfs:Class, sh:NodeShape ;
     .
 
 cat:ShakeBravoAction a rdfs:Class, sh:NodeShape ;
-    rdfs:subClassOf allo-real:AFRE_0000001, cat:BravoAction ;
+    rdfs:subClassOf cat:BravoAction ;
     sh:property [sh:path cat:hasPlate ; sh:class cat:Plate] ; # hasPlate
     sh:property cat:temperatureInDegC ;
     .
 
 
 cat:FiltrateAction a rdfs:Class, sh:NodeShape ;
-    rdfs:subClassOf allo-real:AFRE_0000001, cat:SynthAction ;
+    rdfs:subClassOf cat:SynthAction ;
     sh:property [sh:path cat:hasPlate ; sh:class cat:Plate] ; # hasPlate
     .
 
 cat:EvaporationAction a rdfs:Class, sh:NodeShape ;
-    rdfs:subClassOf allo-real:AFRE_0000001, cat:BravoAction ;
+    rdfs:subClassOf cat:BravoAction ;
     sh:property [sh:path allo-prop:AFX_0000060 ; sh:datatype xsd:double] ; #temperature
     sh:property [sh:path cat:hasWell ; sh:class cat:Well] ; #hasWell
     sh:property [sh:path cat:volumeEvaporationFinal ; sh:node cat:Observation] ; #volumeEvaporationFinal
@@ -738,7 +738,7 @@ cat:EvaporationAction a rdfs:Class, sh:NodeShape ;
     .
 
 cat:SolventChangeAction a rdfs:Class, sh:NodeShape ;
-    rdfs:subClassOf allo-real:AFRE_0000001, cat:BravoAction ;
+    rdfs:subClassOf cat:BravoAction ;
     skos:prefLabel "Solvent Change" ;
     skos:definition "A solvent that is selected to replace an existing one. This process involves considering the solvent's properties, compatibility with the analytes, and the analytical techniques employed, ensuring optimal performance and results in the analysis." ; 
     sh:property [sh:path cat:startDuration ;
