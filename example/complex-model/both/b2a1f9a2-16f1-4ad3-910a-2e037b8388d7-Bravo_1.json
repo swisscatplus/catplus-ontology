@@ -1,0 +1,196 @@
+{
+    "Actions": [
+        {
+            "actionName": "EvaporationAction",
+            "methodName": "Evaporate",
+            "equipmentName": "Evaporator",
+            "subEquipmentName": "item-1",
+            "volumeEvaporationFinal": {
+                "value": 50,
+                "unit": "%"
+            },
+            "startTime": "2024-07-25T12:03:31",
+            "endingTime": "2024-07-25T12:15:20",
+            "temperature": {
+                "value": 156,
+                "unit": "°C",
+                "errorMargin": {
+                    "value": 1,
+                    "unit": "°C"
+                }
+            },
+            "order": "1",
+            "productIdentification": {
+                "sampleID": "151-D3",
+                "peakIdentifier": "b2a1f9a2-16f1-4ad3-910a-2e037b8388d7"
+            },
+            "hasWell": {
+                "containerID": "10",
+                "containerBarcode": "1234858858723784",
+                "position": "A1"
+            }
+        },
+        {
+            "actionName": "AddAction",
+            "methodName": "DilutionAddAction",
+            "equipmentName": "Micropipette",
+            "startTime": "2024-07-25T12:02:39",
+            "endingTime": "2024-07-25T12:02:41",
+            "dispenseState": "Liquid",
+            "dispenseType": "volume",
+            "hasSolvent": {
+                "hasChemical": {
+                    "chemicalID": "14",
+                    "chemicalName": "Water",
+                    "CASNumber": "7732-18-5",
+                    "molecularMass": {
+                        "value": 18.015,
+                        "unit": "g/mol"
+                    },
+                    "smiles": "O",
+                    "swissCatNumber": "SwissCAT-962",
+                    "Inchi": "1S/H2O/h1H2",
+                    "molecularFormula": "H2O",
+                    "density": {
+                        "value": 1.000,
+                        "unit": "g/mL"
+                    }
+                },
+                "volume": {
+                    "value": 0.5,
+                    "unit": "mL",
+                    "errorMargin": {
+                        "value": 0.01,
+                        "unit": "mL"
+                    }
+                }
+            },
+            "order": "2",
+            "productIdentification": {
+                "sampleID": "151-D3",
+                "peakIdentifier": "b2a1f9a2-16f1-4ad3-910a-2e037b8388d7"
+            },
+            "hasWell": {
+                "containerID": "10",
+                "containerBarcode": "1234858858723784",
+                "position": "A1"
+            }
+        },
+        {
+            "actionName": "solventChangeAction",
+            "methodName": "separation-cartridge-part-1",
+            "equipmentName": "SPE",
+            "subEquipmentName": "cartridge exchange",
+            "startTime": "2024-07-25T12:03:31",
+            "endingTime": "2024-07-25T12:15:20",
+            "SPMEprocess": true,
+            "hasCartridge": {
+                "cartridgeName": "test-cartridge",
+                "cartridgeComposition": "test-material"
+            },
+            "startDuration": {
+                "value": 0,
+                "unit": "min"
+            },
+            "endingDuration": {
+                "value": 1,
+                "unit": "min"
+            },
+            "hasSolvent": {
+                "hasChemical": {
+                    "chemicalID": "25",
+                    "chemicalName": "Acetonitrile",
+                    "CASNumber": "75-05-8",
+                    "molecularMass": {
+                        "value": 41.05,
+                        "unit": "g/mol"
+                    },
+                    "smiles": "CC#N",
+                    "swissCatNumber": "SwissCAT-6342",
+                    "Inchi": "1S/C2H3N/c1-2-3/h1H3",
+                    "molecularFormula": "C2H3N",
+                    "density": {
+                        "value": 0.787,
+                        "unit": "g/mL"
+                    }
+                },
+                "volume": {
+                    "value": 50,
+                    "unit": "uL",
+                    "errorMargin": {
+                        "value": 0.5,
+                        "unit": "uL"
+                    }
+                }
+            },
+            "order": "3",
+            "productIdentification": {
+                "sampleID": "151-D3",
+                "peakIdentifier": "b2a1f9a2-16f1-4ad3-910a-2e037b8388d7"
+            },
+            "hasWell": {
+                "containerID": "10",
+                "containerBarcode": "1234858858723784",
+                "position": "A1"
+            }
+        },
+        {
+            "actionName": "solventChangeAction",
+            "methodName": "separation-cartridge-part-2",
+            "equipmentName": "SPE",
+            "subEquipmentName": "cartridge exchange",
+            "startTime": "2024-07-25T12:03:31",
+            "endingTime": "2024-07-25T12:15:20",
+            "SPMEprocess": true,
+            "hasCartridge": {
+                "cartridgeName": "C18cartridge",
+                "cartridgeComposition": "C18"
+            },
+            "startDuration": {
+                "value": 1,
+                "unit": "min"
+            },
+            "endingDuration": {
+                "value": 7,
+                "unit": "min"
+            },
+            "hasSolvent": {
+                "hasChemical": {
+                    "chemicalID": "25",
+                    "chemicalName": "Acetonitrile",
+                    "CASNumber": "75-05-8",
+                    "molecularMass": {
+                        "value": 41.05,
+                        "unit": "g/mol"
+                    },
+                    "smiles": "CC#N",
+                    "swissCatNumber": "SwissCAT-6342",
+                    "Inchi": "1S/C2H3N/c1-2-3/h1H3",
+                    "molecularFormula": "C2H3N",
+                    "density": {
+                        "value": 0.787,
+                        "unit": "g/mL"
+                    }
+                },
+                "volume": {
+                    "value": 50,
+                    "unit": "uL",
+                    "errorMargin": {
+                        "value": 0.5,
+                        "unit": "uL"
+                    }
+                }
+            },
+            "order": "4",
+            "productIdentification": {
+                "sampleID": "151-D3",
+                "peakIdentifier": "b2a1f9a2-16f1-4ad3-910a-2e037b8388d7"
+            },
+            "hasWell": {
+                "containerID": "10",
+                "containerBarcode": "1234858858723784",
+                "position": "A1"
+            }
+        }
+    ]
+}

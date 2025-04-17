@@ -22,8 +22,8 @@
                                 ]
                             },
                             "sample document": {
-                                "sample identifier": "0659d110-49d0-4e98-8f3a-1aaf9c4ec0d9",
-                                "written name": "100-A1"
+                                "sample identifier": "6f2a9c3d-3d47-4bd3-8a9f-7dbbc413b16f",
+                                "written name": "120-A1"
                             },
                             "injection document": {
                                 "autosampler injection volume setting (chromatography)": {
@@ -79,7 +79,7 @@
                                                 "value": 1.19008,
                                                 "unit": "min"
                                             },
-                                            "identifier": "f81b4bcb-4d4a-41c7-8b34-5610e940d3ca",
+                                            "identifier": "511359d7-df0d-4018-bfee-ff58585b5809",
                                             "peak end": {
                                                 "value": 1.68996,
                                                 "unit": "min"
@@ -108,6 +108,46 @@
                                                 "value": -183.143,
                                                 "unit": "mAU"
                                             }
+                                        },
+                                        {
+                                            "@index": 2,
+                                            "peak area": {
+                                                "value": 34034.5,
+                                                "unit": "mAU.s"
+                                            },
+                                            "retention time": {
+                                                "value": 4.35675,
+                                                "unit": "min"
+                                            },
+                                            "identifier": "f3b749c0-0fa6-4e31-bb6e-2e9f8d7a12e3",
+                                            "peak end": {
+                                                "value": 4.68996,
+                                                "unit": "min"
+                                            },
+                                            "relative peak height": {
+                                                "value": 100,
+                                                "unit": "%"
+                                            },
+                                            "peak height": {
+                                                "value": 6058.31,
+                                                "unit": "mAU"
+                                            },
+                                            "peak start": {
+                                                "value": 3.984987,
+                                                "unit": "min"
+                                            },
+                                            "relative peak area": {
+                                                "value": 100,
+                                                "unit": "%"
+                                            },
+                                            "peak value at start": {
+                                                "value": -100.679,
+                                                "unit": "mAU"
+                                            },
+                                            "peak value at end": {
+                                                "value": -163.143,
+                                                "unit": "mAU"
+                                            }
                                         }
                                     ]
                                 }
@@ -130,8 +170,8 @@
                                 ]
                             },
                             "sample document": {
-                                "sample identifier": "0659d110-49d0-4e98-8f3a-1aaf9c4ec0d9",
-                                "written name": "100-A1"
+                                "sample identifier": "6f2a9c3d-3d47-4bd3-8a9f-7dbbc413b16f",
+                                "written name": "120-A1"
                             },
                             "injection document": {
                                 "autosampler injection volume setting (chromatography)": {
@@ -197,8 +237,8 @@
                                 ]
                             },
                             "sample document": {
-                                "sample identifier": "0659d110-49d0-4e98-8f3a-1aaf9c4ec0d9",
-                                "written name": "100-A1"
+                                "sample identifier": "6f2a9c3d-3d47-4bd3-8a9f-7dbbc413b16f",
+                                "written name": "120-A1"
                             },
                             "injection document": {
                                 "autosampler injection volume setting (chromatography)": {
@@ -254,7 +294,7 @@
                                                 "value": 1.29756,
                                                 "unit": "min"
                                             },
-                                            "identifier": "511359d7-df0d-4018-bfee-ff58585b5809",
+                                            "identifier": "e8d3d276-4e61-4b3b-8d84-f51c3b9132f0",
                                             "peak end": {
                                                 "value": 2.15236,
                                                 "unit": "min"
@@ -283,6 +323,46 @@
                                                 "value": 26108000,
                                                 "unit": "(unitless)"
                                             }
+                                        },
+                                        {
+                                            "@index": 2,
+                                            "peak area": {
+                                                "value": 1278380000,
+                                                "unit": "Counts.s"
+                                            },
+                                            "retention time": {
+                                                "value": 4.35675,
+                                                "unit": "min"
+                                            },
+                                            "identifier": "7b83e4a5-bb01-4e47-a726-90f03cb2a3f2",
+                                            "peak end": {
+                                                "value": 4.68996,
+                                                "unit": "min"
+                                            },
+                                            "relative peak height": {
+                                                "value": 100,
+                                                "unit": "%"
+                                            },
+                                            "peak height": {
+                                                "value": 6058.31,
+                                                "unit": "(unitless)"
+                                            },
+                                            "peak start": {
+                                                "value": 3.984987,
+                                                "unit": "min"
+                                            },
+                                            "relative peak area": {
+                                                "value": 100,
+                                                "unit": "%"
+                                            },
+                                            "peak value at start": {
+                                                "value": -100.679,
+                                                "unit": "(unitless)"
+                                            },
+                                            "peak value at end": {
+                                                "value": -163.143,
+                                                "unit": "(unitless)"
+                                            }
                                         }
                                     ]
                                 }
@@ -305,8 +385,8 @@
                                 ]
                             },
                             "sample document": {
-                                "sample identifier": "0659d110-49d0-4e98-8f3a-1aaf9c4ec0d9",
-                                "written name": "100-A1"
+                                "sample identifier": "6f2a9c3d-3d47-4bd3-8a9f-7dbbc413b16f",
+                                "written name": "120-A1"
                             },
                             "injection document": {
                                 "autosampler injection volume setting (chromatography)": {
@@ -372,8 +452,8 @@
                                 ]
                             },
                             "sample document": {
-                                "sample identifier": "0659d110-49d0-4e98-8f3a-1aaf9c4ec0d9",
-                                "written name": "100-A1"
+                                "sample identifier": "6f2a9c3d-3d47-4bd3-8a9f-7dbbc413b16f",
+                                "written name": "120-A1"
                             },
                             "injection document": {
                                 "autosampler injection volume setting (chromatography)": {
@@ -7336,8 +7416,8 @@
                                 ]
                             },
                             "sample document": {
-                                "sample identifier": "0659d110-49d0-4e98-8f3a-1aaf9c4ec0d9",
-                                "written name": "100-A1"
+                                "sample identifier": "6f2a9c3d-3d47-4bd3-8a9f-7dbbc413b16f",
+                                "written name": "120-A1"
                             },
                             "injection document": {
                                 "autosampler injection volume setting (chromatography)": {
