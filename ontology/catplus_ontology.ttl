@@ -786,7 +786,8 @@ cat:Solvent a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path cat:hasChemical ; sh:class obo:CHEBI_25367 ] ; #hasChemical
     sh:property [sh:path cat:volume ; sh:node cat:Observation ; #volume
                  sh:node [sh:property    [sh:path qudt:unit ;
-                                         sh:hasValue unit:MilliL] ]]
+                                          sh:xone ([ sh:hasValue unit:MilliL ] [ sh:hasValue unit:MicroL ]);]]]
+
 .
 
 
@@ -1196,6 +1197,7 @@ unit:GM-PER-MOL a qudt:Unit.
 unit:GM-PER-MilliL a qudt:Unit.
 unit:MIN a qudt:Unit.
 unit:MilliL a qudt:Unit.
+unit:MicroL a qudt:Unit.
 unit:MilliGM a qudt:Unit.
 unit:MOL-PER-L a qudt:Unit.
 unit:NanoM a qudt:Unit.
