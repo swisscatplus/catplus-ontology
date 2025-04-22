@@ -216,6 +216,13 @@ cat:temperatureShaker a rdf:Property ;
     skos:definition "the temperature maintained by a device that combines mechanical agitation with precise temperature control, allowing samples to be mixed or incubated under specific thermal conditions." ;
     .
 
+
+cat:temperature a rdf:Property ;
+    rdfs:subPropertyOf allo-prop:AFX_0000060 ;
+    skos:prefLabel "temperature shaker" ;
+    skos:definition "the temperature maintained by a device that combines mechanical agitation with precise temperature control, allowing samples to be mixed or incubated under specific thermal conditions." ;
+    .
+
 cat:wavelength a rdf:Property ;
     skos:prefLabel "wavelength irradiation" ;
     skos:definition "Distance in the direction of propagation of a periodic wave between two successive points where at a given time the phase is the same. [IUPAC Gold Book]. The wavelength to irradiate a sample. One possible unit is the nm." ;
@@ -720,7 +727,7 @@ cat:ShakeSynthAction a rdfs:Class, sh:NodeShape ;
 cat:ShakeBravoAction a rdfs:Class, sh:NodeShape ;
     rdfs:subClassOf cat:BravoAction ;
     sh:property [sh:path cat:hasPlate ; sh:class cat:Plate] ; # hasPlate
-    sh:property cat:temperatureInDegC ;
+    sh:property cat:temperatureShape ;
     .
 
 
@@ -731,7 +738,7 @@ cat:FiltrateAction a rdfs:Class, sh:NodeShape ;
 
 cat:EvaporationAction a rdfs:Class, sh:NodeShape ;
     rdfs:subClassOf cat:BravoAction ;
-    sh:property [sh:path allo-prop:AFX_0000060 ; sh:datatype xsd:double] ; #temperature
+    sh:property cat:temperatureShape ; #temperature
     sh:property [sh:path cat:hasWell ; sh:class cat:Well] ; #hasWell
     sh:property [sh:path cat:volumeEvaporationFinal ; sh:node cat:Observation] ; #volumeEvaporationFinal
     sh:property [sh:path purl:identifier ; sh:datatype xsd:string] ; #identifier/sampleID
@@ -1175,10 +1182,10 @@ cat:speedShakerShape a sh:PropertyShape ;
                 sh:hasValue unit:REV-PER-MIN] ;]
     .
 
-cat:temperatureInDegC a sh:PropertyShape ;
-    sh:path allo-prop:AFX_0000060 ;
+cat:temperatureShape a sh:PropertyShape ;
+    sh:path cat:temperature ;
     sh:node cat:Observation ;
-    sh:property [sh:path qudt:unit ; sh:hasValue unit:DEG_C] ;
+    sh:property [sh:path qudt:unit ; sh:hasValue unit:DEG_C]
     .
 
 cat:vialShape a sh:PropertyShape ;
