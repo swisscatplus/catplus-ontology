@@ -1,4 +1,4 @@
-prefix cat: <http://example.org/cat/ontology/>
+prefix cat: <http://example.org/catplus/ontology/>
 prefix skos: <http://www.w3.org/2004/02/skos/core#>
 prefix sh: <http://www.w3.org/ns/shacl#>
 prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -41,7 +41,7 @@ cat: a owl:Ontology ;
     dct:modified "2025-02-19"^^xsd:date ;
     dct:title "CAT+ Ontology" ;
     vann:preferredNamespacePrefix "cat" ;
-    vann:preferredNamespaceUri "http://example.org/cat/ontology/"^^xsd:string ;
+    vann:preferredNamespaceUri "http://example.org/catplus/ontology/"^^xsd:string ;
     owl:versionInfo "1.0.0"^^xsd:string ;
     sh:entailment <http://www.w3.org/ns/entailment/RDFS>
     .
