@@ -597,6 +597,11 @@ cat:peak a rdf:Property ;
     skos:definition "A peak is a local maximum in the chromatogram that represents the presence of a specific compound or analyte." ;
     .
 
+allo-res:AFR_0001118 a rdf:Property ;
+    skos:prefLabel "sample Identifier" ;
+    skos:definition "Sample id is a measurement metadata that identifies a sample being measured. [Allotrope]" ;
+    .
+
 obo:IAO_0000590 a rdf:Property ;
     skos:prefLabel "written name" ;
     skos:definition "A textual entity that denotes a particular in reality. [IAO]" ;
@@ -1027,8 +1032,8 @@ cat:ChromatographyColumnDocument a rdfs:Class, sh:NodeShape ;
 cat:SampleDocument a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Sample Document" ;
     skos:definition "A document describing a sample, including identifiers and names for traceability in experimental contexts." ;
-    sh:property [sh:path cat:hasProduct ; sh:class cat:Product ] ; #product=sample
-    sh:property [sh:path obo:IAO_0000590 ; sh:datatype xsd:string ] ; #written name
+    sh:property [sh:path cat:hasProduct ; sh:class cat:Product ] ; #product and its identifier
+    sh:property [sh:path allores:AFR_0001118 ; sh:datatype xsd:string ] ; # sample identifier Agilent machine
     .
 
 cat:InjectionDocument a rdfs:Class, sh:NodeShape ;
