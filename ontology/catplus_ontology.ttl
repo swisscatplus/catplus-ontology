@@ -1033,7 +1033,8 @@ cat:SampleDocument a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Sample Document" ;
     skos:definition "A document describing a sample, including identifiers and names for traceability in experimental contexts." ;
     sh:property [sh:path cat:hasProduct ; sh:class cat:Product ] ; #product and its identifier
-    sh:property [sh:path allores:AFR_0001118 ; sh:datatype xsd:string ] ; # sample identifier Agilent machine
+    sh:property [sh:path allo-res:AFR_0001118 ; sh:datatype xsd:string ] ; # sample identifier Agilent machine
+
     .
 
 cat:InjectionDocument a rdfs:Class, sh:NodeShape ;
