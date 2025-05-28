@@ -1,0 +1,8 @@
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX cat: <http://example.org/cat#>
+
+SELECT DISTINCT ?casNumber  
+WHERE
+{?s cat:casNumber ?casNumber .
+}
