@@ -664,7 +664,7 @@ cat:SynthAddAction a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path cat:hasSample ; sh:class cat:Sample ] ;
     sh:property [sh:path qudt:quantity ;
                  sh:node cat:Observation ] ;
-    sh:property cat:speedShaker ;
+    sh:property cat:speedShakerShape ;
     sh:property cat:temperatureShakerShape ;
     sh:property cat:temperatureTumbleStirrerShape ;
     sh:property [sh:path cat:dispenseType ; sh:datatype xsd:string] ;
@@ -1072,7 +1072,7 @@ allo-res:AFR_0000413 a rdfs:Class, sh:NodeShape ;
     skos:definition "A peak describes a part of a spectrum/chromatogram/plot at a definite range of the experimental parameter (independent variable) of the spectrum. This definition includes a single data point of the spectrum. [Allotrope]" ;
     sh:property [sh:path allo-dchdf:Index ; sh:datatype xsd:integer] ; #index
     sh:property [sh:path allo-res:AFR_0001164 ; sh:datatype xsd:string ] ; #peak identifier
-    sh:property [sh:path allo-proc:AFR_0001073 ; sh:node cat:Measurement ;
+    sh:property [sh:path allo-res:AFR_0001073 ; sh:node cat:Measurement ;
                 sh:node [sh:property [sh:path qudt:unit ; 
                                     sh:hasValue qudt-ext:MilliAbsorbanceUnitTimesSecond] ]] ; #peak area
     sh:property [sh:path allo-res:AFR_0001089 ; sh:node cat:Measurement ;
