@@ -1,0 +1,9 @@
+PREFIX cat: <http://example.org/cat#>
+PREFIX schema: <https://schema.org/>
+prefix allo-res: <http://purl.allotrope.org/ontologies/result#>
+
+SELECT DISTINCT ?name
+WHERE {
+ ?s1 a allo-res:AFR_0002567.
+ ?s1  allo-res:AFR_0002568 ?name .
+ ?s1 ?p ?o}

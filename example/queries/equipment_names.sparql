@@ -1,0 +1,10 @@
+PREFIX cat: <http://example.org/cat#>
+PREFIX schema: <https://schema.org/>
+prefix allo-res: <http://purl.allotrope.org/ontologies/result#>
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT DISTINCT ?name WHERE {
+ ?s1 a ?something .
+ ?s1 allo-res:AFR_0001723 ?name .}
+  

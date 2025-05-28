@@ -1,0 +1,8 @@
+PREFIX cat: <http://example.org/cat#>
+PREFIX schema: <https://schema.org/>
+prefix allo-res: <http://purl.allotrope.org/ontologies/result#>
+
+SELECT DISTINCT ?reactiontype 
+WHERE {
+ ?s1 cat:reactionType ?reactiontype .
+ ?s1 ?p ?o}
