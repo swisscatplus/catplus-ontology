@@ -1159,14 +1159,10 @@ allo-res:AFR_0002567 a rdfs:Class, sh:NodeShape ;
     .
 
 cat:Measurement a sh:NodeShape ;
+    skos:prefLabel "Measurement" ;
+    skos:definition "A measurement of something, which must always have a value and a unit specified together." ;
     sh:property [sh:path qudt:value] ;
     sh:property [sh:path qudt:unit] ;
-    .
-
-quantitykind:Time a qudt:QuantityKind ;
-    rdfs:label "Time" ;
-    qudt:applicableUnit unit:SEC ;
-    qudt:applicableUnit unit:MIN ;
     .
 
 cat:temperatureTumbleStirrerShape a sh:PropertyShape ;
@@ -1217,6 +1213,12 @@ cat:vialShape a sh:PropertyShape ;
         [ sh:hasValue "sample vial" ]
         [ sh:hasValue "other" ]
     ) .
+
+quantitykind:Time a qudt:QuantityKind ;
+    rdfs:label "Time" ;
+    qudt:applicableUnit unit:SEC ;
+    qudt:applicableUnit unit:MIN ;
+    .
 
 unit:DEG_C a qudt:Unit .
 unit:GM-PER-MOL a qudt:Unit.
