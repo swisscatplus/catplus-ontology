@@ -656,9 +656,10 @@ cat:isAnalysisOutputOf a rdf:Property ;
 
 
 cat:SynthAddAction a rdfs:Class, sh:NodeShape ;
+    skos:prefLabel "Synthesis Add Action" ;
+    skos:definition "An action that adds a chemical to a well in a synthesis plate." ;
     rdfs:subClassOf cat:SynthAction ;
     sh:property [sh:path cat:producesProduct ; sh:class cat:Product ] ; #producesProduct 
-
     sh:property [sh:path cat:hasWell ; sh:class cat:Well] ; #hasWell
     sh:property [sh:path cat:hasSample ; sh:class cat:Sample ] ;
     sh:property [sh:path qudt:quantity ;
@@ -1167,14 +1168,12 @@ cat:Measurement a sh:NodeShape ;
 
 cat:temperatureTumbleStirrerShape a sh:PropertyShape ;
     sh:path cat:temperatureTumbleStirrer ;
-    sh:node cat:Observation ;
-    sh:property [sh:path qudt:unit ; sh:hasValue unit:DEG_C]
+    sh:node cat:Observation , [sh:property [sh:path qudt:unit ; sh:hasValue unit:DEG_C]]
     .
 
 cat:temperatureShakerShape a sh:PropertyShape ;
     sh:path cat:temperatureShaker ;
-    sh:node cat:Observation ;
-    sh:property [sh:path qudt:unit ; sh:hasValue unit:DEG_C]
+    sh:node cat:Observation , [sh:property [sh:path qudt:unit ; sh:hasValue unit:DEG_C]]
     .
 
 cat:speedInRPM a sh:PropertyShape ;
@@ -1200,8 +1199,7 @@ cat:speedShakerShape a sh:PropertyShape ;
 
 cat:temperatureShape a sh:PropertyShape ;
     sh:path cat:temperature ;
-    sh:node cat:Observation ;
-    sh:property [sh:path qudt:unit ; sh:hasValue unit:DEG_C]
+    sh:node cat:Observation , [sh:property [sh:path qudt:unit ; sh:hasValue unit:DEG_C] ]
     .
 
 cat:vialShape a sh:PropertyShape ;
