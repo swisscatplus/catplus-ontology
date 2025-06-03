@@ -1113,7 +1113,7 @@ cat:UV-IR-NMR-Peak a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "UV-IR-NMR Peak" ;
     skos:definition "A peak identified in a UV, IR, or NMR spectrum, typically used for further analysis in experiments." ;
     rdfs:subClassOf allo-res:AFR_0000413 ;
-    #properties to be added
+    #TODO properties to be added
     .
 
 cat:DeviceSystemDocument a rdfs:Class, sh:NodeShape ;
