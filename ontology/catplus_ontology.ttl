@@ -674,6 +674,8 @@ cat:SynthAddAction a rdfs:Class, sh:NodeShape ;
 
 
 cat:BravoAddAction a rdfs:Class, sh:NodeShape ;
+    skos:prefLabel "Bravo Add Action" ;
+    skos:definition "An action that adds a chemical to a well in a Bravo plate." ;
     rdfs:subClassOf cat:BravoAction ;
     sh:property [sh:path cat:hasWell ; sh:class cat:Well] ; #hasWell
     sh:property [sh:path cat:hasSolvent ; sh:class cat:Solvent ] ;
@@ -687,6 +689,8 @@ cat:BravoAddAction a rdfs:Class, sh:NodeShape ;
 
 
 cat:SetTemperatureAction a rdfs:Class, sh:NodeShape ;
+    skos:prefLabel "Set Temperature Action" ;
+    skos:definition "An action that sets the temperature of a plate or well." ;
     rdfs:subClassOf cat:SynthAction ;
     sh:property [sh:path cat:hasPlate ; sh:class cat:Plate] ; # hasPlate
     sh:property cat:speedShakerShape ;
@@ -696,6 +700,8 @@ cat:SetTemperatureAction a rdfs:Class, sh:NodeShape ;
 
 
 cat:SetPressureAction a rdfs:Class, sh:NodeShape ;
+    skos:prefLabel "Set Pressure Action" ;
+    skos:definition "An action that sets the pressure of a plate or well." ;
     rdfs:subClassOf cat:SynthAction ;
     sh:property [sh:path cat:hasPlate ; sh:class cat:Plate] ; # hasPlate
     sh:property [sh:path allo-proc:AFP_0002677 ;
@@ -705,6 +711,8 @@ cat:SetPressureAction a rdfs:Class, sh:NodeShape ;
     .
 
 cat:SetVacuumAction a rdfs:Class, sh:NodeShape ;
+    skos:prefLabel "Set Vacuum Action" ;
+    skos:definition "An action that sets the vacuum of a plate or well." ;
     rdfs:subClassOf cat:SynthAction ;
     sh:property [sh:path cat:hasPlate ; sh:class cat:Plate] ; # hasPlate
     sh:property [sh:path cat:vacuum ; #vacuum
@@ -714,6 +722,8 @@ cat:SetVacuumAction a rdfs:Class, sh:NodeShape ;
     .
 
 cat:ShakeSynthAction a rdfs:Class, sh:NodeShape ;
+    skos:prefLabel "Shake Synth Action" ;
+    skos:definition "An action that shakes a plate or well." ;
     rdfs:subClassOf cat:SynthAction ;
     sh:property [sh:path cat:hasPlate ; sh:class cat:Plate] ; # hasPlate
     sh:property cat:speedTumbleStirrerShape ;
@@ -722,6 +732,8 @@ cat:ShakeSynthAction a rdfs:Class, sh:NodeShape ;
     .
 
 cat:ShakeBravoAction a rdfs:Class, sh:NodeShape ;
+    skos:prefLabel "Shake Bravo Action" ;
+    skos:definition "An action that shakes a plate or well in a Bravo plate." ;
     rdfs:subClassOf cat:BravoAction ;
     sh:property [sh:path cat:hasPlate ; sh:class cat:Plate] ; # hasPlate
     sh:property cat:temperatureShape ;
@@ -729,11 +741,15 @@ cat:ShakeBravoAction a rdfs:Class, sh:NodeShape ;
 
 
 cat:FiltrateAction a rdfs:Class, sh:NodeShape ;
+    skos:prefLabel "Filtrate Action" ;
+    skos:definition "An action that filters a sample through a filter or membrane to separate solid particles from a liquid or gas." ;
     rdfs:subClassOf cat:SynthAction ;
     sh:property [sh:path cat:hasPlate ; sh:class cat:Plate] ; # hasPlate
     .
 
 cat:EvaporationAction a rdfs:Class, sh:NodeShape ;
+    skos:prefLabel "Evaporation Action" ;
+    skos:definition "An action that evaporates a solvent from a sample, leaving behind the solute or analyte." ;
     rdfs:subClassOf cat:BravoAction ;
     sh:property cat:temperatureShape ; #temperature
     sh:property [sh:path cat:hasWell ; sh:class cat:Well] ; #hasWell
@@ -742,8 +758,8 @@ cat:EvaporationAction a rdfs:Class, sh:NodeShape ;
     .
 
 cat:SolventChangeAction a rdfs:Class, sh:NodeShape ;
+    skos:prefLabel "Solvent Change Action" ;
     rdfs:subClassOf cat:BravoAction ;
-    skos:prefLabel "Solvent Change" ;
     skos:definition "A solvent that is selected to replace an existing one. This process involves considering the solvent's properties, compatibility with the analytes, and the analytical techniques employed, ensuring optimal performance and results in the analysis." ; 
     sh:property [sh:path cat:startDuration ;
                  sh:node cat:Observation ;
@@ -771,12 +787,16 @@ cat:Action a rdfs:Class, sh:NodeShape ;
     .
 
 cat:SynthAction a rdfs:Class, sh:NodeShape ;
+    skos:prefLabel "Synthesis Action" ;
+    skos:definition "A synthesis action is an action that is part of a synthesis procedure." ;
     rdfs:subClassOf cat:Action ;
     sh:property [sh:path cat:hasBatch ; sh:class cat:Batch] ; #hasBatch
 .
 
 
 cat:BravoAction a rdfs:Class, sh:NodeShape ;
+    skos:prefLabel "Bravo Action" ;
+    skos:definition "A Bravo action is an action that is part of a Bravo procedure." ;
     rdfs:subClassOf cat:Action ;
     sh:property [sh:path cat:preparesProduct ; sh:class cat:Product ] ;  #hasProduct
     sh:property [sh:path allo-res:AFR_0001164 ; sh:datatype xsd:string ] ; #peak identifier
@@ -803,6 +823,8 @@ cat:Cartridge a rdfs:Class, sh:NodeShape ;
 
 
 cat:QuantityShape a sh:NodeShape ;
+    skos:prefLabel "Quantity Shape" ;
+    skos:definition "A shape that defines the properties of a quantity, including its value and unit." ;
     sh:targetObjectsOf qudt:quantity ;
     sh:property [
         sh:path qudt:value ;
