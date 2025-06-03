@@ -37,7 +37,7 @@ cat: a owl:Ontology ;
     dct:creator "Robin Franken", "Jean-Charles Cousty" ;
     dct:description "The CAT+ ontology provides concepts (classes and properties) to model human and machine readable automated catalysis discovery experiment metadata. It is the result of re-using external pre-existing vocabularies such as Allotrope, schema.org and qudt, together with custom imaging specific objects and properties." ;    
     dct:license <https://spdx.org/licenses/CC-BY-SA-4.0.html> ;
-    dct:modified "2025-02-19"^^xsd:date ;
+    dct:modified "2025-06-01"^^xsd:date ;
     dct:title "CAT+ Ontology" ;
     vann:preferredNamespacePrefix "cat" ;
     vann:preferredNamespaceUri "http://example.org/catplus/ontology/"^^xsd:string ;
