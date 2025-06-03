@@ -408,7 +408,11 @@
                     }
                 }
             },
-            "order": "11"
+            "order": "11",
+            "productIdentification": {
+                "sampleID": "1-A1",
+                "peakIdentifier": "f81b4bcb-4d4a-41c7-8b34-5610e940d3ca"
+            }
         },
         {
             "actionName": "AddAction",
