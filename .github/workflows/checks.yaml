@@ -2,10 +2,12 @@ name: SHACL validation
 
 on:
   workflow_call:
+  push:
+    paths:
+      - 'ontology/**'
   pull_request:
     paths:
       - 'ontology/**'
-
 jobs:
   validate:
     runs-on: ubuntu-latest
