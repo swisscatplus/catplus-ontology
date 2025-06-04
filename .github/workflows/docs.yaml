@@ -50,7 +50,7 @@ jobs:
         run: |
           java -jar shacl-play-cli.jar \
             doc \
-            -i ontology/catplus_ontology.ttl \
+            -i /tmp/enriched_catplus_ontology.ttl \
             -l en \
             -o docs/index.html \
 
