@@ -1,0 +1,44 @@
+name: SHACL Documentation Generation
+
+on:
+  push:
+    paths:
+      - 'ontology/**'
+  pull_request:
+    paths:
+      - 'ontology/**'
+
+jobs:
+  generate-docs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Java 11
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '11'
+
+      - name: Download SHACL Play CLI
+        run: |
+          # Example URL - replace with actual URL of CLI JAR from the release page
+          wget https://github.com/sparna-git/shacl-play/releases/download/0.10.2/shacl-play-app-0.10.2-onejar.jar -O shacl-play-cli.jar
+
+      - name: Generate Documentation
+        run: |
+          # Run the CLI tool using Java
+          java -jar shacl-play-cli.jar \
+            doc \
+            -i ontology/catplus_ontology.ttl \
+            -l en \
+            -o docs/index.html \
+            -d
+
+      - name: Upload generated documentation as an artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: shacl-documentation
+          path: docs/index.html
