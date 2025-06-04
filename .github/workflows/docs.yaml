@@ -27,14 +27,15 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y graphviz
 
+      - name: Set DOT_PATH environment variable
+        run: echo "GRAPHVIZ_DOT=/usr/bin/dot" >> $GITHUB_ENV
+
       - name: Download SHACL Play CLI
         run: |
-          # Example URL - replace with actual URL of CLI JAR from the release page
           wget https://github.com/sparna-git/shacl-play/releases/download/0.10.2/shacl-play-app-0.10.2-onejar.jar -O shacl-play-cli.jar
 
       - name: Generate Documentation
         run: |
-          # Run the CLI tool using Java
           java -jar shacl-play-cli.jar \
             doc \
             -i ontology/catplus_ontology.ttl \
