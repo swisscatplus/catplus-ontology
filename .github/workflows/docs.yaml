@@ -16,6 +16,18 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Enrich ontology with rdflib
+        id: enrich
+        run: |
+          enriched_file=$(python sparql.py)
+          echo "enriched_file=${enriched_file}" >> $GITHUB_ENV
+
+      - name: Run SHACL documentation generation
+        run: |
+          java -jar shacl-play-cli.jar \
+            --input ${{ env.enriched_file }} \
+            --output shacl-docs
+
       - name: Set up Java 11
         uses: actions/setup-java@v4
         with:
