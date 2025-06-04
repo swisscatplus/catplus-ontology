@@ -37,7 +37,6 @@ WHERE {
 """
 g.update(insert_query)
 
-# 3️⃣ DELETE the sh:notanode triples
 delete_query = """
 PREFIX sh: <http://www.w3.org/ns/shacl#>
 DELETE {
@@ -49,8 +48,8 @@ WHERE {
 """
 g.update(delete_query)
 
-# 4️⃣ Save the enriched ontology to a tempfile
-with tempfile.NamedTemporaryFile(delete=False, suffix=".ttl", mode="w") as tmpfile:
+
+with tempfile.NamedTemporaryFile(delete=False, mode='w') as tmpfile:
+    ttl_data = g.serialize(format="turtle")  # returns a str!
+    tmpfile.write(ttl_data)
     enriched_file = tmpfile.name
-    g.serialize(destination=tmpfile, format="turtle")
-    print(enriched_file)  # This will output the path for downstream usage
