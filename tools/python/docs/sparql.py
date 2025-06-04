@@ -51,5 +51,8 @@ g.update(delete_query)
 
 with tempfile.NamedTemporaryFile(delete=False, mode='w') as tmpfile:
     ttl_data = g.serialize(format="turtle")  # returns a str!
+    print("Ontology enriched with new node shapes.")
+    print(ttl_data)
     tmpfile.write(ttl_data)
     enriched_file = tmpfile.name
+    print(f"Enriched ontology saved to: {enriched_file}")
