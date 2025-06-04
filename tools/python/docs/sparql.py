@@ -1,5 +1,6 @@
 from rdflib import Graph, Namespace, URIRef
 import tempfile
+import os
 
 # Define SHACL namespace
 SH = Namespace("http://www.w3.org/ns/shacl#")
@@ -49,10 +50,11 @@ WHERE {
 g.update(delete_query)
 
 
-with tempfile.NamedTemporaryFile(delete=False, mode='w') as tmpfile:
-    ttl_data = g.serialize(format="turtle")  # returns a str!
-    print("Ontology enriched with new node shapes.")
-    print(ttl_data)
-    tmpfile.write(ttl_data)
-    enriched_file = tmpfile.name
-    print(f"Enriched ontology saved to: {enriched_file}")
+# Use a predictable path for the enriched ontology
+enriched_file = "/tmp/enriched_catplus_ontology.ttl"
+ttl_data = g.serialize(format="turtle")
+with open(enriched_file, "w") as f:
+  f.write(ttl_data)
+print("Ontology enriched with new node shapes.")
+print(ttl_data)
+print(f"Enriched ontology saved to: {enriched_file}")
