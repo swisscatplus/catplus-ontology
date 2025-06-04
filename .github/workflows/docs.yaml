@@ -52,7 +52,6 @@ jobs:
             -i ontology/catplus_ontology.ttl \
             -l en \
             -o docs/index.html \
-            -d
 
       - name: Upload generated documentation as an artifact
         uses: actions/upload-artifact@v4
