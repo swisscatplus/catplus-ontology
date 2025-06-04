@@ -19,7 +19,7 @@ jobs:
       - name: Enrich ontology with rdflib
         id: enrich
         run: |
-          enriched_file=$(python sparql.py)
+          enriched_file=$(python ../tools/python/docs/sparql.py)
           echo "enriched_file=${enriched_file}" >> $GITHUB_ENV
 
       - name: Run SHACL documentation generation
