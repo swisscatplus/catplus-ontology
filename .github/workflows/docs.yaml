@@ -24,8 +24,8 @@ jobs:
       - name: Enrich ontology with rdflib
         id: enrich
         run: |
-          python tools/python/docs/sparql.py > enriched.ttl
-          echo "enriched_file=/tmp/enriched_catplus_ontology.ttl" >> $GITHUB_ENV
+          python tools/python/docs/sparql.py
+          echo "enriched_file=/tmp/enriched.ttl" >> $GITHUB_ENV
           
 
       - name: Set up Java 11
