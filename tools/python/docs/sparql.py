@@ -51,7 +51,7 @@ g.update(delete_query)
 
 
 # Use a predictable path for the enriched ontology
-enriched_file = "/tmp/enriched_catplus_ontology.ttl"
+enriched_file = "/tmp/enriched.ttl"
 ttl_data = g.serialize(format="turtle")
 with open(enriched_file, "w") as f:
   f.write(ttl_data)
