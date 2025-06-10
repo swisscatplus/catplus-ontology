@@ -656,6 +656,8 @@ cat:isAnalysisOutputOf a rdf:Property ;
 
 
 cat:SynthAddAction a rdfs:Class, sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties (rdf:type) ;
     skos:prefLabel "Synthesis Add Action" ;
     skos:definition "An action that adds a chemical to a well in a synthesis plate." ;
     rdfs:subClassOf cat:SynthAction ;
@@ -675,6 +677,8 @@ cat:SynthAddAction a rdfs:Class, sh:NodeShape ;
 
 
 cat:BravoAddAction a rdfs:Class, sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties (rdf:type) ;
     skos:prefLabel "Bravo Add Action" ;
     skos:definition "An action that adds a chemical to a well in a Bravo plate." ;
     rdfs:subClassOf cat:BravoAction ;
@@ -690,6 +694,8 @@ cat:BravoAddAction a rdfs:Class, sh:NodeShape ;
 
 
 cat:SetTemperatureAction a rdfs:Class, sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties (rdf:type) ;
     skos:prefLabel "Set Temperature Action" ;
     skos:definition "An action that sets the temperature of a plate or well." ;
     rdfs:subClassOf cat:SynthAction ;
@@ -701,6 +707,8 @@ cat:SetTemperatureAction a rdfs:Class, sh:NodeShape ;
 
 
 cat:SetPressureAction a rdfs:Class, sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties (rdf:type) ;
     skos:prefLabel "Set Pressure Action" ;
     skos:definition "An action that sets the pressure of a plate or well." ;
     rdfs:subClassOf cat:SynthAction ;
@@ -712,6 +720,8 @@ cat:SetPressureAction a rdfs:Class, sh:NodeShape ;
     .
 
 cat:SetVacuumAction a rdfs:Class, sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties (rdf:type) ;
     skos:prefLabel "Set Vacuum Action" ;
     skos:definition "An action that sets the vacuum of a plate or well." ;
     rdfs:subClassOf cat:SynthAction ;
@@ -723,6 +733,8 @@ cat:SetVacuumAction a rdfs:Class, sh:NodeShape ;
     .
 
 cat:ShakeSynthAction a rdfs:Class, sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties (rdf:type) ;
     skos:prefLabel "Shake Synth Action" ;
     skos:definition "An action that shakes a plate or well." ;
     rdfs:subClassOf cat:SynthAction ;
@@ -733,6 +745,8 @@ cat:ShakeSynthAction a rdfs:Class, sh:NodeShape ;
     .
 
 cat:ShakeBravoAction a rdfs:Class, sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties (rdf:type) ;
     skos:prefLabel "Shake Bravo Action" ;
     skos:definition "An action that shakes a plate or well in a Bravo plate." ;
     rdfs:subClassOf cat:BravoAction ;
@@ -742,6 +756,8 @@ cat:ShakeBravoAction a rdfs:Class, sh:NodeShape ;
 
 
 cat:FiltrateAction a rdfs:Class, sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties (rdf:type) ;
     skos:prefLabel "Filtrate Action" ;
     skos:definition "An action that filters a sample through a filter or membrane to separate solid particles from a liquid or gas." ;
     rdfs:subClassOf cat:SynthAction ;
@@ -749,6 +765,8 @@ cat:FiltrateAction a rdfs:Class, sh:NodeShape ;
     .
 
 cat:EvaporationAction a rdfs:Class, sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties (rdf:type) ;
     skos:prefLabel "Evaporation Action" ;
     skos:definition "An action that evaporates a solvent from a sample, leaving behind the solute or analyte." ;
     rdfs:subClassOf cat:BravoAction ;
@@ -759,6 +777,8 @@ cat:EvaporationAction a rdfs:Class, sh:NodeShape ;
     .
 
 cat:SolventChangeAction a rdfs:Class, sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties (rdf:type) ;
     skos:prefLabel "Solvent Change Action" ;
     rdfs:subClassOf cat:BravoAction ;
     skos:definition "A solvent that is selected to replace an existing one. This process involves considering the solvent's properties, compatibility with the analytes, and the analytical techniques employed, ensuring optimal performance and results in the analysis." ; 
@@ -776,6 +796,8 @@ cat:SolventChangeAction a rdfs:Class, sh:NodeShape ;
     .
 
 cat:Action a rdfs:Class, sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties (rdf:type) ;
     rdfs:subClassOf allo-real:AFRE_0000001 ;
     skos:prefLabel "Action" ;
     skos:definition "An action is a unit element in a procedure and is a concretization of an action specification." ;
@@ -788,6 +810,8 @@ cat:Action a rdfs:Class, sh:NodeShape ;
     .
 
 cat:SynthAction a rdfs:Class, sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties (rdf:type) ;
     skos:prefLabel "Synthesis Action" ;
     skos:definition "A synthesis action is an action that is part of a synthesis procedure." ;
     rdfs:subClassOf cat:Action ;
@@ -796,6 +820,8 @@ cat:SynthAction a rdfs:Class, sh:NodeShape ;
 
 
 cat:BravoAction a rdfs:Class, sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties (rdf:type) ;
     skos:prefLabel "Bravo Action" ;
     skos:definition "A Bravo action is an action that is part of a Bravo procedure." ;
     rdfs:subClassOf cat:Action ;
@@ -805,6 +831,8 @@ cat:BravoAction a rdfs:Class, sh:NodeShape ;
 .
 
 cat:Solvent a rdfs:Class, sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties (rdf:type) ;
     skos:prefLabel "Solvent" ;
     skos:definition "A solvent is a substance that dissolves a solute, resulting in a solution." ;
     sh:property [sh:path cat:hasChemical ; sh:class obo:CHEBI_25367 ] ; #hasChemical
@@ -816,6 +844,8 @@ cat:Solvent a rdfs:Class, sh:NodeShape ;
 
 
 cat:Cartridge a rdfs:Class, sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties (rdf:type) ;
     skos:prefLabel "Cartridge" ;
     skos:definition "A cartridge is a container that holds a sample or a solvent." ;
     sh:property [sh:path cat:cartridgeName ; sh:datatype xsd:string] ; #cartridgeName
@@ -824,6 +854,8 @@ cat:Cartridge a rdfs:Class, sh:NodeShape ;
 
 
 cat:QuantityShape a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties (rdf:type) ;
     skos:prefLabel "Quantity Shape" ;
     skos:definition "A shape that defines the properties of a quantity, including its value and unit." ;
     sh:targetObjectsOf qudt:quantity ;
@@ -841,6 +873,8 @@ cat:QuantityShape a sh:NodeShape ;
     .
 
 cat:Observation a rdfs:Class, sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties (rdf:type) ;
     skos:prefLabel "Observation" ;
     skos:definition "An observation is an abstract entity that captures the unit and value of a property into one node." ;
     sh:property [sh:path qudt:unit  ; sh:minCount 1 ; sh:maxCount 1] ;
@@ -850,6 +884,8 @@ cat:Observation a rdfs:Class, sh:NodeShape ;
     .
 
 cat:Product a rdfs:Class, sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties (rdf:type) ;
     skos:related allo-mat:AFM_0001099 ;
     skos:prefLabel "Unknown Sample" ;
     skos:altLabel  "chemical mixture" ;
@@ -858,6 +894,8 @@ cat:Product a rdfs:Class, sh:NodeShape ;
     .
 
 cat:Sample a rdfs:Class, sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties (rdf:type) ;
     skos:related allo-mat:AFM_0001099 ;
     skos:prefLabel "Sample" ;
     skos:altLabel  "chemical mixture" ;
@@ -886,6 +924,8 @@ cat:Sample a rdfs:Class, sh:NodeShape ;
     .
 
 obo:CHEBI_25367 a rdfs:Class, sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties (rdf:type) ;
     rdfs:subClassOf chebi:CHEBI_36357 ;
     sh:property [sh:path purl:identifier ; sh:datatype xsd:string ; sh:minCount 1 ; sh:maxCount 1] ;
     sh:property [sh:path cat:swissCatNumber; sh:datatype xsd:string] ;
@@ -906,6 +946,8 @@ obo:CHEBI_25367 a rdfs:Class, sh:NodeShape ;
     .
 
 obo:IAO_0000005 a rdfs:Class , sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties (rdf:type) ;
     skos:prefLabel "Objective" ;
     skos:definition "An objective is a goal or target to be achieved by the experiment." ;
     sh:property [sh:path schema:name ; sh:datatype xsd:string] ;
@@ -915,6 +957,8 @@ obo:IAO_0000005 a rdfs:Class , sh:NodeShape ;
     .
 
 cat:Campaign a rdfs:Class, sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties (rdf:type) ;
     skos:prefLabel "Campaign" ;
     skos:definition "A campaign is a series of experiments that are conducted to achieve a specific objective." ;
     sh:property [sh:path schema:name ; sh:datatype xsd:string] ;
@@ -931,9 +975,12 @@ cat:Campaign a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path cat:hasBatch ; sh:class cat:Batch] ;
     sh:property [sh:path cat:hasObjective ; sh:class obo:IAO_0000005] ;
     sh:property [sh:path cat:hasChemical ; sh:class obo:CHEBI_25367] ;
+    sh:property [sh:path schema:contentUrl ; sh:datatype xsd:string] ; #content URL to the S3 data storage 
     .
 
 cat:Batch a rdfs:Class, sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties (rdf:type) ;
     skos:prefLabel "Batch" ;
     skos:definition "A batch is a group of samples that are processed together." ;
     sh:property [sh:path schema:name ; sh:datatype xsd:string] ;
@@ -948,6 +995,8 @@ cat:Batch a rdfs:Class, sh:NodeShape ;
     .
 
 cat:Plate a rdfs:Class, sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties (rdf:type) ;
     skos:prefLabel "Plate" ;
     skos:definition "A plate is a flat, rigid structure that holds samples or reagents in an experiment." ;
     sh:property [sh:path cat:containerBarcode ; sh:datatype xsd:string] ; #container barcode
@@ -955,6 +1004,8 @@ cat:Plate a rdfs:Class, sh:NodeShape ;
     .
 
 cat:Well a rdfs:Class, sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties (rdf:type) ;
     skos:prefLabel "Well" ;
     skos:definition "A well is a small container used to hold samples or reagents in an experiment." ; 
     sh:property [sh:path allo-res:AFR_0002240 ; sh:datatype xsd:string] ; #Well location identifier
@@ -962,6 +1013,8 @@ cat:Well a rdfs:Class, sh:NodeShape ;
     .
 
 allo-res:AFR_0002524 a rdfs:Class, sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties (rdf:type) ;
     skos:prefLabel "Liquid Chromatography Aggregate Document" ;
     skos:definition "A liquid chromatography aggregate document is a document that aggregates LC documents. [Allotrope]" ;
     sh:property [sh:path allo-res:AFR_0002526 ; sh:class cat:DeviceSystemDocument ] ; #device system document
@@ -971,6 +1024,8 @@ allo-res:AFR_0002524 a rdfs:Class, sh:NodeShape ;
 
 
 allo-res:AFR_0002525 a rdfs:Class, sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties (rdf:type) ;
     skos:prefLabel "Liquid Chromatography Document" ;
     skos:definition "A liquid chromatography document is a document that encompasses the information associated with a liquid chromatography run. [Allotrope]" ;
     sh:property [sh:path allo-res:AFR_0001116 ; sh:datatype xsd:string] ; #analyst
@@ -978,6 +1033,8 @@ allo-res:AFR_0002525 a rdfs:Class, sh:NodeShape ;
 .
 
 allo-res:AFR_0002375 a rdfs:Class, sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties (rdf:type) ;
     skos:prefLabel "Measurement Document" ;
     skos:definition "A measurement document is a document that encompasses the information associated with a measurement. [Allotrope]" ;
     sh:property [sh:path allo-res:AFR_0001121 ; sh:datatype xsd:string] ; #measurement id
@@ -993,6 +1050,8 @@ allo-res:AFR_0002375 a rdfs:Class, sh:NodeShape ;
 .
 
 cat:ChromatogramDataCube a rdfs:Class, sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties (rdf:type) ;
     skos:prefLabel "Chromatogram Data Cube" ;
     skos:definition "A three-dimensional representation of chromatographic data, enabling analysis of time, intensity, and other parameters." ;
     sh:property [sh:path obo:IAO_0000009 ; sh:datatype xsd:string] ; #label
@@ -1002,6 +1061,8 @@ cat:ChromatogramDataCube a rdfs:Class, sh:NodeShape ;
 
 
 cat:ThreeDimensionalUltravioletSpectrumDataCube a rdfs:Class, sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties (rdf:type) ;
     skos:prefLabel "Three-Dimensional Ultraviolet Spectrum Data Cube" ;
     skos:definition "A data structure representing a three-dimensional cube of ultraviolet spectral data, often used for analyzing spectroscopic information across multiple dimensions." ;
     sh:property [sh:path obo:IAO_0000009 ; sh:datatype xsd:string] ; #label
@@ -1010,6 +1071,8 @@ cat:ThreeDimensionalUltravioletSpectrumDataCube a rdfs:Class, sh:NodeShape ;
     .
 
 cat:ThreeDimensionalMassSpectrumDataCube a rdfs:Class, sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties (rdf:type) ;
     skos:prefLabel "Three-Dimensional Mass Spectrum Data Cube" ;
     skos:definition "A data structure representing a three-dimensional cube of mass spectrometry data, used to analyze molecular compositions and fragmentations across dimensions." ;
     sh:property [sh:path obo:IAO_0000009 ; sh:datatype xsd:string] ; #label
@@ -1018,6 +1081,8 @@ cat:ThreeDimensionalMassSpectrumDataCube a rdfs:Class, sh:NodeShape ;
 .
 
 cat:Dataframe a rdfs:Class, sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties (rdf:type) ;
     skos:prefLabel "Dataset" ;
     skos:definition "A collection of related data, structured in a way that enables efficient retrieval, processing, and analysis." ;
     sh:property [sh:path cat:measure ; sh:class allo-role:AFRL_0000157 ] ; #measure
@@ -1025,6 +1090,8 @@ cat:Dataframe a rdfs:Class, sh:NodeShape ;
     .
 
 cat:CubeStructure a rdfs:Class, sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties (rdf:type) ;
     skos:prefLabel "Cube Dataset" ;
     skos:definition "A dataset represented as a multidimensional cube, used for structured data analysis in various contexts such as spectroscopy and mass spectrometry." ;
     sh:property [sh:path cat:measure ; sh:class allo-role:AFRL_0000157 ] ; #measure
@@ -1032,6 +1099,8 @@ cat:CubeStructure a rdfs:Class, sh:NodeShape ;
     .
 
 cat:Dimension a rdfs:Class, sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties (rdf:type) ;
     skos:prefLabel "Dimension" ;
     skos:definition "A measurable extent of a particular kind, such as length, width, height, or time, in a specified context." ;
     sh:property [sh:path allo-dc:componentDataType ] ; #component datatype
@@ -1040,6 +1109,8 @@ cat:Dimension a rdfs:Class, sh:NodeShape ;
     .
 
 allo-role:AFRL_0000157 a rdfs:Class, sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties (rdf:type) ;
     skos:prefLabel "Measure" ;
     skos:definition "A measure is an actual value that is the direct or indirect outcome of some measurement and refers to some metric. [Allotrope]" ;
     sh:property [sh:path allo-dc:componentDataType ] ; #component datatype
@@ -1048,11 +1119,15 @@ allo-role:AFRL_0000157 a rdfs:Class, sh:NodeShape ;
     .
 
 cat:ChromatographyColumnDocument a rdfs:Class, sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties (rdf:type) ;
     skos:prefLabel "Chromatography Column Document" ;
     skos:definition "A document that contains metadata and information about a chromatography column used in experiments." ;
     .
 
 cat:SampleDocument a rdfs:Class, sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties (rdf:type) ;
     skos:prefLabel "Sample Document" ;
     skos:definition "A document describing a sample, including identifiers and names for traceability in experimental contexts." ;
     sh:property [sh:path cat:hasProduct ; sh:class cat:Product ] ; #product and its identifier
@@ -1061,6 +1136,8 @@ cat:SampleDocument a rdfs:Class, sh:NodeShape ;
     .
 
 cat:InjectionDocument a rdfs:Class, sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties (rdf:type) ;
     skos:prefLabel "Injection Document" ;
     skos:definition "A document recording details about a specific injection event, including timing and volume settings in chromatography." ;
     sh:property [sh:path allo-res:AFR_0001267 ; sh:class cat:AutosamplerInjectionVolumeSetting ] ; #autosampler injection volume setting
@@ -1069,6 +1146,8 @@ cat:InjectionDocument a rdfs:Class, sh:NodeShape ;
     .
 
 cat:AutosamplerInjectionVolumeSetting a rdfs:Class, sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties (rdf:type) ;
     skos:prefLabel "Autosampler Injection Volume Setting" ;
     skos:definition "A setting that specifies the volume of a sample injected by an autosampler in chromatography." ;
     sh:property [sh:path qudt:value ] ;
@@ -1076,12 +1155,16 @@ cat:AutosamplerInjectionVolumeSetting a rdfs:Class, sh:NodeShape ;
     .
 
 cat:ProcessedDataDocument a rdfs:Class, sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties (rdf:type) ;
     skos:prefLabel "Processed Data Document" ;
     skos:definition "A document containing processed experimental data, often derived from raw measurements, such as peak lists." ;
     sh:property [sh:path allo-res:AFR_0000432 ; sh:class cat:PeakList ] ; #peak list
     .
 
 cat:PeakList a rdfs:Class, sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties (rdf:type) ;
     skos:prefLabel "Peak List" ;
     skos:definition "A collection of peaks identified in chromatograms or spectra, typically used for further analysis in experiments." ;
     sh:property [sh:path cat:peak ; sh:class allo-res:AFR_0000413] ; #peak
@@ -1090,6 +1173,8 @@ cat:PeakList a rdfs:Class, sh:NodeShape ;
 
 
 allo-res:AFR_0000413 a rdfs:Class, sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties (rdf:type) ;
     skos:prefLabel "Peak" ;
     skos:definition "A peak describes a part of a spectrum/chromatogram/plot at a definite range of the experimental parameter (independent variable) of the spectrum. This definition includes a single data point of the spectrum. [Allotrope]" ;
     sh:property [sh:path allo-dchdf:Index ; sh:datatype xsd:integer] ; #index
@@ -1127,12 +1212,16 @@ allo-res:AFR_0000413 a rdfs:Class, sh:NodeShape ;
 .
 
 cat:Agilent-Peak a rdfs:Class, sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties (rdf:type) ;
     skos:prefLabel "Agilent Peak" ;
     skos:definition "A peak identified in an Agilent chromatogram or spectrum, typically used for further analysis in experiments." ;
     rdfs:subClassOf allo-res:AFR_0000413 ;
     .
 
 cat:UV-IR-NMR-Peak a rdfs:Class, sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties (rdf:type) ;
     skos:prefLabel "UV-IR-NMR Peak" ;
     skos:definition "A peak identified in a UV, IR, or NMR spectrum, typically used for further analysis in experiments." ;
     rdfs:subClassOf allo-res:AFR_0000413 ;
@@ -1140,6 +1229,8 @@ cat:UV-IR-NMR-Peak a rdfs:Class, sh:NodeShape ;
     .
 
 cat:DeviceSystemDocument a rdfs:Class, sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties (rdf:type) ;
     skos:prefLabel "Device System Document" ;
     skos:definition "A document describing a system of devices, including identifiers and associated metadata for asset management." ;
     sh:property [sh:path allo-res:AFR_0001976 ; sh:datatype xsd:string] ; #asset management identifier
@@ -1147,6 +1238,8 @@ cat:DeviceSystemDocument a rdfs:Class, sh:NodeShape ;
     .
     
 allo-res:AFR_0002567 a rdfs:Class, sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties (rdf:type) ;
     skos:prefLabel "Device Document" ;
     skos:definition "A device document is a document that encompasses the information associated with a device. [Allotrope]" ;
     sh:property [sh:path allo-res:AFR_0002018 ; sh:datatype xsd:string] ; #device ID
@@ -1160,6 +1253,8 @@ allo-res:AFR_0002567 a rdfs:Class, sh:NodeShape ;
     .
 
 cat:Measurement a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties (rdf:type) ;
     skos:prefLabel "Measurement" ;
     skos:definition "A measurement of something, which must always have a value and a unit specified together." ;
     sh:property [sh:path qudt:value] ;
