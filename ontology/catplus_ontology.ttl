@@ -700,7 +700,7 @@ cat:SetTemperatureAction a rdfs:Class, sh:NodeShape ;
     skos:definition "An action that sets the temperature of a plate or well." ;
     rdfs:subClassOf cat:SynthAction ;
     sh:property [sh:path cat:hasPlate ; sh:class cat:Plate] ; # hasPlate
-    sh:property cat:speedShakerShape ;
+    sh:property cat:speedTumbleStirrerShape ;
     sh:property cat:temperatureShakerShape ;
     sh:property cat:temperatureTumbleStirrerShape ;
     .
@@ -1269,13 +1269,6 @@ cat:temperatureTumbleStirrerShape a sh:PropertyShape ;
 cat:temperatureShakerShape a sh:PropertyShape ;
     sh:path cat:temperatureShaker ;
     sh:node cat:Observation , [sh:property [sh:path qudt:unit ; sh:hasValue unit:DEG_C]]
-    .
-
-cat:speedInRPM a sh:PropertyShape ;
-    sh:path allo-prop:AFX_0000211 ;
-    sh:node cat:Observation ;
-    sh:node [sh:property [sh:path qudt:unit ;
-                sh:hasValue unit:REV-PER-MIN] ;]
     .
 
 cat:speedTumbleStirrerShape a sh:PropertyShape ;
