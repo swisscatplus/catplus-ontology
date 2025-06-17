@@ -651,7 +651,6 @@ cat:isAnalysisOutputOf a rdf:Property ;
     .
 
 ##########################################################################################
-# Shapes
 
 
 cat:SynthAddAction a rdfs:Class, sh:NodeShape ;

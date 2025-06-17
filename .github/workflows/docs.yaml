@@ -60,7 +60,7 @@ jobs:
             draw \
             -i ${{ env.enriched_file }} \
             -o docs/ontology.svg \
-            -s true
+            -s
 
       - name: Commit generated docs
         run: |
