@@ -29,7 +29,6 @@ prefix quantitykind: <http://qudt.org/vocab/quantitykind/>
 prefix qudt-ext: <http://purl.allotrope.org/ontology/qudt-ext/unit#>
 
 
-#ontology for catalysis, chemistry
 cat: a owl:Ontology ;
     dct:abstract "The CAT+ ontology provides concepts (classes and properties) to model human and machine readable automated catalysis discovery experiment metadata. It is the result of re-using external pre-existing vocabularies such as Allotrope, schema.org and qudt, together with custom imaging specific objects and properties." ;
     dct:contributor "Oksana Riba", "Robin Franken", "Jean-Charles Cousty","Laure VanCauwenberghe", "Pascal Miéville" ;
