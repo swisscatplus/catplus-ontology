@@ -320,6 +320,11 @@ cat:genericObjective a rdf:Property ;
     skos:definition "It serves as a guiding principle, focusing on enhancing overall performance in conducting chemical reactions, reducing errors, and increasing output without specifying particular methods or metrics." ;
     .
 
+cat:belongsToProduct a rdf:Property ;
+    skos:prefLabel "belongs to product" ;
+    skos:definition "property to link to a product" ;
+    .
+
 allo-res:AFR_0001952 a rdf:Property ;
     skos:prefLabel "molecular formula" ;
     skos:definition "A molecular formula is a molecular entity facet which identifies each constituent element by its chemical symbol and indicates the number of atoms of each element found in each discrete molecular entity of that compound. [CHEMINF]" ;    .#tochceck
