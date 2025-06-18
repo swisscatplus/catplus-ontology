@@ -50,6 +50,7 @@ jobs:
         run: |
           java -jar shacl-play-cli.jar \
             doc \
+            -d \
             -i ${{ env.enriched_file }} \
             -l en \
             -o docs/index.html
