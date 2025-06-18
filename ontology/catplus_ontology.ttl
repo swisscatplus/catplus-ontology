@@ -113,10 +113,12 @@ allo-res:AFR_0002464 a rdf:Property ;
     skos:prefLabel "vial location identifier" ;
     skos:definition "A vial location identifier is a local identifier that identifies the location of a vial in the vial plate in the scope of the vial plate. [Allotrope]" ;
     .
+
 allo-res:AFR_0002294 a rdf:Property ;
     skos:prefLabel "molecular mass" ;
     skos:definition "A molecular mass is a quality quantification facet that quantifies the mass of a molecule. [Allotrope]" ;
     .
+    
 allo-res:AFR_0002036 a rdf:Property ;
     skos:prefLabel "concentration" ;
     skos:definition "Concentration is a molecular quality inhering in a substance by virtue of the amount of the bearer's there is mixed with another substance. [PATO]" ;
