@@ -59,8 +59,7 @@ jobs:
           java -jar shacl-play-cli.jar \
             draw \
             -i ${{ env.enriched_file }} \
-            -o docs/ontology.svg \
-            -s
+            -o docs/ontology.svg 
 
       - name: Commit generated docs
         run: |
