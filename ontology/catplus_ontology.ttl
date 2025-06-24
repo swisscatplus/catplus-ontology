@@ -647,11 +647,6 @@ cat:preparesProduct a rdf:Property ;
     skos:definition "A property to indicate which product gets prepared for analysis (for bravo)" ;
     .
 
-cat:isAnalysisOutputOf a rdf:Property ;
-    skos:prefLabel "is analysis output of" ;
-    skos:definition "A property to relate a peaklist to the product it is an analysis of" ;
-    .
-
 ###########################################################################################
 
 
