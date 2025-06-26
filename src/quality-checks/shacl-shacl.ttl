@@ -48,19 +48,27 @@ ordes:TargetClassNotDeclaredShape
     ] .
 
 ordes:nodeShapeWithoutNodeOrProperty a sh:NodeShape ;
-	sh:targetClass sh:NodeShape ;
-	sh:sparql [
-		a sh:SPARQLConstraint ;
-		sh:message "This shape does not have a sh:node or a sh:property, and is therefore useless." ;
-		sh:select """
-		PREFIX sh: <http://www.w3.org/ns/shacl#>
-		SELECT ?this WHERE {
-			FILTER NOT EXISTS {
-				?this (sh:node|sh:property) ?target .
-			}
-		}
-		""" ;
-	] .
+  sh:targetClass sh:NodeShape ;
+  sh:message "This shape and its superclasses do not have a sh:node or a sh:property, and are therefore useless." ;
+  sh:sparql [
+    a sh:SPARQLConstraint ;
+    sh:select """
+      PREFIX sh: <http://www.w3.org/ns/shacl#>
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+      SELECT ?this WHERE {
+        # Ensure the shape itself has no sh:node or sh:property
+        FILTER NOT EXISTS { ?this sh:node|sh:property ?any . }
+
+        # And none of its superclasses (recursively) have them either
+        FILTER NOT EXISTS {
+          ?this rdfs:subClassOf+ ?superShape .
+          ?superShape sh:node|sh:property ?any2 .
+        }
+      }
+    """ ;
+  ] .
+
 
 shsh:
 	rdfs:label "SHACL for SHACL"@en ;
