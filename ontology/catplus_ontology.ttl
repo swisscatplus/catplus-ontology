@@ -31,7 +31,7 @@ prefix qudt-ext: <http://purl.allotrope.org/ontology/qudt-ext/unit#>
 
 cat: a owl:Ontology ;
     dct:abstract "The CAT+ ontology provides concepts (classes and properties) to model human and machine readable automated catalysis discovery experiment metadata. It is the result of re-using external pre-existing vocabularies such as Allotrope, schema.org and qudt, together with custom imaging specific objects and properties." ;
-    dct:contributor "Oksana Riba", "Robin Franken", "Jean-Charles Cousty","Laure VanCauwenberghe", "Pascal Miéville" ;
+    dct:contributor "Oksana Riba", "Robin Franken", "Jean-Charles Cousty","Laure VanCauwenberghe", "Sabine Maennel", "Pascal Miéville" ;
     dct:created "2024-04-01"^^xsd:date ;
     dct:creator "Robin Franken", "Jean-Charles Cousty" ;
     dct:description "The CAT+ ontology provides concepts (classes and properties) to model human and machine readable automated catalysis discovery experiment metadata. It is the result of re-using external pre-existing vocabularies such as Allotrope, schema.org and qudt, together with custom imaging specific objects and properties." ;    
