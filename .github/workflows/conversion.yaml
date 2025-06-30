@@ -19,6 +19,7 @@ jobs:
       - name : Install dependencies
         run: |
           git clone https://github.com/pchampin/sophia-cli
+          cd sophia-cli
           cargo install --path .
 
       - name: Convert ontology to N-Triples
