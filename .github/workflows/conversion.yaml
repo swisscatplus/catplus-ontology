@@ -1,0 +1,21 @@
+name: Conversion
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  conversion-nt:
+    runs-on: ubuntu-latest
+
+    steps: 
+
+      - name : Install dependencies
+        run: |
+          git clone https://github.com/sdsc-ordes/rdfpipe-rs
+          cd rdfpipe-rs
+          cargo build --release
+
+      - name: Convert ontology to N-Triples
+        run: |
+          rdfpipe-rs --input-format turtle --output-format n-triples ontology/catplus_ontology.ttl > ontology/catplus_ontology.nt
