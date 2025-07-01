@@ -1,0 +1,34 @@
+name: Conversion
+
+on:
+  release:
+    types:
+      - published
+
+jobs:
+  conversion-nt:
+    runs-on: ubuntu-latest
+
+    steps: 
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name : Install dependencies
+        run: |
+          git clone https://github.com/pchampin/sophia-cli
+          cd sophia-cli
+          cargo install --path .
+
+      - name: Convert ontology to N-Triples
+        run: |
+          sop parse ontology/catplus_ontology.ttl ! serialize -o ontology/catplus_ontology.nt
+
+      - name: Upload Release Asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ github.event.release.upload_url }}
+          asset_path: ontology/catplus_ontology.nt
+          asset_name: catplus_ontology.nt
+          asset_content_type: application/n-triples
