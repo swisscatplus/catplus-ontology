@@ -1,9 +1,9 @@
 name: Conversion
 
 on:
-  push:
-    branches:
-      - main
+  release:
+    types:
+      - published
 
 jobs:
   conversion-nt:
@@ -23,13 +23,12 @@ jobs:
         run: |
           sop parse ontology/catplus_ontology.ttl ! serialize -o ontology/catplus_ontology.nt
 
-      - name: Configure git
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-      - name: Commit new file
-        run: |
-          git add ontology/catplus_ontology.nt
-          git commit -m "ontology conversion to nt-triples format"
-          git push
+      - name: Upload Release Asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ github.event.release.upload_url }}
+          asset_path: ontology/catplus_ontology.nt
+          asset_name: catplus_ontology.nt
+          asset_content_type: application/n-triples
