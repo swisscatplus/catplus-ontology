@@ -1,0 +1,1503 @@
+<http://example.org/catplus/ontology/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology>.
+<http://example.org/catplus/ontology/> <http://purl.org/dc/terms/abstract> "The CAT+ ontology provides concepts (classes and properties) to model human and machine readable automated catalysis discovery experiment metadata. It is the result of re-using external pre-existing vocabularies such as Allotrope, schema.org and qudt, together with custom imaging specific objects and properties.".
+<http://example.org/catplus/ontology/> <http://purl.org/dc/terms/contributor> "Oksana Riba".
+<http://example.org/catplus/ontology/> <http://purl.org/dc/terms/contributor> "Robin Franken".
+<http://example.org/catplus/ontology/> <http://purl.org/dc/terms/contributor> "Jean-Charles Cousty".
+<http://example.org/catplus/ontology/> <http://purl.org/dc/terms/contributor> "Laure Vancauwenberghe".
+<http://example.org/catplus/ontology/> <http://purl.org/dc/terms/contributor> "Sabine Maennel".
+<http://example.org/catplus/ontology/> <http://purl.org/dc/terms/contributor> "Pascal Miéville".
+<http://example.org/catplus/ontology/> <http://purl.org/dc/terms/created> "2024-04-01"^^<http://www.w3.org/2001/XMLSchema#date>.
+<http://example.org/catplus/ontology/> <http://purl.org/dc/terms/creator> "Robin Franken".
+<http://example.org/catplus/ontology/> <http://purl.org/dc/terms/creator> "Jean-Charles Cousty".
+<http://example.org/catplus/ontology/> <http://purl.org/dc/terms/description> "The CAT+ ontology provides concepts (classes and properties) to model human and machine readable automated catalysis discovery experiment metadata. It is the result of re-using external pre-existing vocabularies such as Allotrope, schema.org and qudt, together with custom imaging specific objects and properties.".
+<http://example.org/catplus/ontology/> <http://purl.org/dc/terms/license> <https://spdx.org/licenses/CC-BY-SA-4.0.html>.
+<http://example.org/catplus/ontology/> <http://purl.org/dc/terms/modified> "2025-06-26"^^<http://www.w3.org/2001/XMLSchema#date>.
+<http://example.org/catplus/ontology/> <http://purl.org/dc/terms/title> "CAT+ Ontology".
+<http://example.org/catplus/ontology/> <http://purl.org/vocab/vann/preferredNamespacePrefix> "cat".
+<http://example.org/catplus/ontology/> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://example.org/catplus/ontology/".
+<http://example.org/catplus/ontology/> <http://www.w3.org/2002/07/owl#versionInfo> "2.0.1".
+<http://example.org/catplus/ontology/> <http://www.w3.org/ns/shacl#entailment> <http://www.w3.org/ns/entailment/RDFS>.
+<http://purl.allotrope.org/ontologies/result#AFR_0001723> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://purl.allotrope.org/ontologies/result#AFR_0001723> <http://www.w3.org/2004/02/skos/core#prefLabel> "equipment name".
+<http://purl.allotrope.org/ontologies/result#AFR_0001723> <http://www.w3.org/2004/02/skos/core#definition> "An equipment name is a written name refering to a device.".
+<http://purl.allotrope.org/ontologies/result#AFR_0001723> <http://www.w3.org/2004/02/skos/core#altLabel> "device name".
+<http://example.org/catplus/ontology/subEquipmentName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://example.org/catplus/ontology/subEquipmentName> <http://www.w3.org/2004/02/skos/core#prefLabel> "sub equipment name".
+<http://example.org/catplus/ontology/subEquipmentName> <http://www.w3.org/2004/02/skos/core#definition> "A sub equipment name is a written name refering to a sub category of equipment.".
+<http://purl.allotrope.org/ontologies/result#AFR_0002240> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://purl.allotrope.org/ontologies/result#AFR_0002240> <http://www.w3.org/2004/02/skos/core#prefLabel> "well location identifier".
+<http://purl.allotrope.org/ontologies/result#AFR_0002240> <http://www.w3.org/2004/02/skos/core#definition> "A well location identifier is a local identifier that identifies the location of a well on the container submitted to the experiment in the scope of the container.".
+<http://purl.allotrope.org/ontologies/process#AFP_0002677> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://purl.allotrope.org/ontologies/process#AFP_0002677> <http://www.w3.org/2004/02/skos/core#prefLabel> "pressure measurement".
+<http://purl.allotrope.org/ontologies/process#AFP_0002677> <http://www.w3.org/2004/02/skos/core#definition> "A measurement that targets the pressure of some material entity. [Allotrope]".
+<http://purl.org/dc/terms/identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://purl.org/dc/terms/identifier> <http://www.w3.org/2004/02/skos/core#prefLabel> "identifier".
+<http://purl.org/dc/terms/identifier> <http://www.w3.org/2004/02/skos/core#definition> "An unambiguous reference to the resource within a given context.".
+<http://purl.allotrope.org/ontologies/property#AFX_0000622> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://purl.allotrope.org/ontologies/property#AFX_0000622> <http://www.w3.org/2004/02/skos/core#prefLabel> "event start time".
+<http://purl.allotrope.org/ontologies/property#AFX_0000622> <http://www.w3.org/2004/02/skos/core#definition> "Point in time when an event starts.".
+<http://example.org/catplus/ontology/startDuration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://example.org/catplus/ontology/startDuration> <http://www.w3.org/2004/02/skos/core#prefLabel> "duration start interval".
+<http://example.org/catplus/ontology/startDuration> <http://www.w3.org/2004/02/skos/core#definition> "Start duration in minutes".
+<http://example.org/catplus/ontology/endingDuration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://example.org/catplus/ontology/endingDuration> <http://www.w3.org/2004/02/skos/core#prefLabel> "duration end interval".
+<http://example.org/catplus/ontology/endingDuration> <http://www.w3.org/2004/02/skos/core#definition> "End duration in minutes".
+<http://purl.allotrope.org/ontologies/property#AFX_0000687> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://purl.allotrope.org/ontologies/property#AFX_0000687> <http://www.w3.org/2004/02/skos/core#prefLabel> "barcode".
+<http://purl.allotrope.org/ontologies/property#AFX_0000687> <http://www.w3.org/2004/02/skos/core#definition> "A barcode is an optical machine-readable representation of data relating to the object to which it is attached. [Wikipedia]".
+<http://purl.allotrope.org/ontologies/quality#AFQ_0000111> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://purl.allotrope.org/ontologies/quality#AFQ_0000111> <http://www.w3.org/2004/02/skos/core#prefLabel> "state of matter".
+<http://purl.allotrope.org/ontologies/quality#AFQ_0000111> <http://www.w3.org/2004/02/skos/core#altLabel> "material state".
+<http://purl.allotrope.org/ontologies/quality#AFQ_0000111> <http://www.w3.org/2004/02/skos/core#altLabel> "dispense state".
+<http://purl.allotrope.org/ontologies/quality#AFQ_0000111> <http://www.w3.org/2004/02/skos/core#definition> "A state of matter is a quality of material that is one of the distinct forms in which matter can exist. Four states of matter are observable in everyday life: solid, liquid, gas, and plasma. Many other states are known to exist only in extreme situations, such as Bose-Einstein condensates, neutron-degenerate matter, and quark-gluon plasma, which only occur in situations of extreme cold, extreme density, and extremely high-energy color-charged matter respectively. [Wikipedia]".
+<http://purl.allotrope.org/ontologies/result#AFR_0002295> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://purl.allotrope.org/ontologies/result#AFR_0002295> <http://www.w3.org/2004/02/skos/core#prefLabel> "SMILES molecular structure".
+<http://purl.allotrope.org/ontologies/result#AFR_0002295> <http://www.w3.org/2004/02/skos/core#definition> "A SMILES molecular structure is a molecular structure specified in Simplified Molecular Input Line Entry System (SMILES) line notation. [edamontology.org]".
+<http://purl.allotrope.org/ontologies/result#AFR_0002423> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://purl.allotrope.org/ontologies/result#AFR_0002423> <http://www.w3.org/2004/02/skos/core#prefLabel> "end time".
+<http://purl.allotrope.org/ontologies/result#AFR_0002423> <http://www.w3.org/2004/02/skos/core#definition> "A end time is a time that denotes the end of some process. [Allotrope]".
+<http://purl.allotrope.org/ontologies/result#AFR_0002464> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://purl.allotrope.org/ontologies/result#AFR_0002464> <http://www.w3.org/2004/02/skos/core#prefLabel> "vial location identifier".
+<http://purl.allotrope.org/ontologies/result#AFR_0002464> <http://www.w3.org/2004/02/skos/core#definition> "A vial location identifier is a local identifier that identifies the location of a vial in the vial plate in the scope of the vial plate. [Allotrope]".
+<http://purl.allotrope.org/ontologies/result#AFR_0002294> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://purl.allotrope.org/ontologies/result#AFR_0002294> <http://www.w3.org/2004/02/skos/core#prefLabel> "molecular mass".
+<http://purl.allotrope.org/ontologies/result#AFR_0002294> <http://www.w3.org/2004/02/skos/core#definition> "A molecular mass is a quality quantification facet that quantifies the mass of a molecule. [Allotrope]".
+<http://purl.allotrope.org/ontologies/result#AFR_0002036> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://purl.allotrope.org/ontologies/result#AFR_0002036> <http://www.w3.org/2004/02/skos/core#prefLabel> "concentration".
+<http://purl.allotrope.org/ontologies/result#AFR_0002036> <http://www.w3.org/2004/02/skos/core#definition> "Concentration is a molecular quality inhering in a substance by virtue of the amount of the bearer's there is mixed with another substance. [PATO]".
+<http://purl.allotrope.org/ontologies/quality#AFQ_0000209> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://purl.allotrope.org/ontologies/quality#AFQ_0000209> <http://www.w3.org/2004/02/skos/core#prefLabel> "purity".
+<http://purl.allotrope.org/ontologies/quality#AFQ_0000209> <http://www.w3.org/2004/02/skos/core#definition> "Purity is a composition quality inhering in an bearer by virtue of the bearer lacking undesired components. [Allotrope]".
+<http://schema.org/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://schema.org/name> <http://www.w3.org/2004/02/skos/core#prefLabel> "name".
+<http://schema.org/name> <http://www.w3.org/2004/02/skos/core#definition> "A name is a word or set of words by which a person, animal, place, or thing is known, addressed, or referred to.".
+<http://schema.org/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://schema.org/description> <http://www.w3.org/2004/02/skos/core#prefLabel> "description".
+<http://schema.org/description> <http://www.w3.org/2004/02/skos/core#definition> "A description is a spoken or written representation or account of a person, object, or event.".
+<http://qudt.org/schema/qudt/quantity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://qudt.org/schema/qudt/quantity> <http://www.w3.org/2004/02/skos/core#prefLabel> "quantity".
+<http://qudt.org/schema/qudt/quantity> <http://www.w3.org/2004/02/skos/core#definition> "a property to relate an observable thing with a quantity (qudt:Quantity)".
+<http://qudt.org/schema/qudt/unit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://qudt.org/schema/qudt/unit> <http://www.w3.org/2004/02/skos/core#prefLabel> "unit".
+<http://qudt.org/schema/qudt/unit> <http://www.w3.org/2004/02/skos/core#definition> "A reference to the unit of measure of a quantity (variable or constant) of interest.".
+<http://purl.allotrope.org/ontologies/role#AFRL_0000474> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://purl.allotrope.org/ontologies/role#AFRL_0000474> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://qudt.org/schema/qudt/quantity>.
+<http://purl.allotrope.org/ontologies/role#AFRL_0000474> <http://www.w3.org/2004/02/skos/core#prefLabel> "expected datum".
+<http://purl.allotrope.org/ontologies/role#AFRL_0000474> <http://www.w3.org/2004/02/skos/core#definition> "An expected datum is a descriptive datum that describes a information that was predicted or assumed to be the outcome of some process . [Allotrope]".
+<http://example.org/catplus/ontology/measuredQuantity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://example.org/catplus/ontology/measuredQuantity> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://qudt.org/schema/qudt/quantity>.
+<http://example.org/catplus/ontology/measuredQuantity> <http://www.w3.org/2004/02/skos/core#prefLabel> "measured quantity".
+<http://example.org/catplus/ontology/measuredQuantity> <http://www.w3.org/2004/02/skos/core#definition> "Actual measured value of a physical property, such as mass, volume, or concentration, as opposed to a theoretical or ideal value.".
+<http://example.org/catplus/ontology/vialType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://example.org/catplus/ontology/vialType> <http://www.w3.org/2004/02/skos/core#prefLabel> "vial type".
+<http://example.org/catplus/ontology/vialType> <http://www.w3.org/2004/02/skos/core#definition> "classification and design of a vial used for particular purposes in laboratory settings, such as storage, preparation, sampling, or analysis.".
+<http://example.org/catplus/ontology/role> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://example.org/catplus/ontology/role> <http://www.w3.org/2004/02/skos/core#prefLabel> "role".
+<http://example.org/catplus/ontology/role> <http://www.w3.org/2004/02/skos/core#definition> "A role is a function or position in a system. In our system, a role is the defined function for the sample or chemical within the context of the reaction.".
+<http://example.org/catplus/ontology/containerID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://example.org/catplus/ontology/containerID> <http://www.w3.org/2004/02/skos/core#prefLabel> "container identifier".
+<http://example.org/catplus/ontology/containerID> <http://www.w3.org/2004/02/skos/core#definition> "The identifier or number for the individual container storing each specific media type. ".
+<http://example.org/catplus/ontology/reactionType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://example.org/catplus/ontology/reactionType> <http://www.w3.org/2004/02/skos/core#prefLabel> "reaction type".
+<http://example.org/catplus/ontology/reactionType> <http://www.w3.org/2004/02/skos/core#definition> "The type of reaction that is part of the batch".
+<http://example.org/catplus/ontology/reactionType> <http://www.w3.org/2004/02/skos/core#example> "Sonoshira coupling with ethanol".
+<http://example.org/catplus/ontology/containerBarcode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://example.org/catplus/ontology/containerBarcode> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.allotrope.org/ontologies/property#AFX_0000687>.
+<http://example.org/catplus/ontology/containerBarcode> <http://www.w3.org/2004/02/skos/core#prefLabel> "container barcode".
+<http://example.org/catplus/ontology/containerBarcode> <http://www.w3.org/2004/02/skos/core#definition> "A container barcode is a unique identifier that identifies a container within a sample".
+<http://example.org/catplus/ontology/dispenseType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://example.org/catplus/ontology/dispenseType> <http://www.w3.org/2004/02/skos/core#prefLabel> "dispense type".
+<http://example.org/catplus/ontology/dispenseType> <http://www.w3.org/2004/02/skos/core#definition> "The method or mechanism used to deliver or dispense liquids or powders from one container to another, refered to mass or liquid".
+<http://example.org/catplus/ontology/internalBarCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://example.org/catplus/ontology/internalBarCode> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.allotrope.org/ontologies/property#AFX_0000687>.
+<http://example.org/catplus/ontology/internalBarCode> <http://www.w3.org/2004/02/skos/core#prefLabel> "internal barcode".
+<http://example.org/catplus/ontology/internalBarCode> <http://www.w3.org/2004/02/skos/core#definition> "An internal barcode is a unique identifier that identifies a sample".
+<http://example.org/catplus/ontology/internalBarCode> <http://www.w3.org/2004/02/skos/core#example> "EPFL barcode".
+<http://example.org/catplus/ontology/internalBarCode> <http://www.w3.org/2004/02/skos/core#example> "inhouse-created barcode".
+<http://example.org/catplus/ontology/vacuum> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://example.org/catplus/ontology/vacuum> <http://www.w3.org/2004/02/skos/core#prefLabel> "vacuum".
+<http://example.org/catplus/ontology/vacuum> <http://www.w3.org/2004/02/skos/core#definition> "the state of a gas at which its pressure in a vessel and therefore its particle density is lower than that of the ambient surrounding atmosphere or in which the pressure of the gas is lower than 300 mbar, i. e. lower than the pressure of the atmosphere on the Earth's surface.".
+<http://purl.allotrope.org/ontologies/property#AFX_0000060> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://purl.allotrope.org/ontologies/property#AFX_0000060> <http://www.w3.org/2004/02/skos/core#prefLabel> "temperature".
+<http://purl.allotrope.org/ontologies/property#AFX_0000060> <http://www.w3.org/2004/02/skos/core#definition> "A temperature is a comparative objective measure of hot and cold. It is measured, typically by a thermometer, through the bulk behavior of a thermometric material, detection of heat radiation, or by particle velocity or kinetic energy. It may be calibrated in any of various temperature scales, Celsius, Fahrenheit, Kelvin, etc. [Wikipedia]".
+<http://example.org/catplus/ontology/temperatureShaker> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://example.org/catplus/ontology/temperatureShaker> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.allotrope.org/ontologies/property#AFX_0000060>.
+<http://example.org/catplus/ontology/temperatureShaker> <http://www.w3.org/2004/02/skos/core#prefLabel> "temperature shaker".
+<http://example.org/catplus/ontology/temperatureShaker> <http://www.w3.org/2004/02/skos/core#definition> "the temperature maintained by a device that combines mechanical agitation with precise temperature control, allowing samples to be mixed or incubated under specific thermal conditions.".
+<http://example.org/catplus/ontology/temperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://example.org/catplus/ontology/temperature> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.allotrope.org/ontologies/property#AFX_0000060>.
+<http://example.org/catplus/ontology/temperature> <http://www.w3.org/2004/02/skos/core#prefLabel> "temperature shaker".
+<http://example.org/catplus/ontology/temperature> <http://www.w3.org/2004/02/skos/core#definition> "the temperature maintained by a device that combines mechanical agitation with precise temperature control, allowing samples to be mixed or incubated under specific thermal conditions.".
+<http://example.org/catplus/ontology/wavelength> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://example.org/catplus/ontology/wavelength> <http://www.w3.org/2004/02/skos/core#prefLabel> "wavelength irradiation".
+<http://example.org/catplus/ontology/wavelength> <http://www.w3.org/2004/02/skos/core#definition> "Distance in the direction of propagation of a periodic wave between two successive points where at a given time the phase is the same. [IUPAC Gold Book]. The wavelength to irradiate a sample. One possible unit is the nm.".
+<http://example.org/catplus/ontology/temperatureTumbleStirrer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://example.org/catplus/ontology/temperatureTumbleStirrer> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.allotrope.org/ontologies/property#AFX_0000060>.
+<http://example.org/catplus/ontology/temperatureTumbleStirrer> <http://www.w3.org/2004/02/skos/core#prefLabel> "temperature tumble stirrer".
+<http://example.org/catplus/ontology/temperatureTumbleStirrer> <http://www.w3.org/2004/02/skos/core#definition> "the specific temperature maintained by a device designed for mixing or agitating liquids, typically by using a rotating motion to create a tumbling effect.".
+<http://example.org/catplus/ontology/casNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://example.org/catplus/ontology/casNumber> <http://www.w3.org/2004/02/skos/core#related> <https://www.cas.org/>.
+<http://example.org/catplus/ontology/casNumber> <http://www.w3.org/2004/02/skos/core#prefLabel> "CAS number".
+<http://example.org/catplus/ontology/casNumber> <http://www.w3.org/2004/02/skos/core#definition> "A CAS number is a unique numerical identifier assigned by the Chemical Abstracts Service (CAS) to every chemical substance described in the open scientific literature.".
+<http://purl.allotrope.org/ontologies/result#AFR_0002292> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://purl.allotrope.org/ontologies/result#AFR_0002292> <http://www.w3.org/2004/02/skos/core#prefLabel> "chemical name".
+<http://purl.allotrope.org/ontologies/result#AFR_0002292> <http://www.w3.org/2004/02/skos/core#definition> "A chemical name is the written name of a chemical substance that shows the names of each of its elements or subcompounds. [Allotrope]".
+<http://purl.allotrope.org/ontologies/result#AFR_0002292> <http://www.w3.org/2004/02/skos/core#example> "ethanol".
+<http://purl.allotrope.org/ontologies/result#AFR_0002292> <http://www.w3.org/2004/02/skos/core#example> "2-propanol".
+<http://purl.allotrope.org/ontologies/result#AFR_0002292> <http://www.w3.org/2004/02/skos/core#example> "sodium chloride".
+<http://example.org/catplus/ontology/hasChemical> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://example.org/catplus/ontology/hasChemical> <http://www.w3.org/2004/02/skos/core#prefLabel> "has chemical".
+<http://example.org/catplus/ontology/hasChemical> <http://www.w3.org/2004/02/skos/core#definition> "The chemical that is part of the sample".
+<http://purl.allotrope.org/ontologies/process#AFP_0002677> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://purl.allotrope.org/ontologies/process#AFP_0002677> <http://www.w3.org/2004/02/skos/core#prefLabel> "pressure measurement".
+<http://purl.allotrope.org/ontologies/process#AFP_0002677> <http://www.w3.org/2004/02/skos/core#definition> "A measurement that targets the pressure of some material entity. [Allotrope]".
+<http://example.org/catplus/ontology/theoreticalRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://example.org/catplus/ontology/theoreticalRole> <http://www.w3.org/2004/02/skos/core#prefLabel> "theoretical role".
+<http://example.org/catplus/ontology/theoreticalRole> <http://www.w3.org/2004/02/skos/core#definition> "The theoretical role is the role of the molecule in the context of the reaction.".
+<http://example.org/catplus/ontology/errorMargin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://example.org/catplus/ontology/errorMargin> <http://www.w3.org/2004/02/skos/core#prefLabel> "error margin".
+<http://example.org/catplus/ontology/errorMargin> <http://www.w3.org/2004/02/skos/core#definition> "it refers to the range within which the true value of a measured quantity is expected to lie, considering the inherent uncertainties of the instrument. It is typically expressed as a ± value indicating the possible deviation from the true measurement due to limitations in precision, accuracy, or sensitivity of the instrument, manipulation.".
+<http://purl.allotrope.org/ontologies/hdf5/1.8#HardLink> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://purl.allotrope.org/ontologies/hdf5/1.8#HardLink> <http://www.w3.org/2004/02/skos/core#prefLabel> "hard link".
+<http://purl.allotrope.org/ontologies/hdf5/1.8#HardLink> <http://www.w3.org/2004/02/skos/core#definition> "A hard link is a reference to a file or directory that is a pointer to the file or directory itself, rather than a copy of the file or directory.".
+<http://example.org/catplus/ontology/optimizationType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://example.org/catplus/ontology/optimizationType> <http://www.w3.org/2004/02/skos/core#prefLabel> "optimization type".
+<http://example.org/catplus/ontology/optimizationType> <http://www.w3.org/2004/02/skos/core#definition> "The type of optimization that is part of the batch".
+<http://example.org/catplus/ontology/hasObjective> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://example.org/catplus/ontology/hasObjective> <http://www.w3.org/2004/02/skos/core#prefLabel> "has objective".
+<http://example.org/catplus/ontology/hasObjective> <http://www.w3.org/2004/02/skos/core#definition> "The objective that is part of the batch".
+<http://example.org/catplus/ontology/hasBatch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://example.org/catplus/ontology/hasBatch> <http://www.w3.org/2004/02/skos/core#prefLabel> "has batch".
+<http://example.org/catplus/ontology/hasBatch> <http://www.w3.org/2004/02/skos/core#definition> "refers to a specific batch instance".
+<http://purl.allotrope.org/ontologies/result#AFR_0002764> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://purl.allotrope.org/ontologies/result#AFR_0002764> <http://www.w3.org/2004/02/skos/core#prefLabel> "reference".
+<http://purl.allotrope.org/ontologies/result#AFR_0002764> <http://www.w3.org/2004/02/skos/core#definition> "Some link to a publication or paper, we want a less generic name to describe any note/reference".
+<http://example.org/catplus/ontology/campaignClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://example.org/catplus/ontology/campaignClass> <http://www.w3.org/2004/02/skos/core#prefLabel> "campaign class".
+<http://example.org/catplus/ontology/campaignClass> <http://www.w3.org/2004/02/skos/core#definition> "Categorization or grouping of related activities, tasks, or items, often used in contexts such as project management, operations, or production.".
+<http://purl.allotrope.org/ontologies/common#AFC_0000090> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://purl.allotrope.org/ontologies/common#AFC_0000090> <http://www.w3.org/2004/02/skos/core#prefLabel> "condition".
+<http://purl.allotrope.org/ontologies/common#AFC_0000090> <http://www.w3.org/2004/02/skos/core#definition> "A condition is an information content entity that is about the portion of reality under which something occurs or is valid. The condition is limited by its scope and may have preconditions. It restricts the possible realizations. [Allotrope]".
+<http://example.org/catplus/ontology/criteria> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://example.org/catplus/ontology/criteria> <http://www.w3.org/2004/02/skos/core#prefLabel> "criteria".
+<http://example.org/catplus/ontology/criteria> <http://www.w3.org/2004/02/skos/core#definition> "A criteria is a standard or rule by which the success of the experiment is judged.".
+<http://example.org/catplus/ontology/swissCatNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://example.org/catplus/ontology/swissCatNumber> <http://www.w3.org/2004/02/skos/core#prefLabel> "SwissCAT number".
+<http://example.org/catplus/ontology/swissCatNumber> <http://www.w3.org/2004/02/skos/core#definition> "A SwissCAT number is a unique identifier assigned by the SwissCAT to every chemical substance described in the open scientific literature.".
+<http://schema.org/keywords> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://schema.org/keywords> <http://www.w3.org/2004/02/skos/core#prefLabel> "keywords".
+<http://schema.org/keywords> <http://www.w3.org/2004/02/skos/core#definition> "Keywords or tags used to describe some item. Multiple textual entries in a keywords list are typically delimited by commas, or by repeating the property.[Schema.org]".
+<http://example.org/catplus/ontology/genericObjective> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://example.org/catplus/ontology/genericObjective> <http://www.w3.org/2004/02/skos/core#prefLabel> "generic objective".
+<http://example.org/catplus/ontology/genericObjective> <http://www.w3.org/2004/02/skos/core#definition> "It serves as a guiding principle, focusing on enhancing overall performance in conducting chemical reactions, reducing errors, and increasing output without specifying particular methods or metrics.".
+<http://purl.allotrope.org/ontologies/result#AFR_0001952> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://purl.allotrope.org/ontologies/result#AFR_0001952> <http://www.w3.org/2004/02/skos/core#prefLabel> "molecular formula".
+<http://purl.allotrope.org/ontologies/result#AFR_0001952> <http://www.w3.org/2004/02/skos/core#definition> "A molecular formula is a molecular entity facet which identifies each constituent element by its chemical symbol and indicates the number of atoms of each element found in each discrete molecular entity of that compound. [CHEMINF]".
+<http://purl.allotrope.org/ontologies/result#AFR_0002296> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://purl.allotrope.org/ontologies/result#AFR_0002296> <http://www.w3.org/2004/02/skos/core#prefLabel> "InChI".
+<http://purl.allotrope.org/ontologies/result#AFR_0002296> <http://www.w3.org/2004/02/skos/core#definition> "An InChI molecular structure is a molecular structure specified in IUPAC International Chemical Identifier (InChI) line notation. [edamontology.org]".
+<http://purl.allotrope.org/ontologies/property#AFX_0000211> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://purl.allotrope.org/ontologies/property#AFX_0000211> <http://www.w3.org/2004/02/skos/core#prefLabel> "speed".
+<http://purl.allotrope.org/ontologies/property#AFX_0000211> <http://www.w3.org/2004/02/skos/core#definition> "Speed in revolutions per minute (RPM) is a measure of the frequency of rotation, specifically the number of full rotations completed in one minute around a fixed axis.".
+<http://purl.obolibrary.org/obo/PATO_0001019> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://purl.obolibrary.org/obo/PATO_0001019> <http://www.w3.org/2004/02/skos/core#prefLabel> "mass density".
+<http://purl.obolibrary.org/obo/PATO_0001019> <http://www.w3.org/2004/02/skos/core#definition> "A physical quality which inheres in a bearer by virtue of some influence is exerted by the bearer's mass per unit size.".
+<http://example.org/catplus/ontology/volumeEvaporationFinal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://example.org/catplus/ontology/volumeEvaporationFinal> <http://www.w3.org/2004/02/skos/core#prefLabel> "volume evaporation final".
+<http://example.org/catplus/ontology/volumeEvaporationFinal> <http://www.w3.org/2004/02/skos/core#definition> "It indicates the percentage of a liquid's initial volume that has evaporated by the end of a process.".
+<http://example.org/catplus/ontology/order> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://example.org/catplus/ontology/order> <http://www.w3.org/2004/02/skos/core#prefLabel> "order".
+<http://example.org/catplus/ontology/order> <http://www.w3.org/2004/02/skos/core#definition> "The order of the action in the procedure.".
+<http://example.org/catplus/ontology/hasSolvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://example.org/catplus/ontology/hasSolvent> <http://www.w3.org/2004/02/skos/core#prefLabel> "has solvent".
+<http://example.org/catplus/ontology/hasSolvent> <http://www.w3.org/2004/02/skos/core#definition> "The solvent that is part of the sample".
+<http://example.org/catplus/ontology/volume> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://example.org/catplus/ontology/volume> <http://www.w3.org/2004/02/skos/core#prefLabel> "volume".
+<http://example.org/catplus/ontology/volume> <http://www.w3.org/2004/02/skos/core#definition> "The volume of the sample".
+<http://example.org/catplus/ontology/isSpmeProcess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://example.org/catplus/ontology/isSpmeProcess> <http://www.w3.org/2004/02/skos/core#prefLabel> "is SPME process".
+<http://example.org/catplus/ontology/isSpmeProcess> <http://www.w3.org/2004/02/skos/core#definition> "Solid-phase microextraction (SPME) is a solvent-free sample preparation technique that involves the extraction of analytes from a sample into a solid phase, followed by the desorption of the analytes into a solvent for analysis.".
+<http://example.org/catplus/ontology/hasCartridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://example.org/catplus/ontology/hasCartridge> <http://www.w3.org/2004/02/skos/core#prefLabel> "has cartridge".
+<http://example.org/catplus/ontology/hasCartridge> <http://www.w3.org/2004/02/skos/core#definition> "The cartridge that is part of the sub action".
+<http://example.org/catplus/ontology/cartridgeName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://example.org/catplus/ontology/cartridgeName> <http://www.w3.org/2004/02/skos/core#prefLabel> "cartridge name".
+<http://example.org/catplus/ontology/cartridgeName> <http://www.w3.org/2004/02/skos/core#definition> "It refers to the specific type or brand of cartridge used, which often indicates the nature of the sorbent material inside.".
+<http://example.org/catplus/ontology/cartridgeComposition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://example.org/catplus/ontology/cartridgeComposition> <http://www.w3.org/2004/02/skos/core#prefLabel> "cartridge composition".
+<http://example.org/catplus/ontology/cartridgeComposition> <http://www.w3.org/2004/02/skos/core#definition> "It refers to the materials and specific sorbents packed within the SPE cartridge.".
+<http://purl.allotrope.org/ontologies/result#AFR_0002526> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://purl.allotrope.org/ontologies/result#AFR_0002526> <http://www.w3.org/2004/02/skos/core#prefLabel> "device system document".
+<http://purl.allotrope.org/ontologies/result#AFR_0002526> <http://www.w3.org/2004/02/skos/core#definition> "A device system document is a document that encompasses the information associated with a device system. [Allotrope]".
+<http://purl.allotrope.org/ontologies/result#AFR_0002083> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://purl.allotrope.org/ontologies/result#AFR_0002083> <http://www.w3.org/2004/02/skos/core#definition> "A sample document is a document about a particular sample. [Allotrope]".
+<http://purl.allotrope.org/ontologies/result#AFR_0002083> <http://www.w3.org/2004/02/skos/core#prefLabel> "sample document".
+<http://purl.allotrope.org/ontologies/result#AFR_0002529> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://purl.allotrope.org/ontologies/result#AFR_0002529> <http://www.w3.org/2004/02/skos/core#definition> "An injection document is a document that encompasses the information associated with an injection. [Allotrope]".
+<http://purl.allotrope.org/ontologies/result#AFR_0002529> <http://www.w3.org/2004/02/skos/core#prefLabel> "injection document".
+<http://purl.allotrope.org/ontologies/result#AFR_0002550> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://purl.allotrope.org/ontologies/result#AFR_0002550> <http://www.w3.org/2004/02/skos/core#definition> "A chromatogram data cube is a data cube that represents a chromatogram. [Allotrope]".
+<http://purl.allotrope.org/ontologies/result#AFR_0002550> <http://www.w3.org/2004/02/skos/core#prefLabel> "chromatogram data cube".
+<http://purl.allotrope.org/ontologies/result#AFR_0002551> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://purl.allotrope.org/ontologies/result#AFR_0002551> <http://www.w3.org/2004/02/skos/core#definition> "A three-dimensional ultraviolet spectrum data cube is a data cube that represents a three-dimensional ultraviolet spectrum. [Allotrope]".
+<http://purl.allotrope.org/ontologies/result#AFR_0002551> <http://www.w3.org/2004/02/skos/core#prefLabel> "three-dimensional ultraviolet spectrum data cube".
+<http://purl.allotrope.org/ontologies/result#AFR_0002878> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://purl.allotrope.org/ontologies/result#AFR_0002878> <http://www.w3.org/2004/02/skos/core#definition> "A three-dimensional mass spectrum data cube is a data cube that is a representation of a three-dimensional mass spectrum. [Allotrope]".
+<http://purl.allotrope.org/ontologies/result#AFR_0002878> <http://www.w3.org/2004/02/skos/core#prefLabel> "three-dimensional mass spectrum data cube".
+<http://example.org/catplus/ontology/measure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://example.org/catplus/ontology/measure> <http://www.w3.org/2004/02/skos/core#prefLabel> "measure".
+<http://example.org/catplus/ontology/measure> <http://www.w3.org/2004/02/skos/core#definition> "A property representing the act of quantifying or determining the extent, amount, or size of a specific attribute or phenomenon.".
+<http://example.org/catplus/ontology/dimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://example.org/catplus/ontology/dimension> <http://www.w3.org/2004/02/skos/core#prefLabel> "dimension".
+<http://example.org/catplus/ontology/dimension> <http://www.w3.org/2004/02/skos/core#definition> "A property representing a measurable extent of a particular kind, such as length, width, height, or time, in a specified context.".
+<http://example.org/catplus/ontology/hasLiquidChromatography> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://example.org/catplus/ontology/hasLiquidChromatography> <http://www.w3.org/2004/02/skos/core#prefLabel> "has a liquid chromatography".
+<http://example.org/catplus/ontology/hasLiquidChromatography> <http://www.w3.org/2004/02/skos/core#definition> "The belonging of a liquid chromatography".
+<http://purl.allotrope.org/ontologies/result#AFR_0002659> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://purl.allotrope.org/ontologies/result#AFR_0002659> <http://www.w3.org/2004/02/skos/core#definition> "A processed data document is a document that encompasses the output of some data processing operation. [Allotrope]".
+<http://purl.allotrope.org/ontologies/result#AFR_0002659> <http://www.w3.org/2004/02/skos/core#prefLabel> "processed data document".
+<http://purl.obolibrary.org/obo/IAO_0000009> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://purl.obolibrary.org/obo/IAO_0000009> <http://www.w3.org/2004/02/skos/core#definition> "A label is a symbol that is part of some other datum and is used to either partially define  the denotation of that datum or to provide a means for identifying the datum as a member of the set of data with the same label [IAO]".
+<http://purl.obolibrary.org/obo/IAO_0000009> <http://www.w3.org/2004/02/skos/core#prefLabel> "datum label".
+<http://purl.org/linked-data/cube#structure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://purl.org/linked-data/cube#structure> <http://www.w3.org/2004/02/skos/core#definition> "Represents a collection of observations, possibly organized into various slices, conforming to some common dimensional structure. [QB]".
+<http://purl.org/linked-data/cube#structure> <http://www.w3.org/2004/02/skos/core#prefLabel> "data cube".
+<http://purl.allotrope.org/ontologies/hdf5/1.8#Dataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://purl.allotrope.org/ontologies/hdf5/1.8#Dataset> <http://www.w3.org/2004/02/skos/core#definition> "A multi-dimensional array of data elements, together with supporting metadata. [Allotrope]".
+<http://purl.allotrope.org/ontologies/hdf5/1.8#Dataset> <http://www.w3.org/2004/02/skos/core#prefLabel> "dataset".
+<http://purl.allotrope.org/ontologies/result#AFR_0000917> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://purl.allotrope.org/ontologies/result#AFR_0000917> <http://www.w3.org/2004/02/skos/core#definition> "An identifier is a name that identifies (that is, labels the identity of) either a unique object or a unique class of objects, where the \"object\" or class may be an idea, physical [countable] object (or class thereof), or physical [uncountable] substance (or class thereof). [Wikipedia]".
+<http://purl.allotrope.org/ontologies/result#AFR_0000917> <http://www.w3.org/2004/02/skos/core#prefLabel> "identifier".
+<http://purl.allotrope.org/ontologies/result#AFR_0000432> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://purl.allotrope.org/ontologies/result#AFR_0000432> <http://www.w3.org/2004/02/skos/core#definition> "Collection of peaks or peak groups for a specific purpose. [Allotrope]".
+<http://purl.allotrope.org/ontologies/result#AFR_0000432> <http://www.w3.org/2004/02/skos/core#prefLabel> "peak list".
+<http://purl.allotrope.org/ontologies/result#AFR_0001073> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://purl.allotrope.org/ontologies/result#AFR_0001073> <http://www.w3.org/2004/02/skos/core#definition> "A peak facet that quantitates the area enclosed by a peak and the selected baseline. [Allotrope]".
+<http://purl.allotrope.org/ontologies/result#AFR_0001073> <http://www.w3.org/2004/02/skos/core#prefLabel> "peak area".
+<http://purl.allotrope.org/ontologies/result#AFR_0001089> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://purl.allotrope.org/ontologies/result#AFR_0001089> <http://www.w3.org/2004/02/skos/core#definition> "Retention time is a chromatography peak facet that indicates the elapsed time between the injection of the sample and the maximum detector response attributed to the peak (analyte band). [Allotrope]".
+<http://purl.allotrope.org/ontologies/result#AFR_0001089> <http://www.w3.org/2004/02/skos/core#prefLabel> "retention time".
+<http://purl.allotrope.org/ontologies/result#AFR_0001164> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://purl.allotrope.org/ontologies/result#AFR_0001164> <http://www.w3.org/2004/02/skos/core#definition> "A peak identifier is an identifier that identifies a peak. [Allotrope]".
+<http://purl.allotrope.org/ontologies/result#AFR_0001164> <http://www.w3.org/2004/02/skos/core#prefLabel> "peak identifier".
+<http://purl.allotrope.org/ontologies/result#AFR_0001180> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://purl.allotrope.org/ontologies/result#AFR_0001180> <http://www.w3.org/2004/02/skos/core#definition> "A peak facet that denotes the last value of the abscissa that belongs to the peak. [Allotrope]".
+<http://purl.allotrope.org/ontologies/result#AFR_0001180> <http://www.w3.org/2004/02/skos/core#prefLabel> "peak end".
+<http://purl.allotrope.org/ontologies/result#AFR_0000949> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://purl.allotrope.org/ontologies/result#AFR_0000949> <http://www.w3.org/2004/02/skos/core#definition> "A peak facet that denotes the height of the peak relative to some other peak or summation of peaks. [Allotrope]".
+<http://purl.allotrope.org/ontologies/result#AFR_0000949> <http://www.w3.org/2004/02/skos/core#prefLabel> "relative peak height".
+<http://purl.allotrope.org/ontologies/result#AFR_0001178> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://purl.allotrope.org/ontologies/result#AFR_0001178> <http://www.w3.org/2004/02/skos/core#definition> "A peak facet that denotes the first value of the abscissa that belongs to the peak. [Allotrope]".
+<http://purl.allotrope.org/ontologies/result#AFR_0001178> <http://www.w3.org/2004/02/skos/core#prefLabel> "peak start".
+<http://purl.allotrope.org/ontologies/result#AFR_0001165> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://purl.allotrope.org/ontologies/result#AFR_0001165> <http://www.w3.org/2004/02/skos/core#definition> "A peak facet that denotes the area of the peak relative to some other peak or summation of peaks. [Allotrope]".
+<http://purl.allotrope.org/ontologies/result#AFR_0001165> <http://www.w3.org/2004/02/skos/core#prefLabel> "relative peak area".
+<http://purl.allotrope.org/ontologies/result#AFR_0001179> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://purl.allotrope.org/ontologies/result#AFR_0001179> <http://www.w3.org/2004/02/skos/core#definition> "A peak facet that denotes the first value of the ordinate that belongs to the peak. [Allotrope]".
+<http://purl.allotrope.org/ontologies/result#AFR_0001179> <http://www.w3.org/2004/02/skos/core#prefLabel> "peak value at start".
+<http://purl.allotrope.org/ontologies/result#AFR_0001181> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://purl.allotrope.org/ontologies/result#AFR_0001181> <http://www.w3.org/2004/02/skos/core#definition> "A peak facet that denotes the last value of the ordinate that belongs to the peak. [Allotrope]".
+<http://purl.allotrope.org/ontologies/result#AFR_0001181> <http://www.w3.org/2004/02/skos/core#prefLabel> "peak value at end".
+<http://purl.allotrope.org/ontologies/result#AFR_0001976> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://purl.allotrope.org/ontologies/result#AFR_0001976> <http://www.w3.org/2004/02/skos/core#definition> "An asset management identifier is an identifier that is registered within an asset / inventory management system that identifies an equipment. [Allotrope]".
+<http://purl.allotrope.org/ontologies/result#AFR_0001976> <http://www.w3.org/2004/02/skos/core#prefLabel> "asset management identifier".
+<http://purl.allotrope.org/ontologies/result#AFR_0002018> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://purl.allotrope.org/ontologies/result#AFR_0002018> <http://www.w3.org/2004/02/skos/core#definition> "A device identifier is an identifier that identifies some device. [Allotrope]".
+<http://purl.allotrope.org/ontologies/result#AFR_0002018> <http://www.w3.org/2004/02/skos/core#prefLabel> "device identifier".
+<http://purl.allotrope.org/ontologies/result#AFR_0002568> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://purl.allotrope.org/ontologies/result#AFR_0002568> <http://www.w3.org/2004/02/skos/core#definition> "A device type is a classification datum that classifies the type of device used. [Allotrope]".
+<http://purl.allotrope.org/ontologies/result#AFR_0002568> <http://www.w3.org/2004/02/skos/core#prefLabel> "device type".
+<http://purl.allotrope.org/ontologies/result#AFR_0001258> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://purl.allotrope.org/ontologies/result#AFR_0001258> <http://www.w3.org/2004/02/skos/core#definition> "A product manufacturer is a symbol that denotes the organizational entity manufacturing some entity with a product role (economic). [Allotrope]".
+<http://purl.allotrope.org/ontologies/result#AFR_0001258> <http://www.w3.org/2004/02/skos/core#prefLabel> "product manufacturer".
+<http://purl.allotrope.org/ontologies/result#AFR_0001119> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://purl.allotrope.org/ontologies/result#AFR_0001119> <http://www.w3.org/2004/02/skos/core#definition> "Equipment serial number is a serial number that identifies an equipment used in the measuring by its serial number. [Allotrope]".
+<http://purl.allotrope.org/ontologies/result#AFR_0001119> <http://www.w3.org/2004/02/skos/core#prefLabel> "equipment serial number".
+<http://purl.obolibrary.org/obo/IAO_0000017> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://purl.obolibrary.org/obo/IAO_0000017> <http://www.w3.org/2004/02/skos/core#definition> "A model number is an information content entity specifically borne by catalogs, design specifications, advertising materials, inventory systems and similar that is about manufactured objects of the same class. The model number is an alternative term for the class. [IAO]".
+<http://purl.obolibrary.org/obo/IAO_0000017> <http://www.w3.org/2004/02/skos/core#prefLabel> "model number".
+<http://purl.allotrope.org/ontologies/result#AFR_0001259> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://purl.allotrope.org/ontologies/result#AFR_0001259> <http://www.w3.org/2004/02/skos/core#definition> "A firmware version is a version number that identifies the firmware of a device. [Allotrope]".
+<http://purl.allotrope.org/ontologies/result#AFR_0001259> <http://www.w3.org/2004/02/skos/core#prefLabel> "firmware version".
+<http://purl.allotrope.org/ontologies/datacube-hdf-map#Index> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://purl.allotrope.org/ontologies/datacube-hdf-map#Index> <http://www.w3.org/2004/02/skos/core#definition> "An index is part of index structure definition and defined for at least one dimension component of a data structure definition. [Allotrope]".
+<http://purl.allotrope.org/ontologies/datacube-hdf-map#Index> <http://www.w3.org/2004/02/skos/core#prefLabel> "index".
+<http://purl.allotrope.org/ontologies/result#AFR_0000948> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://purl.allotrope.org/ontologies/result#AFR_0000948> <http://www.w3.org/2004/02/skos/core#prefLabel> "Peak Height".
+<http://purl.allotrope.org/ontologies/result#AFR_0000948> <http://www.w3.org/2004/02/skos/core#definition> "The distance between the peak maximum and the peak base, measured in a direction parallel to the axis representing the detector response resp. the measured quantity. [IUPAC Orange Book]".
+<http://purl.allotrope.org/ontologies/result#AFR_0001606> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://purl.allotrope.org/ontologies/result#AFR_0001606> <http://www.w3.org/2004/02/skos/core#prefLabel> "method name".
+<http://purl.allotrope.org/ontologies/result#AFR_0001606> <http://www.w3.org/2004/02/skos/core#definition> "A method name is a name that denotes a plan specification (method). [Allotrope]".
+<http://example.org/catplus/ontology/hasPlate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://example.org/catplus/ontology/hasPlate> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Plate".
+<http://example.org/catplus/ontology/hasPlate> <http://www.w3.org/2004/02/skos/core#definition> "The plate that is part of the batch".
+<http://purl.allotrope.org/ontologies/datacube#componentDataType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://purl.allotrope.org/ontologies/datacube#componentDataType> <http://www.w3.org/2004/02/skos/core#prefLabel> "component data type".
+<http://purl.allotrope.org/ontologies/datacube#componentDataType> <http://www.w3.org/2004/02/skos/core#definition> "The data type of the component".
+<http://www.w3.org/2000/01/rdf-schema#label> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://www.w3.org/2000/01/rdf-schema#label> <http://www.w3.org/2004/02/skos/core#prefLabel> "label".
+<http://www.w3.org/2000/01/rdf-schema#label> <http://www.w3.org/2004/02/skos/core#definition> "A label is a textual or numeric identifier that is used to identify or describe an object, entity, or concept.".
+<http://purl.allotrope.org/ontologies/result#AFR_0001121> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://purl.allotrope.org/ontologies/result#AFR_0001121> <http://www.w3.org/2004/02/skos/core#prefLabel> "measurement ID".
+<http://purl.allotrope.org/ontologies/result#AFR_0001121> <http://www.w3.org/2004/02/skos/core#definition> "Measurement id is measurement metadata that identifies the measuring run. [Allotrope]".
+<http://purl.allotrope.org/ontologies/result#AFR_0002722> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://purl.allotrope.org/ontologies/result#AFR_0002722> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Device control aggregate document".
+<http://purl.allotrope.org/ontologies/result#AFR_0002722> <http://www.w3.org/2004/02/skos/core#definition> "A property which aggregates device control documents. [Allotrope]".
+<http://purl.allotrope.org/ontologies/result#AFR_0002534> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://purl.allotrope.org/ontologies/result#AFR_0002534> <http://www.w3.org/2004/02/skos/core#prefLabel> "detection type".
+<http://purl.allotrope.org/ontologies/result#AFR_0002534> <http://www.w3.org/2004/02/skos/core#definition> "A detection type is a classification datum that classifies the type of detection performed by the detector. [Allotrope]".
+<http://purl.allotrope.org/ontologies/result#AFR_0001116> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://purl.allotrope.org/ontologies/result#AFR_0001116> <http://www.w3.org/2004/02/skos/core#prefLabel> "analyst".
+<http://purl.allotrope.org/ontologies/result#AFR_0001116> <http://www.w3.org/2004/02/skos/core#definition> "Analyst is measurement metadata about the name or identifier of a person that has the role of an analyst in the measurement. [Allotrope]".
+<http://purl.allotrope.org/ontologies/result#AFR_0002374> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://purl.allotrope.org/ontologies/result#AFR_0002374> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Measurement aggregate document".
+<http://purl.allotrope.org/ontologies/result#AFR_0002374> <http://www.w3.org/2004/02/skos/core#definition> "A property which aggregates measurement documents.".
+<http://purl.allotrope.org/ontologies/identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://purl.allotrope.org/ontologies/identifier> <http://www.w3.org/2004/02/skos/core#prefLabel> "identifier".
+<http://purl.allotrope.org/ontologies/identifier> <http://www.w3.org/2004/02/skos/core#definition> "An unambiguous reference to the resource within a given context.".
+<http://example.org/catplus/ontology/hasWell> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://example.org/catplus/ontology/hasWell> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Well".
+<http://example.org/catplus/ontology/hasWell> <http://www.w3.org/2004/02/skos/core#definition> "A property to indicate the well something has".
+<http://qudt.org/schema/qudt/value> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://qudt.org/schema/qudt/value> <http://www.w3.org/2004/02/skos/core#prefLabel> "value".
+<http://qudt.org/schema/qudt/value> <http://www.w3.org/2004/02/skos/core#definition> "The value of a quantity".
+<http://example.org/catplus/ontology/hasProduct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://example.org/catplus/ontology/hasProduct> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Product".
+<http://example.org/catplus/ontology/hasProduct> <http://www.w3.org/2004/02/skos/core#definition> "A property to indicate the product (unknown mix of chemicals) something has".
+<http://example.org/catplus/ontology/hasSample> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://example.org/catplus/ontology/hasSample> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Sample".
+<http://example.org/catplus/ontology/hasSample> <http://www.w3.org/2004/02/skos/core#definition> "A property to indicate the sample something has".
+<http://example.org/catplus/ontology/peak> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://example.org/catplus/ontology/peak> <http://www.w3.org/2004/02/skos/core#prefLabel> "peak".
+<http://example.org/catplus/ontology/peak> <http://www.w3.org/2004/02/skos/core#definition> "A peak is a local maximum in the chromatogram that represents the presence of a specific compound or analyte.".
+<http://purl.allotrope.org/ontologies/result#AFR_0001118> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://purl.allotrope.org/ontologies/result#AFR_0001118> <http://www.w3.org/2004/02/skos/core#prefLabel> "sample Identifier".
+<http://purl.allotrope.org/ontologies/result#AFR_0001118> <http://www.w3.org/2004/02/skos/core#definition> "Sample id is a measurement metadata that identifies a sample being measured. [Allotrope]".
+<http://purl.obolibrary.org/obo/IAO_0000590> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://purl.obolibrary.org/obo/IAO_0000590> <http://www.w3.org/2004/02/skos/core#prefLabel> "written name".
+<http://purl.obolibrary.org/obo/IAO_0000590> <http://www.w3.org/2004/02/skos/core#definition> "A textual entity that denotes a particular in reality. [IAO]".
+<http://purl.allotrope.org/ontologies/result#AFR_0001267> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://purl.allotrope.org/ontologies/result#AFR_0001267> <http://www.w3.org/2004/02/skos/core#prefLabel> "autosampler injection volume setting".
+<http://purl.allotrope.org/ontologies/result#AFR_0001267> <http://www.w3.org/2004/02/skos/core#definition> "An autosampler parameter specification that specifies the volume of sample the autosampler is to inject into the mobile phase for separation. [Allotrope]".
+<http://purl.allotrope.org/ontologies/result#AFR_0002535> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://purl.allotrope.org/ontologies/result#AFR_0002535> <http://www.w3.org/2004/02/skos/core#prefLabel> "injection identifier".
+<http://purl.allotrope.org/ontologies/result#AFR_0002535> <http://www.w3.org/2004/02/skos/core#definition> "An injection identifier is an identifier that identifies some injection. [Allotrope]".
+<http://purl.allotrope.org/ontologies/result#AFR_0002536> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://purl.allotrope.org/ontologies/result#AFR_0002536> <http://www.w3.org/2004/02/skos/core#prefLabel> "injection time".
+<http://purl.allotrope.org/ontologies/result#AFR_0002536> <http://www.w3.org/2004/02/skos/core#definition> "An injection time is a time that indicates when an injection is performed. [Allotrope]".
+<http://example.org/catplus/ontology/type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://example.org/catplus/ontology/type> <http://www.w3.org/2004/02/skos/core#prefLabel> "type".
+<http://example.org/catplus/ontology/type> <http://www.w3.org/2004/02/skos/core#definition> "A type refers to the classification of a process or approach based on its purpose, which can be: Optimization: The process of refining or improving a system, model, or reaction to achieve the best possible performance, efficiency, or yield. Discovery: The process of identifying new compounds, reactions, or principles, often through exploration, experimentation, or computational methods.".
+<http://example.org/catplus/ontology/reactionName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://example.org/catplus/ontology/reactionName> <http://www.w3.org/2004/02/skos/core#prefLabel> "reaction name".
+<http://example.org/catplus/ontology/reactionName> <http://www.w3.org/2004/02/skos/core#definition> "the specific name given to a well-known chemical reaction, often named after its discoverer(s) or key feature, to describe a particular transformation of reactants into products".
+<http://schema.org/contentUrl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://schema.org/contentUrl> <http://www.w3.org/2004/02/skos/core#prefLabel> "content URL".
+<http://schema.org/contentUrl> <http://www.w3.org/2004/02/skos/core#definition> "A url pointing to the actual bytes of the media object, for example the agilent data file.".
+<http://example.org/catplus/ontology/producesProduct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://example.org/catplus/ontology/producesProduct> <http://www.w3.org/2004/02/skos/core#prefLabel> "produces product".
+<http://example.org/catplus/ontology/producesProduct> <http://www.w3.org/2004/02/skos/core#definition> "A property to indicate the product that a synthesis step produces".
+<http://example.org/catplus/ontology/preparesProduct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://example.org/catplus/ontology/preparesProduct> <http://www.w3.org/2004/02/skos/core#prefLabel> "prepares product".
+<http://example.org/catplus/ontology/preparesProduct> <http://www.w3.org/2004/02/skos/core#definition> "A property to indicate which product gets prepared for analysis (for bravo)".
+<http://example.org/catplus/ontology/SynthAddAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class>.
+<http://example.org/catplus/ontology/SynthAddAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape>.
+<http://example.org/catplus/ontology/SynthAddAction> <http://www.w3.org/ns/shacl#closed> "true"^^<http://www.w3.org/2001/XMLSchema#boolean>.
+_:riog00000001 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+_:riog00000001 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil>.
+<http://example.org/catplus/ontology/SynthAddAction> <http://www.w3.org/ns/shacl#ignoredProperties> _:riog00000001.
+<http://example.org/catplus/ontology/SynthAddAction> <http://www.w3.org/2004/02/skos/core#prefLabel> "Synthesis Add Action".
+<http://example.org/catplus/ontology/SynthAddAction> <http://www.w3.org/2004/02/skos/core#definition> "An action that adds a chemical to a well in a synthesis plate.".
+<http://example.org/catplus/ontology/SynthAddAction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/catplus/ontology/SynthAction>.
+_:riog00000002 <http://www.w3.org/ns/shacl#path> <http://example.org/catplus/ontology/producesProduct>.
+_:riog00000002 <http://www.w3.org/ns/shacl#class> <http://example.org/catplus/ontology/Product>.
+<http://example.org/catplus/ontology/SynthAddAction> <http://www.w3.org/ns/shacl#property> _:riog00000002.
+_:riog00000003 <http://www.w3.org/ns/shacl#path> <http://example.org/catplus/ontology/hasWell>.
+_:riog00000003 <http://www.w3.org/ns/shacl#class> <http://example.org/catplus/ontology/Well>.
+<http://example.org/catplus/ontology/SynthAddAction> <http://www.w3.org/ns/shacl#property> _:riog00000003.
+_:riog00000004 <http://www.w3.org/ns/shacl#path> <http://example.org/catplus/ontology/hasSample>.
+_:riog00000004 <http://www.w3.org/ns/shacl#class> <http://example.org/catplus/ontology/Sample>.
+<http://example.org/catplus/ontology/SynthAddAction> <http://www.w3.org/ns/shacl#property> _:riog00000004.
+_:riog00000005 <http://www.w3.org/ns/shacl#path> <http://qudt.org/schema/qudt/quantity>.
+_:riog00000005 <http://www.w3.org/ns/shacl#node> <http://example.org/catplus/ontology/Observation>.
+<http://example.org/catplus/ontology/SynthAddAction> <http://www.w3.org/ns/shacl#property> _:riog00000005.
+<http://example.org/catplus/ontology/SynthAddAction> <http://www.w3.org/ns/shacl#property> <http://example.org/catplus/ontology/speedShakerShape>.
+<http://example.org/catplus/ontology/SynthAddAction> <http://www.w3.org/ns/shacl#property> <http://example.org/catplus/ontology/temperatureShakerShape>.
+<http://example.org/catplus/ontology/SynthAddAction> <http://www.w3.org/ns/shacl#property> <http://example.org/catplus/ontology/temperatureTumbleStirrerShape>.
+_:riog00000006 <http://www.w3.org/ns/shacl#path> <http://example.org/catplus/ontology/dispenseType>.
+_:riog00000006 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string>.
+<http://example.org/catplus/ontology/SynthAddAction> <http://www.w3.org/ns/shacl#property> _:riog00000006.
+_:riog00000007 <http://www.w3.org/ns/shacl#path> <http://purl.allotrope.org/ontologies/quality#AFQ_0000111>.
+_:riog00000009 <http://www.w3.org/ns/shacl#hasValue> "Solid".
+_:riog00000008 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:riog00000009.
+_:riog00000008 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:riog00000010.
+_:riog00000011 <http://www.w3.org/ns/shacl#hasValue> "Liquid".
+_:riog00000010 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:riog00000011.
+_:riog00000010 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil>.
+_:riog00000007 <http://www.w3.org/ns/shacl#xone> _:riog00000008.
+<http://example.org/catplus/ontology/SynthAddAction> <http://www.w3.org/ns/shacl#property> _:riog00000007.
+<http://example.org/catplus/ontology/BravoAddAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class>.
+<http://example.org/catplus/ontology/BravoAddAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape>.
+<http://example.org/catplus/ontology/BravoAddAction> <http://www.w3.org/ns/shacl#closed> "true"^^<http://www.w3.org/2001/XMLSchema#boolean>.
+_:riog00000012 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+_:riog00000012 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil>.
+<http://example.org/catplus/ontology/BravoAddAction> <http://www.w3.org/ns/shacl#ignoredProperties> _:riog00000012.
+<http://example.org/catplus/ontology/BravoAddAction> <http://www.w3.org/2004/02/skos/core#prefLabel> "Bravo Add Action".
+<http://example.org/catplus/ontology/BravoAddAction> <http://www.w3.org/2004/02/skos/core#definition> "An action that adds a chemical to a well in a Bravo plate.".
+<http://example.org/catplus/ontology/BravoAddAction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/catplus/ontology/BravoAction>.
+_:riog00000013 <http://www.w3.org/ns/shacl#path> <http://example.org/catplus/ontology/hasWell>.
+_:riog00000013 <http://www.w3.org/ns/shacl#class> <http://example.org/catplus/ontology/Well>.
+<http://example.org/catplus/ontology/BravoAddAction> <http://www.w3.org/ns/shacl#property> _:riog00000013.
+_:riog00000014 <http://www.w3.org/ns/shacl#path> <http://example.org/catplus/ontology/hasSolvent>.
+_:riog00000014 <http://www.w3.org/ns/shacl#class> <http://example.org/catplus/ontology/Solvent>.
+<http://example.org/catplus/ontology/BravoAddAction> <http://www.w3.org/ns/shacl#property> _:riog00000014.
+_:riog00000015 <http://www.w3.org/ns/shacl#path> <http://example.org/catplus/ontology/hasSample>.
+_:riog00000015 <http://www.w3.org/ns/shacl#class> <http://example.org/catplus/ontology/Sample>.
+<http://example.org/catplus/ontology/BravoAddAction> <http://www.w3.org/ns/shacl#property> _:riog00000015.
+_:riog00000016 <http://www.w3.org/ns/shacl#path> <http://example.org/catplus/ontology/volume>.
+<http://example.org/catplus/ontology/BravoAddAction> <http://www.w3.org/ns/shacl#property> _:riog00000016.
+_:riog00000017 <http://www.w3.org/ns/shacl#path> <http://example.org/catplus/ontology/dispenseType>.
+_:riog00000017 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string>.
+<http://example.org/catplus/ontology/BravoAddAction> <http://www.w3.org/ns/shacl#property> _:riog00000017.
+_:riog00000018 <http://www.w3.org/ns/shacl#path> <http://purl.allotrope.org/ontologies/quality#AFQ_0000111>.
+_:riog00000020 <http://www.w3.org/ns/shacl#hasValue> "Solid".
+_:riog00000019 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:riog00000020.
+_:riog00000019 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:riog00000021.
+_:riog00000022 <http://www.w3.org/ns/shacl#hasValue> "Liquid".
+_:riog00000021 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:riog00000022.
+_:riog00000021 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil>.
+_:riog00000018 <http://www.w3.org/ns/shacl#xone> _:riog00000019.
+<http://example.org/catplus/ontology/BravoAddAction> <http://www.w3.org/ns/shacl#property> _:riog00000018.
+<http://example.org/catplus/ontology/SetTemperatureAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class>.
+<http://example.org/catplus/ontology/SetTemperatureAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape>.
+<http://example.org/catplus/ontology/SetTemperatureAction> <http://www.w3.org/ns/shacl#closed> "true"^^<http://www.w3.org/2001/XMLSchema#boolean>.
+_:riog00000023 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+_:riog00000023 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil>.
+<http://example.org/catplus/ontology/SetTemperatureAction> <http://www.w3.org/ns/shacl#ignoredProperties> _:riog00000023.
+<http://example.org/catplus/ontology/SetTemperatureAction> <http://www.w3.org/2004/02/skos/core#prefLabel> "Set Temperature Action".
+<http://example.org/catplus/ontology/SetTemperatureAction> <http://www.w3.org/2004/02/skos/core#definition> "An action that sets the temperature of a plate or well.".
+<http://example.org/catplus/ontology/SetTemperatureAction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/catplus/ontology/SynthAction>.
+_:riog00000024 <http://www.w3.org/ns/shacl#path> <http://example.org/catplus/ontology/hasPlate>.
+_:riog00000024 <http://www.w3.org/ns/shacl#class> <http://example.org/catplus/ontology/Plate>.
+<http://example.org/catplus/ontology/SetTemperatureAction> <http://www.w3.org/ns/shacl#property> _:riog00000024.
+<http://example.org/catplus/ontology/SetTemperatureAction> <http://www.w3.org/ns/shacl#property> <http://example.org/catplus/ontology/speedTumbleStirrerShape>.
+<http://example.org/catplus/ontology/SetTemperatureAction> <http://www.w3.org/ns/shacl#property> <http://example.org/catplus/ontology/temperatureShakerShape>.
+<http://example.org/catplus/ontology/SetTemperatureAction> <http://www.w3.org/ns/shacl#property> <http://example.org/catplus/ontology/temperatureTumbleStirrerShape>.
+<http://example.org/catplus/ontology/SetPressureAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class>.
+<http://example.org/catplus/ontology/SetPressureAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape>.
+<http://example.org/catplus/ontology/SetPressureAction> <http://www.w3.org/ns/shacl#closed> "true"^^<http://www.w3.org/2001/XMLSchema#boolean>.
+_:riog00000025 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+_:riog00000025 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil>.
+<http://example.org/catplus/ontology/SetPressureAction> <http://www.w3.org/ns/shacl#ignoredProperties> _:riog00000025.
+<http://example.org/catplus/ontology/SetPressureAction> <http://www.w3.org/2004/02/skos/core#prefLabel> "Set Pressure Action".
+<http://example.org/catplus/ontology/SetPressureAction> <http://www.w3.org/2004/02/skos/core#definition> "An action that sets the pressure of a plate or well.".
+<http://example.org/catplus/ontology/SetPressureAction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/catplus/ontology/SynthAction>.
+_:riog00000026 <http://www.w3.org/ns/shacl#path> <http://example.org/catplus/ontology/hasPlate>.
+_:riog00000026 <http://www.w3.org/ns/shacl#class> <http://example.org/catplus/ontology/Plate>.
+<http://example.org/catplus/ontology/SetPressureAction> <http://www.w3.org/ns/shacl#property> _:riog00000026.
+_:riog00000027 <http://www.w3.org/ns/shacl#path> <http://purl.allotrope.org/ontologies/process#AFP_0002677>.
+_:riog00000027 <http://www.w3.org/ns/shacl#node> <http://example.org/catplus/ontology/Observation>.
+_:riog00000029 <http://www.w3.org/ns/shacl#path> <http://qudt.org/schema/qudt/unit>.
+_:riog00000029 <http://www.w3.org/ns/shacl#hasValue> <http://qudt.org/vocab/unit/Bar>.
+_:riog00000028 <http://www.w3.org/ns/shacl#property> _:riog00000029.
+_:riog00000027 <http://www.w3.org/ns/shacl#node> _:riog00000028.
+<http://example.org/catplus/ontology/SetPressureAction> <http://www.w3.org/ns/shacl#property> _:riog00000027.
+<http://example.org/catplus/ontology/SetVacuumAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class>.
+<http://example.org/catplus/ontology/SetVacuumAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape>.
+<http://example.org/catplus/ontology/SetVacuumAction> <http://www.w3.org/ns/shacl#closed> "true"^^<http://www.w3.org/2001/XMLSchema#boolean>.
+_:riog00000030 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+_:riog00000030 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil>.
+<http://example.org/catplus/ontology/SetVacuumAction> <http://www.w3.org/ns/shacl#ignoredProperties> _:riog00000030.
+<http://example.org/catplus/ontology/SetVacuumAction> <http://www.w3.org/2004/02/skos/core#prefLabel> "Set Vacuum Action".
+<http://example.org/catplus/ontology/SetVacuumAction> <http://www.w3.org/2004/02/skos/core#definition> "An action that sets the vacuum of a plate or well.".
+<http://example.org/catplus/ontology/SetVacuumAction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/catplus/ontology/SynthAction>.
+_:riog00000031 <http://www.w3.org/ns/shacl#path> <http://example.org/catplus/ontology/hasPlate>.
+_:riog00000031 <http://www.w3.org/ns/shacl#class> <http://example.org/catplus/ontology/Plate>.
+<http://example.org/catplus/ontology/SetVacuumAction> <http://www.w3.org/ns/shacl#property> _:riog00000031.
+_:riog00000032 <http://www.w3.org/ns/shacl#path> <http://example.org/catplus/ontology/vacuum>.
+_:riog00000032 <http://www.w3.org/ns/shacl#node> <http://example.org/catplus/ontology/Observation>.
+_:riog00000034 <http://www.w3.org/ns/shacl#path> <http://qudt.org/schema/qudt/unit>.
+_:riog00000034 <http://www.w3.org/ns/shacl#hasValue> <http://qudt.org/vocab/unit/Bar>.
+_:riog00000033 <http://www.w3.org/ns/shacl#property> _:riog00000034.
+_:riog00000032 <http://www.w3.org/ns/shacl#node> _:riog00000033.
+<http://example.org/catplus/ontology/SetVacuumAction> <http://www.w3.org/ns/shacl#property> _:riog00000032.
+<http://example.org/catplus/ontology/ShakeSynthAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class>.
+<http://example.org/catplus/ontology/ShakeSynthAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape>.
+<http://example.org/catplus/ontology/ShakeSynthAction> <http://www.w3.org/ns/shacl#closed> "true"^^<http://www.w3.org/2001/XMLSchema#boolean>.
+_:riog00000035 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+_:riog00000035 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil>.
+<http://example.org/catplus/ontology/ShakeSynthAction> <http://www.w3.org/ns/shacl#ignoredProperties> _:riog00000035.
+<http://example.org/catplus/ontology/ShakeSynthAction> <http://www.w3.org/2004/02/skos/core#prefLabel> "Shake Synth Action".
+<http://example.org/catplus/ontology/ShakeSynthAction> <http://www.w3.org/2004/02/skos/core#definition> "An action that shakes a plate or well.".
+<http://example.org/catplus/ontology/ShakeSynthAction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/catplus/ontology/SynthAction>.
+_:riog00000036 <http://www.w3.org/ns/shacl#path> <http://example.org/catplus/ontology/hasPlate>.
+_:riog00000036 <http://www.w3.org/ns/shacl#class> <http://example.org/catplus/ontology/Plate>.
+<http://example.org/catplus/ontology/ShakeSynthAction> <http://www.w3.org/ns/shacl#property> _:riog00000036.
+<http://example.org/catplus/ontology/ShakeSynthAction> <http://www.w3.org/ns/shacl#property> <http://example.org/catplus/ontology/speedTumbleStirrerShape>.
+<http://example.org/catplus/ontology/ShakeSynthAction> <http://www.w3.org/ns/shacl#property> <http://example.org/catplus/ontology/temperatureShakerShape>.
+<http://example.org/catplus/ontology/ShakeSynthAction> <http://www.w3.org/ns/shacl#property> <http://example.org/catplus/ontology/temperatureTumbleStirrerShape>.
+<http://example.org/catplus/ontology/ShakeBravoAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class>.
+<http://example.org/catplus/ontology/ShakeBravoAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape>.
+<http://example.org/catplus/ontology/ShakeBravoAction> <http://www.w3.org/ns/shacl#closed> "true"^^<http://www.w3.org/2001/XMLSchema#boolean>.
+_:riog00000037 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+_:riog00000037 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil>.
+<http://example.org/catplus/ontology/ShakeBravoAction> <http://www.w3.org/ns/shacl#ignoredProperties> _:riog00000037.
+<http://example.org/catplus/ontology/ShakeBravoAction> <http://www.w3.org/2004/02/skos/core#prefLabel> "Shake Bravo Action".
+<http://example.org/catplus/ontology/ShakeBravoAction> <http://www.w3.org/2004/02/skos/core#definition> "An action that shakes a plate or well in a Bravo plate.".
+<http://example.org/catplus/ontology/ShakeBravoAction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/catplus/ontology/BravoAction>.
+_:riog00000038 <http://www.w3.org/ns/shacl#path> <http://example.org/catplus/ontology/hasPlate>.
+_:riog00000038 <http://www.w3.org/ns/shacl#class> <http://example.org/catplus/ontology/Plate>.
+<http://example.org/catplus/ontology/ShakeBravoAction> <http://www.w3.org/ns/shacl#property> _:riog00000038.
+<http://example.org/catplus/ontology/ShakeBravoAction> <http://www.w3.org/ns/shacl#property> <http://example.org/catplus/ontology/temperatureShape>.
+<http://example.org/catplus/ontology/FiltrateAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class>.
+<http://example.org/catplus/ontology/FiltrateAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape>.
+<http://example.org/catplus/ontology/FiltrateAction> <http://www.w3.org/ns/shacl#closed> "true"^^<http://www.w3.org/2001/XMLSchema#boolean>.
+_:riog00000039 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+_:riog00000039 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil>.
+<http://example.org/catplus/ontology/FiltrateAction> <http://www.w3.org/ns/shacl#ignoredProperties> _:riog00000039.
+<http://example.org/catplus/ontology/FiltrateAction> <http://www.w3.org/2004/02/skos/core#prefLabel> "Filtrate Action".
+<http://example.org/catplus/ontology/FiltrateAction> <http://www.w3.org/2004/02/skos/core#definition> "An action that filters a sample through a filter or membrane to separate solid particles from a liquid or gas.".
+<http://example.org/catplus/ontology/FiltrateAction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/catplus/ontology/SynthAction>.
+_:riog00000040 <http://www.w3.org/ns/shacl#path> <http://example.org/catplus/ontology/hasPlate>.
+_:riog00000040 <http://www.w3.org/ns/shacl#class> <http://example.org/catplus/ontology/Plate>.
+<http://example.org/catplus/ontology/FiltrateAction> <http://www.w3.org/ns/shacl#property> _:riog00000040.
+<http://example.org/catplus/ontology/EvaporationAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class>.
+<http://example.org/catplus/ontology/EvaporationAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape>.
+<http://example.org/catplus/ontology/EvaporationAction> <http://www.w3.org/ns/shacl#closed> "true"^^<http://www.w3.org/2001/XMLSchema#boolean>.
+_:riog00000041 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+_:riog00000041 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil>.
+<http://example.org/catplus/ontology/EvaporationAction> <http://www.w3.org/ns/shacl#ignoredProperties> _:riog00000041.
+<http://example.org/catplus/ontology/EvaporationAction> <http://www.w3.org/2004/02/skos/core#prefLabel> "Evaporation Action".
+<http://example.org/catplus/ontology/EvaporationAction> <http://www.w3.org/2004/02/skos/core#definition> "An action that evaporates a solvent from a sample, leaving behind the solute or analyte.".
+<http://example.org/catplus/ontology/EvaporationAction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/catplus/ontology/BravoAction>.
+<http://example.org/catplus/ontology/EvaporationAction> <http://www.w3.org/ns/shacl#property> <http://example.org/catplus/ontology/temperatureShape>.
+_:riog00000042 <http://www.w3.org/ns/shacl#path> <http://example.org/catplus/ontology/hasWell>.
+_:riog00000042 <http://www.w3.org/ns/shacl#class> <http://example.org/catplus/ontology/Well>.
+<http://example.org/catplus/ontology/EvaporationAction> <http://www.w3.org/ns/shacl#property> _:riog00000042.
+_:riog00000043 <http://www.w3.org/ns/shacl#path> <http://example.org/catplus/ontology/volumeEvaporationFinal>.
+_:riog00000043 <http://www.w3.org/ns/shacl#node> <http://example.org/catplus/ontology/Observation>.
+<http://example.org/catplus/ontology/EvaporationAction> <http://www.w3.org/ns/shacl#property> _:riog00000043.
+_:riog00000044 <http://www.w3.org/ns/shacl#path> <http://purl.allotrope.org/ontologies/identifier>.
+_:riog00000044 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string>.
+<http://example.org/catplus/ontology/EvaporationAction> <http://www.w3.org/ns/shacl#property> _:riog00000044.
+<http://example.org/catplus/ontology/SolventChangeAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class>.
+<http://example.org/catplus/ontology/SolventChangeAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape>.
+<http://example.org/catplus/ontology/SolventChangeAction> <http://www.w3.org/ns/shacl#closed> "true"^^<http://www.w3.org/2001/XMLSchema#boolean>.
+_:riog00000045 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+_:riog00000045 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil>.
+<http://example.org/catplus/ontology/SolventChangeAction> <http://www.w3.org/ns/shacl#ignoredProperties> _:riog00000045.
+<http://example.org/catplus/ontology/SolventChangeAction> <http://www.w3.org/2004/02/skos/core#prefLabel> "Solvent Change Action".
+<http://example.org/catplus/ontology/SolventChangeAction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/catplus/ontology/BravoAction>.
+<http://example.org/catplus/ontology/SolventChangeAction> <http://www.w3.org/2004/02/skos/core#definition> "A solvent that is selected to replace an existing one. This process involves considering the solvent's properties, compatibility with the analytes, and the analytical techniques employed, ensuring optimal performance and results in the analysis.".
+_:riog00000046 <http://www.w3.org/ns/shacl#path> <http://example.org/catplus/ontology/startDuration>.
+_:riog00000046 <http://www.w3.org/ns/shacl#node> <http://example.org/catplus/ontology/Observation>.
+_:riog00000048 <http://www.w3.org/ns/shacl#path> <http://qudt.org/schema/qudt/unit>.
+_:riog00000048 <http://www.w3.org/ns/shacl#hasValue> <http://qudt.org/vocab/unit/MIN>.
+_:riog00000047 <http://www.w3.org/ns/shacl#property> _:riog00000048.
+_:riog00000046 <http://www.w3.org/ns/shacl#node> _:riog00000047.
+<http://example.org/catplus/ontology/SolventChangeAction> <http://www.w3.org/ns/shacl#property> _:riog00000046.
+_:riog00000049 <http://www.w3.org/ns/shacl#path> <http://example.org/catplus/ontology/endingDuration>.
+_:riog00000049 <http://www.w3.org/ns/shacl#node> <http://example.org/catplus/ontology/Observation>.
+_:riog00000051 <http://www.w3.org/ns/shacl#path> <http://qudt.org/schema/qudt/unit>.
+_:riog00000051 <http://www.w3.org/ns/shacl#hasValue> <http://qudt.org/vocab/unit/MIN>.
+_:riog00000050 <http://www.w3.org/ns/shacl#property> _:riog00000051.
+_:riog00000049 <http://www.w3.org/ns/shacl#node> _:riog00000050.
+<http://example.org/catplus/ontology/SolventChangeAction> <http://www.w3.org/ns/shacl#property> _:riog00000049.
+_:riog00000052 <http://www.w3.org/ns/shacl#path> <http://example.org/catplus/ontology/hasCartridge>.
+_:riog00000052 <http://www.w3.org/ns/shacl#class> <http://example.org/catplus/ontology/Cartridge>.
+<http://example.org/catplus/ontology/SolventChangeAction> <http://www.w3.org/ns/shacl#property> _:riog00000052.
+_:riog00000053 <http://www.w3.org/ns/shacl#path> <http://example.org/catplus/ontology/isSpmeProcess>.
+_:riog00000053 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#boolean>.
+<http://example.org/catplus/ontology/SolventChangeAction> <http://www.w3.org/ns/shacl#property> _:riog00000053.
+_:riog00000054 <http://www.w3.org/ns/shacl#path> <http://example.org/catplus/ontology/hasWell>.
+_:riog00000054 <http://www.w3.org/ns/shacl#class> <http://example.org/catplus/ontology/Well>.
+<http://example.org/catplus/ontology/SolventChangeAction> <http://www.w3.org/ns/shacl#property> _:riog00000054.
+<http://example.org/catplus/ontology/Action> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class>.
+<http://example.org/catplus/ontology/Action> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape>.
+<http://example.org/catplus/ontology/Action> <http://www.w3.org/ns/shacl#closed> "true"^^<http://www.w3.org/2001/XMLSchema#boolean>.
+_:riog00000055 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+_:riog00000055 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil>.
+<http://example.org/catplus/ontology/Action> <http://www.w3.org/ns/shacl#ignoredProperties> _:riog00000055.
+<http://example.org/catplus/ontology/Action> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.allotrope.org/ontologies/realizable#AFRE_0000001>.
+<http://example.org/catplus/ontology/Action> <http://www.w3.org/2004/02/skos/core#prefLabel> "Action".
+<http://example.org/catplus/ontology/Action> <http://www.w3.org/2004/02/skos/core#definition> "An action is a unit element in a procedure and is a concretization of an action specification.".
+_:riog00000056 <http://www.w3.org/ns/shacl#path> <http://purl.allotrope.org/ontologies/result#AFR_0001723>.
+_:riog00000056 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string>.
+<http://example.org/catplus/ontology/Action> <http://www.w3.org/ns/shacl#property> _:riog00000056.
+_:riog00000057 <http://www.w3.org/ns/shacl#path> <http://example.org/catplus/ontology/subEquipmentName>.
+_:riog00000057 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string>.
+<http://example.org/catplus/ontology/Action> <http://www.w3.org/ns/shacl#property> _:riog00000057.
+_:riog00000058 <http://www.w3.org/ns/shacl#path> <http://schema.org/name>.
+_:riog00000058 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string>.
+<http://example.org/catplus/ontology/Action> <http://www.w3.org/ns/shacl#property> _:riog00000058.
+_:riog00000059 <http://www.w3.org/ns/shacl#path> <http://purl.allotrope.org/ontologies/property#AFX_0000622>.
+_:riog00000059 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#dateTime>.
+<http://example.org/catplus/ontology/Action> <http://www.w3.org/ns/shacl#property> _:riog00000059.
+_:riog00000060 <http://www.w3.org/ns/shacl#path> <http://purl.allotrope.org/ontologies/result#AFR_0002423>.
+_:riog00000060 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#dateTime>.
+<http://example.org/catplus/ontology/Action> <http://www.w3.org/ns/shacl#property> _:riog00000060.
+_:riog00000061 <http://www.w3.org/ns/shacl#path> <http://purl.allotrope.org/ontologies/result#AFR_0001606>.
+_:riog00000061 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string>.
+<http://example.org/catplus/ontology/Action> <http://www.w3.org/ns/shacl#property> _:riog00000061.
+<http://example.org/catplus/ontology/SynthAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class>.
+<http://example.org/catplus/ontology/SynthAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape>.
+<http://example.org/catplus/ontology/SynthAction> <http://www.w3.org/ns/shacl#closed> "true"^^<http://www.w3.org/2001/XMLSchema#boolean>.
+_:riog00000062 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+_:riog00000062 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil>.
+<http://example.org/catplus/ontology/SynthAction> <http://www.w3.org/ns/shacl#ignoredProperties> _:riog00000062.
+<http://example.org/catplus/ontology/SynthAction> <http://www.w3.org/2004/02/skos/core#prefLabel> "Synthesis Action".
+<http://example.org/catplus/ontology/SynthAction> <http://www.w3.org/2004/02/skos/core#definition> "A synthesis action is an action that is part of a synthesis procedure.".
+<http://example.org/catplus/ontology/SynthAction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/catplus/ontology/Action>.
+_:riog00000063 <http://www.w3.org/ns/shacl#path> <http://example.org/catplus/ontology/hasBatch>.
+_:riog00000063 <http://www.w3.org/ns/shacl#class> <http://example.org/catplus/ontology/Batch>.
+<http://example.org/catplus/ontology/SynthAction> <http://www.w3.org/ns/shacl#property> _:riog00000063.
+<http://example.org/catplus/ontology/BravoAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class>.
+<http://example.org/catplus/ontology/BravoAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape>.
+<http://example.org/catplus/ontology/BravoAction> <http://www.w3.org/ns/shacl#closed> "true"^^<http://www.w3.org/2001/XMLSchema#boolean>.
+_:riog00000064 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+_:riog00000064 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil>.
+<http://example.org/catplus/ontology/BravoAction> <http://www.w3.org/ns/shacl#ignoredProperties> _:riog00000064.
+<http://example.org/catplus/ontology/BravoAction> <http://www.w3.org/2004/02/skos/core#prefLabel> "Bravo Action".
+<http://example.org/catplus/ontology/BravoAction> <http://www.w3.org/2004/02/skos/core#definition> "A Bravo action is an action that is part of a Bravo procedure.".
+<http://example.org/catplus/ontology/BravoAction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/catplus/ontology/Action>.
+_:riog00000065 <http://www.w3.org/ns/shacl#path> <http://example.org/catplus/ontology/preparesProduct>.
+_:riog00000065 <http://www.w3.org/ns/shacl#class> <http://example.org/catplus/ontology/Product>.
+<http://example.org/catplus/ontology/BravoAction> <http://www.w3.org/ns/shacl#property> _:riog00000065.
+_:riog00000066 <http://www.w3.org/ns/shacl#path> <http://purl.allotrope.org/ontologies/result#AFR_0001164>.
+_:riog00000066 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string>.
+<http://example.org/catplus/ontology/BravoAction> <http://www.w3.org/ns/shacl#property> _:riog00000066.
+_:riog00000067 <http://www.w3.org/ns/shacl#path> <http://example.org/catplus/ontology/order>.
+_:riog00000067 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string>.
+<http://example.org/catplus/ontology/BravoAction> <http://www.w3.org/ns/shacl#property> _:riog00000067.
+<http://example.org/catplus/ontology/Solvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class>.
+<http://example.org/catplus/ontology/Solvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape>.
+<http://example.org/catplus/ontology/Solvent> <http://www.w3.org/ns/shacl#closed> "true"^^<http://www.w3.org/2001/XMLSchema#boolean>.
+_:riog00000068 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+_:riog00000068 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil>.
+<http://example.org/catplus/ontology/Solvent> <http://www.w3.org/ns/shacl#ignoredProperties> _:riog00000068.
+<http://example.org/catplus/ontology/Solvent> <http://www.w3.org/2004/02/skos/core#prefLabel> "Solvent".
+<http://example.org/catplus/ontology/Solvent> <http://www.w3.org/2004/02/skos/core#definition> "A solvent is a substance that dissolves a solute, resulting in a solution.".
+_:riog00000069 <http://www.w3.org/ns/shacl#path> <http://example.org/catplus/ontology/hasChemical>.
+_:riog00000069 <http://www.w3.org/ns/shacl#class> <http://purl.obolibrary.org/obo/CHEBI_25367>.
+<http://example.org/catplus/ontology/Solvent> <http://www.w3.org/ns/shacl#property> _:riog00000069.
+_:riog00000070 <http://www.w3.org/ns/shacl#path> <http://example.org/catplus/ontology/volume>.
+_:riog00000070 <http://www.w3.org/ns/shacl#node> <http://example.org/catplus/ontology/Observation>.
+_:riog00000072 <http://www.w3.org/ns/shacl#path> <http://qudt.org/schema/qudt/unit>.
+_:riog00000074 <http://www.w3.org/ns/shacl#hasValue> <http://qudt.org/vocab/unit/MilliL>.
+_:riog00000073 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:riog00000074.
+_:riog00000073 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:riog00000075.
+_:riog00000076 <http://www.w3.org/ns/shacl#hasValue> <http://qudt.org/vocab/unit/MicroL>.
+_:riog00000075 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:riog00000076.
+_:riog00000075 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil>.
+_:riog00000072 <http://www.w3.org/ns/shacl#xone> _:riog00000073.
+_:riog00000071 <http://www.w3.org/ns/shacl#property> _:riog00000072.
+_:riog00000070 <http://www.w3.org/ns/shacl#node> _:riog00000071.
+<http://example.org/catplus/ontology/Solvent> <http://www.w3.org/ns/shacl#property> _:riog00000070.
+<http://example.org/catplus/ontology/Cartridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class>.
+<http://example.org/catplus/ontology/Cartridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape>.
+<http://example.org/catplus/ontology/Cartridge> <http://www.w3.org/ns/shacl#closed> "true"^^<http://www.w3.org/2001/XMLSchema#boolean>.
+_:riog00000077 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+_:riog00000077 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil>.
+<http://example.org/catplus/ontology/Cartridge> <http://www.w3.org/ns/shacl#ignoredProperties> _:riog00000077.
+<http://example.org/catplus/ontology/Cartridge> <http://www.w3.org/2004/02/skos/core#prefLabel> "Cartridge".
+<http://example.org/catplus/ontology/Cartridge> <http://www.w3.org/2004/02/skos/core#definition> "A cartridge is a container that holds a sample or a solvent.".
+_:riog00000078 <http://www.w3.org/ns/shacl#path> <http://example.org/catplus/ontology/cartridgeName>.
+_:riog00000078 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string>.
+<http://example.org/catplus/ontology/Cartridge> <http://www.w3.org/ns/shacl#property> _:riog00000078.
+_:riog00000079 <http://www.w3.org/ns/shacl#path> <http://example.org/catplus/ontology/cartridgeComposition>.
+_:riog00000079 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string>.
+<http://example.org/catplus/ontology/Cartridge> <http://www.w3.org/ns/shacl#property> _:riog00000079.
+<http://example.org/catplus/ontology/QuantityShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape>.
+<http://example.org/catplus/ontology/QuantityShape> <http://www.w3.org/ns/shacl#closed> "true"^^<http://www.w3.org/2001/XMLSchema#boolean>.
+_:riog00000080 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+_:riog00000080 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil>.
+<http://example.org/catplus/ontology/QuantityShape> <http://www.w3.org/ns/shacl#ignoredProperties> _:riog00000080.
+<http://example.org/catplus/ontology/QuantityShape> <http://www.w3.org/2004/02/skos/core#prefLabel> "Quantity Shape".
+<http://example.org/catplus/ontology/QuantityShape> <http://www.w3.org/2004/02/skos/core#definition> "A shape that defines the properties of a quantity, including its value and unit.".
+<http://example.org/catplus/ontology/QuantityShape> <http://www.w3.org/ns/shacl#targetObjectsOf> <http://qudt.org/schema/qudt/quantity>.
+_:riog00000081 <http://www.w3.org/ns/shacl#path> <http://qudt.org/schema/qudt/value>.
+_:riog00000081 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#double>.
+_:riog00000081 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer>.
+_:riog00000081 <http://www.w3.org/ns/shacl#maxCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer>.
+<http://example.org/catplus/ontology/QuantityShape> <http://www.w3.org/ns/shacl#property> _:riog00000081.
+_:riog00000082 <http://www.w3.org/ns/shacl#path> <http://qudt.org/schema/qudt/unit>.
+_:riog00000082 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer>.
+_:riog00000082 <http://www.w3.org/ns/shacl#maxCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer>.
+_:riog00000084 <http://www.w3.org/ns/shacl#hasValue> <http://qudt.org/vocab/unit/MilliGM>.
+_:riog00000083 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:riog00000084.
+_:riog00000083 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:riog00000085.
+_:riog00000086 <http://www.w3.org/ns/shacl#hasValue> <http://qudt.org/vocab/unit/MilliL>.
+_:riog00000085 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:riog00000086.
+_:riog00000085 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil>.
+_:riog00000082 <http://www.w3.org/ns/shacl#xone> _:riog00000083.
+<http://example.org/catplus/ontology/QuantityShape> <http://www.w3.org/ns/shacl#property> _:riog00000082.
+<http://example.org/catplus/ontology/Observation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class>.
+<http://example.org/catplus/ontology/Observation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape>.
+<http://example.org/catplus/ontology/Observation> <http://www.w3.org/ns/shacl#closed> "true"^^<http://www.w3.org/2001/XMLSchema#boolean>.
+_:riog00000087 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+_:riog00000087 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil>.
+<http://example.org/catplus/ontology/Observation> <http://www.w3.org/ns/shacl#ignoredProperties> _:riog00000087.
+<http://example.org/catplus/ontology/Observation> <http://www.w3.org/2004/02/skos/core#prefLabel> "Observation".
+<http://example.org/catplus/ontology/Observation> <http://www.w3.org/2004/02/skos/core#definition> "An observation is an abstract entity that captures the unit and value of a property into one node.".
+_:riog00000088 <http://www.w3.org/ns/shacl#path> <http://qudt.org/schema/qudt/unit>.
+_:riog00000088 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer>.
+_:riog00000088 <http://www.w3.org/ns/shacl#maxCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer>.
+<http://example.org/catplus/ontology/Observation> <http://www.w3.org/ns/shacl#property> _:riog00000088.
+_:riog00000089 <http://www.w3.org/ns/shacl#path> <http://qudt.org/schema/qudt/value>.
+_:riog00000089 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer>.
+_:riog00000089 <http://www.w3.org/ns/shacl#maxCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer>.
+<http://example.org/catplus/ontology/Observation> <http://www.w3.org/ns/shacl#property> _:riog00000089.
+_:riog00000090 <http://www.w3.org/ns/shacl#path> <http://example.org/catplus/ontology/errorMargin>.
+_:riog00000092 <http://www.w3.org/ns/shacl#path> <http://qudt.org/schema/qudt/unit>.
+_:riog00000092 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer>.
+_:riog00000091 <http://www.w3.org/ns/shacl#property> _:riog00000092.
+_:riog00000093 <http://www.w3.org/ns/shacl#path> <http://qudt.org/schema/qudt/value>.
+_:riog00000093 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer>.
+_:riog00000091 <http://www.w3.org/ns/shacl#property> _:riog00000093.
+_:riog00000090 <http://www.w3.org/ns/shacl#node> _:riog00000091.
+<http://example.org/catplus/ontology/Observation> <http://www.w3.org/ns/shacl#property> _:riog00000090.
+<http://example.org/catplus/ontology/Product> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class>.
+<http://example.org/catplus/ontology/Product> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape>.
+<http://example.org/catplus/ontology/Product> <http://www.w3.org/ns/shacl#closed> "true"^^<http://www.w3.org/2001/XMLSchema#boolean>.
+_:riog00000094 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+_:riog00000094 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil>.
+<http://example.org/catplus/ontology/Product> <http://www.w3.org/ns/shacl#ignoredProperties> _:riog00000094.
+<http://example.org/catplus/ontology/Product> <http://www.w3.org/2004/02/skos/core#related> <http://purl.allotrope.org/ontologies/material#AFM_0001099>.
+<http://example.org/catplus/ontology/Product> <http://www.w3.org/2004/02/skos/core#prefLabel> "Unknown Sample".
+<http://example.org/catplus/ontology/Product> <http://www.w3.org/2004/02/skos/core#altLabel> "chemical mixture".
+<http://example.org/catplus/ontology/Product> <http://www.w3.org/2004/02/skos/core#definition> "A chemical mixture where the chemical substances are unknown.".
+_:riog00000095 <http://www.w3.org/ns/shacl#path> <http://purl.allotrope.org/ontologies/identifier>.
+_:riog00000095 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string>.
+<http://example.org/catplus/ontology/Product> <http://www.w3.org/ns/shacl#property> _:riog00000095.
+<http://example.org/catplus/ontology/Sample> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class>.
+<http://example.org/catplus/ontology/Sample> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape>.
+<http://example.org/catplus/ontology/Sample> <http://www.w3.org/ns/shacl#closed> "true"^^<http://www.w3.org/2001/XMLSchema#boolean>.
+_:riog00000096 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+_:riog00000096 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil>.
+<http://example.org/catplus/ontology/Sample> <http://www.w3.org/ns/shacl#ignoredProperties> _:riog00000096.
+<http://example.org/catplus/ontology/Sample> <http://www.w3.org/2004/02/skos/core#related> <http://purl.allotrope.org/ontologies/material#AFM_0001099>.
+<http://example.org/catplus/ontology/Sample> <http://www.w3.org/2004/02/skos/core#prefLabel> "Sample".
+<http://example.org/catplus/ontology/Sample> <http://www.w3.org/2004/02/skos/core#altLabel> "chemical mixture".
+<http://example.org/catplus/ontology/Sample> <http://www.w3.org/2004/02/skos/core#definition> "A chemical mixture where the chemical substances are known.".
+_:riog00000097 <http://www.w3.org/ns/shacl#path> <http://example.org/catplus/ontology/internalBarCode>.
+_:riog00000097 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string>.
+<http://example.org/catplus/ontology/Sample> <http://www.w3.org/ns/shacl#property> _:riog00000097.
+_:riog00000098 <http://www.w3.org/ns/shacl#path> <http://purl.allotrope.org/ontologies/result#AFR_0002464>.
+_:riog00000098 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string>.
+<http://example.org/catplus/ontology/Sample> <http://www.w3.org/ns/shacl#property> _:riog00000098.
+<http://example.org/catplus/ontology/Sample> <http://www.w3.org/ns/shacl#property> <http://example.org/catplus/ontology/vialShape>.
+_:riog00000099 <http://www.w3.org/ns/shacl#path> <http://example.org/catplus/ontology/role>.
+<http://example.org/catplus/ontology/Sample> <http://www.w3.org/ns/shacl#property> _:riog00000099.
+_:riog00000100 <http://www.w3.org/ns/shacl#path> <http://purl.allotrope.org/ontologies/identifier>.
+_:riog00000100 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string>.
+<http://example.org/catplus/ontology/Sample> <http://www.w3.org/ns/shacl#property> _:riog00000100.
+_:riog00000101 <http://www.w3.org/ns/shacl#path> <http://purl.allotrope.org/ontologies/role#AFRL_0000474>.
+_:riog00000101 <http://www.w3.org/ns/shacl#node> <http://example.org/catplus/ontology/Observation>.
+<http://example.org/catplus/ontology/Sample> <http://www.w3.org/ns/shacl#property> _:riog00000101.
+_:riog00000102 <http://www.w3.org/ns/shacl#path> <http://example.org/catplus/ontology/measuredQuantity>.
+_:riog00000102 <http://www.w3.org/ns/shacl#node> <http://example.org/catplus/ontology/Observation>.
+<http://example.org/catplus/ontology/Sample> <http://www.w3.org/ns/shacl#property> _:riog00000102.
+_:riog00000103 <http://www.w3.org/ns/shacl#path> <http://purl.allotrope.org/ontologies/quality#AFQ_0000111>.
+_:riog00000105 <http://www.w3.org/ns/shacl#hasValue> "Solid".
+_:riog00000104 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:riog00000105.
+_:riog00000104 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:riog00000106.
+_:riog00000107 <http://www.w3.org/ns/shacl#hasValue> "Liquid".
+_:riog00000106 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:riog00000107.
+_:riog00000106 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil>.
+_:riog00000103 <http://www.w3.org/ns/shacl#xone> _:riog00000104.
+<http://example.org/catplus/ontology/Sample> <http://www.w3.org/ns/shacl#property> _:riog00000103.
+_:riog00000108 <http://www.w3.org/ns/shacl#path> <http://purl.allotrope.org/ontologies/result#AFR_0002036>.
+_:riog00000108 <http://www.w3.org/ns/shacl#node> <http://example.org/catplus/ontology/Observation>.
+_:riog00000110 <http://www.w3.org/ns/shacl#path> <http://qudt.org/schema/qudt/unit>.
+_:riog00000110 <http://www.w3.org/ns/shacl#hasValue> <http://qudt.org/vocab/unit/MOL-PER-L>.
+_:riog00000109 <http://www.w3.org/ns/shacl#property> _:riog00000110.
+_:riog00000108 <http://www.w3.org/ns/shacl#node> _:riog00000109.
+<http://example.org/catplus/ontology/Sample> <http://www.w3.org/ns/shacl#property> _:riog00000108.
+_:riog00000111 <http://www.w3.org/ns/shacl#path> <http://purl.allotrope.org/ontologies/quality#AFQ_0000209>.
+_:riog00000111 <http://www.w3.org/ns/shacl#node> <http://example.org/catplus/ontology/Observation>.
+_:riog00000113 <http://www.w3.org/ns/shacl#path> <http://qudt.org/schema/qudt/unit>.
+_:riog00000113 <http://www.w3.org/ns/shacl#hasValue> <http://qudt.org/vocab/unit/PERCENT>.
+_:riog00000112 <http://www.w3.org/ns/shacl#property> _:riog00000113.
+_:riog00000111 <http://www.w3.org/ns/shacl#node> _:riog00000112.
+<http://example.org/catplus/ontology/Sample> <http://www.w3.org/ns/shacl#property> _:riog00000111.
+_:riog00000114 <http://www.w3.org/ns/shacl#path> <http://example.org/catplus/ontology/hasPlate>.
+_:riog00000114 <http://www.w3.org/ns/shacl#class> <http://example.org/catplus/ontology/Plate>.
+<http://example.org/catplus/ontology/Sample> <http://www.w3.org/ns/shacl#property> _:riog00000114.
+_:riog00000115 <http://www.w3.org/ns/shacl#path> <http://example.org/catplus/ontology/hasSample>.
+_:riog00000115 <http://www.w3.org/ns/shacl#class> <http://example.org/catplus/ontology/Sample>.
+<http://example.org/catplus/ontology/Sample> <http://www.w3.org/ns/shacl#property> _:riog00000115.
+_:riog00000116 <http://www.w3.org/ns/shacl#path> <http://example.org/catplus/ontology/hasChemical>.
+_:riog00000116 <http://www.w3.org/ns/shacl#class> <http://purl.obolibrary.org/obo/CHEBI_25367>.
+<http://example.org/catplus/ontology/Sample> <http://www.w3.org/ns/shacl#property> _:riog00000116.
+<http://purl.obolibrary.org/obo/CHEBI_25367> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class>.
+<http://purl.obolibrary.org/obo/CHEBI_25367> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape>.
+<http://purl.obolibrary.org/obo/CHEBI_25367> <http://www.w3.org/ns/shacl#closed> "true"^^<http://www.w3.org/2001/XMLSchema#boolean>.
+_:riog00000117 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+_:riog00000117 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil>.
+<http://purl.obolibrary.org/obo/CHEBI_25367> <http://www.w3.org/ns/shacl#ignoredProperties> _:riog00000117.
+<http://purl.obolibrary.org/obo/CHEBI_25367> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI_36357>.
+_:riog00000118 <http://www.w3.org/ns/shacl#path> <http://purl.allotrope.org/ontologies/identifier>.
+_:riog00000118 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string>.
+_:riog00000118 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer>.
+_:riog00000118 <http://www.w3.org/ns/shacl#maxCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer>.
+<http://purl.obolibrary.org/obo/CHEBI_25367> <http://www.w3.org/ns/shacl#property> _:riog00000118.
+_:riog00000119 <http://www.w3.org/ns/shacl#path> <http://example.org/catplus/ontology/swissCatNumber>.
+_:riog00000119 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string>.
+<http://purl.obolibrary.org/obo/CHEBI_25367> <http://www.w3.org/ns/shacl#property> _:riog00000119.
+_:riog00000120 <http://www.w3.org/ns/shacl#path> <http://example.org/catplus/ontology/casNumber>.
+_:riog00000120 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string>.
+<http://purl.obolibrary.org/obo/CHEBI_25367> <http://www.w3.org/ns/shacl#property> _:riog00000120.
+_:riog00000121 <http://www.w3.org/ns/shacl#path> <http://purl.allotrope.org/ontologies/result#AFR_0002292>.
+_:riog00000121 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string>.
+<http://purl.obolibrary.org/obo/CHEBI_25367> <http://www.w3.org/ns/shacl#property> _:riog00000121.
+_:riog00000122 <http://www.w3.org/ns/shacl#path> <http://purl.allotrope.org/ontologies/result#AFR_0002295>.
+_:riog00000122 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string>.
+<http://purl.obolibrary.org/obo/CHEBI_25367> <http://www.w3.org/ns/shacl#property> _:riog00000122.
+_:riog00000123 <http://www.w3.org/ns/shacl#path> <http://purl.allotrope.org/ontologies/result#AFR_0002294>.
+_:riog00000125 <http://www.w3.org/ns/shacl#path> <http://qudt.org/schema/qudt/unit>.
+_:riog00000125 <http://www.w3.org/ns/shacl#hasValue> <http://qudt.org/vocab/unit/GM-PER-MOL>.
+_:riog00000124 <http://www.w3.org/ns/shacl#property> _:riog00000125.
+_:riog00000123 <http://www.w3.org/ns/shacl#node> _:riog00000124.
+<http://purl.obolibrary.org/obo/CHEBI_25367> <http://www.w3.org/ns/shacl#property> _:riog00000123.
+_:riog00000126 <http://www.w3.org/ns/shacl#path> <http://schema.org/keywords>.
+_:riog00000126 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string>.
+<http://purl.obolibrary.org/obo/CHEBI_25367> <http://www.w3.org/ns/shacl#property> _:riog00000126.
+_:riog00000127 <http://www.w3.org/ns/shacl#path> <http://purl.allotrope.org/ontologies/result#AFR_0001952>.
+_:riog00000127 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string>.
+<http://purl.obolibrary.org/obo/CHEBI_25367> <http://www.w3.org/ns/shacl#property> _:riog00000127.
+_:riog00000128 <http://www.w3.org/ns/shacl#path> <http://purl.allotrope.org/ontologies/result#AFR_0002296>.
+_:riog00000128 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string>.
+<http://purl.obolibrary.org/obo/CHEBI_25367> <http://www.w3.org/ns/shacl#property> _:riog00000128.
+_:riog00000129 <http://www.w3.org/ns/shacl#path> <http://purl.obolibrary.org/obo/PATO_0001019>.
+_:riog00000131 <http://www.w3.org/ns/shacl#path> <http://qudt.org/schema/qudt/unit>.
+_:riog00000131 <http://www.w3.org/ns/shacl#hasValue> <http://qudt.org/vocab/unit/GM-PER-MilliL>.
+_:riog00000130 <http://www.w3.org/ns/shacl#property> _:riog00000131.
+_:riog00000129 <http://www.w3.org/ns/shacl#node> _:riog00000130.
+<http://purl.obolibrary.org/obo/CHEBI_25367> <http://www.w3.org/ns/shacl#property> _:riog00000129.
+<http://purl.obolibrary.org/obo/CHEBI_25367> <http://www.w3.org/2004/02/skos/core#prefLabel> "molecule".
+<http://purl.obolibrary.org/obo/CHEBI_25367> <http://www.w3.org/2004/02/skos/core#definition> "Any polyatomic entity that is an electrically neutral entity consisting of more than one atom.".
+<http://purl.obolibrary.org/obo/IAO_0000005> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class>.
+<http://purl.obolibrary.org/obo/IAO_0000005> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape>.
+<http://purl.obolibrary.org/obo/IAO_0000005> <http://www.w3.org/ns/shacl#closed> "true"^^<http://www.w3.org/2001/XMLSchema#boolean>.
+_:riog00000132 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+_:riog00000132 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil>.
+<http://purl.obolibrary.org/obo/IAO_0000005> <http://www.w3.org/ns/shacl#ignoredProperties> _:riog00000132.
+<http://purl.obolibrary.org/obo/IAO_0000005> <http://www.w3.org/2004/02/skos/core#prefLabel> "Objective".
+<http://purl.obolibrary.org/obo/IAO_0000005> <http://www.w3.org/2004/02/skos/core#definition> "An objective is a goal or target to be achieved by the experiment.".
+_:riog00000133 <http://www.w3.org/ns/shacl#path> <http://schema.org/name>.
+_:riog00000133 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string>.
+<http://purl.obolibrary.org/obo/IAO_0000005> <http://www.w3.org/ns/shacl#property> _:riog00000133.
+_:riog00000134 <http://www.w3.org/ns/shacl#path> <http://schema.org/description>.
+_:riog00000134 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string>.
+<http://purl.obolibrary.org/obo/IAO_0000005> <http://www.w3.org/ns/shacl#property> _:riog00000134.
+_:riog00000135 <http://www.w3.org/ns/shacl#path> <http://example.org/catplus/ontology/criteria>.
+_:riog00000135 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string>.
+<http://purl.obolibrary.org/obo/IAO_0000005> <http://www.w3.org/ns/shacl#property> _:riog00000135.
+_:riog00000136 <http://www.w3.org/ns/shacl#path> <http://purl.allotrope.org/ontologies/common#AFC_0000090>.
+_:riog00000136 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string>.
+<http://purl.obolibrary.org/obo/IAO_0000005> <http://www.w3.org/ns/shacl#property> _:riog00000136.
+<http://example.org/catplus/ontology/Campaign> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class>.
+<http://example.org/catplus/ontology/Campaign> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape>.
+<http://example.org/catplus/ontology/Campaign> <http://www.w3.org/ns/shacl#closed> "true"^^<http://www.w3.org/2001/XMLSchema#boolean>.
+_:riog00000137 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+_:riog00000137 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil>.
+<http://example.org/catplus/ontology/Campaign> <http://www.w3.org/ns/shacl#ignoredProperties> _:riog00000137.
+<http://example.org/catplus/ontology/Campaign> <http://www.w3.org/2004/02/skos/core#prefLabel> "Campaign".
+<http://example.org/catplus/ontology/Campaign> <http://www.w3.org/2004/02/skos/core#definition> "A campaign is a series of experiments that are conducted to achieve a specific objective.".
+_:riog00000138 <http://www.w3.org/ns/shacl#path> <http://schema.org/name>.
+_:riog00000138 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string>.
+<http://example.org/catplus/ontology/Campaign> <http://www.w3.org/ns/shacl#property> _:riog00000138.
+_:riog00000139 <http://www.w3.org/ns/shacl#path> <http://schema.org/description>.
+_:riog00000139 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string>.
+<http://example.org/catplus/ontology/Campaign> <http://www.w3.org/ns/shacl#property> _:riog00000139.
+_:riog00000140 <http://www.w3.org/ns/shacl#path> <http://example.org/catplus/ontology/genericObjective>.
+_:riog00000140 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string>.
+<http://example.org/catplus/ontology/Campaign> <http://www.w3.org/ns/shacl#property> _:riog00000140.
+_:riog00000141 <http://www.w3.org/ns/shacl#path> <http://example.org/catplus/ontology/campaignClass>.
+_:riog00000141 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string>.
+_:riog00000143 <http://www.w3.org/ns/shacl#hasValue> "Open Research".
+_:riog00000142 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:riog00000143.
+_:riog00000142 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:riog00000144.
+_:riog00000145 <http://www.w3.org/ns/shacl#hasValue> "Standard Research".
+_:riog00000144 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:riog00000145.
+_:riog00000144 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:riog00000146.
+_:riog00000147 <http://www.w3.org/ns/shacl#hasValue> "High level of Confidentiality".
+_:riog00000146 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:riog00000147.
+_:riog00000146 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil>.
+_:riog00000141 <http://www.w3.org/ns/shacl#xone> _:riog00000142.
+<http://example.org/catplus/ontology/Campaign> <http://www.w3.org/ns/shacl#property> _:riog00000141.
+_:riog00000148 <http://www.w3.org/ns/shacl#path> <http://example.org/catplus/ontology/type>.
+_:riog00000148 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string>.
+_:riog00000150 <http://www.w3.org/ns/shacl#hasValue> "discovery".
+_:riog00000149 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:riog00000150.
+_:riog00000149 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:riog00000151.
+_:riog00000152 <http://www.w3.org/ns/shacl#hasValue> "optimization".
+_:riog00000151 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:riog00000152.
+_:riog00000151 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil>.
+_:riog00000148 <http://www.w3.org/ns/shacl#xone> _:riog00000149.
+<http://example.org/catplus/ontology/Campaign> <http://www.w3.org/ns/shacl#property> _:riog00000148.
+_:riog00000153 <http://www.w3.org/ns/shacl#path> <http://purl.allotrope.org/ontologies/result#AFR_0002764>.
+_:riog00000153 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string>.
+<http://example.org/catplus/ontology/Campaign> <http://www.w3.org/ns/shacl#property> _:riog00000153.
+_:riog00000154 <http://www.w3.org/ns/shacl#path> <http://example.org/catplus/ontology/hasBatch>.
+_:riog00000154 <http://www.w3.org/ns/shacl#class> <http://example.org/catplus/ontology/Batch>.
+<http://example.org/catplus/ontology/Campaign> <http://www.w3.org/ns/shacl#property> _:riog00000154.
+_:riog00000155 <http://www.w3.org/ns/shacl#path> <http://example.org/catplus/ontology/hasObjective>.
+_:riog00000155 <http://www.w3.org/ns/shacl#class> <http://purl.obolibrary.org/obo/IAO_0000005>.
+<http://example.org/catplus/ontology/Campaign> <http://www.w3.org/ns/shacl#property> _:riog00000155.
+_:riog00000156 <http://www.w3.org/ns/shacl#path> <http://example.org/catplus/ontology/hasChemical>.
+_:riog00000156 <http://www.w3.org/ns/shacl#class> <http://purl.obolibrary.org/obo/CHEBI_25367>.
+<http://example.org/catplus/ontology/Campaign> <http://www.w3.org/ns/shacl#property> _:riog00000156.
+_:riog00000157 <http://www.w3.org/ns/shacl#path> <http://schema.org/contentUrl>.
+_:riog00000157 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string>.
+<http://example.org/catplus/ontology/Campaign> <http://www.w3.org/ns/shacl#property> _:riog00000157.
+<http://example.org/catplus/ontology/Batch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class>.
+<http://example.org/catplus/ontology/Batch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape>.
+<http://example.org/catplus/ontology/Batch> <http://www.w3.org/ns/shacl#closed> "true"^^<http://www.w3.org/2001/XMLSchema#boolean>.
+_:riog00000158 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+_:riog00000158 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil>.
+<http://example.org/catplus/ontology/Batch> <http://www.w3.org/ns/shacl#ignoredProperties> _:riog00000158.
+<http://example.org/catplus/ontology/Batch> <http://www.w3.org/2004/02/skos/core#prefLabel> "Batch".
+<http://example.org/catplus/ontology/Batch> <http://www.w3.org/2004/02/skos/core#definition> "A batch is a group of samples that are processed together.".
+_:riog00000159 <http://www.w3.org/ns/shacl#path> <http://schema.org/name>.
+_:riog00000159 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string>.
+<http://example.org/catplus/ontology/Batch> <http://www.w3.org/ns/shacl#property> _:riog00000159.
+_:riog00000160 <http://www.w3.org/ns/shacl#path> <http://purl.allotrope.org/ontologies/identifier>.
+_:riog00000160 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string>.
+<http://example.org/catplus/ontology/Batch> <http://www.w3.org/ns/shacl#property> _:riog00000160.
+_:riog00000161 <http://www.w3.org/ns/shacl#path> <http://example.org/catplus/ontology/reactionType>.
+_:riog00000161 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string>.
+<http://example.org/catplus/ontology/Batch> <http://www.w3.org/ns/shacl#property> _:riog00000161.
+_:riog00000162 <http://www.w3.org/ns/shacl#path> <http://purl.allotrope.org/ontologies/result#AFR_0002764>.
+_:riog00000162 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string>.
+<http://example.org/catplus/ontology/Batch> <http://www.w3.org/ns/shacl#property> _:riog00000162.
+_:riog00000163 <http://www.w3.org/ns/shacl#path> <http://purl.allotrope.org/ontologies/hdf5/1.8#HardLink>.
+_:riog00000163 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string>.
+<http://example.org/catplus/ontology/Batch> <http://www.w3.org/ns/shacl#property> _:riog00000163.
+_:riog00000164 <http://www.w3.org/ns/shacl#path> <http://example.org/catplus/ontology/optimizationType>.
+_:riog00000164 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string>.
+<http://example.org/catplus/ontology/Batch> <http://www.w3.org/ns/shacl#property> _:riog00000164.
+_:riog00000165 <http://www.w3.org/ns/shacl#path> <http://example.org/catplus/ontology/hasChemical>.
+_:riog00000165 <http://www.w3.org/ns/shacl#class> <http://purl.obolibrary.org/obo/CHEBI_25367>.
+<http://example.org/catplus/ontology/Batch> <http://www.w3.org/ns/shacl#property> _:riog00000165.
+_:riog00000166 <http://www.w3.org/ns/shacl#path> <http://example.org/catplus/ontology/hasPlate>.
+_:riog00000166 <http://www.w3.org/ns/shacl#class> <http://example.org/catplus/ontology/Plate>.
+<http://example.org/catplus/ontology/Batch> <http://www.w3.org/ns/shacl#property> _:riog00000166.
+_:riog00000167 <http://www.w3.org/ns/shacl#path> <http://example.org/catplus/ontology/reactionName>.
+_:riog00000167 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string>.
+<http://example.org/catplus/ontology/Batch> <http://www.w3.org/ns/shacl#property> _:riog00000167.
+<http://example.org/catplus/ontology/Plate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class>.
+<http://example.org/catplus/ontology/Plate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape>.
+<http://example.org/catplus/ontology/Plate> <http://www.w3.org/ns/shacl#closed> "true"^^<http://www.w3.org/2001/XMLSchema#boolean>.
+_:riog00000168 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+_:riog00000168 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil>.
+<http://example.org/catplus/ontology/Plate> <http://www.w3.org/ns/shacl#ignoredProperties> _:riog00000168.
+<http://example.org/catplus/ontology/Plate> <http://www.w3.org/2004/02/skos/core#prefLabel> "Plate".
+<http://example.org/catplus/ontology/Plate> <http://www.w3.org/2004/02/skos/core#definition> "A plate is a flat, rigid structure that holds samples or reagents in an experiment.".
+_:riog00000169 <http://www.w3.org/ns/shacl#path> <http://example.org/catplus/ontology/containerBarcode>.
+_:riog00000169 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string>.
+<http://example.org/catplus/ontology/Plate> <http://www.w3.org/ns/shacl#property> _:riog00000169.
+_:riog00000170 <http://www.w3.org/ns/shacl#path> <http://example.org/catplus/ontology/containerID>.
+_:riog00000170 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string>.
+<http://example.org/catplus/ontology/Plate> <http://www.w3.org/ns/shacl#property> _:riog00000170.
+<http://example.org/catplus/ontology/Well> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class>.
+<http://example.org/catplus/ontology/Well> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape>.
+<http://example.org/catplus/ontology/Well> <http://www.w3.org/ns/shacl#closed> "true"^^<http://www.w3.org/2001/XMLSchema#boolean>.
+_:riog00000171 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+_:riog00000171 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil>.
+<http://example.org/catplus/ontology/Well> <http://www.w3.org/ns/shacl#ignoredProperties> _:riog00000171.
+<http://example.org/catplus/ontology/Well> <http://www.w3.org/2004/02/skos/core#prefLabel> "Well".
+<http://example.org/catplus/ontology/Well> <http://www.w3.org/2004/02/skos/core#definition> "A well is a small container used to hold samples or reagents in an experiment.".
+_:riog00000172 <http://www.w3.org/ns/shacl#path> <http://purl.allotrope.org/ontologies/result#AFR_0002240>.
+_:riog00000172 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string>.
+<http://example.org/catplus/ontology/Well> <http://www.w3.org/ns/shacl#property> _:riog00000172.
+_:riog00000173 <http://www.w3.org/ns/shacl#path> <http://example.org/catplus/ontology/hasPlate>.
+_:riog00000173 <http://www.w3.org/ns/shacl#class> <http://example.org/catplus/ontology/Plate>.
+<http://example.org/catplus/ontology/Well> <http://www.w3.org/ns/shacl#property> _:riog00000173.
+<http://purl.allotrope.org/ontologies/result#AFR_0002524> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class>.
+<http://purl.allotrope.org/ontologies/result#AFR_0002524> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape>.
+<http://purl.allotrope.org/ontologies/result#AFR_0002524> <http://www.w3.org/ns/shacl#closed> "true"^^<http://www.w3.org/2001/XMLSchema#boolean>.
+_:riog00000174 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+_:riog00000174 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil>.
+<http://purl.allotrope.org/ontologies/result#AFR_0002524> <http://www.w3.org/ns/shacl#ignoredProperties> _:riog00000174.
+<http://purl.allotrope.org/ontologies/result#AFR_0002524> <http://www.w3.org/2004/02/skos/core#prefLabel> "Liquid Chromatography Aggregate Document".
+<http://purl.allotrope.org/ontologies/result#AFR_0002524> <http://www.w3.org/2004/02/skos/core#definition> "A liquid chromatography aggregate document is a document that aggregates LC documents. [Allotrope]".
+_:riog00000175 <http://www.w3.org/ns/shacl#path> <http://purl.allotrope.org/ontologies/result#AFR_0002526>.
+_:riog00000175 <http://www.w3.org/ns/shacl#class> <http://example.org/catplus/ontology/DeviceSystemDocument>.
+<http://purl.allotrope.org/ontologies/result#AFR_0002524> <http://www.w3.org/ns/shacl#property> _:riog00000175.
+_:riog00000176 <http://www.w3.org/ns/shacl#path> <http://example.org/catplus/ontology/hasLiquidChromatography>.
+_:riog00000176 <http://www.w3.org/ns/shacl#class> <http://purl.allotrope.org/ontologies/result#AFR_0002525>.
+<http://purl.allotrope.org/ontologies/result#AFR_0002524> <http://www.w3.org/ns/shacl#property> _:riog00000176.
+_:riog00000177 <http://www.w3.org/ns/shacl#path> <http://schema.org/contentUrl>.
+_:riog00000177 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string>.
+<http://purl.allotrope.org/ontologies/result#AFR_0002524> <http://www.w3.org/ns/shacl#property> _:riog00000177.
+<http://purl.allotrope.org/ontologies/result#AFR_0002525> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class>.
+<http://purl.allotrope.org/ontologies/result#AFR_0002525> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape>.
+<http://purl.allotrope.org/ontologies/result#AFR_0002525> <http://www.w3.org/ns/shacl#closed> "true"^^<http://www.w3.org/2001/XMLSchema#boolean>.
+_:riog00000178 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+_:riog00000178 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil>.
+<http://purl.allotrope.org/ontologies/result#AFR_0002525> <http://www.w3.org/ns/shacl#ignoredProperties> _:riog00000178.
+<http://purl.allotrope.org/ontologies/result#AFR_0002525> <http://www.w3.org/2004/02/skos/core#prefLabel> "Liquid Chromatography Document".
+<http://purl.allotrope.org/ontologies/result#AFR_0002525> <http://www.w3.org/2004/02/skos/core#definition> "A liquid chromatography document is a document that encompasses the information associated with a liquid chromatography run. [Allotrope]".
+_:riog00000179 <http://www.w3.org/ns/shacl#path> <http://purl.allotrope.org/ontologies/result#AFR_0001116>.
+_:riog00000179 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string>.
+<http://purl.allotrope.org/ontologies/result#AFR_0002525> <http://www.w3.org/ns/shacl#property> _:riog00000179.
+_:riog00000180 <http://www.w3.org/ns/shacl#path> <http://purl.allotrope.org/ontologies/result#AFR_0002374>.
+_:riog00000180 <http://www.w3.org/ns/shacl#class> <http://purl.allotrope.org/ontologies/result#AFR_0002375>.
+<http://purl.allotrope.org/ontologies/result#AFR_0002525> <http://www.w3.org/ns/shacl#property> _:riog00000180.
+<http://purl.allotrope.org/ontologies/result#AFR_0002375> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class>.
+<http://purl.allotrope.org/ontologies/result#AFR_0002375> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape>.
+<http://purl.allotrope.org/ontologies/result#AFR_0002375> <http://www.w3.org/ns/shacl#closed> "true"^^<http://www.w3.org/2001/XMLSchema#boolean>.
+_:riog00000181 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+_:riog00000181 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil>.
+<http://purl.allotrope.org/ontologies/result#AFR_0002375> <http://www.w3.org/ns/shacl#ignoredProperties> _:riog00000181.
+<http://purl.allotrope.org/ontologies/result#AFR_0002375> <http://www.w3.org/2004/02/skos/core#prefLabel> "Measurement Document".
+<http://purl.allotrope.org/ontologies/result#AFR_0002375> <http://www.w3.org/2004/02/skos/core#definition> "A measurement document is a document that encompasses the information associated with a measurement. [Allotrope]".
+_:riog00000182 <http://www.w3.org/ns/shacl#path> <http://purl.allotrope.org/ontologies/result#AFR_0001121>.
+_:riog00000182 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string>.
+<http://purl.allotrope.org/ontologies/result#AFR_0002375> <http://www.w3.org/ns/shacl#property> _:riog00000182.
+_:riog00000183 <http://www.w3.org/ns/shacl#path> <http://purl.allotrope.org/ontologies/result#AFR_0002526>.
+_:riog00000183 <http://www.w3.org/ns/shacl#class> <http://example.org/catplus/ontology/DeviceSystemDocument>.
+<http://purl.allotrope.org/ontologies/result#AFR_0002375> <http://www.w3.org/ns/shacl#property> _:riog00000183.
+_:riog00000184 <http://www.w3.org/ns/shacl#path> <http://purl.allotrope.org/ontologies/result#AFR_0002083>.
+_:riog00000184 <http://www.w3.org/ns/shacl#class> <http://example.org/catplus/ontology/SampleDocument>.
+<http://purl.allotrope.org/ontologies/result#AFR_0002375> <http://www.w3.org/ns/shacl#property> _:riog00000184.
+_:riog00000185 <http://www.w3.org/ns/shacl#path> <http://purl.allotrope.org/ontologies/result#AFR_0002529>.
+_:riog00000185 <http://www.w3.org/ns/shacl#class> <http://example.org/catplus/ontology/InjectionDocument>.
+<http://purl.allotrope.org/ontologies/result#AFR_0002375> <http://www.w3.org/ns/shacl#property> _:riog00000185.
+_:riog00000186 <http://www.w3.org/ns/shacl#path> <http://purl.allotrope.org/ontologies/result#AFR_0002534>.
+_:riog00000186 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string>.
+<http://purl.allotrope.org/ontologies/result#AFR_0002375> <http://www.w3.org/ns/shacl#property> _:riog00000186.
+_:riog00000187 <http://www.w3.org/ns/shacl#path> <http://purl.allotrope.org/ontologies/result#AFR_0002550>.
+_:riog00000187 <http://www.w3.org/ns/shacl#class> <http://example.org/catplus/ontology/ChromatogramDataCube>.
+<http://purl.allotrope.org/ontologies/result#AFR_0002375> <http://www.w3.org/ns/shacl#property> _:riog00000187.
+_:riog00000188 <http://www.w3.org/ns/shacl#path> <http://purl.allotrope.org/ontologies/result#AFR_0002551>.
+_:riog00000188 <http://www.w3.org/ns/shacl#class> <http://example.org/catplus/ontology/ThreeDimensionalUltravioletSpectrumDataCube>.
+<http://purl.allotrope.org/ontologies/result#AFR_0002375> <http://www.w3.org/ns/shacl#property> _:riog00000188.
+_:riog00000189 <http://www.w3.org/ns/shacl#path> <http://purl.allotrope.org/ontologies/result#AFR_0002878>.
+_:riog00000189 <http://www.w3.org/ns/shacl#class> <http://example.org/catplus/ontology/ThreeDimensionalMassSpectrumDataCube>.
+<http://purl.allotrope.org/ontologies/result#AFR_0002375> <http://www.w3.org/ns/shacl#property> _:riog00000189.
+_:riog00000190 <http://www.w3.org/ns/shacl#path> <http://purl.allotrope.org/ontologies/result#AFR_0002659>.
+_:riog00000190 <http://www.w3.org/ns/shacl#class> <http://example.org/catplus/ontology/ProcessedDataDocument>.
+<http://purl.allotrope.org/ontologies/result#AFR_0002375> <http://www.w3.org/ns/shacl#property> _:riog00000190.
+<http://example.org/catplus/ontology/ChromatogramDataCube> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class>.
+<http://example.org/catplus/ontology/ChromatogramDataCube> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape>.
+<http://example.org/catplus/ontology/ChromatogramDataCube> <http://www.w3.org/ns/shacl#closed> "true"^^<http://www.w3.org/2001/XMLSchema#boolean>.
+_:riog00000191 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+_:riog00000191 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil>.
+<http://example.org/catplus/ontology/ChromatogramDataCube> <http://www.w3.org/ns/shacl#ignoredProperties> _:riog00000191.
+<http://example.org/catplus/ontology/ChromatogramDataCube> <http://www.w3.org/2004/02/skos/core#prefLabel> "Chromatogram Data Cube".
+<http://example.org/catplus/ontology/ChromatogramDataCube> <http://www.w3.org/2004/02/skos/core#definition> "A three-dimensional representation of chromatographic data, enabling analysis of time, intensity, and other parameters.".
+_:riog00000192 <http://www.w3.org/ns/shacl#path> <http://purl.obolibrary.org/obo/IAO_0000009>.
+_:riog00000192 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string>.
+<http://example.org/catplus/ontology/ChromatogramDataCube> <http://www.w3.org/ns/shacl#property> _:riog00000192.
+_:riog00000193 <http://www.w3.org/ns/shacl#path> <http://purl.org/linked-data/cube#structure>.
+_:riog00000193 <http://www.w3.org/ns/shacl#class> <http://example.org/catplus/ontology/CubeStructure>.
+<http://example.org/catplus/ontology/ChromatogramDataCube> <http://www.w3.org/ns/shacl#property> _:riog00000193.
+_:riog00000194 <http://www.w3.org/ns/shacl#path> <http://purl.allotrope.org/ontologies/result#AFR_0000917>.
+_:riog00000194 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string>.
+<http://example.org/catplus/ontology/ChromatogramDataCube> <http://www.w3.org/ns/shacl#property> _:riog00000194.
+<http://example.org/catplus/ontology/ThreeDimensionalUltravioletSpectrumDataCube> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class>.
+<http://example.org/catplus/ontology/ThreeDimensionalUltravioletSpectrumDataCube> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape>.
+<http://example.org/catplus/ontology/ThreeDimensionalUltravioletSpectrumDataCube> <http://www.w3.org/ns/shacl#closed> "true"^^<http://www.w3.org/2001/XMLSchema#boolean>.
+_:riog00000195 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+_:riog00000195 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil>.
+<http://example.org/catplus/ontology/ThreeDimensionalUltravioletSpectrumDataCube> <http://www.w3.org/ns/shacl#ignoredProperties> _:riog00000195.
+<http://example.org/catplus/ontology/ThreeDimensionalUltravioletSpectrumDataCube> <http://www.w3.org/2004/02/skos/core#prefLabel> "Three-Dimensional Ultraviolet Spectrum Data Cube".
+<http://example.org/catplus/ontology/ThreeDimensionalUltravioletSpectrumDataCube> <http://www.w3.org/2004/02/skos/core#definition> "A data structure representing a three-dimensional cube of ultraviolet spectral data, often used for analyzing spectroscopic information across multiple dimensions.".
+_:riog00000196 <http://www.w3.org/ns/shacl#path> <http://purl.obolibrary.org/obo/IAO_0000009>.
+_:riog00000196 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string>.
+<http://example.org/catplus/ontology/ThreeDimensionalUltravioletSpectrumDataCube> <http://www.w3.org/ns/shacl#property> _:riog00000196.
+_:riog00000197 <http://www.w3.org/ns/shacl#path> <http://purl.org/linked-data/cube#structure>.
+_:riog00000197 <http://www.w3.org/ns/shacl#class> <http://example.org/catplus/ontology/CubeStructure>.
+<http://example.org/catplus/ontology/ThreeDimensionalUltravioletSpectrumDataCube> <http://www.w3.org/ns/shacl#property> _:riog00000197.
+_:riog00000198 <http://www.w3.org/ns/shacl#path> <http://purl.allotrope.org/ontologies/result#AFR_0000917>.
+_:riog00000198 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string>.
+<http://example.org/catplus/ontology/ThreeDimensionalUltravioletSpectrumDataCube> <http://www.w3.org/ns/shacl#property> _:riog00000198.
+<http://example.org/catplus/ontology/ThreeDimensionalMassSpectrumDataCube> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class>.
+<http://example.org/catplus/ontology/ThreeDimensionalMassSpectrumDataCube> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape>.
+<http://example.org/catplus/ontology/ThreeDimensionalMassSpectrumDataCube> <http://www.w3.org/ns/shacl#closed> "true"^^<http://www.w3.org/2001/XMLSchema#boolean>.
+_:riog00000199 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+_:riog00000199 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil>.
+<http://example.org/catplus/ontology/ThreeDimensionalMassSpectrumDataCube> <http://www.w3.org/ns/shacl#ignoredProperties> _:riog00000199.
+<http://example.org/catplus/ontology/ThreeDimensionalMassSpectrumDataCube> <http://www.w3.org/2004/02/skos/core#prefLabel> "Three-Dimensional Mass Spectrum Data Cube".
+<http://example.org/catplus/ontology/ThreeDimensionalMassSpectrumDataCube> <http://www.w3.org/2004/02/skos/core#definition> "A data structure representing a three-dimensional cube of mass spectrometry data, used to analyze molecular compositions and fragmentations across dimensions.".
+_:riog00000200 <http://www.w3.org/ns/shacl#path> <http://purl.obolibrary.org/obo/IAO_0000009>.
+_:riog00000200 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string>.
+<http://example.org/catplus/ontology/ThreeDimensionalMassSpectrumDataCube> <http://www.w3.org/ns/shacl#property> _:riog00000200.
+_:riog00000201 <http://www.w3.org/ns/shacl#path> <http://purl.org/linked-data/cube#structure>.
+_:riog00000201 <http://www.w3.org/ns/shacl#class> <http://example.org/catplus/ontology/CubeStructure>.
+<http://example.org/catplus/ontology/ThreeDimensionalMassSpectrumDataCube> <http://www.w3.org/ns/shacl#property> _:riog00000201.
+_:riog00000202 <http://www.w3.org/ns/shacl#path> <http://purl.allotrope.org/ontologies/result#AFR_0000917>.
+_:riog00000202 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string>.
+<http://example.org/catplus/ontology/ThreeDimensionalMassSpectrumDataCube> <http://www.w3.org/ns/shacl#property> _:riog00000202.
+<http://example.org/catplus/ontology/Dataframe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class>.
+<http://example.org/catplus/ontology/Dataframe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape>.
+<http://example.org/catplus/ontology/Dataframe> <http://www.w3.org/ns/shacl#closed> "true"^^<http://www.w3.org/2001/XMLSchema#boolean>.
+_:riog00000203 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+_:riog00000203 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil>.
+<http://example.org/catplus/ontology/Dataframe> <http://www.w3.org/ns/shacl#ignoredProperties> _:riog00000203.
+<http://example.org/catplus/ontology/Dataframe> <http://www.w3.org/2004/02/skos/core#prefLabel> "Dataset".
+<http://example.org/catplus/ontology/Dataframe> <http://www.w3.org/2004/02/skos/core#definition> "A collection of related data, structured in a way that enables efficient retrieval, processing, and analysis.".
+_:riog00000204 <http://www.w3.org/ns/shacl#path> <http://example.org/catplus/ontology/measure>.
+_:riog00000204 <http://www.w3.org/ns/shacl#class> <http://purl.allotrope.org/ontologies/role#AFRL_0000157>.
+<http://example.org/catplus/ontology/Dataframe> <http://www.w3.org/ns/shacl#property> _:riog00000204.
+_:riog00000205 <http://www.w3.org/ns/shacl#path> <http://example.org/catplus/ontology/dimension>.
+_:riog00000205 <http://www.w3.org/ns/shacl#class> <http://example.org/catplus/ontology/Dimension>.
+<http://example.org/catplus/ontology/Dataframe> <http://www.w3.org/ns/shacl#property> _:riog00000205.
+<http://example.org/catplus/ontology/CubeStructure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class>.
+<http://example.org/catplus/ontology/CubeStructure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape>.
+<http://example.org/catplus/ontology/CubeStructure> <http://www.w3.org/ns/shacl#closed> "true"^^<http://www.w3.org/2001/XMLSchema#boolean>.
+_:riog00000206 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+_:riog00000206 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil>.
+<http://example.org/catplus/ontology/CubeStructure> <http://www.w3.org/ns/shacl#ignoredProperties> _:riog00000206.
+<http://example.org/catplus/ontology/CubeStructure> <http://www.w3.org/2004/02/skos/core#prefLabel> "Cube Dataset".
+<http://example.org/catplus/ontology/CubeStructure> <http://www.w3.org/2004/02/skos/core#definition> "A dataset represented as a multidimensional cube, used for structured data analysis in various contexts such as spectroscopy and mass spectrometry.".
+_:riog00000207 <http://www.w3.org/ns/shacl#path> <http://example.org/catplus/ontology/measure>.
+_:riog00000207 <http://www.w3.org/ns/shacl#class> <http://purl.allotrope.org/ontologies/role#AFRL_0000157>.
+<http://example.org/catplus/ontology/CubeStructure> <http://www.w3.org/ns/shacl#property> _:riog00000207.
+_:riog00000208 <http://www.w3.org/ns/shacl#path> <http://example.org/catplus/ontology/dimension>.
+_:riog00000208 <http://www.w3.org/ns/shacl#class> <http://example.org/catplus/ontology/Dimension>.
+<http://example.org/catplus/ontology/CubeStructure> <http://www.w3.org/ns/shacl#property> _:riog00000208.
+<http://example.org/catplus/ontology/Dimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class>.
+<http://example.org/catplus/ontology/Dimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape>.
+<http://example.org/catplus/ontology/Dimension> <http://www.w3.org/ns/shacl#closed> "true"^^<http://www.w3.org/2001/XMLSchema#boolean>.
+_:riog00000209 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+_:riog00000209 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil>.
+<http://example.org/catplus/ontology/Dimension> <http://www.w3.org/ns/shacl#ignoredProperties> _:riog00000209.
+<http://example.org/catplus/ontology/Dimension> <http://www.w3.org/2004/02/skos/core#prefLabel> "Dimension".
+<http://example.org/catplus/ontology/Dimension> <http://www.w3.org/2004/02/skos/core#definition> "A measurable extent of a particular kind, such as length, width, height, or time, in a specified context.".
+_:riog00000210 <http://www.w3.org/ns/shacl#path> <http://purl.allotrope.org/ontologies/datacube#componentDataType>.
+<http://example.org/catplus/ontology/Dimension> <http://www.w3.org/ns/shacl#property> _:riog00000210.
+_:riog00000211 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/2000/01/rdf-schema#label>.
+_:riog00000211 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string>.
+<http://example.org/catplus/ontology/Dimension> <http://www.w3.org/ns/shacl#property> _:riog00000211.
+_:riog00000212 <http://www.w3.org/ns/shacl#path> <http://qudt.org/schema/qudt/unit>.
+_:riog00000212 <http://www.w3.org/ns/shacl#class> <http://qudt.org/schema/qudt/Unit>.
+<http://example.org/catplus/ontology/Dimension> <http://www.w3.org/ns/shacl#property> _:riog00000212.
+<http://purl.allotrope.org/ontologies/role#AFRL_0000157> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class>.
+<http://purl.allotrope.org/ontologies/role#AFRL_0000157> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape>.
+<http://purl.allotrope.org/ontologies/role#AFRL_0000157> <http://www.w3.org/ns/shacl#closed> "true"^^<http://www.w3.org/2001/XMLSchema#boolean>.
+_:riog00000213 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+_:riog00000213 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil>.
+<http://purl.allotrope.org/ontologies/role#AFRL_0000157> <http://www.w3.org/ns/shacl#ignoredProperties> _:riog00000213.
+<http://purl.allotrope.org/ontologies/role#AFRL_0000157> <http://www.w3.org/2004/02/skos/core#prefLabel> "Measure".
+<http://purl.allotrope.org/ontologies/role#AFRL_0000157> <http://www.w3.org/2004/02/skos/core#definition> "A measure is an actual value that is the direct or indirect outcome of some measurement and refers to some metric. [Allotrope]".
+_:riog00000214 <http://www.w3.org/ns/shacl#path> <http://purl.allotrope.org/ontologies/datacube#componentDataType>.
+<http://purl.allotrope.org/ontologies/role#AFRL_0000157> <http://www.w3.org/ns/shacl#property> _:riog00000214.
+_:riog00000215 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/2000/01/rdf-schema#label>.
+_:riog00000215 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string>.
+<http://purl.allotrope.org/ontologies/role#AFRL_0000157> <http://www.w3.org/ns/shacl#property> _:riog00000215.
+_:riog00000216 <http://www.w3.org/ns/shacl#path> <http://qudt.org/schema/qudt/unit>.
+_:riog00000216 <http://www.w3.org/ns/shacl#class> <http://qudt.org/schema/qudt/Unit>.
+<http://purl.allotrope.org/ontologies/role#AFRL_0000157> <http://www.w3.org/ns/shacl#property> _:riog00000216.
+<http://example.org/catplus/ontology/SampleDocument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class>.
+<http://example.org/catplus/ontology/SampleDocument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape>.
+<http://example.org/catplus/ontology/SampleDocument> <http://www.w3.org/ns/shacl#closed> "true"^^<http://www.w3.org/2001/XMLSchema#boolean>.
+_:riog00000217 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+_:riog00000217 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil>.
+<http://example.org/catplus/ontology/SampleDocument> <http://www.w3.org/ns/shacl#ignoredProperties> _:riog00000217.
+<http://example.org/catplus/ontology/SampleDocument> <http://www.w3.org/2004/02/skos/core#prefLabel> "Sample Document".
+<http://example.org/catplus/ontology/SampleDocument> <http://www.w3.org/2004/02/skos/core#definition> "A document describing a sample, including identifiers and names for traceability in experimental contexts.".
+_:riog00000218 <http://www.w3.org/ns/shacl#path> <http://example.org/catplus/ontology/hasProduct>.
+_:riog00000218 <http://www.w3.org/ns/shacl#class> <http://example.org/catplus/ontology/Product>.
+<http://example.org/catplus/ontology/SampleDocument> <http://www.w3.org/ns/shacl#property> _:riog00000218.
+_:riog00000219 <http://www.w3.org/ns/shacl#path> <http://purl.allotrope.org/ontologies/result#AFR_0001118>.
+_:riog00000219 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string>.
+<http://example.org/catplus/ontology/SampleDocument> <http://www.w3.org/ns/shacl#property> _:riog00000219.
+<http://example.org/catplus/ontology/InjectionDocument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class>.
+<http://example.org/catplus/ontology/InjectionDocument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape>.
+<http://example.org/catplus/ontology/InjectionDocument> <http://www.w3.org/ns/shacl#closed> "true"^^<http://www.w3.org/2001/XMLSchema#boolean>.
+_:riog00000220 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+_:riog00000220 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil>.
+<http://example.org/catplus/ontology/InjectionDocument> <http://www.w3.org/ns/shacl#ignoredProperties> _:riog00000220.
+<http://example.org/catplus/ontology/InjectionDocument> <http://www.w3.org/2004/02/skos/core#prefLabel> "Injection Document".
+<http://example.org/catplus/ontology/InjectionDocument> <http://www.w3.org/2004/02/skos/core#definition> "A document recording details about a specific injection event, including timing and volume settings in chromatography.".
+_:riog00000221 <http://www.w3.org/ns/shacl#path> <http://purl.allotrope.org/ontologies/result#AFR_0001267>.
+_:riog00000221 <http://www.w3.org/ns/shacl#class> <http://example.org/catplus/ontology/AutosamplerInjectionVolumeSetting>.
+<http://example.org/catplus/ontology/InjectionDocument> <http://www.w3.org/ns/shacl#property> _:riog00000221.
+_:riog00000222 <http://www.w3.org/ns/shacl#path> <http://purl.allotrope.org/ontologies/result#AFR_0002535>.
+_:riog00000222 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string>.
+<http://example.org/catplus/ontology/InjectionDocument> <http://www.w3.org/ns/shacl#property> _:riog00000222.
+_:riog00000223 <http://www.w3.org/ns/shacl#path> <http://purl.allotrope.org/ontologies/result#AFR_0002536>.
+_:riog00000223 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#dateTime>.
+<http://example.org/catplus/ontology/InjectionDocument> <http://www.w3.org/ns/shacl#property> _:riog00000223.
+<http://example.org/catplus/ontology/AutosamplerInjectionVolumeSetting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class>.
+<http://example.org/catplus/ontology/AutosamplerInjectionVolumeSetting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape>.
+<http://example.org/catplus/ontology/AutosamplerInjectionVolumeSetting> <http://www.w3.org/ns/shacl#closed> "true"^^<http://www.w3.org/2001/XMLSchema#boolean>.
+_:riog00000224 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+_:riog00000224 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil>.
+<http://example.org/catplus/ontology/AutosamplerInjectionVolumeSetting> <http://www.w3.org/ns/shacl#ignoredProperties> _:riog00000224.
+<http://example.org/catplus/ontology/AutosamplerInjectionVolumeSetting> <http://www.w3.org/2004/02/skos/core#prefLabel> "Autosampler Injection Volume Setting".
+<http://example.org/catplus/ontology/AutosamplerInjectionVolumeSetting> <http://www.w3.org/2004/02/skos/core#definition> "A setting that specifies the volume of a sample injected by an autosampler in chromatography.".
+_:riog00000225 <http://www.w3.org/ns/shacl#path> <http://qudt.org/schema/qudt/value>.
+<http://example.org/catplus/ontology/AutosamplerInjectionVolumeSetting> <http://www.w3.org/ns/shacl#property> _:riog00000225.
+_:riog00000226 <http://www.w3.org/ns/shacl#path> <http://qudt.org/schema/qudt/unit>.
+<http://example.org/catplus/ontology/AutosamplerInjectionVolumeSetting> <http://www.w3.org/ns/shacl#property> _:riog00000226.
+<http://example.org/catplus/ontology/ProcessedDataDocument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class>.
+<http://example.org/catplus/ontology/ProcessedDataDocument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape>.
+<http://example.org/catplus/ontology/ProcessedDataDocument> <http://www.w3.org/ns/shacl#closed> "true"^^<http://www.w3.org/2001/XMLSchema#boolean>.
+_:riog00000227 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+_:riog00000227 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil>.
+<http://example.org/catplus/ontology/ProcessedDataDocument> <http://www.w3.org/ns/shacl#ignoredProperties> _:riog00000227.
+<http://example.org/catplus/ontology/ProcessedDataDocument> <http://www.w3.org/2004/02/skos/core#prefLabel> "Processed Data Document".
+<http://example.org/catplus/ontology/ProcessedDataDocument> <http://www.w3.org/2004/02/skos/core#definition> "A document containing processed experimental data, often derived from raw measurements, such as peak lists.".
+_:riog00000228 <http://www.w3.org/ns/shacl#path> <http://purl.allotrope.org/ontologies/result#AFR_0000432>.
+_:riog00000228 <http://www.w3.org/ns/shacl#class> <http://example.org/catplus/ontology/PeakList>.
+<http://example.org/catplus/ontology/ProcessedDataDocument> <http://www.w3.org/ns/shacl#property> _:riog00000228.
+<http://example.org/catplus/ontology/PeakList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class>.
+<http://example.org/catplus/ontology/PeakList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape>.
+<http://example.org/catplus/ontology/PeakList> <http://www.w3.org/ns/shacl#closed> "true"^^<http://www.w3.org/2001/XMLSchema#boolean>.
+_:riog00000229 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+_:riog00000229 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil>.
+<http://example.org/catplus/ontology/PeakList> <http://www.w3.org/ns/shacl#ignoredProperties> _:riog00000229.
+<http://example.org/catplus/ontology/PeakList> <http://www.w3.org/2004/02/skos/core#prefLabel> "Peak List".
+<http://example.org/catplus/ontology/PeakList> <http://www.w3.org/2004/02/skos/core#definition> "A collection of peaks identified in chromatograms or spectra, typically used for further analysis in experiments.".
+_:riog00000230 <http://www.w3.org/ns/shacl#path> <http://example.org/catplus/ontology/peak>.
+_:riog00000230 <http://www.w3.org/ns/shacl#class> <http://purl.allotrope.org/ontologies/result#AFR_0000413>.
+<http://example.org/catplus/ontology/PeakList> <http://www.w3.org/ns/shacl#property> _:riog00000230.
+_:riog00000231 <http://www.w3.org/ns/shacl#path> <http://example.org/catplus/ontology/hasProduct>.
+_:riog00000231 <http://www.w3.org/ns/shacl#class> <http://example.org/catplus/ontology/Product>.
+<http://example.org/catplus/ontology/PeakList> <http://www.w3.org/ns/shacl#property> _:riog00000231.
+<http://purl.allotrope.org/ontologies/result#AFR_0000413> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class>.
+<http://purl.allotrope.org/ontologies/result#AFR_0000413> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape>.
+<http://purl.allotrope.org/ontologies/result#AFR_0000413> <http://www.w3.org/ns/shacl#closed> "true"^^<http://www.w3.org/2001/XMLSchema#boolean>.
+_:riog00000232 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+_:riog00000232 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil>.
+<http://purl.allotrope.org/ontologies/result#AFR_0000413> <http://www.w3.org/ns/shacl#ignoredProperties> _:riog00000232.
+<http://purl.allotrope.org/ontologies/result#AFR_0000413> <http://www.w3.org/2004/02/skos/core#prefLabel> "Peak".
+<http://purl.allotrope.org/ontologies/result#AFR_0000413> <http://www.w3.org/2004/02/skos/core#definition> "A peak describes a part of a spectrum/chromatogram/plot at a definite range of the experimental parameter (independent variable) of the spectrum. This definition includes a single data point of the spectrum. [Allotrope]".
+_:riog00000233 <http://www.w3.org/ns/shacl#path> <http://purl.allotrope.org/ontologies/datacube-hdf-map#Index>.
+_:riog00000233 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#integer>.
+<http://purl.allotrope.org/ontologies/result#AFR_0000413> <http://www.w3.org/ns/shacl#property> _:riog00000233.
+_:riog00000234 <http://www.w3.org/ns/shacl#path> <http://purl.allotrope.org/ontologies/result#AFR_0001164>.
+_:riog00000234 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string>.
+<http://purl.allotrope.org/ontologies/result#AFR_0000413> <http://www.w3.org/ns/shacl#property> _:riog00000234.
+_:riog00000235 <http://www.w3.org/ns/shacl#path> <http://purl.allotrope.org/ontologies/result#AFR_0001073>.
+_:riog00000235 <http://www.w3.org/ns/shacl#node> <http://example.org/catplus/ontology/Measurement>.
+_:riog00000237 <http://www.w3.org/ns/shacl#path> <http://qudt.org/schema/qudt/unit>.
+_:riog00000237 <http://www.w3.org/ns/shacl#hasValue> <http://purl.allotrope.org/ontology/qudt-ext/unit#MilliAbsorbanceUnitTimesSecond>.
+_:riog00000236 <http://www.w3.org/ns/shacl#property> _:riog00000237.
+_:riog00000235 <http://www.w3.org/ns/shacl#node> _:riog00000236.
+<http://purl.allotrope.org/ontologies/result#AFR_0000413> <http://www.w3.org/ns/shacl#property> _:riog00000235.
+_:riog00000238 <http://www.w3.org/ns/shacl#path> <http://purl.allotrope.org/ontologies/result#AFR_0001089>.
+_:riog00000238 <http://www.w3.org/ns/shacl#node> <http://example.org/catplus/ontology/Measurement>.
+_:riog00000240 <http://www.w3.org/ns/shacl#path> <http://qudt.org/schema/qudt/unit>.
+_:riog00000240 <http://www.w3.org/ns/shacl#hasValue> <http://qudt.org/vocab/unit/MIN>.
+_:riog00000239 <http://www.w3.org/ns/shacl#property> _:riog00000240.
+_:riog00000238 <http://www.w3.org/ns/shacl#node> _:riog00000239.
+<http://purl.allotrope.org/ontologies/result#AFR_0000413> <http://www.w3.org/ns/shacl#property> _:riog00000238.
+_:riog00000241 <http://www.w3.org/ns/shacl#path> <http://purl.allotrope.org/ontologies/result#AFR_0001178>.
+_:riog00000241 <http://www.w3.org/ns/shacl#node> <http://example.org/catplus/ontology/Measurement>.
+_:riog00000243 <http://www.w3.org/ns/shacl#path> <http://qudt.org/schema/qudt/unit>.
+_:riog00000243 <http://www.w3.org/ns/shacl#hasValue> <http://qudt.org/vocab/unit/MIN>.
+_:riog00000242 <http://www.w3.org/ns/shacl#property> _:riog00000243.
+_:riog00000241 <http://www.w3.org/ns/shacl#node> _:riog00000242.
+<http://purl.allotrope.org/ontologies/result#AFR_0000413> <http://www.w3.org/ns/shacl#property> _:riog00000241.
+_:riog00000244 <http://www.w3.org/ns/shacl#path> <http://purl.allotrope.org/ontologies/result#AFR_0001180>.
+_:riog00000244 <http://www.w3.org/ns/shacl#node> <http://example.org/catplus/ontology/Measurement>.
+_:riog00000246 <http://www.w3.org/ns/shacl#path> <http://qudt.org/schema/qudt/unit>.
+_:riog00000246 <http://www.w3.org/ns/shacl#hasValue> <http://qudt.org/vocab/unit/MIN>.
+_:riog00000245 <http://www.w3.org/ns/shacl#property> _:riog00000246.
+_:riog00000244 <http://www.w3.org/ns/shacl#node> _:riog00000245.
+<http://purl.allotrope.org/ontologies/result#AFR_0000413> <http://www.w3.org/ns/shacl#property> _:riog00000244.
+_:riog00000247 <http://www.w3.org/ns/shacl#path> <http://purl.allotrope.org/ontologies/result#AFR_0000948>.
+_:riog00000247 <http://www.w3.org/ns/shacl#node> <http://example.org/catplus/ontology/Measurement>.
+_:riog00000249 <http://www.w3.org/ns/shacl#path> <http://qudt.org/schema/qudt/unit>.
+_:riog00000251 <http://www.w3.org/ns/shacl#hasValue> <http://purl.allotrope.org/ontology/qudt-ext/unit#MilliAbsorbanceUnit>.
+_:riog00000250 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:riog00000251.
+_:riog00000250 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:riog00000252.
+_:riog00000253 <http://www.w3.org/ns/shacl#hasValue> <http://qudt.org/vocab/unit/UNITLESS>.
+_:riog00000252 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:riog00000253.
+_:riog00000252 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil>.
+_:riog00000249 <http://www.w3.org/ns/shacl#xone> _:riog00000250.
+_:riog00000248 <http://www.w3.org/ns/shacl#property> _:riog00000249.
+_:riog00000247 <http://www.w3.org/ns/shacl#node> _:riog00000248.
+<http://purl.allotrope.org/ontologies/result#AFR_0000413> <http://www.w3.org/ns/shacl#property> _:riog00000247.
+_:riog00000254 <http://www.w3.org/ns/shacl#path> <http://purl.allotrope.org/ontologies/result#AFR_0001165>.
+_:riog00000254 <http://www.w3.org/ns/shacl#node> <http://example.org/catplus/ontology/Measurement>.
+_:riog00000256 <http://www.w3.org/ns/shacl#path> <http://qudt.org/schema/qudt/unit>.
+_:riog00000256 <http://www.w3.org/ns/shacl#hasValue> <http://qudt.org/vocab/unit/PERCENT>.
+_:riog00000255 <http://www.w3.org/ns/shacl#property> _:riog00000256.
+_:riog00000254 <http://www.w3.org/ns/shacl#node> _:riog00000255.
+<http://purl.allotrope.org/ontologies/result#AFR_0000413> <http://www.w3.org/ns/shacl#property> _:riog00000254.
+_:riog00000257 <http://www.w3.org/ns/shacl#path> <http://purl.allotrope.org/ontologies/result#AFR_0000949>.
+_:riog00000257 <http://www.w3.org/ns/shacl#node> <http://example.org/catplus/ontology/Measurement>.
+_:riog00000259 <http://www.w3.org/ns/shacl#path> <http://qudt.org/schema/qudt/unit>.
+_:riog00000259 <http://www.w3.org/ns/shacl#hasValue> <http://qudt.org/vocab/unit/PERCENT>.
+_:riog00000258 <http://www.w3.org/ns/shacl#property> _:riog00000259.
+_:riog00000257 <http://www.w3.org/ns/shacl#node> _:riog00000258.
+<http://purl.allotrope.org/ontologies/result#AFR_0000413> <http://www.w3.org/ns/shacl#property> _:riog00000257.
+_:riog00000260 <http://www.w3.org/ns/shacl#path> <http://purl.allotrope.org/ontologies/result#AFR_0001179>.
+_:riog00000260 <http://www.w3.org/ns/shacl#node> <http://example.org/catplus/ontology/Measurement>.
+_:riog00000262 <http://www.w3.org/ns/shacl#path> <http://qudt.org/schema/qudt/unit>.
+_:riog00000264 <http://www.w3.org/ns/shacl#hasValue> <http://purl.allotrope.org/ontology/qudt-ext/unit#MilliAbsorbanceUnit>.
+_:riog00000263 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:riog00000264.
+_:riog00000263 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:riog00000265.
+_:riog00000266 <http://www.w3.org/ns/shacl#hasValue> <http://qudt.org/vocab/unit/UNITLESS>.
+_:riog00000265 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:riog00000266.
+_:riog00000265 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil>.
+_:riog00000262 <http://www.w3.org/ns/shacl#xone> _:riog00000263.
+_:riog00000261 <http://www.w3.org/ns/shacl#property> _:riog00000262.
+_:riog00000260 <http://www.w3.org/ns/shacl#node> _:riog00000261.
+<http://purl.allotrope.org/ontologies/result#AFR_0000413> <http://www.w3.org/ns/shacl#property> _:riog00000260.
+_:riog00000267 <http://www.w3.org/ns/shacl#path> <http://purl.allotrope.org/ontologies/result#AFR_0001181>.
+_:riog00000267 <http://www.w3.org/ns/shacl#node> <http://example.org/catplus/ontology/Measurement>.
+_:riog00000269 <http://www.w3.org/ns/shacl#path> <http://qudt.org/schema/qudt/unit>.
+_:riog00000271 <http://www.w3.org/ns/shacl#hasValue> <http://purl.allotrope.org/ontology/qudt-ext/unit#MilliAbsorbanceUnit>.
+_:riog00000270 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:riog00000271.
+_:riog00000270 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:riog00000272.
+_:riog00000273 <http://www.w3.org/ns/shacl#hasValue> <http://qudt.org/vocab/unit/UNITLESS>.
+_:riog00000272 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:riog00000273.
+_:riog00000272 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil>.
+_:riog00000269 <http://www.w3.org/ns/shacl#xone> _:riog00000270.
+_:riog00000268 <http://www.w3.org/ns/shacl#property> _:riog00000269.
+_:riog00000267 <http://www.w3.org/ns/shacl#node> _:riog00000268.
+<http://purl.allotrope.org/ontologies/result#AFR_0000413> <http://www.w3.org/ns/shacl#property> _:riog00000267.
+<http://example.org/catplus/ontology/Agilent-Peak> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class>.
+<http://example.org/catplus/ontology/Agilent-Peak> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape>.
+<http://example.org/catplus/ontology/Agilent-Peak> <http://www.w3.org/ns/shacl#closed> "true"^^<http://www.w3.org/2001/XMLSchema#boolean>.
+_:riog00000274 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+_:riog00000274 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil>.
+<http://example.org/catplus/ontology/Agilent-Peak> <http://www.w3.org/ns/shacl#ignoredProperties> _:riog00000274.
+<http://example.org/catplus/ontology/Agilent-Peak> <http://www.w3.org/2004/02/skos/core#prefLabel> "Agilent Peak".
+<http://example.org/catplus/ontology/Agilent-Peak> <http://www.w3.org/2004/02/skos/core#definition> "A peak identified in an Agilent chromatogram or spectrum, typically used for further analysis in experiments.".
+<http://example.org/catplus/ontology/Agilent-Peak> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.allotrope.org/ontologies/result#AFR_0000413>.
+<http://example.org/catplus/ontology/UV-IR-NMR-Peak> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class>.
+<http://example.org/catplus/ontology/UV-IR-NMR-Peak> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape>.
+<http://example.org/catplus/ontology/UV-IR-NMR-Peak> <http://www.w3.org/ns/shacl#closed> "true"^^<http://www.w3.org/2001/XMLSchema#boolean>.
+_:riog00000275 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+_:riog00000275 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil>.
+<http://example.org/catplus/ontology/UV-IR-NMR-Peak> <http://www.w3.org/ns/shacl#ignoredProperties> _:riog00000275.
+<http://example.org/catplus/ontology/UV-IR-NMR-Peak> <http://www.w3.org/2004/02/skos/core#prefLabel> "UV-IR-NMR Peak".
+<http://example.org/catplus/ontology/UV-IR-NMR-Peak> <http://www.w3.org/2004/02/skos/core#definition> "A peak identified in a UV, IR, or NMR spectrum, typically used for further analysis in experiments.".
+<http://example.org/catplus/ontology/UV-IR-NMR-Peak> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.allotrope.org/ontologies/result#AFR_0000413>.
+<http://example.org/catplus/ontology/DeviceSystemDocument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class>.
+<http://example.org/catplus/ontology/DeviceSystemDocument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape>.
+<http://example.org/catplus/ontology/DeviceSystemDocument> <http://www.w3.org/ns/shacl#closed> "true"^^<http://www.w3.org/2001/XMLSchema#boolean>.
+_:riog00000276 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+_:riog00000276 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil>.
+<http://example.org/catplus/ontology/DeviceSystemDocument> <http://www.w3.org/ns/shacl#ignoredProperties> _:riog00000276.
+<http://example.org/catplus/ontology/DeviceSystemDocument> <http://www.w3.org/2004/02/skos/core#prefLabel> "Device System Document".
+<http://example.org/catplus/ontology/DeviceSystemDocument> <http://www.w3.org/2004/02/skos/core#definition> "A document describing a system of devices, including identifiers and associated metadata for asset management.".
+_:riog00000277 <http://www.w3.org/ns/shacl#path> <http://purl.allotrope.org/ontologies/result#AFR_0001976>.
+_:riog00000277 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string>.
+<http://example.org/catplus/ontology/DeviceSystemDocument> <http://www.w3.org/ns/shacl#property> _:riog00000277.
+_:riog00000278 <http://www.w3.org/ns/shacl#path> <http://purl.allotrope.org/ontologies/result#AFR_0002722>.
+_:riog00000278 <http://www.w3.org/ns/shacl#class> <http://purl.allotrope.org/ontologies/result#AFR_0002567>.
+<http://example.org/catplus/ontology/DeviceSystemDocument> <http://www.w3.org/ns/shacl#property> _:riog00000278.
+<http://purl.allotrope.org/ontologies/result#AFR_0002567> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class>.
+<http://purl.allotrope.org/ontologies/result#AFR_0002567> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape>.
+<http://purl.allotrope.org/ontologies/result#AFR_0002567> <http://www.w3.org/ns/shacl#closed> "true"^^<http://www.w3.org/2001/XMLSchema#boolean>.
+_:riog00000279 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+_:riog00000279 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil>.
+<http://purl.allotrope.org/ontologies/result#AFR_0002567> <http://www.w3.org/ns/shacl#ignoredProperties> _:riog00000279.
+<http://purl.allotrope.org/ontologies/result#AFR_0002567> <http://www.w3.org/2004/02/skos/core#prefLabel> "Device Document".
+<http://purl.allotrope.org/ontologies/result#AFR_0002567> <http://www.w3.org/2004/02/skos/core#definition> "A device document is a document that encompasses the information associated with a device. [Allotrope]".
+_:riog00000280 <http://www.w3.org/ns/shacl#path> <http://purl.allotrope.org/ontologies/result#AFR_0002018>.
+_:riog00000280 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string>.
+<http://purl.allotrope.org/ontologies/result#AFR_0002567> <http://www.w3.org/ns/shacl#property> _:riog00000280.
+_:riog00000281 <http://www.w3.org/ns/shacl#path> <http://purl.allotrope.org/ontologies/result#AFR_0002568>.
+_:riog00000281 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string>.
+<http://purl.allotrope.org/ontologies/result#AFR_0002567> <http://www.w3.org/ns/shacl#property> _:riog00000281.
+_:riog00000282 <http://www.w3.org/ns/shacl#path> <http://purl.allotrope.org/ontologies/result#AFR_0001258>.
+_:riog00000282 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string>.
+<http://purl.allotrope.org/ontologies/result#AFR_0002567> <http://www.w3.org/ns/shacl#property> _:riog00000282.
+_:riog00000283 <http://www.w3.org/ns/shacl#path> <http://purl.allotrope.org/ontologies/result#AFR_0001119>.
+_:riog00000283 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string>.
+<http://purl.allotrope.org/ontologies/result#AFR_0002567> <http://www.w3.org/ns/shacl#property> _:riog00000283.
+_:riog00000284 <http://www.w3.org/ns/shacl#path> <http://purl.obolibrary.org/obo/IAO_0000017>.
+_:riog00000284 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string>.
+<http://purl.allotrope.org/ontologies/result#AFR_0002567> <http://www.w3.org/ns/shacl#property> _:riog00000284.
+_:riog00000285 <http://www.w3.org/ns/shacl#path> <http://purl.allotrope.org/ontologies/result#AFR_0001259>.
+_:riog00000285 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string>.
+<http://purl.allotrope.org/ontologies/result#AFR_0002567> <http://www.w3.org/ns/shacl#property> _:riog00000285.
+_:riog00000286 <http://www.w3.org/ns/shacl#path> <http://purl.allotrope.org/ontologies/datacube-hdf-map#Index>.
+_:riog00000286 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#integer>.
+<http://purl.allotrope.org/ontologies/result#AFR_0002567> <http://www.w3.org/ns/shacl#property> _:riog00000286.
+_:riog00000287 <http://www.w3.org/ns/shacl#path> <http://purl.allotrope.org/ontologies/result#AFR_0002534>.
+_:riog00000287 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string>.
+<http://purl.allotrope.org/ontologies/result#AFR_0002567> <http://www.w3.org/ns/shacl#property> _:riog00000287.
+<http://example.org/catplus/ontology/Measurement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape>.
+<http://example.org/catplus/ontology/Measurement> <http://www.w3.org/ns/shacl#closed> "true"^^<http://www.w3.org/2001/XMLSchema#boolean>.
+_:riog00000288 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>.
+_:riog00000288 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil>.
+<http://example.org/catplus/ontology/Measurement> <http://www.w3.org/ns/shacl#ignoredProperties> _:riog00000288.
+<http://example.org/catplus/ontology/Measurement> <http://www.w3.org/2004/02/skos/core#prefLabel> "Measurement".
+<http://example.org/catplus/ontology/Measurement> <http://www.w3.org/2004/02/skos/core#definition> "A measurement of something, which must always have a value and a unit specified together.".
+_:riog00000289 <http://www.w3.org/ns/shacl#path> <http://qudt.org/schema/qudt/value>.
+<http://example.org/catplus/ontology/Measurement> <http://www.w3.org/ns/shacl#property> _:riog00000289.
+_:riog00000290 <http://www.w3.org/ns/shacl#path> <http://qudt.org/schema/qudt/unit>.
+<http://example.org/catplus/ontology/Measurement> <http://www.w3.org/ns/shacl#property> _:riog00000290.
+<http://example.org/catplus/ontology/temperatureTumbleStirrerShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape>.
+<http://example.org/catplus/ontology/temperatureTumbleStirrerShape> <http://www.w3.org/ns/shacl#path> <http://example.org/catplus/ontology/temperatureTumbleStirrer>.
+<http://example.org/catplus/ontology/temperatureTumbleStirrerShape> <http://www.w3.org/ns/shacl#node> <http://example.org/catplus/ontology/Observation>.
+_:riog00000292 <http://www.w3.org/ns/shacl#path> <http://qudt.org/schema/qudt/unit>.
+_:riog00000292 <http://www.w3.org/ns/shacl#hasValue> <http://qudt.org/vocab/unit/DEG_C>.
+_:riog00000291 <http://www.w3.org/ns/shacl#property> _:riog00000292.
+<http://example.org/catplus/ontology/temperatureTumbleStirrerShape> <http://www.w3.org/ns/shacl#node> _:riog00000291.
+<http://example.org/catplus/ontology/temperatureShakerShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape>.
+<http://example.org/catplus/ontology/temperatureShakerShape> <http://www.w3.org/ns/shacl#path> <http://example.org/catplus/ontology/temperatureShaker>.
+<http://example.org/catplus/ontology/temperatureShakerShape> <http://www.w3.org/ns/shacl#node> <http://example.org/catplus/ontology/Observation>.
+_:riog00000294 <http://www.w3.org/ns/shacl#path> <http://qudt.org/schema/qudt/unit>.
+_:riog00000294 <http://www.w3.org/ns/shacl#hasValue> <http://qudt.org/vocab/unit/DEG_C>.
+_:riog00000293 <http://www.w3.org/ns/shacl#property> _:riog00000294.
+<http://example.org/catplus/ontology/temperatureShakerShape> <http://www.w3.org/ns/shacl#node> _:riog00000293.
+<http://example.org/catplus/ontology/speedTumbleStirrerShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape>.
+<http://example.org/catplus/ontology/speedTumbleStirrerShape> <http://www.w3.org/ns/shacl#path> <http://purl.allotrope.org/ontologies/property#AFX_0000211>.
+<http://example.org/catplus/ontology/speedTumbleStirrerShape> <http://www.w3.org/ns/shacl#node> <http://example.org/catplus/ontology/Observation>.
+_:riog00000296 <http://www.w3.org/ns/shacl#path> <http://qudt.org/schema/qudt/unit>.
+_:riog00000296 <http://www.w3.org/ns/shacl#hasValue> <http://qudt.org/vocab/unit/REV-PER-MIN>.
+_:riog00000295 <http://www.w3.org/ns/shacl#property> _:riog00000296.
+<http://example.org/catplus/ontology/speedTumbleStirrerShape> <http://www.w3.org/ns/shacl#node> _:riog00000295.
+<http://example.org/catplus/ontology/speedShakerShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape>.
+<http://example.org/catplus/ontology/speedShakerShape> <http://www.w3.org/ns/shacl#path> <http://purl.allotrope.org/ontologies/property#AFX_0000211>.
+<http://example.org/catplus/ontology/speedShakerShape> <http://www.w3.org/ns/shacl#node> <http://example.org/catplus/ontology/Observation>.
+_:riog00000298 <http://www.w3.org/ns/shacl#path> <http://qudt.org/schema/qudt/unit>.
+_:riog00000298 <http://www.w3.org/ns/shacl#hasValue> <http://qudt.org/vocab/unit/REV-PER-MIN>.
+_:riog00000297 <http://www.w3.org/ns/shacl#property> _:riog00000298.
+<http://example.org/catplus/ontology/speedShakerShape> <http://www.w3.org/ns/shacl#node> _:riog00000297.
+<http://example.org/catplus/ontology/temperatureShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape>.
+<http://example.org/catplus/ontology/temperatureShape> <http://www.w3.org/ns/shacl#path> <http://example.org/catplus/ontology/temperature>.
+<http://example.org/catplus/ontology/temperatureShape> <http://www.w3.org/ns/shacl#node> <http://example.org/catplus/ontology/Observation>.
+_:riog00000300 <http://www.w3.org/ns/shacl#path> <http://qudt.org/schema/qudt/unit>.
+_:riog00000300 <http://www.w3.org/ns/shacl#hasValue> <http://qudt.org/vocab/unit/DEG_C>.
+_:riog00000299 <http://www.w3.org/ns/shacl#property> _:riog00000300.
+<http://example.org/catplus/ontology/temperatureShape> <http://www.w3.org/ns/shacl#node> _:riog00000299.
+<http://example.org/catplus/ontology/vialShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape>.
+<http://example.org/catplus/ontology/vialShape> <http://www.w3.org/ns/shacl#path> <http://example.org/catplus/ontology/vialType>.
+_:riog00000302 <http://www.w3.org/ns/shacl#hasValue> "synthesis vial".
+_:riog00000301 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:riog00000302.
+_:riog00000301 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:riog00000303.
+_:riog00000304 <http://www.w3.org/ns/shacl#hasValue> "storage vial".
+_:riog00000303 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:riog00000304.
+_:riog00000303 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:riog00000305.
+_:riog00000306 <http://www.w3.org/ns/shacl#hasValue> "reaction vial".
+_:riog00000305 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:riog00000306.
+_:riog00000305 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:riog00000307.
+_:riog00000308 <http://www.w3.org/ns/shacl#hasValue> "sample vial".
+_:riog00000307 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:riog00000308.
+_:riog00000307 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:riog00000309.
+_:riog00000310 <http://www.w3.org/ns/shacl#hasValue> "other".
+_:riog00000309 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:riog00000310.
+_:riog00000309 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil>.
+<http://example.org/catplus/ontology/vialShape> <http://www.w3.org/ns/shacl#xone> _:riog00000301.
+<http://qudt.org/vocab/quantitykind/Time> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://qudt.org/schema/qudt/QuantityKind>.
+<http://qudt.org/vocab/quantitykind/Time> <http://www.w3.org/2000/01/rdf-schema#label> "Time".
+<http://qudt.org/vocab/quantitykind/Time> <http://qudt.org/schema/qudt/applicableUnit> <http://qudt.org/vocab/unit/SEC>.
+<http://qudt.org/vocab/quantitykind/Time> <http://qudt.org/schema/qudt/applicableUnit> <http://qudt.org/vocab/unit/MIN>.
+<http://qudt.org/vocab/unit/DEG_C> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://qudt.org/schema/qudt/Unit>.
+<http://qudt.org/vocab/unit/GM-PER-MOL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://qudt.org/schema/qudt/Unit>.
+<http://qudt.org/vocab/unit/GM-PER-MilliL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://qudt.org/schema/qudt/Unit>.
+<http://qudt.org/vocab/unit/MIN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://qudt.org/schema/qudt/Unit>.
+<http://qudt.org/vocab/unit/MilliL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://qudt.org/schema/qudt/Unit>.
+<http://qudt.org/vocab/unit/MicroL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://qudt.org/schema/qudt/Unit>.
+<http://qudt.org/vocab/unit/MilliGM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://qudt.org/schema/qudt/Unit>.
+<http://qudt.org/vocab/unit/MOL-PER-L> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://qudt.org/schema/qudt/Unit>.
+<http://qudt.org/vocab/unit/NanoM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://qudt.org/schema/qudt/Unit>.
+<http://qudt.org/vocab/unit/PERCENT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://qudt.org/schema/qudt/Unit>.
+<http://qudt.org/vocab/unit/REV-PER-MIN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://qudt.org/schema/qudt/Unit>.
+<http://qudt.org/vocab/unit/SEC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://qudt.org/schema/qudt/Unit>.
+<http://qudt.org/vocab/unit/UNITLESS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://qudt.org/schema/qudt/Unit>.
+<http://purl.allotrope.org/ontology/qudt-ext/unit#MilliAbsorbanceUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://qudt.org/schema/qudt/Unit>.
+<http://purl.allotrope.org/ontology/qudt-ext/unit#MilliAbsorbanceUnitTimesSecond> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://qudt.org/schema/qudt/Unit>.
