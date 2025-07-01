@@ -1,11 +1,8 @@
 name: Conversion
 
 on:
-  release:
-    types: [published]
   push:
     branches:
-      - feat/action-nt-conversion
       - main
 
 jobs:
