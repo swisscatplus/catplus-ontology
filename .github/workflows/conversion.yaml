@@ -25,3 +25,14 @@ jobs:
       - name: Convert ontology to N-Triples
         run: |
           sop parse ontology/catplus_ontology.ttl ! serialize -o ontology/catplus_ontology.nt
+
+      - name: Configure git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Commit new file
+        run: |
+          git add ontology/catplus_ontology.nt
+          git commit -m "ontology conversion to nt-triples format"
+          git push
