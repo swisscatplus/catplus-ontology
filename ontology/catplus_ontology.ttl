@@ -384,10 +384,7 @@ cat:cartridgeComposition a rdf:Property ;
 allo-res:AFR_0002526 a rdf:Property ;
     skos:prefLabel "device system document" ;
     skos:definition "A device system document is a document that encompasses the information associated with a device system. [Allotrope]" ;
-    . 
-#allo-res:AFR_0002607 a rdf:Property;
-#  skos:definition "A chromatography column document is a document that encompasses the information associated with a chromatography column. [Allotrope]";
-#  skos:prefLabel "chromatography column document" .
+    .
 
 allo-res:AFR_0002083 a rdf:Property;
   skos:definition "A sample document is a document about a particular sample. [Allotrope]";
@@ -1033,7 +1030,6 @@ allo-res:AFR_0002375 a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Measurement Document" ;
     skos:definition "A measurement document is a document that encompasses the information associated with a measurement. [Allotrope]" ;
     sh:property [sh:path allo-res:AFR_0001121 ; sh:datatype xsd:string] ; #measurement id
-#    sh:property [sh:path allo-res:AFR_0002607 ; sh:class cat:ChromatographyColumnDocument ] ; #chromatographyColumnDocument -> ChromatographyColumnDocument
     sh:property [sh:path allo-res:AFR_0002526 ; sh:class cat:DeviceSystemDocument ] ; #device system document aka device control aggregate document -> list of Device document
     sh:property [sh:path allo-res:AFR_0002083 ; sh:class cat:SampleDocument ] ; #hasSampleDocument -> cat:SampleDocument
     sh:property [sh:path allo-res:AFR_0002529 ; sh:class cat:InjectionDocument] ; #injectionDocument -> cat:InjectionDocument
@@ -1112,13 +1108,6 @@ allo-role:AFRL_0000157 a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path rdfs:label ; sh:datatype xsd:string ] ; #concept
     sh:property [sh:path qudt:unit ; sh:class qudt:Unit ] ; #unit
     .
-
-#cat:ChromatographyColumnDocument a rdfs:Class, sh:NodeShape ;
-#    sh:closed true ;
-#    sh:ignoredProperties (rdf:type) ;
-#    skos:prefLabel "Chromatography Column Document" ;
-#    skos:definition "A document that contains metadata and information about a chromatography column used in experiments." ;
-#    .
 
 cat:SampleDocument a rdfs:Class, sh:NodeShape ;
     sh:closed true ;
@@ -1220,7 +1209,6 @@ cat:UV-IR-NMR-Peak a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "UV-IR-NMR Peak" ;
     skos:definition "A peak identified in a UV, IR, or NMR spectrum, typically used for further analysis in experiments." ;
     rdfs:subClassOf allo-res:AFR_0000413 ;
-    #TODO properties to be added
     .
 
 cat:DeviceSystemDocument a rdfs:Class, sh:NodeShape ;
