@@ -23,7 +23,17 @@ jobs:
         run: |
           sop parse ontology/catplus_ontology.ttl ! serialize -o ontology/catplus_ontology.nt
 
-      - name: Upload Release Asset
+      - name: Upload Release Asset (TTL)
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ github.event.release.upload_url }}
+          asset_path: ontology/catplus_ontology.ttl
+          asset_name: catplus_ontology.ttl
+          asset_content_type: text/turtle
+
+      - name: Upload Release Asset (NT)
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
